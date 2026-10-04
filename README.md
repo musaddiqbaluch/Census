@@ -61,3 +61,7 @@ Census was built using **Sketchware Pro**, with the help of **AI** for research,
 ## Project Status
 
 Census is currently in its **first public release**. Installer detection and compatibility may vary depending on the Android version and device manufacturer.
+
+## License
+
+Census is licensed under the [MIT License](LICENSE).
