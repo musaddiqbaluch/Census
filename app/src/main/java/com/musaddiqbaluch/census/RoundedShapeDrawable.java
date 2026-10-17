@@ -1,1 +1,580 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuY29udGVudC5Db250ZXh0OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LnJlcy5Db2xvclN0YXRlTGlzdDsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuQ2FudmFzOwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5MaW5lYXJHcmFkaWVudDsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuUGFpbnQ7CmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLlBvcnRlckR1ZmY7CmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLlBvcnRlckR1ZmZYZmVybW9kZTsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuUmVjdDsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuU2hhZGVyOwppbXBvcnQgYW5kcm9pZC5vcy5Mb29wZXI7CmltcG9ydCBhbmRyb2lkLnV0aWwuTG9nOwppbXBvcnQgYW5kcm9pZC52aWV3LlZpZXc7CgppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5Ob25OdWxsOwppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5OdWxsYWJsZTsKaW1wb3J0IGFuZHJvaWR4LmNvcmUuZ3JhcGhpY3MuQ29sb3JVdGlsczsKCmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuUjsKaW1wb3J0IGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5jb2xvci5NYXRlcmlhbENvbG9yczsKaW1wb3J0IGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5zaGFwZS5NYXRlcmlhbFNoYXBlRHJhd2FibGU7CmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuc2hhcGUuU2hhcGVBcHBlYXJhbmNlTW9kZWw7CgovKioKICogTWF0ZXJpYWwgMyBzaGFwZSBkcmF3YWJsZSB3cmFwcGVyIHdpdGggYSBjaGFpbmFibGUgQVBJIGZvcgogKiBiYWNrZ3JvdW5kcywgY29ybmVycywgYW5kIHN0cm9rZXMuCiAqCiAqIFR5cGljYWwgdXNhZ2U6CiAqCiAqICAgbmV3IFJvdW5kZWRTaGFwZURyYXdhYmxlKHZpZXcpCiAqICAgICAgICAgICAucmFkaXVzKDI4KQogKiAgICAgICAgICAgLmJhY2tncm91bmRBdHRyKFIuYXR0ci5jb2xvclN1cmZhY2VDb250YWluZXJMb3cpCiAqICAgICAgICAgICAuc3Ryb2tlKDFmLCAwLjQwZikKICogICAgICAgICAgIC5hcHBseVRvVmlldygpOwogKgogKiBGYWRpbmcgZGl2aWRlciAobGVmdCBhbmQgcmlnaHQgZW5kcyBmYWRlIG91dCBvdmVyIDEwIGRwKToKICoKICogICBuZXcgUm91bmRlZFNoYXBlRHJhd2FibGUoZGl2aWRlclZpZXcpCiAqICAgICAgICAgICAuYmFja2dyb3VuZEF0dHIoUi5hdHRyLmNvbG9yT3V0bGluZVZhcmlhbnQpCiAqICAgICAgICAgICAuZmFkZUVkZ2VzKDEwZikKICogICAgICAgICAgIC5hcHBseVRvVmlldygpOwogKgogKiBSb2J1c3RuZXNzCiAqIC0tLS0tLS0tLS0KICogICAtIEV2ZXJ5IHNoYXBlIHJvbGUsIGJhY2tncm91bmQsIHN0cm9rZSwgYW5kIGFwcGx5IGNhbGwgaXMgd3JhcHBlZAogKiAgICAgaW4gdHJ5L2NhdGNoOyBhIGJyb2tlbiB0aGVtZSBvciBzdHJpcHBlZCBidWlsZCBkZWdyYWRlcyB0byBhCiAqICAgICBzZW5zaWJsZSBkZWZhdWx0IGluc3RlYWQgb2YgY3Jhc2hpbmcuCiAqICAgLSBUaGVtZSBjb2xvciByZWFkcyBmYWxsIGJhY2sgdG8gaGFyZGNvZGVkIE0zIGRlZmF1bHRzLgogKiAgIC0gRGVuc2l0eSByZWFkcyBmYWxsIGJhY2sgdG8gMS4wZiBvbiBhIGJyb2tlbiBjb25maWd1cmF0aW9uLgogKiAgIC0gYXBwbHlUb1ZpZXcoKSBlbWl0cyBhIGRlYnVnIHdhcm5pbmcgaWYgY2FsbGVkIG9mZiB0aGUgbWFpbgogKiAgICAgdGhyZWFkOyBpdCBkb2VzIG5vdCB0aHJvdywgYmVjYXVzZSBidWlsZGluZyBhIGRyYXdhYmxlCiAqICAgICBvZmYtdGhyZWFkIGJlZm9yZSBhcHBseWluZyBpdCBvbiB0aGUgbWFpbiB0aHJlYWQgaXMgYSB2YWxpZAogKiAgICAgcGF0dGVybi4KICogICAtIEEgbWlzc2luZyBzaGFwZSBzdHlsZSByZXNvdXJjZSBsZWF2ZXMgdGhlIHByZXZpb3VzIHNoYXBlIGludGFjdAogKiAgICAgcmF0aGVyIHRoYW4gcmVwbGFjaW5nIGl0IHdpdGggYW4gZW1wdHkgb25lLgogKi8KcHVibGljIGNsYXNzIFJvdW5kZWRTaGFwZURyYXdhYmxlIGV4dGVuZHMgTWF0ZXJpYWxTaGFwZURyYXdhYmxlIHsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgVEFHID0gIlJvdW5kZWRTaGFwZURyYXdhYmxlIjsKCiAgICAvLyBGYWxsYmFjayBNMyBjb2xvcnMgZm9yIHRoZSBtb3N0IGNvbW1vbiByb2xlcywgdXNlZCBvbmx5IHdoZW4gdGhlCiAgICAvLyB0aGVtZSBjYW5ub3QgYmUgcmVhZC4KICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGludCBGQUxMQkFDS19TVVJGQUNFX0NPTlRBSU5FUl9MSUdIVCA9IDB4RkZGM0VERjc7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgRkFMTEJBQ0tfU1VSRkFDRV9DT05UQUlORVJfREFSSyAgPSAweEZGMjExRjI2OwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgaW50IEZBTExCQUNLX1NVUkZBQ0VfTElHSFQgICAgICAgICAgID0gMHhGRkZGRkJGRTsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGludCBGQUxMQkFDS19TVVJGQUNFX0RBUksgICAgICAgICAgICA9IDB4RkYxQzFCMUY7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgRkFMTEJBQ0tfT1VUTElORV9WQVJJQU5UX0xJR0hUICAgPSAweEZGQ0FDNEQwOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgaW50IEZBTExCQUNLX09VVExJTkVfVkFSSUFOVF9EQVJLICAgID0gMHhGRjQ5NDU0RjsKCiAgICAvKiogVXBwZXIgYm91bmQgZm9yIHJhZGl1cygpIHNvIGEgYmFkIGNhbGxlciBjYW5ub3QgcHJvZHVjZSBhbgogICAgICogIGFic3VyZCBzaGFwZS4gQW55IHJlYWwgdmlldyBpcyBmYXIgc21hbGxlciB0aGFuIDIwMCBkcC4gKi8KICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IE1BWF9SQURJVVNfRFAgPSAyMDBmOwoKICAgIHByaXZhdGUgZmluYWwgVmlldyB2aWV3OwoKICAgIHByaXZhdGUgYm9vbGVhbiBjdXN0b21CYWNrZ3JvdW5kID0gZmFsc2U7CiAgICBwcml2YXRlIGJvb2xlYW4gc3Ryb2tlRW5hYmxlZCA9IGZhbHNlOwoKICAgIC8vIEhvcml6b250YWwgZWRnZSBmYWRlLiAwID0gb2ZmLgogICAgcHJpdmF0ZSBmbG9hdCBmYWRlTGVuZ3RoUHggPSAwZjsKICAgIEBOdWxsYWJsZSBwcml2YXRlIFBhaW50IGZhZGVQYWludDsKICAgIHByaXZhdGUgaW50IGZhZGVCb3VuZHNMZWZ0ID0gSW50ZWdlci5NSU5fVkFMVUU7CiAgICBwcml2YXRlIGludCBmYWRlQm91bmRzUmlnaHQgPSBJbnRlZ2VyLk1JTl9WQUxVRTsKCiAgICBwcml2YXRlIGZsb2F0IHN0cm9rZVdpZHRoID0gMGY7CiAgICBwcml2YXRlIGludCBzdHJva2VDb2xvciA9IDB4MDAwMDAwMDA7CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlKEBOb25OdWxsIFZpZXcgdmlldykgewogICAgICAgIHN1cGVyKCk7CiAgICAgICAgdGhpcy52aWV3ID0gdmlldzsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gTUFURVJJQUwgMyBTSEFQRSBST0xFUwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgZXh0cmFTbWFsbCgpIHsKICAgICAgICByZXR1cm4gc2hhcGUoUi5zdHlsZS5TaGFwZUFwcGVhcmFuY2VfTWF0ZXJpYWwzX0Nvcm5lcl9FeHRyYVNtYWxsKTsKICAgIH0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgc21hbGwoKSB7CiAgICAgICAgcmV0dXJuIHNoYXBlKFIuc3R5bGUuU2hhcGVBcHBlYXJhbmNlX01hdGVyaWFsM19Db3JuZXJfU21hbGwpOwogICAgfQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSBtZWRpdW0oKSB7CiAgICAgICAgcmV0dXJuIHNoYXBlKFIuc3R5bGUuU2hhcGVBcHBlYXJhbmNlX01hdGVyaWFsM19Db3JuZXJfTWVkaXVtKTsKICAgIH0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgbGFyZ2UoKSB7CiAgICAgICAgcmV0dXJuIHNoYXBlKFIuc3R5bGUuU2hhcGVBcHBlYXJhbmNlX01hdGVyaWFsM19Db3JuZXJfTGFyZ2UpOwogICAgfQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSBsYXJnZUluY3JlYXNlZCgpIHsKICAgICAgICByZXR1cm4gc2hhcGUoUi5zdHlsZS5TaGFwZUFwcGVhcmFuY2VfTWF0ZXJpYWwzX0Nvcm5lcl9MYXJnZUluY3JlYXNlZCk7CiAgICB9CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIGV4dHJhTGFyZ2UoKSB7CiAgICAgICAgcmV0dXJuIHNoYXBlKFIuc3R5bGUuU2hhcGVBcHBlYXJhbmNlX01hdGVyaWFsM19Db3JuZXJfRXh0cmFMYXJnZSk7CiAgICB9CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIGV4dHJhTGFyZ2VJbmNyZWFzZWQoKSB7CiAgICAgICAgcmV0dXJuIHNoYXBlKFIuc3R5bGUuU2hhcGVBcHBlYXJhbmNlX01hdGVyaWFsM19Db3JuZXJfRXh0cmFMYXJnZUluY3JlYXNlZCk7CiAgICB9CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIGV4dHJhRXh0cmFMYXJnZSgpIHsKICAgICAgICByZXR1cm4gc2hhcGUoUi5zdHlsZS5TaGFwZUFwcGVhcmFuY2VfTWF0ZXJpYWwzX0Nvcm5lcl9FeHRyYUV4dHJhTGFyZ2UpOwogICAgfQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSBmdWxsKCkgewogICAgICAgIHJldHVybiBzaGFwZShSLnN0eWxlLlNoYXBlQXBwZWFyYW5jZV9NYXRlcmlhbDNfQ29ybmVyX0Z1bGwpOwogICAgfQoKICAgIC8qKgogICAgICogQXBwbGllcyBhIE1hdGVyaWFsIDMgY29ybmVyIHNoYXBlIGZyb20gYSBzdHlsZSByZXNvdXJjZS4KICAgICAqCiAgICAgKiBJZiB0aGUgcmVzb3VyY2UgaXMgbWlzc2luZyAoc3RyaXBwZWQgYnVpbGQsIE9FTSBvdmVybGF5KSBvciB0aGUKICAgICAqIGJ1aWxkZXIgdGhyb3dzLCB0aGUgcHJldmlvdXMgc2hhcGUgaXMgcHJlc2VydmVkLiBUaGlzIGtlZXBzIHRoZQogICAgICogY2hhaW4gdXNhYmxlIGV2ZW4gd2hlbiBvbmUgcm9sZSBpcyB1bmF2YWlsYWJsZS4KICAgICAqLwogICAgcHJpdmF0ZSBSb3VuZGVkU2hhcGVEcmF3YWJsZSBzaGFwZShpbnQgc2hhcGVSZXNJZCkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBTaGFwZUFwcGVhcmFuY2VNb2RlbCBzaGFwZSA9IFNoYXBlQXBwZWFyYW5jZU1vZGVsLmJ1aWxkZXIoCiAgICAgICAgICAgICAgICAgICAgdmlldy5nZXRDb250ZXh0KCksCiAgICAgICAgICAgICAgICAgICAgc2hhcGVSZXNJZCwKICAgICAgICAgICAgICAgICAgICAwCiAgICAgICAgICAgICkuYnVpbGQoKTsKCiAgICAgICAgICAgIHNldFNoYXBlQXBwZWFyYW5jZU1vZGVsKHNoYXBlKTsKCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAic2hhcGUoc3R5bGVSZXM9IiArIHNoYXBlUmVzSWQgKyAiKSBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBDVVNUT00gUkFESVVTCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSByYWRpdXMoZmxvYXQgcmFkaXVzRHApIHsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgLy8gQ2xhbXAgdG8gYSBzYW5lIHJhbmdlIHNvIGEgYmFkIGNhbGxlciBjYW5ub3QgcHJvZHVjZSBhbgogICAgICAgICAgICAvLyBhYnN1cmQgc2hhcGUuCiAgICAgICAgICAgIGZsb2F0IHNhZmVEcCA9IHJhZGl1c0RwOwogICAgICAgICAgICBpZiAoRmxvYXQuaXNOYU4oc2FmZURwKSB8fCBGbG9hdC5pc0luZmluaXRlKHNhZmVEcCkpIHsKICAgICAgICAgICAgICAgIHNhZmVEcCA9IDBmOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGlmIChzYWZlRHAgPCAwZikgc2FmZURwID0gMGY7CiAgICAgICAgICAgIGlmIChzYWZlRHAgPiBNQVhfUkFESVVTX0RQKSBzYWZlRHAgPSBNQVhfUkFESVVTX0RQOwoKICAgICAgICAgICAgZmxvYXQgZCA9IHNhZmVEZW5zaXR5KCk7CgogICAgICAgICAgICBTaGFwZUFwcGVhcmFuY2VNb2RlbCBzaGFwZSA9IFNoYXBlQXBwZWFyYW5jZU1vZGVsLmJ1aWxkZXIoKQogICAgICAgICAgICAgICAgICAgIC5zZXRBbGxDb3JuZXJTaXplcyhzYWZlRHAgKiBkKQogICAgICAgICAgICAgICAgICAgIC5idWlsZCgpOwoKICAgICAgICAgICAgc2V0U2hhcGVBcHBlYXJhbmNlTW9kZWwoc2hhcGUpOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJyYWRpdXMoIiArIHJhZGl1c0RwICsgIikgZmFpbGVkIiwgdCk7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gdGhpczsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gQkFDS0dST1VORDogRElSRUNUIENPTE9SCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSBiYWNrZ3JvdW5kQ29sb3IoaW50IGNvbG9yKSB7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHNldEZpbGxDb2xvcihDb2xvclN0YXRlTGlzdC52YWx1ZU9mKGNvbG9yKSk7CiAgICAgICAgICAgIGN1c3RvbUJhY2tncm91bmQgPSB0cnVlOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImJhY2tncm91bmRDb2xvciBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBCQUNLR1JPVU5EOiBNQVRFUklBTCAzIENPTE9SIEFUVFJJQlVURQogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgYmFja2dyb3VuZEF0dHIoaW50IGNvbG9yQXR0cikgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBpbnQgY29sb3IgPSBzYWZlVGhlbWVDb2xvcihjb2xvckF0dHIsIGZhbGxiYWNrU3VyZmFjZUNvbnRhaW5lcigpKTsKCiAgICAgICAgICAgIHNldEZpbGxDb2xvcihDb2xvclN0YXRlTGlzdC52YWx1ZU9mKGNvbG9yKSk7CiAgICAgICAgICAgIGN1c3RvbUJhY2tncm91bmQgPSB0cnVlOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJiYWNrZ3JvdW5kQXR0ciBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBCQUNLR1JPVU5EOiBCTEVORCBUV08gTUFURVJJQUwgMyBDT0xPUlMKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIGJhY2tncm91bmRGcm9tKAogICAgICAgICAgICBpbnQgZnJvbUF0dHIsCiAgICAgICAgICAgIGludCB0b0F0dHIsCiAgICAgICAgICAgIGZsb2F0IGFtb3VudCkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBpbnQgZnJvbUNvbG9yID0gc2FmZVRoZW1lQ29sb3IoZnJvbUF0dHIsIGZhbGxiYWNrU3VyZmFjZUNvbnRhaW5lcigpKTsKICAgICAgICAgICAgaW50IHRvQ29sb3IgPSBzYWZlVGhlbWVDb2xvcih0b0F0dHIsIGZhbGxiYWNrU3VyZmFjZUNvbnRhaW5lcigpKTsKCiAgICAgICAgICAgIGludCBjb2xvciA9IHNhZmVCbGVuZChmcm9tQ29sb3IsIHRvQ29sb3IsIGFtb3VudCk7CgogICAgICAgICAgICBzZXRGaWxsQ29sb3IoQ29sb3JTdGF0ZUxpc3QudmFsdWVPZihjb2xvcikpOwogICAgICAgICAgICBjdXN0b21CYWNrZ3JvdW5kID0gdHJ1ZTsKCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiYmFja2dyb3VuZEZyb20gZmFpbGVkIiwgdCk7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gdGhpczsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gREVGQVVMVCBNQVRFUklBTCAzIFNVUkZBQ0UgQkFDS0dST1VORAogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgYmFja2dyb3VuZENvbnRyYXN0KGZsb2F0IGFtb3VudCkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBpbnQgc3VyZmFjZUNvbnRhaW5lciA9IHNhZmVUaGVtZUNvbG9yKAogICAgICAgICAgICAgICAgICAgIFIuYXR0ci5jb2xvclN1cmZhY2VDb250YWluZXIsCiAgICAgICAgICAgICAgICAgICAgZmFsbGJhY2tTdXJmYWNlQ29udGFpbmVyKCkpOwoKICAgICAgICAgICAgaW50IHN1cmZhY2UgPSBzYWZlVGhlbWVDb2xvcigKICAgICAgICAgICAgICAgICAgICBSLmF0dHIuY29sb3JTdXJmYWNlLAogICAgICAgICAgICAgICAgICAgIGZhbGxiYWNrU3VyZmFjZSgpKTsKCiAgICAgICAgICAgIGludCBjb2xvciA9IHNhZmVCbGVuZChzdXJmYWNlQ29udGFpbmVyLCBzdXJmYWNlLCBhbW91bnQpOwoKICAgICAgICAgICAgc2V0RmlsbENvbG9yKENvbG9yU3RhdGVMaXN0LnZhbHVlT2YoY29sb3IpKTsKICAgICAgICAgICAgY3VzdG9tQmFja2dyb3VuZCA9IHRydWU7CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImJhY2tncm91bmRDb250cmFzdCBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBNQVRFUklBTCAzIE9VVExJTkUgU1RST0tFCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBSb3VuZGVkU2hhcGVEcmF3YWJsZSBzdHJva2UoZmxvYXQgd2lkdGhEcCwgZmxvYXQgYW1vdW50KSB7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHN0cm9rZVdpZHRoID0gc2FmZVN0cm9rZVdpZHRoKHdpZHRoRHApOwoKICAgICAgICAgICAgaW50IG91dGxpbmUgPSBzYWZlVGhlbWVDb2xvcigKICAgICAgICAgICAgICAgICAgICBSLmF0dHIuY29sb3JPdXRsaW5lVmFyaWFudCwKICAgICAgICAgICAgICAgICAgICBmYWxsYmFja091dGxpbmVWYXJpYW50KCkpOwoKICAgICAgICAgICAgaW50IHN1cmZhY2VDb250YWluZXIgPSBzYWZlVGhlbWVDb2xvcigKICAgICAgICAgICAgICAgICAgICBSLmF0dHIuY29sb3JTdXJmYWNlQ29udGFpbmVyLAogICAgICAgICAgICAgICAgICAgIGZhbGxiYWNrU3VyZmFjZUNvbnRhaW5lcigpKTsKCiAgICAgICAgICAgIHN0cm9rZUNvbG9yID0gc2FmZUJsZW5kKG91dGxpbmUsIHN1cmZhY2VDb250YWluZXIsIGFtb3VudCk7CiAgICAgICAgICAgIHN0cm9rZUVuYWJsZWQgPSBzdHJva2VXaWR0aCA+IDBmOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJzdHJva2UgZmFpbGVkIiwgdCk7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gdGhpczsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gRElSRUNUIFNUUk9LRSBDT0xPUgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgc3Ryb2tlQ29sb3IoZmxvYXQgd2lkdGhEcCwgaW50IGNvbG9yKSB7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHN0cm9rZVdpZHRoID0gc2FmZVN0cm9rZVdpZHRoKHdpZHRoRHApOwogICAgICAgICAgICBzdHJva2VDb2xvciA9IGNvbG9yOwogICAgICAgICAgICBzdHJva2VFbmFibGVkID0gc3Ryb2tlV2lkdGggPiAwZjsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJzdHJva2VDb2xvciBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBNQVRFUklBTCAzIFNUUk9LRSBDT0xPUiBBVFRSSUJVVEUKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIHN0cm9rZUF0dHIoZmxvYXQgd2lkdGhEcCwgaW50IGNvbG9yQXR0cikgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBzdHJva2VXaWR0aCA9IHNhZmVTdHJva2VXaWR0aCh3aWR0aERwKTsKICAgICAgICAgICAgc3Ryb2tlQ29sb3IgPSBzYWZlVGhlbWVDb2xvcihjb2xvckF0dHIsIGZhbGxiYWNrT3V0bGluZVZhcmlhbnQoKSk7CiAgICAgICAgICAgIHN0cm9rZUVuYWJsZWQgPSBzdHJva2VXaWR0aCA+IDBmOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgInN0cm9rZUF0dHIgZmFpbGVkIiwgdCk7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gdGhpczsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gRElTQUJMRSBTVFJPS0UKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHVibGljIFJvdW5kZWRTaGFwZURyYXdhYmxlIG5vU3Ryb2tlKCkgewogICAgICAgIHN0cm9rZUVuYWJsZWQgPSBmYWxzZTsKICAgICAgICBzdHJva2VXaWR0aCA9IDBmOwogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBFREdFIEZBREUKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgLyoqCiAgICAgKiBGYWRlcyB0aGUgbGVmdCBhbmQgcmlnaHQgZW5kcyBvZiB0aGUgd2hvbGUgZHJhd2FibGUgKGZpbGwgYW5kCiAgICAgKiBzdHJva2UpIHRvIHRyYW5zcGFyZW50IG92ZXIgdGhlIGdpdmVuIGxlbmd0aC4KICAgICAqCiAgICAgKiBXb3JrcyB3aXRoIGFueSBmaWxsIGNvbG9yLCBpbmNsdWRpbmcgY29sb3JzIHRoYXQgYXJlIGNoYW5nZWQgb3IKICAgICAqIGFuaW1hdGVkIGxhdGVyIHRocm91Z2ggc2V0RmlsbENvbG9yKCksIGJlY2F1c2UgdGhlIGZhZGUgaXMgYXBwbGllZAogICAgICogYXMgYW4gYWxwaGEgbWFzayBhdCBkcmF3IHRpbWUuIFRoZSBmYWRlIGlzIGNhcHBlZCBhdCBoYWxmIG9mIHRoZQogICAgICogZHJhd2FibGUncyB3aWR0aC4gUGFzcyAwIHRvIHR1cm4gaXQgb2ZmLgogICAgICovCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgZmFkZUVkZ2VzKGZsb2F0IGxlbmd0aERwKSB7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGZsb2F0IHNhZmVEcCA9IGxlbmd0aERwOwogICAgICAgICAgICBpZiAoRmxvYXQuaXNOYU4oc2FmZURwKSB8fCBGbG9hdC5pc0luZmluaXRlKHNhZmVEcCkpIHNhZmVEcCA9IDBmOwogICAgICAgICAgICBpZiAoc2FmZURwIDwgMGYpIHNhZmVEcCA9IDBmOwogICAgICAgICAgICBpZiAoc2FmZURwID4gTUFYX1JBRElVU19EUCkgc2FmZURwID0gTUFYX1JBRElVU19EUDsKCiAgICAgICAgICAgIGZhZGVMZW5ndGhQeCA9IHNhZmVEcCAqIHNhZmVEZW5zaXR5KCk7CiAgICAgICAgICAgIGZhZGVCb3VuZHNMZWZ0ID0gSW50ZWdlci5NSU5fVkFMVUU7CiAgICAgICAgICAgIGludmFsaWRhdGVTZWxmKCk7CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImZhZGVFZGdlcygiICsgbGVuZ3RoRHAgKyAiKSBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHVibGljIHZvaWQgZHJhdyhATm9uTnVsbCBDYW52YXMgY2FudmFzKSB7CgogICAgICAgIGlmIChmYWRlTGVuZ3RoUHggPD0gMGYpIHsKICAgICAgICAgICAgc3VwZXIuZHJhdyhjYW52YXMpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICBmaW5hbCBSZWN0IGJvdW5kcyA9IGdldEJvdW5kcygpOwogICAgICAgIGlmIChib3VuZHMuaXNFbXB0eSgpKSB7CiAgICAgICAgICAgIHN1cGVyLmRyYXcoY2FudmFzKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgaW50IHNhdmVDb3VudCA9IC0xOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIC8vIERyYXcgdGhlIHNoYXBlIGludG8gYW4gb2Zmc2NyZWVuIGxheWVyLCB0aGVuIG11bHRpcGx5IGl0IGJ5CiAgICAgICAgICAgIC8vIGEgaG9yaXpvbnRhbCBhbHBoYSByYW1wICgwIC0+IDEgLT4gMSAtPiAwKS4KICAgICAgICAgICAgc2F2ZUNvdW50ID0gY2FudmFzLnNhdmVMYXllcigKICAgICAgICAgICAgICAgICAgICBib3VuZHMubGVmdCwgYm91bmRzLnRvcCwgYm91bmRzLnJpZ2h0LCBib3VuZHMuYm90dG9tLAogICAgICAgICAgICAgICAgICAgIG51bGwpOwoKICAgICAgICAgICAgc3VwZXIuZHJhdyhjYW52YXMpOwoKICAgICAgICAgICAgY2FudmFzLmRyYXdSZWN0KGJvdW5kcywgb2J0YWluRmFkZVBhaW50KGJvdW5kcykpOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJkcmF3IHdpdGggZWRnZSBmYWRlIGZhaWxlZCIsIHQpOwogICAgICAgIH0gZmluYWxseSB7CiAgICAgICAgICAgIGlmIChzYXZlQ291bnQgPj0gMCkgewogICAgICAgICAgICAgICAgdHJ5IHsgY2FudmFzLnJlc3RvcmVUb0NvdW50KHNhdmVDb3VudCk7IH0KICAgICAgICAgICAgICAgIGNhdGNoIChUaHJvd2FibGUgaWdub3JlZCkge30KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBATm9uTnVsbAogICAgcHJpdmF0ZSBQYWludCBvYnRhaW5GYWRlUGFpbnQoQE5vbk51bGwgUmVjdCBib3VuZHMpIHsKCiAgICAgICAgUGFpbnQgcGFpbnQgPSBmYWRlUGFpbnQ7CiAgICAgICAgaWYgKHBhaW50ID09IG51bGwpIHsKICAgICAgICAgICAgcGFpbnQgPSBuZXcgUGFpbnQoUGFpbnQuQU5USV9BTElBU19GTEFHKTsKICAgICAgICAgICAgcGFpbnQuc2V0U3R5bGUoUGFpbnQuU3R5bGUuRklMTCk7CiAgICAgICAgICAgIHBhaW50LnNldFhmZXJtb2RlKG5ldyBQb3J0ZXJEdWZmWGZlcm1vZGUoUG9ydGVyRHVmZi5Nb2RlLkRTVF9JTikpOwogICAgICAgICAgICBmYWRlUGFpbnQgPSBwYWludDsKICAgICAgICB9CgogICAgICAgIGlmIChmYWRlQm91bmRzTGVmdCAhPSBib3VuZHMubGVmdCB8fCBmYWRlQm91bmRzUmlnaHQgIT0gYm91bmRzLnJpZ2h0KSB7CiAgICAgICAgICAgIGZsb2F0IHdpZHRoID0gYm91bmRzLndpZHRoKCk7CiAgICAgICAgICAgIGZsb2F0IGZyYWN0aW9uID0gd2lkdGggPiAwZgogICAgICAgICAgICAgICAgICAgID8gTWF0aC5taW4oMC41ZiwgZmFkZUxlbmd0aFB4IC8gd2lkdGgpIDogMGY7CgogICAgICAgICAgICAvLyBPbmx5IHRoZSBhbHBoYSBvZiB0aGVzZSBjb2xvcnMgbWF0dGVycyB3aXRoIERTVF9JTi4KICAgICAgICAgICAgcGFpbnQuc2V0U2hhZGVyKG5ldyBMaW5lYXJHcmFkaWVudCgKICAgICAgICAgICAgICAgICAgICBib3VuZHMubGVmdCwgMGYsIGJvdW5kcy5yaWdodCwgMGYsCiAgICAgICAgICAgICAgICAgICAgbmV3IGludFtdezB4MDAwMDAwMDAsIDB4RkYwMDAwMDAsIDB4RkYwMDAwMDAsIDB4MDAwMDAwMDB9LAogICAgICAgICAgICAgICAgICAgIG5ldyBmbG9hdFtdezBmLCBmcmFjdGlvbiwgMWYgLSBmcmFjdGlvbiwgMWZ9LAogICAgICAgICAgICAgICAgICAgIFNoYWRlci5UaWxlTW9kZS5DTEFNUCkpOwoKICAgICAgICAgICAgZmFkZUJvdW5kc0xlZnQgPSBib3VuZHMubGVmdDsKICAgICAgICAgICAgZmFkZUJvdW5kc1JpZ2h0ID0gYm91bmRzLnJpZ2h0OwogICAgICAgIH0KCiAgICAgICAgcmV0dXJuIHBhaW50OwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBBUFBMWQogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgUm91bmRlZFNoYXBlRHJhd2FibGUgYXBwbHlUb1ZpZXcoKSB7CgogICAgICAgIHdhcm5JZk5vdE1haW5UaHJlYWQoImFwcGx5VG9WaWV3Iik7CgogICAgICAgIC8vIDEuIERlZmF1bHQgYmFja2dyb3VuZCBpZiBub25lIHdhcyBzcGVjaWZpZWQuCiAgICAgICAgaWYgKCFjdXN0b21CYWNrZ3JvdW5kKSB7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBpbnQgc3VyZmFjZUNvbnRhaW5lciA9IHNhZmVUaGVtZUNvbG9yKAogICAgICAgICAgICAgICAgICAgICAgICBSLmF0dHIuY29sb3JTdXJmYWNlQ29udGFpbmVyLAogICAgICAgICAgICAgICAgICAgICAgICBmYWxsYmFja1N1cmZhY2VDb250YWluZXIoKSk7CgogICAgICAgICAgICAgICAgc2V0RmlsbENvbG9yKENvbG9yU3RhdGVMaXN0LnZhbHVlT2Yoc3VyZmFjZUNvbnRhaW5lcikpOwogICAgICAgICAgICAgICAgY3VzdG9tQmFja2dyb3VuZCA9IHRydWU7CgogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiYXBwbHlUb1ZpZXc6IGRlZmF1bHQgYmFja2dyb3VuZCBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgLy8gMi4gU3Ryb2tlIChvciBjbGVhciBpdCkuCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgaWYgKHN0cm9rZUVuYWJsZWQpIHsKICAgICAgICAgICAgICAgIHNldFN0cm9rZShzdHJva2VXaWR0aCwgQ29sb3JTdGF0ZUxpc3QudmFsdWVPZihzdHJva2VDb2xvcikpOwogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgc2V0U3Ryb2tlV2lkdGgoMGYpOwogICAgICAgICAgICB9CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiYXBwbHlUb1ZpZXc6IHN0cm9rZSBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIC8vIDMuIEluc3RhbGwgYXMgdGhlIHZpZXcncyBiYWNrZ3JvdW5kLgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHZpZXcuc2V0QmFja2dyb3VuZCh0aGlzKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJhcHBseVRvVmlldzogc2V0QmFja2dyb3VuZCBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIHJldHVybiB0aGlzOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBJTlRFUk5BTCBIRUxQRVJTCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIC8qKgogICAgICogUmVhZHMgYSB0aGVtZSBjb2xvciBhdHRyaWJ1dGUsIGZhbGxpbmcgYmFjayB0byB0aGUgZ2l2ZW4gdmFsdWUgb24KICAgICAqIGFueSBmYWlsdXJlLiBOZXZlciB0aHJvd3MuCiAgICAgKi8KICAgIHByaXZhdGUgaW50IHNhZmVUaGVtZUNvbG9yKGludCBhdHRyUmVzSWQsIGludCBmYWxsYmFjaykgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHJldHVybiBNYXRlcmlhbENvbG9ycy5nZXRDb2xvcih2aWV3LCBhdHRyUmVzSWQsIGZhbGxiYWNrKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICByZXR1cm4gZmFsbGJhY2s7CiAgICAgICAgfQogICAgfQoKICAgIC8qKgogICAgICogUmV0dXJucyB0aGUgZGlzcGxheSBkZW5zaXR5LCBvciAxLjBmIHdoZW4gdGhlIG1ldHJpY3MgYXJlIGJyb2tlbi4KICAgICAqLwogICAgcHJpdmF0ZSBmbG9hdCBzYWZlRGVuc2l0eSgpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBmbG9hdCBkID0gdmlldy5nZXRSZXNvdXJjZXMoKS5nZXREaXNwbGF5TWV0cmljcygpLmRlbnNpdHk7CiAgICAgICAgICAgIGlmIChkIDw9IDBmIHx8IEZsb2F0LmlzTmFOKGQpIHx8IEZsb2F0LmlzSW5maW5pdGUoZCkpIHsKICAgICAgICAgICAgICAgIHJldHVybiAxLjBmOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHJldHVybiBkOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIHJldHVybiAxLjBmOwogICAgICAgIH0KICAgIH0KCiAgICAvKioKICAgICAqIENvbnZlcnRzIGEgZHAgc3Ryb2tlIHdpZHRoIHRvIHBpeGVscywgY2xhbXBlZCB0byBhIHNhbmUgcmFuZ2UuCiAgICAgKi8KICAgIHByaXZhdGUgZmxvYXQgc2FmZVN0cm9rZVdpZHRoKGZsb2F0IHdpZHRoRHApIHsKICAgICAgICBmbG9hdCBkID0gc2FmZURlbnNpdHkoKTsKICAgICAgICBpZiAoRmxvYXQuaXNOYU4od2lkdGhEcCkgfHwgRmxvYXQuaXNJbmZpbml0ZSh3aWR0aERwKSkgcmV0dXJuIDBmOwogICAgICAgIGlmICh3aWR0aERwIDwgMGYpIHJldHVybiAwZjsKICAgICAgICAvLyBVcHBlciBib3VuZCBtYXRjaGVzIHRoZSByYWRpdXMgY2xhbXAgc28gbm90aGluZyBiZWNvbWVzCiAgICAgICAgLy8gcGF0aG9sb2dpY2FsLgogICAgICAgIGlmICh3aWR0aERwID4gTUFYX1JBRElVU19EUCkgd2lkdGhEcCA9IE1BWF9SQURJVVNfRFA7CiAgICAgICAgcmV0dXJuIHdpZHRoRHAgKiBkOwogICAgfQoKICAgIHByaXZhdGUgc3RhdGljIGludCBzYWZlQmxlbmQoaW50IGZyb20sIGludCB0bywgZmxvYXQgYW1vdW50KSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgcmV0dXJuIENvbG9yVXRpbHMuYmxlbmRBUkdCKGZyb20sIHRvLCBhbW91bnQpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIHJldHVybiBmcm9tOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGludCBmYWxsYmFja1N1cmZhY2VDb250YWluZXIoKSB7CiAgICAgICAgcmV0dXJuIGlzTmlnaHRNb2RlKCkKICAgICAgICAgICAgICAgID8gRkFMTEJBQ0tfU1VSRkFDRV9DT05UQUlORVJfREFSSwogICAgICAgICAgICAgICAgOiBGQUxMQkFDS19TVVJGQUNFX0NPTlRBSU5FUl9MSUdIVDsKICAgIH0KCiAgICBwcml2YXRlIGludCBmYWxsYmFja1N1cmZhY2UoKSB7CiAgICAgICAgcmV0dXJuIGlzTmlnaHRNb2RlKCkKICAgICAgICAgICAgICAgID8gRkFMTEJBQ0tfU1VSRkFDRV9EQVJLCiAgICAgICAgICAgICAgICA6IEZBTExCQUNLX1NVUkZBQ0VfTElHSFQ7CiAgICB9CgogICAgcHJpdmF0ZSBpbnQgZmFsbGJhY2tPdXRsaW5lVmFyaWFudCgpIHsKICAgICAgICByZXR1cm4gaXNOaWdodE1vZGUoKQogICAgICAgICAgICAgICAgPyBGQUxMQkFDS19PVVRMSU5FX1ZBUklBTlRfREFSSwogICAgICAgICAgICAgICAgOiBGQUxMQkFDS19PVVRMSU5FX1ZBUklBTlRfTElHSFQ7CiAgICB9CgogICAgcHJpdmF0ZSBib29sZWFuIGlzTmlnaHRNb2RlKCkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGludCBmbGFncyA9IHZpZXcuZ2V0UmVzb3VyY2VzKCkuZ2V0Q29uZmlndXJhdGlvbigpLnVpTW9kZQogICAgICAgICAgICAgICAgICAgICYgYW5kcm9pZC5jb250ZW50LnJlcy5Db25maWd1cmF0aW9uLlVJX01PREVfTklHSFRfTUFTSzsKICAgICAgICAgICAgcmV0dXJuIGZsYWdzID09IGFuZHJvaWQuY29udGVudC5yZXMuQ29uZmlndXJhdGlvbi5VSV9NT0RFX05JR0hUX1lFUzsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgc3RhdGljIHZvaWQgd2FybklmTm90TWFpblRocmVhZChATm9uTnVsbCBTdHJpbmcgbWV0aG9kTmFtZSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmIChMb29wZXIubXlMb29wZXIoKSAhPSBMb29wZXIuZ2V0TWFpbkxvb3BlcigpKSB7CiAgICAgICAgICAgICAgICBMb2cudyhUQUcsIG1ldGhvZE5hbWUgKyAiIGNhbGxlZCBvZmYgdGhlIG1haW4gdGhyZWFkLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICsgIlZpZXcuc2V0QmFja2dyb3VuZCBpcyBhIFVJIG9wZXJhdGlvbi4iKTsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7CiAgICAgICAgICAgIC8vIExvZ2dpbmcgbXVzdCBuZXZlciBicmVhayB0aGUgcGlwZWxpbmUuCiAgICAgICAgfQogICAgfQp9
+package com.musaddiqbaluch.census;
+
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Canvas;
+import android.graphics.LinearGradient;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.Shader;
+import android.os.Looper;
+import android.util.Log;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.graphics.ColorUtils;
+
+import com.google.android.material.R;
+import com.google.android.material.color.MaterialColors;
+import com.google.android.material.shape.MaterialShapeDrawable;
+import com.google.android.material.shape.ShapeAppearanceModel;
+
+/**
+ * Material 3 shape drawable wrapper with a chainable API for
+ * backgrounds, corners, and strokes.
+ *
+ * Typical usage:
+ *
+ *   new RoundedShapeDrawable(view)
+ *           .radius(28)
+ *           .backgroundAttr(R.attr.colorSurfaceContainerLow)
+ *           .stroke(1f, 0.40f)
+ *           .applyToView();
+ *
+ * Fading divider (left and right ends fade out over 10 dp):
+ *
+ *   new RoundedShapeDrawable(dividerView)
+ *           .backgroundAttr(R.attr.colorOutlineVariant)
+ *           .fadeEdges(10f)
+ *           .applyToView();
+ *
+ * Robustness
+ * ----------
+ *   - Every shape role, background, stroke, and apply call is wrapped
+ *     in try/catch; a broken theme or stripped build degrades to a
+ *     sensible default instead of crashing.
+ *   - Theme color reads fall back to hardcoded M3 defaults.
+ *   - Density reads fall back to 1.0f on a broken configuration.
+ *   - applyToView() emits a debug warning if called off the main
+ *     thread; it does not throw, because building a drawable
+ *     off-thread before applying it on the main thread is a valid
+ *     pattern.
+ *   - A missing shape style resource leaves the previous shape intact
+ *     rather than replacing it with an empty one.
+ */
+public class RoundedShapeDrawable extends MaterialShapeDrawable {
+
+    private static final String TAG = "RoundedShapeDrawable";
+
+    // Fallback M3 colors for the most common roles, used only when the
+    // theme cannot be read.
+    private static final int FALLBACK_SURFACE_CONTAINER_LIGHT = 0xFFF3EDF7;
+    private static final int FALLBACK_SURFACE_CONTAINER_DARK  = 0xFF211F26;
+    private static final int FALLBACK_SURFACE_LIGHT           = 0xFFFFFBFE;
+    private static final int FALLBACK_SURFACE_DARK            = 0xFF1C1B1F;
+    private static final int FALLBACK_OUTLINE_VARIANT_LIGHT   = 0xFFCAC4D0;
+    private static final int FALLBACK_OUTLINE_VARIANT_DARK    = 0xFF49454F;
+
+    /** Upper bound for radius() so a bad caller cannot produce an
+     *  absurd shape. Any real view is far smaller than 200 dp. */
+    private static final float MAX_RADIUS_DP = 200f;
+
+    private final View view;
+
+    private boolean customBackground = false;
+    private boolean strokeEnabled = false;
+
+    // Horizontal edge fade. 0 = off.
+    private float fadeLengthPx = 0f;
+    @Nullable private Paint fadePaint;
+    private int fadeBoundsLeft = Integer.MIN_VALUE;
+    private int fadeBoundsRight = Integer.MIN_VALUE;
+
+    private float strokeWidth = 0f;
+    private int strokeColor = 0x00000000;
+
+    public RoundedShapeDrawable(@NonNull View view) {
+        super();
+        this.view = view;
+    }
+
+    // ==================================================
+    // MATERIAL 3 SHAPE ROLES
+    // ==================================================
+
+    public RoundedShapeDrawable extraSmall() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_ExtraSmall);
+    }
+
+    public RoundedShapeDrawable small() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_Small);
+    }
+
+    public RoundedShapeDrawable medium() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_Medium);
+    }
+
+    public RoundedShapeDrawable large() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_Large);
+    }
+
+    public RoundedShapeDrawable largeIncreased() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_LargeIncreased);
+    }
+
+    public RoundedShapeDrawable extraLarge() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_ExtraLarge);
+    }
+
+    public RoundedShapeDrawable extraLargeIncreased() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_ExtraLargeIncreased);
+    }
+
+    public RoundedShapeDrawable extraExtraLarge() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_ExtraExtraLarge);
+    }
+
+    public RoundedShapeDrawable full() {
+        return shape(R.style.ShapeAppearance_Material3_Corner_Full);
+    }
+
+    /**
+     * Applies a Material 3 corner shape from a style resource.
+     *
+     * If the resource is missing (stripped build, OEM overlay) or the
+     * builder throws, the previous shape is preserved. This keeps the
+     * chain usable even when one role is unavailable.
+     */
+    private RoundedShapeDrawable shape(int shapeResId) {
+
+        try {
+            ShapeAppearanceModel shape = ShapeAppearanceModel.builder(
+                    view.getContext(),
+                    shapeResId,
+                    0
+            ).build();
+
+            setShapeAppearanceModel(shape);
+
+        } catch (Throwable t) {
+            Log.e(TAG, "shape(styleRes=" + shapeResId + ") failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // CUSTOM RADIUS
+    // ==================================================
+
+    public RoundedShapeDrawable radius(float radiusDp) {
+
+        try {
+            // Clamp to a sane range so a bad caller cannot produce an
+            // absurd shape.
+            float safeDp = radiusDp;
+            if (Float.isNaN(safeDp) || Float.isInfinite(safeDp)) {
+                safeDp = 0f;
+            }
+            if (safeDp < 0f) safeDp = 0f;
+            if (safeDp > MAX_RADIUS_DP) safeDp = MAX_RADIUS_DP;
+
+            float d = safeDensity();
+
+            ShapeAppearanceModel shape = ShapeAppearanceModel.builder()
+                    .setAllCornerSizes(safeDp * d)
+                    .build();
+
+            setShapeAppearanceModel(shape);
+
+        } catch (Throwable t) {
+            Log.e(TAG, "radius(" + radiusDp + ") failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // BACKGROUND: DIRECT COLOR
+    // ==================================================
+
+    public RoundedShapeDrawable backgroundColor(int color) {
+
+        try {
+            setFillColor(ColorStateList.valueOf(color));
+            customBackground = true;
+        } catch (Throwable t) {
+            Log.e(TAG, "backgroundColor failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // BACKGROUND: MATERIAL 3 COLOR ATTRIBUTE
+    // ==================================================
+
+    public RoundedShapeDrawable backgroundAttr(int colorAttr) {
+
+        try {
+            int color = safeThemeColor(colorAttr, fallbackSurfaceContainer());
+
+            setFillColor(ColorStateList.valueOf(color));
+            customBackground = true;
+
+        } catch (Throwable t) {
+            Log.e(TAG, "backgroundAttr failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // BACKGROUND: BLEND TWO MATERIAL 3 COLORS
+    // ==================================================
+
+    public RoundedShapeDrawable backgroundFrom(
+            int fromAttr,
+            int toAttr,
+            float amount) {
+
+        try {
+            int fromColor = safeThemeColor(fromAttr, fallbackSurfaceContainer());
+            int toColor = safeThemeColor(toAttr, fallbackSurfaceContainer());
+
+            int color = safeBlend(fromColor, toColor, amount);
+
+            setFillColor(ColorStateList.valueOf(color));
+            customBackground = true;
+
+        } catch (Throwable t) {
+            Log.e(TAG, "backgroundFrom failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // DEFAULT MATERIAL 3 SURFACE BACKGROUND
+    // ==================================================
+
+    public RoundedShapeDrawable backgroundContrast(float amount) {
+
+        try {
+            int surfaceContainer = safeThemeColor(
+                    R.attr.colorSurfaceContainer,
+                    fallbackSurfaceContainer());
+
+            int surface = safeThemeColor(
+                    R.attr.colorSurface,
+                    fallbackSurface());
+
+            int color = safeBlend(surfaceContainer, surface, amount);
+
+            setFillColor(ColorStateList.valueOf(color));
+            customBackground = true;
+
+        } catch (Throwable t) {
+            Log.e(TAG, "backgroundContrast failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // MATERIAL 3 OUTLINE STROKE
+    // ==================================================
+
+    public RoundedShapeDrawable stroke(float widthDp, float amount) {
+
+        try {
+            strokeWidth = safeStrokeWidth(widthDp);
+
+            int outline = safeThemeColor(
+                    R.attr.colorOutlineVariant,
+                    fallbackOutlineVariant());
+
+            int surfaceContainer = safeThemeColor(
+                    R.attr.colorSurfaceContainer,
+                    fallbackSurfaceContainer());
+
+            strokeColor = safeBlend(outline, surfaceContainer, amount);
+            strokeEnabled = strokeWidth > 0f;
+
+        } catch (Throwable t) {
+            Log.e(TAG, "stroke failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // DIRECT STROKE COLOR
+    // ==================================================
+
+    public RoundedShapeDrawable strokeColor(float widthDp, int color) {
+
+        try {
+            strokeWidth = safeStrokeWidth(widthDp);
+            strokeColor = color;
+            strokeEnabled = strokeWidth > 0f;
+        } catch (Throwable t) {
+            Log.e(TAG, "strokeColor failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // MATERIAL 3 STROKE COLOR ATTRIBUTE
+    // ==================================================
+
+    public RoundedShapeDrawable strokeAttr(float widthDp, int colorAttr) {
+
+        try {
+            strokeWidth = safeStrokeWidth(widthDp);
+            strokeColor = safeThemeColor(colorAttr, fallbackOutlineVariant());
+            strokeEnabled = strokeWidth > 0f;
+        } catch (Throwable t) {
+            Log.e(TAG, "strokeAttr failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // DISABLE STROKE
+    // ==================================================
+
+    public RoundedShapeDrawable noStroke() {
+        strokeEnabled = false;
+        strokeWidth = 0f;
+        return this;
+    }
+
+    // ==================================================
+    // EDGE FADE
+    // ==================================================
+
+    /**
+     * Fades the left and right ends of the whole drawable (fill and
+     * stroke) to transparent over the given length.
+     *
+     * Works with any fill color, including colors that are changed or
+     * animated later through setFillColor(), because the fade is applied
+     * as an alpha mask at draw time. The fade is capped at half of the
+     * drawable's width. Pass 0 to turn it off.
+     */
+    public RoundedShapeDrawable fadeEdges(float lengthDp) {
+
+        try {
+            float safeDp = lengthDp;
+            if (Float.isNaN(safeDp) || Float.isInfinite(safeDp)) safeDp = 0f;
+            if (safeDp < 0f) safeDp = 0f;
+            if (safeDp > MAX_RADIUS_DP) safeDp = MAX_RADIUS_DP;
+
+            fadeLengthPx = safeDp * safeDensity();
+            fadeBoundsLeft = Integer.MIN_VALUE;
+            invalidateSelf();
+
+        } catch (Throwable t) {
+            Log.e(TAG, "fadeEdges(" + lengthDp + ") failed", t);
+        }
+
+        return this;
+    }
+
+    @Override
+    public void draw(@NonNull Canvas canvas) {
+
+        if (fadeLengthPx <= 0f) {
+            super.draw(canvas);
+            return;
+        }
+
+        final Rect bounds = getBounds();
+        if (bounds.isEmpty()) {
+            super.draw(canvas);
+            return;
+        }
+
+        int saveCount = -1;
+        try {
+            // Draw the shape into an offscreen layer, then multiply it by
+            // a horizontal alpha ramp (0 -> 1 -> 1 -> 0).
+            saveCount = canvas.saveLayer(
+                    bounds.left, bounds.top, bounds.right, bounds.bottom,
+                    null);
+
+            super.draw(canvas);
+
+            canvas.drawRect(bounds, obtainFadePaint(bounds));
+
+        } catch (Throwable t) {
+            Log.e(TAG, "draw with edge fade failed", t);
+        } finally {
+            if (saveCount >= 0) {
+                try { canvas.restoreToCount(saveCount); }
+                catch (Throwable ignored) {}
+            }
+        }
+    }
+
+    @NonNull
+    private Paint obtainFadePaint(@NonNull Rect bounds) {
+
+        Paint paint = fadePaint;
+        if (paint == null) {
+            paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            paint.setStyle(Paint.Style.FILL);
+            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+            fadePaint = paint;
+        }
+
+        if (fadeBoundsLeft != bounds.left || fadeBoundsRight != bounds.right) {
+            float width = bounds.width();
+            float fraction = width > 0f
+                    ? Math.min(0.5f, fadeLengthPx / width) : 0f;
+
+            // Only the alpha of these colors matters with DST_IN.
+            paint.setShader(new LinearGradient(
+                    bounds.left, 0f, bounds.right, 0f,
+                    new int[]{0x00000000, 0xFF000000, 0xFF000000, 0x00000000},
+                    new float[]{0f, fraction, 1f - fraction, 1f},
+                    Shader.TileMode.CLAMP));
+
+            fadeBoundsLeft = bounds.left;
+            fadeBoundsRight = bounds.right;
+        }
+
+        return paint;
+    }
+
+    // ==================================================
+    // APPLY
+    // ==================================================
+
+    public RoundedShapeDrawable applyToView() {
+
+        warnIfNotMainThread("applyToView");
+
+        // 1. Default background if none was specified.
+        if (!customBackground) {
+            try {
+                int surfaceContainer = safeThemeColor(
+                        R.attr.colorSurfaceContainer,
+                        fallbackSurfaceContainer());
+
+                setFillColor(ColorStateList.valueOf(surfaceContainer));
+                customBackground = true;
+
+            } catch (Throwable t) {
+                Log.e(TAG, "applyToView: default background failed", t);
+            }
+        }
+
+        // 2. Stroke (or clear it).
+        try {
+            if (strokeEnabled) {
+                setStroke(strokeWidth, ColorStateList.valueOf(strokeColor));
+            } else {
+                setStrokeWidth(0f);
+            }
+        } catch (Throwable t) {
+            Log.e(TAG, "applyToView: stroke failed", t);
+        }
+
+        // 3. Install as the view's background.
+        try {
+            view.setBackground(this);
+        } catch (Throwable t) {
+            Log.e(TAG, "applyToView: setBackground failed", t);
+        }
+
+        return this;
+    }
+
+    // ==================================================
+    // INTERNAL HELPERS
+    // ==================================================
+
+    /**
+     * Reads a theme color attribute, falling back to the given value on
+     * any failure. Never throws.
+     */
+    private int safeThemeColor(int attrResId, int fallback) {
+        try {
+            return MaterialColors.getColor(view, attrResId, fallback);
+        } catch (Throwable t) {
+            return fallback;
+        }
+    }
+
+    /**
+     * Returns the display density, or 1.0f when the metrics are broken.
+     */
+    private float safeDensity() {
+        try {
+            float d = view.getResources().getDisplayMetrics().density;
+            if (d <= 0f || Float.isNaN(d) || Float.isInfinite(d)) {
+                return 1.0f;
+            }
+            return d;
+        } catch (Throwable t) {
+            return 1.0f;
+        }
+    }
+
+    /**
+     * Converts a dp stroke width to pixels, clamped to a sane range.
+     */
+    private float safeStrokeWidth(float widthDp) {
+        float d = safeDensity();
+        if (Float.isNaN(widthDp) || Float.isInfinite(widthDp)) return 0f;
+        if (widthDp < 0f) return 0f;
+        // Upper bound matches the radius clamp so nothing becomes
+        // pathological.
+        if (widthDp > MAX_RADIUS_DP) widthDp = MAX_RADIUS_DP;
+        return widthDp * d;
+    }
+
+    private static int safeBlend(int from, int to, float amount) {
+        try {
+            return ColorUtils.blendARGB(from, to, amount);
+        } catch (Throwable t) {
+            return from;
+        }
+    }
+
+    private int fallbackSurfaceContainer() {
+        return isNightMode()
+                ? FALLBACK_SURFACE_CONTAINER_DARK
+                : FALLBACK_SURFACE_CONTAINER_LIGHT;
+    }
+
+    private int fallbackSurface() {
+        return isNightMode()
+                ? FALLBACK_SURFACE_DARK
+                : FALLBACK_SURFACE_LIGHT;
+    }
+
+    private int fallbackOutlineVariant() {
+        return isNightMode()
+                ? FALLBACK_OUTLINE_VARIANT_DARK
+                : FALLBACK_OUTLINE_VARIANT_LIGHT;
+    }
+
+    private boolean isNightMode() {
+        try {
+            int flags = view.getResources().getConfiguration().uiMode
+                    & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+            return flags == android.content.res.Configuration.UI_MODE_NIGHT_YES;
+        } catch (Throwable t) {
+            return false;
+        }
+    }
+
+    private static void warnIfNotMainThread(@NonNull String methodName) {
+        try {
+            if (Looper.myLooper() != Looper.getMainLooper()) {
+                Log.w(TAG, methodName + " called off the main thread. "
+                        + "View.setBackground is a UI operation.");
+            }
+        } catch (Throwable ignored) {
+            // Logging must never break the pipeline.
+        }
+    }
+}

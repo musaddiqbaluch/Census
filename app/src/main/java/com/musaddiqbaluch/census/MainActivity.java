@@ -1,1 +1,599 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOw0KDQppbXBvcnQgYW5kcm9pZC5hbmltYXRpb24uKjsNCmltcG9ydCBhbmRyb2lkLmFwcC4qOw0KaW1wb3J0IGFuZHJvaWQuY29udGVudC4qOw0KaW1wb3J0IGFuZHJvaWQuY29udGVudC5yZXMuKjsNCmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLio7DQppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5kcmF3YWJsZS4qOw0KaW1wb3J0IGFuZHJvaWQubWVkaWEuKjsNCmltcG9ydCBhbmRyb2lkLm5ldC4qOw0KaW1wb3J0IGFuZHJvaWQub3MuKjsNCmltcG9ydCBhbmRyb2lkLnRleHQuKjsNCmltcG9ydCBhbmRyb2lkLnRleHQuc3R5bGUuKjsNCmltcG9ydCBhbmRyb2lkLnV0aWwuKjsNCmltcG9ydCBhbmRyb2lkLnZpZXcuKjsNCmltcG9ydCBhbmRyb2lkLnZpZXcuVmlldy4qOw0KaW1wb3J0IGFuZHJvaWQudmlldy5hbmltYXRpb24uKjsNCmltcG9ydCBhbmRyb2lkLndlYmtpdC4qOw0KaW1wb3J0IGFuZHJvaWQud2lkZ2V0Lio7DQppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi4qOw0KaW1wb3J0IGFuZHJvaWR4LmFwcGNvbXBhdC5hcHAuQXBwQ29tcGF0QWN0aXZpdHk7DQppbXBvcnQgYW5kcm9pZHguZnJhZ21lbnQuYXBwLkRpYWxvZ0ZyYWdtZW50Ow0KaW1wb3J0IGFuZHJvaWR4LmZyYWdtZW50LmFwcC5GcmFnbWVudDsNCmltcG9ydCBhbmRyb2lkeC5mcmFnbWVudC5hcHAuRnJhZ21lbnRNYW5hZ2VyOw0KaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy4qOw0KaW1wb3J0IGFuZHJvaWR4LnBhbGV0dGUuKjsNCmltcG9ydCBjb20uYWlyYm5iLmxvdHRpZS4qOw0KaW1wb3J0IGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC4qOw0KaW1wb3J0IGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC50YWJzLlRhYkxheW91dDsNCmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwudGFicy5UYWJMYXlvdXQuT25UYWJTZWxlY3RlZExpc3RlbmVyOw0KaW1wb3J0IGNvbS5tYXRlcmlhbGtvbG9yLmNvbG9ydXRpbGl0aWVzLio7DQppbXBvcnQgY29tLm11c2FkZGlxYmFsdWNoLmNlbnN1cy5kYXRhYmluZGluZy4qOw0KaW1wb3J0IGphdmEuaW8uKjsNCmltcG9ydCBqYXZhLnRleHQuKjsNCmltcG9ydCBqYXZhLnV0aWwuKjsNCmltcG9ydCBqYXZhLnV0aWwucmVnZXguKjsNCmltcG9ydCBvcmcuanNvbi4qOw0KaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy5TaGFwZXNfYW5kcm9pZEt0Ow0KaW1wb3J0IGFuZHJvaWR4LmNvcmUuZ3JhcGhpY3MuQ29sb3JVdGlsczsNCmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuY29sb3IuTWF0ZXJpYWxDb2xvcnM7DQppbXBvcnQgYW5kcm9pZHguY29yZS52aWV3LkhhcHRpY0ZlZWRiYWNrQ29uc3RhbnRzQ29tcGF0Ow0NCg0KcHVibGljIGNsYXNzIE1haW5BY3Rpdml0eSBleHRlbmRzIEFwcENvbXBhdEFjdGl2aXR5IHsNCgkNCglwcml2YXRlIE1haW5CaW5kaW5nIGJpbmRpbmc7DQoJcHJpdmF0ZSBJbnN0YWxsZWRBcHBUcmFja2VyIGluc3RhbGxlZEFwcFRyYWNrZXI7DQoJcHJpdmF0ZSBBcHBDb3VudFRleHRBbmltYXRvciBhcHBDb3VudEFuaW1hdG9yOw0KCXByaXZhdGUgYm9vbGVhbiBhY3Rpdml0eVJlc3VtZWQ7DQoJcHJpdmF0ZSBJbnN0YWxsZXJUYWJDb250cm9sbGVyIGluc3RhbGxlclRhYkNvbnRyb2xsZXI7DQoJcHJpdmF0ZSBIYXB0aWNGZWVkYmFja01hbmFnZXIgaGFwdGljTWFuYWdlcjsNCglwcml2YXRlIE1hdGVyaWFsVG9vbGJhclNjcm9sbEhlbHBlciB0b29sYmFyU2Nyb2xsSGVscGVyOw0KCXByaXZhdGUgTWF0ZXJpYWxEaXN0cmlidXRpb25CYXIgbWF0ZXJpYWxEaXN0cmlidXRpb25CYXI7DQoJcHJpdmF0ZSBSb3VuZGVkU2hhcGVEcmF3YWJsZSBib2R5T3V0bGluZURyYXdhYmxlOw0KCXByaXZhdGUgUm91bmRlZFNoYXBlRHJhd2FibGUgYm9yZGVyRHJhd2FibGUxOw0KCXByaXZhdGUgUm91bmRlZFNoYXBlRHJhd2FibGUgYm9yZGVyRHJhd2FibGUyOw0KCXByaXZhdGUgVXBkYXRlTWFuYWdlci5IYW5kbGUgdXBkYXRlSGFuZGxlOw0KCQ0KCUBPdmVycmlkZQ0KCXByb3RlY3RlZCB2b2lkIG9uQ3JlYXRlKEJ1bmRsZSBfc2F2ZWRJbnN0YW5jZVN0YXRlKSB7DQoJCXN1cGVyLm9uQ3JlYXRlKF9zYXZlZEluc3RhbmNlU3RhdGUpOw0KCQliaW5kaW5nID0gTWFpbkJpbmRpbmcuaW5mbGF0ZShnZXRMYXlvdXRJbmZsYXRlcigpKTsNCgkJc2V0Q29udGVudFZpZXcoYmluZGluZy5nZXRSb290KCkpOw0KCQlpbml0aWFsaXplKF9zYXZlZEluc3RhbmNlU3RhdGUpOw0KCQlpbml0aWFsaXplTG9naWMoKTsNCgl9DQoJDQoJcHJpdmF0ZSB2b2lkIGluaXRpYWxpemUoQnVuZGxlIF9zYXZlZEluc3RhbmNlU3RhdGUpIHsNCgkJCgkJCgkJLy8gU2tpcCB0aGUgcmlwcGxlIHdoZW4gdGhlIEFjdGl2aXR5IGlzIGJlaW5nIHJlY3JlYXRlZAoJCS8vICh0aGVtZSBzd2l0Y2gsIHJvdGF0aW9uLCBwcm9jZXNzIHJlc3RvcmUpLiBGcmVzaCBsYXVuY2hlcwoJCS8vIGhhdmUgc2F2ZWRJbnN0YW5jZVN0YXRlID09IG51bGwgYW5kIERPIHBsYXkgaXQuCgkJaWYgKF9zYXZlZEluc3RhbmNlU3RhdGUgPT0gbnVsbCkgewoJCQlmaW5hbCBWaWV3IHJpcHBsZVJvb3QgPSBnZXRXaW5kb3coKS5nZXREZWNvclZpZXcoKTsKCQkJcmlwcGxlUm9vdC5wb3N0KG5ldyBSdW5uYWJsZSgpIHsKCQkJCUBPdmVycmlkZSBwdWJsaWMgdm9pZCBydW4oKSB7CgkJCQkJaWYgKHJpcHBsZVJvb3QuaXNBdHRhY2hlZFRvV2luZG93KCkKCQkJCQkmJiByaXBwbGVSb290LmlzTGFpZE91dCgpKSB7CgkJCQkJCW5ldyBMaXF1aWRSaXBwbGVFZmZlY3QocmlwcGxlUm9vdCkucGxheSgpOwoJCQkJCX0KCQkJCX0KCQkJfSk7CgkJfQoJCQoJCS8vIC4uLiBhbGwgeW91ciBleGlzdGluZyBzZXR1cCAuLi4NCgl9DQoJDQoJcHJpdmF0ZSB2b2lkIGluaXRpYWxpemVMb2dpYygpIHsNCgkJLy8gMS4gQXBwIHRyYWNrZXIKCQlpbnN0YWxsZWRBcHBUcmFja2VyID0KCQluZXcgSW5zdGFsbGVkQXBwVHJhY2tlcigKCQl0aGlzLAoJCWZhbHNlCgkJKTsKCQkKCQkvLyAyLiBBcHBDb3VudFRleHRBbmltYXRvciAobnVtZXJpYyB2YWx1ZSBvbmx5LCBuZXZlciBjb2xvcikKCQlhcHBDb3VudEFuaW1hdG9yID0KCQluZXcgQXBwQ291bnRUZXh0QW5pbWF0b3IoCgkJYmluZGluZy5hcHBDb3VudFRleHQKCQkpOwoJCQoJCS8vIDMuIE1hdGVyaWFsRGlzdHJpYnV0aW9uQmFyIChvd25zIGV2ZXJ5IGFydHdvcmstZHJpdmVuIGNvbG9yKS4KCQkvLyAgICBUaGUgdGhpcmQgYXJndW1lbnQgaXMgUkVRVUlSRUQuCgkJbWF0ZXJpYWxEaXN0cmlidXRpb25CYXIgPQoJCW5ldyBNYXRlcmlhbERpc3RyaWJ1dGlvbkJhcigKCQliaW5kaW5nLmRpc3RyaWJ1dGlvbkJhciwKCQliaW5kaW5nLmFwcENvdW50VGV4dExheW91dCwKCQliaW5kaW5nLmFwcENvdW50VGV4dAoJCSk7CgkJCgkJLy8gNC4gUm91bmRlZFNoYXBlRHJhd2FibGVzIGJlaGluZCB0aGUgYXJ0d29yayBwaXBlbGluZQoJCVJvdW5kZWRTaGFwZURyYXdhYmxlIGJvZHlPdXRsaW5lRHJhd2FibGUgPQoJCW5ldyBSb3VuZGVkU2hhcGVEcmF3YWJsZShiaW5kaW5nLmJvZHlPdXRsaW5lKQoJCS5yYWRpdXMoMjgpCgkJLmJhY2tncm91bmRBdHRyKAoJCWNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIKCQkuY29sb3JTdXJmYWNlQ29udGFpbmVyTG93CgkJKQoJCS5zdHJva2UoMSwgMC40MGYpCgkJLmFwcGx5VG9WaWV3KCk7CgkJCgkJUm91bmRlZFNoYXBlRHJhd2FibGUgYm9yZGVyRHJhd2FibGUxID0KCQluZXcgUm91bmRlZFNoYXBlRHJhd2FibGUoYmluZGluZy5ib3JkZXJMYXlvdXQpCgkJLnJhZGl1cygyOCkKCQkuYmFja2dyb3VuZEZyb20oCgkJY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0cgoJCS5jb2xvck91dGxpbmVWYXJpYW50LAoJCWNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIKCQkuY29sb3JTdXJmYWNlQ29udGFpbmVyLAoJCTAuODVmCgkJKQoJCS5hcHBseVRvVmlldygpOwoJCQoJCVJvdW5kZWRTaGFwZURyYXdhYmxlIGJvcmRlckRyYXdhYmxlMiA9CgkJbmV3IFJvdW5kZWRTaGFwZURyYXdhYmxlKGJpbmRpbmcuYm9yZGVyTGF5b3V0MikKCQkucmFkaXVzKDI4KQoJCS5iYWNrZ3JvdW5kRnJvbSgKCQljb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuUi5hdHRyCgkJLmNvbG9yT3V0bGluZVZhcmlhbnQsCgkJY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0cgoJCS5jb2xvclN1cmZhY2VDb250YWluZXIsCgkJMC44NWYKCQkpCgkJLmFwcGx5VG9WaWV3KCk7CgkJCgkJbWF0ZXJpYWxEaXN0cmlidXRpb25CYXIuYXR0YWNoQm9keU91dGxpbmUoYm9keU91dGxpbmVEcmF3YWJsZSk7CgkJbWF0ZXJpYWxEaXN0cmlidXRpb25CYXIuYXR0YWNoQm9yZGVyRHJhd2FibGUoYm9yZGVyRHJhd2FibGUxKTsKCQltYXRlcmlhbERpc3RyaWJ1dGlvbkJhci5hdHRhY2hCb3JkZXJEcmF3YWJsZShib3JkZXJEcmF3YWJsZTIpOwoJCQoJCS8vIDUuIGFwcENvdW50TGF5b3V0IHBpbGwgKyBpbWFnZXZpZXcxIHRpbnQgKGZpcnN0LWZyYW1lIHNlZWQgY29sb3IpCgkJaW50IHByaW1hcnlDb250YWluZXIgPQoJCU1hdGVyaWFsQ29sb3JzLmdldENvbG9yKAoJCWJpbmRpbmcuYXBwQ291bnRMYXlvdXQsCgkJY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci5jb2xvclByaW1hcnlDb250YWluZXIKCQkpOwoJCQoJCWludCBzdXJmYWNlQ29udGFpbmVyID0KCQlNYXRlcmlhbENvbG9ycy5nZXRDb2xvcigKCQliaW5kaW5nLmFwcENvdW50TGF5b3V0LAoJCWNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIuY29sb3JTdXJmYWNlQ29udGFpbmVyCgkJKTsKCQkKCQlpbnQgcGlsbEJsZW5kID0KCQlDb2xvclV0aWxzLmJsZW5kQVJHQigKCQlwcmltYXJ5Q29udGFpbmVyLAoJCXN1cmZhY2VDb250YWluZXIsCgkJMC41NWYKCQkpOwoJCQoJCWludCBib2R5QmFja2dyb3VuZCA9CgkJTWF0ZXJpYWxDb2xvcnMuZ2V0Q29sb3IoCgkJYmluZGluZy5hcHBDb3VudExheW91dCwKCQljb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuUi5hdHRyLmNvbG9yU3VyZmFjZUNvbnRhaW5lckxvdwoJCSk7CgkJCgkJYm9vbGVhbiBpc0xpZ2h0ID0KCQlNYXRlcmlhbENvbG9ycy5nZXRDb2xvcigKCQliaW5kaW5nLmFwcENvdW50TGF5b3V0LAoJCWNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIuY29sb3JTdXJmYWNlCgkJKSA+IDB4RkY3RjdGN0Y7CgkJCgkJZmxvYXQgYW1vdW50ID0KCQlpc0xpZ2h0ID8gMC4yNWYgOiAwLjA2ZjsKCQkKCQlpbnQgcGlsbENvbG9yID0KCQlDb2xvclV0aWxzLmJsZW5kQVJHQigKCQlib2R5QmFja2dyb3VuZCwKCQlwaWxsQmxlbmQsCgkJMS4wZiAtIGFtb3VudAoJCSk7CgkJCgkJUm91bmRlZFNoYXBlRHJhd2FibGUgYXBwQ291bnRQaWxsID0KCQluZXcgUm91bmRlZFNoYXBlRHJhd2FibGUoYmluZGluZy5hcHBDb3VudExheW91dCkKCQkuZnVsbCgpCgkJLmJhY2tncm91bmRDb2xvcihwaWxsQ29sb3IpCgkJLmFwcGx5VG9WaWV3KCk7CgkJCgkJbWF0ZXJpYWxEaXN0cmlidXRpb25CYXIuYXR0YWNoQXBwQ291bnRQaWxsKAoJCWFwcENvdW50UGlsbCwKCQliaW5kaW5nLmltYWdldmlldzEKCQkpOwoJCQoJCS8vIDYuIGxhYmVsTGF5b3V0IGNoaXAgKyBpbWFnZXZpZXcyICsgbGFiZWxUZXh0IChmaXJzdC1mcmFtZSBzZWVkIGNvbG9ycykKCQlpbnQgbGFiZWxGaWxsID0KCQlNYXRlcmlhbENvbG9ycy5nZXRDb2xvcigKCQliaW5kaW5nLmxhYmVsTGF5b3V0LAoJCWNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIuY29sb3JTZWNvbmRhcnlDb250YWluZXIKCQkpOwoJCQoJCWludCBsYWJlbE91dGxpbmUgPQoJCU1hdGVyaWFsQ29sb3JzLmdldENvbG9yKAoJCWJpbmRpbmcubGFiZWxMYXlvdXQsCgkJY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci5jb2xvck91dGxpbmUKCQkpOwoJCQoJCWludCBsYWJlbFN0cm9rZSA9CgkJQ29sb3JVdGlscy5ibGVuZEFSR0IoCgkJbGFiZWxGaWxsLAoJCWxhYmVsT3V0bGluZSwKCQkwLjM1ZgoJCSk7CgkJCgkJUm91bmRlZFNoYXBlRHJhd2FibGUgbGFiZWxDaGlwID0KCQluZXcgUm91bmRlZFNoYXBlRHJhd2FibGUoYmluZGluZy5sYWJlbExheW91dCkKCQkucmFkaXVzKDEyKQoJCS5iYWNrZ3JvdW5kQ29sb3IobGFiZWxGaWxsKQoJCS5zdHJva2VDb2xvcigxLCBsYWJlbFN0cm9rZSkKCQkuYXBwbHlUb1ZpZXcoKTsKCQkKCQltYXRlcmlhbERpc3RyaWJ1dGlvbkJhci5hdHRhY2hMYWJlbExheW91dCgKCQlsYWJlbENoaXAsCgkJYmluZGluZy5pbWFnZXZpZXcyLAoJCWJpbmRpbmcubGFiZWxUZXh0CgkJKTsKCQkKCQkvLyA3LiBFbW8gRHJvaWQgTG90dGllIG1hc2NvdAoJCW1hdGVyaWFsRGlzdHJpYnV0aW9uQmFyLmF0dGFjaEVtb0Ryb2lkKAoJCWJpbmRpbmcuZW1vRHJvaWQKCQkpOwoJCQoJCS8vIDdiLiBDb29raWUgcmlwcGxlIHJpbmdzIGJlaGluZCBhcHBDb3VudFRleHRMYXlvdXQuCgkJLy8gICAgIEluZGV4IDAgcHV0cyB0aGUgcmluZ3MgYmVoaW5kIHRoZSBjb29raWU7IHRoZWlyIGNvbG9yIGZvbGxvd3MKCQkvLyAgICAgdGhlIGluZGljYXRvciBjb2xvciBvd25lZCBieSBNYXRlcmlhbERpc3RyaWJ1dGlvbkJhci4KCQlDb29raWVSaXBwbGVWaWV3IGNvb2tpZVJpcHBsZSA9IG5ldyBDb29raWVSaXBwbGVWaWV3KHRoaXMpOwoJCWJpbmRpbmcucmFkZXJFZmZlY3RMYXlvdXQuYWRkVmlldygKCQljb29raWVSaXBwbGUsCgkJMCwKCQluZXcgYW5kcm9pZC53aWRnZXQuRnJhbWVMYXlvdXQuTGF5b3V0UGFyYW1zKAoJCWFuZHJvaWQudmlldy5WaWV3R3JvdXAuTGF5b3V0UGFyYW1zLk1BVENIX1BBUkVOVCwKCQlhbmRyb2lkLnZpZXcuVmlld0dyb3VwLkxheW91dFBhcmFtcy5NQVRDSF9QQVJFTlQKCQkpCgkJKTsKCQltYXRlcmlhbERpc3RyaWJ1dGlvbkJhci5hdHRhY2hSaXBwbGVWaWV3KGNvb2tpZVJpcHBsZSk7CgkJCgkJLy8gOC4gSW5zdGFsbGVyVGFiQ29udHJvbGxlciAoYnVpbHQgTEFTVCBzbyBldmVyeSBhdHRhY2gqKCkgaXMgcmVnaXN0ZXJlZCkKCQlpbnN0YWxsZXJUYWJDb250cm9sbGVyID0KCQluZXcgSW5zdGFsbGVyVGFiQ29udHJvbGxlcigKCQl0aGlzLAoJCWJpbmRpbmcuaW5zdGFsbGVyVGFicywKCQlhcHBDb3VudEFuaW1hdG9yLAoJCW1hdGVyaWFsRGlzdHJpYnV0aW9uQmFyCgkJKTsNCgkJX3NldEZvbnQoKTsNCgkJX3RoZUhlbHBlcigpOw0KCQlfbWF0ZXJpYWxUaGVtZSgpOw0KCQl1cGRhdGVIYW5kbGUgPSBVcGRhdGVNYW5hZ2VyLnNjaGVkdWxlQXV0b0NoZWNrKHRoaXMpOw0KCX0NCgkNCgkNCglAT3ZlcnJpZGUNCglwdWJsaWMgdm9pZCBvblJlc3VtZSgpIHsNCgkJc3VwZXIub25SZXN1bWUoKTsNCgkJYWN0aXZpdHlSZXN1bWVkID0gdHJ1ZTsKCQkKCQlpZiAoaW5zdGFsbGVkQXBwVHJhY2tlciA9PSBudWxsIHx8CgkJYXBwQ291bnRBbmltYXRvciA9PSBudWxsIHx8CgkJaW5zdGFsbGVyVGFiQ29udHJvbGxlciA9PSBudWxsKSB7CgkJCXJldHVybjsKCQl9CgkJCgkJaW5zdGFsbGVkQXBwVHJhY2tlci5jaGVja0ZvckNoYW5nZXMoCgkJbmV3IEluc3RhbGxlZEFwcFRyYWNrZXIuQ2FsbGJhY2soKSB7CgkJCQoJCQlAT3ZlcnJpZGUKCQkJcHVibGljIHZvaWQgb25SZXN1bHQoCgkJCUluc3RhbGxlZEFwcFRyYWNrZXIuUmVzdWx0IHJlc3VsdCkgewoJCQkJCgkJCQlpZiAoIWFjdGl2aXR5UmVzdW1lZCkgewoJCQkJCXJldHVybjsKCQkJCX0KCQkJCQoJCQkJaWYgKHJlc3VsdCA9PSBudWxsIHx8CgkJCQkhcmVzdWx0LmlzU3VjY2VzcygpKSB7CgkJCQkJcmV0dXJuOwoJCQkJfQoJCQkJCgkJCQlpbnN0YWxsZXJUYWJDb250cm9sbGVyLnVwZGF0ZSgKCQkJCXJlc3VsdC5nZXRDb3VudCgpLAoJCQkJcmVzdWx0LmdldEluc3RhbGxlckluZm9zKCksCgkJCQlyZXN1bHQuaXNGaXJzdFJ1bigpCgkJCQkpOwoJCQkJCgkJCQlpZiAocmVzdWx0LmlzRmlyc3RSdW4oKSkgewoJCQkJCQoJCQkJCWluc3RhbGxlZEFwcFRyYWNrZXIKCQkJCQkubWFya0ZpcnN0QW5pbWF0aW9uU2hvd24oKTsKCQkJCX0KCQkJfQoJCX0KCQkpOw0KCX0NCgkNCglAT3ZlcnJpZGUNCglwdWJsaWMgdm9pZCBvblBhdXNlKCkgew0KCQlzdXBlci5vblBhdXNlKCk7DQoJCWFjdGl2aXR5UmVzdW1lZCA9IGZhbHNlOwoJCQoJCWlmIChhcHBDb3VudEFuaW1hdG9yICE9IG51bGwpIHsKCQkJYXBwQ291bnRBbmltYXRvci5maW5pc2goKTsKCQl9DQoJfQ0KCQ0KCUBPdmVycmlkZQ0KCXB1YmxpYyB2b2lkIG9uRGVzdHJveSgpIHsNCgkJc3VwZXIub25EZXN0cm95KCk7DQoJCQoJCWFjdGl2aXR5UmVzdW1lZCA9IGZhbHNlOwoJCQoJCS8vIDEuIEFuaW1hdG9yICsgdHJhY2tlcgoJCWlmIChhcHBDb3VudEFuaW1hdG9yICE9IG51bGwpIHsKCQkJYXBwQ291bnRBbmltYXRvci5kZXN0cm95KCk7CgkJCWFwcENvdW50QW5pbWF0b3IgPSBudWxsOwoJCX0KCQkKCQlpZiAoaW5zdGFsbGVkQXBwVHJhY2tlciAhPSBudWxsKSB7CgkJCWluc3RhbGxlZEFwcFRyYWNrZXIuc2h1dGRvd24oKTsKCQkJaW5zdGFsbGVkQXBwVHJhY2tlciA9IG51bGw7CgkJfQoJCQoJCURyb2lkUHJlc3NCb3VuY2UuZGV0YWNoKGJpbmRpbmcuZW1vRHJvaWQpOwoJCU1hdGVyaWFsU2V0dGluZ3NSaXBwbGUuZGV0YWNoKGJpbmRpbmcuc2V0dGluZ3NMYXlvdXQpOwoJCQoJCS8vIDMuIEhhcHRpYyBtYW5hZ2VyICh3YXMgbGVha2luZykKCQlpZiAoaGFwdGljTWFuYWdlciAhPSBudWxsKSB7CgkJCWhhcHRpY01hbmFnZXIuZGVzdHJveSgpOwoJCQloYXB0aWNNYW5hZ2VyID0gbnVsbDsKCQl9CgkJCgkJLy8gNC4gVG9vbGJhciBoZWxwZXIgKHdhcyBsZWFraW5nKQoJCWlmICh0b29sYmFyU2Nyb2xsSGVscGVyICE9IG51bGwpIHsKCQkJdG9vbGJhclNjcm9sbEhlbHBlci5kZXRhY2goKTsKCQkJdG9vbGJhclNjcm9sbEhlbHBlciA9IG51bGw7CgkJfQoJCQoJCS8vIDUuIFBhbmVsIGNvbnRyb2xsZXIgKGl0cyBkZXN0cm95KCkgZm9yd2FyZHMgdG8gdGhlIGJhcikKCQlpZiAoaW5zdGFsbGVyVGFiQ29udHJvbGxlciAhPSBudWxsKSB7CgkJCWluc3RhbGxlclRhYkNvbnRyb2xsZXIuZGVzdHJveSgpOwoJCQlpbnN0YWxsZXJUYWJDb250cm9sbGVyID0gbnVsbDsKCQl9CgkJCgkJaWYgKG1hdGVyaWFsRGlzdHJpYnV0aW9uQmFyICE9IG51bGwpIHsKCQkJbWF0ZXJpYWxEaXN0cmlidXRpb25CYXIuZGVzdHJveSgpOwoJCQltYXRlcmlhbERpc3RyaWJ1dGlvbkJhciA9IG51bGw7CgkJfQoJCQoJCWlmICh1cGRhdGVIYW5kbGUgIT0gbnVsbCkgewoJCQl1cGRhdGVIYW5kbGUuY2FuY2VsKCk7CgkJfQ0KCQkvKiAKICAgIAoqLw0KCX0NCgkNCglAT3ZlcnJpZGUKCXByb3RlY3RlZCB2b2lkIGF0dGFjaEJhc2VDb250ZXh0KENvbnRleHQgbmV3QmFzZSkgewoJCXRyeSB7CgkJCVNldHRpbmdzRGlhbG9nLmFwcGx5U2F2ZWRUaGVtZShuZXdCYXNlKTsKCQl9IGNhdGNoIChUaHJvd2FibGUgdCkgewoJCQlhbmRyb2lkLnV0aWwuTG9nLmUoIk1haW5BY3Rpdml0eSIsICJhdHRhY2hCYXNlQ29udGV4dCB0aGVtZSBhcHBseSBmYWlsZWQiLCB0KTsKCQl9CgkJc3VwZXIuYXR0YWNoQmFzZUNvbnRleHQobmV3QmFzZSk7Cgl9DQoJcHVibGljIHZvaWQgX21hdGVyaWFsVGhlbWUoKSB7DQoJCS8qIFRvb2xCYXIgQ29sb3IgU3dpdGNoICAqLyAKCQkKCQl0b29sYmFyU2Nyb2xsSGVscGVyID0KCQluZXcgTWF0ZXJpYWxUb29sYmFyU2Nyb2xsSGVscGVyKAoJCXRoaXMsCgkJZmluZFZpZXdCeUlkKFIuaWQudG9vbEJhciksCgkJZmluZFZpZXdCeUlkKFIuaWQuaW5zdGFsbGVyVGFicykKCQkpOwoJCQoJCXRvb2xiYXJTY3JvbGxIZWxwZXIuYXR0YWNoKCk7DQoJfQ0KCQ0KCQ0KCXB1YmxpYyB2b2lkIF90aGVIZWxwZXIoKSB7DQoJCS8qIFRvb2xCYXIgUG9zaXRpb24gKi8gCgkJCgkJYW5kcm9pZHguY29yZS52aWV3LlZpZXdDb21wYXQuc2V0T25BcHBseVdpbmRvd0luc2V0c0xpc3RlbmVyKAoJCWJpbmRpbmcudG9vbEJhciwKCQluZXcgYW5kcm9pZHguY29yZS52aWV3Lk9uQXBwbHlXaW5kb3dJbnNldHNMaXN0ZW5lcigpIHsKCQkJQE92ZXJyaWRlCgkJCXB1YmxpYyBhbmRyb2lkeC5jb3JlLnZpZXcuV2luZG93SW5zZXRzQ29tcGF0IG9uQXBwbHlXaW5kb3dJbnNldHMoCgkJCVZpZXcgdiwKCQkJYW5kcm9pZHguY29yZS52aWV3LldpbmRvd0luc2V0c0NvbXBhdCBpbnNldHMpIHsKCQkJCQoJCQkJYW5kcm9pZHguY29yZS5ncmFwaGljcy5JbnNldHMgc3RhdHVzQmFycyA9CgkJCQlpbnNldHMuZ2V0SW5zZXRzKAoJCQkJYW5kcm9pZHguY29yZS52aWV3LldpbmRvd0luc2V0c0NvbXBhdC5UeXBlLnN0YXR1c0JhcnMoKQoJCQkJKTsKCQkJCQoJCQkJdi5zZXRQYWRkaW5nKAoJCQkJdi5nZXRQYWRkaW5nTGVmdCgpLAoJCQkJc3RhdHVzQmFycy50b3AsCgkJCQl2LmdldFBhZGRpbmdSaWdodCgpLAoJCQkJdi5nZXRQYWRkaW5nQm90dG9tKCkKCQkJCSk7CgkJCQkKCQkJCXJldHVybiBpbnNldHM7CgkJCX0KCQl9CgkJKTsKCQkKCQlhbmRyb2lkeC5jb3JlLnZpZXcuVmlld0NvbXBhdC5yZXF1ZXN0QXBwbHlJbnNldHMoYmluZGluZy50b29sQmFyKTsNCgkJLyogRW1vIERyb2lkIEJvdW5jZSAqLyAKCQkKCQlEcm9pZFByZXNzQm91bmNlLmF0dGFjaCgKCQlmaW5kVmlld0J5SWQoUi5pZC5lbW9fZHJvaWQpCgkJKTsKCQkKCQkNCgkJLyogSGFwdGljIEZlZWRiYWNrICAqLyAKCQkKCQkvKiBIYXB0aWMgRmVlZGJhY2sgICovIAoJCQoJCWhhcHRpY01hbmFnZXIgPQoJCW5ldyBIYXB0aWNGZWVkYmFja01hbmFnZXIodGhpcyk7CgkJCgkJZmluZFZpZXdCeUlkKFIuaWQuZW1vX2Ryb2lkKS5zZXRPbkNsaWNrTGlzdGVuZXIoCgkJbmV3IFZpZXcuT25DbGlja0xpc3RlbmVyKCkgewoJCQlAT3ZlcnJpZGUKCQkJcHVibGljIHZvaWQgb25DbGljayhWaWV3IHYpIHsKCQkJCWhhcHRpY01hbmFnZXIuY3ljbGVOZXh0TGV2ZWwoKTsKCQkJCWhhcHRpY01hbmFnZXIucGVyZm9ybUZlZWRiYWNrKHYpOwoJCQkJaGFwdGljTWFuYWdlci5zaG93U3RhdHVzU25hY2tiYXIoCgkJCQlmaW5kVmlld0J5SWQoYW5kcm9pZC5SLmlkLmNvbnRlbnQpCgkJCQkpOwoJCQl9CgkJfQoJCSk7DQoJCS8qIFNldHRpbmdzIFJpcHBsZSAqLyAKCQkKCQlNYXRlcmlhbFNldHRpbmdzUmlwcGxlLmF0dGFjaCgKCQlmaW5kVmlld0J5SWQoUi5pZC5zZXR0aW5nc0xheW91dCksCgkJZmluZFZpZXdCeUlkKFIuaWQuaW5zdGFsbGVyVGFicykKCQkpOw0KCQkvKiBTZXR0aW5ncyBPbkNsaWNrICovIAoJCQoJCWZpbmRWaWV3QnlJZChSLmlkLnNldHRpbmdzTGF5b3V0KS5zZXRPbkNsaWNrTGlzdGVuZXIoCgkJbmV3IFZpZXcuT25DbGlja0xpc3RlbmVyKCkgewoJCQlAT3ZlcnJpZGUKCQkJcHVibGljIHZvaWQgb25DbGljayhWaWV3IHYpIHsKCQkJCVNldHRpbmdzRGlhbG9nLnNob3coTWFpbkFjdGl2aXR5LnRoaXMpOwoJCQl9CgkJfQoJCSk7DQoJCS8qIFVwZGF0ZSBEaWFsb2cgKi8gCgkJCgkJDQoJfQ0KCQ0KCQ0KCXB1YmxpYyB2b2lkIF9zZXRGb250KCkgew0KCQkvKiBGb250cyAqLyAKCQkKCQlTeXN0ZW1Gb250LmJvbGQoYmluZGluZy50aXRsZVRleHQpOw0KCQlTeXN0ZW1Gb250LmJsYWNrKGJpbmRpbmcuYXBwQ291bnRUZXh0KTsNCgkJU3lzdGVtRm9udC5yZWd1bGFyKGJpbmRpbmcubGFiZWxUZXh0KTsNCgl9DQoJDQp9DQ==
+package com.musaddiqbaluch.census;
+
+import android.animation.*;
+import android.app.*;
+import android.content.*;
+import android.content.res.*;
+import android.graphics.*;
+import android.graphics.drawable.*;
+import android.media.*;
+import android.net.*;
+import android.os.*;
+import android.text.*;
+import android.text.style.*;
+import android.util.*;
+import android.view.*;
+import android.view.View.*;
+import android.view.animation.*;
+import android.webkit.*;
+import android.widget.*;
+import androidx.annotation.*;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.graphics.shapes.*;
+import androidx.palette.*;
+import com.airbnb.lottie.*;
+import com.google.android.material.*;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
+import com.materialkolor.colorutilities.*;
+import com.musaddiqbaluch.census.databinding.*;
+import java.io.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+import org.json.*;
+import androidx.graphics.shapes.Shapes_androidKt;
+import androidx.core.graphics.ColorUtils;
+import com.google.android.material.color.MaterialColors;
+import androidx.core.view.HapticFeedbackConstantsCompat;
+import android.util.Log;
+
+public class MainActivity extends AppCompatActivity {
+	
+	private MainBinding binding;
+	private InstalledAppTracker installedAppTracker;
+	private AppCountTextAnimator appCountAnimator;
+	private boolean activityResumed;
+	private InstallerTabController installerTabController;
+	private HapticFeedbackManager hapticManager;
+	private MaterialToolbarScrollHelper toolbarScrollHelper;
+	private MaterialDistributionBar materialDistributionBar;
+	private RoundedShapeDrawable bodyOutlineDrawable;
+	private RoundedShapeDrawable borderDrawable1;
+	private RoundedShapeDrawable borderDrawable2;
+	private UpdateManager.Handle updateHandle;
+	private static final String DESTROY_TAG = "MainDestroy";
+	private FloatingCirclesDrawable circlesBg;
+	private GlassBackdropDrawable glassBg;
+	private GlassBackdropDrawable glassLabel;
+	private GlassBackdropDrawable glassAppCount;
+	
+	@Override
+	protected void onCreate(Bundle _savedInstanceState) {
+		super.onCreate(_savedInstanceState);
+		binding = MainBinding.inflate(getLayoutInflater());
+		setContentView(binding.getRoot());
+		initialize(_savedInstanceState);
+		initializeLogic();
+	}
+	
+	private void initialize(Bundle _savedInstanceState) {
+		
+		
+		// Skip the ripple when the Activity is being recreated
+		// (theme switch, rotation, process restore). Fresh launches
+		// have savedInstanceState == null and DO play it.
+		if (_savedInstanceState == null) {
+			final View rippleRoot = getWindow().getDecorView();
+			rippleRoot.post(new Runnable() {
+				@Override public void run() {
+					if (rippleRoot.isAttachedToWindow()
+					&& rippleRoot.isLaidOut()) {
+						new LiquidRippleEffect(rippleRoot).play();
+					}
+				}
+			});
+		}
+		
+		// ... all your existing setup ...
+	}
+	
+	private void initializeLogic() {
+		// 1. App tracker
+		installedAppTracker =
+		new InstalledAppTracker(
+		this,
+		false
+		);
+		
+		// 2. AppCountTextAnimator (numeric value only, never color)
+		appCountAnimator =
+		new AppCountTextAnimator(
+		binding.appCountText
+		);
+		
+		// 3. MaterialDistributionBar (owns every artwork-driven color).
+		//    The third argument is REQUIRED.
+		materialDistributionBar =
+		new MaterialDistributionBar(
+		binding.distributionBar,
+		binding.appCountTextLayout,
+		binding.appCountText
+		);
+		
+		// 4. RoundedShapeDrawables behind the artwork pipeline
+		RoundedShapeDrawable bodyOutlineDrawable =
+		new RoundedShapeDrawable(binding.bodyOutline)
+		.radius(28)
+		.backgroundAttr(
+		com.google.android.material.R.attr
+		.colorSurfaceContainerLow
+		)
+		.stroke(1, 0.40f)
+		.applyToView();
+		
+		RoundedShapeDrawable borderDrawable1 =
+		new RoundedShapeDrawable(binding.borderLayout)
+		.radius(28)
+		.backgroundFrom(
+		com.google.android.material.R.attr
+		.colorOutlineVariant,
+		com.google.android.material.R.attr
+		.colorSurfaceContainer,
+		0.85f
+		)
+		.applyToView();
+		
+		RoundedShapeDrawable borderDrawable2 =
+		new RoundedShapeDrawable(binding.borderLayout2)
+		.radius(28)
+		.backgroundFrom(
+		com.google.android.material.R.attr
+		.colorOutlineVariant,
+		com.google.android.material.R.attr
+		.colorSurfaceContainer,
+		0.85f
+		)
+		.applyToView();
+		
+		materialDistributionBar.attachBodyOutline(bodyOutlineDrawable);
+		materialDistributionBar.attachBorderDrawable(borderDrawable1);
+		materialDistributionBar.attachBorderDrawable(borderDrawable2);
+		
+		// 5. appCountLayout pill + imageview1 tint (first-frame seed color)
+		int primaryContainer =
+		MaterialColors.getColor(
+		binding.appCountLayout,
+		com.google.android.material.R.attr.colorPrimaryContainer
+		);
+		
+		int surfaceContainer =
+		MaterialColors.getColor(
+		binding.appCountLayout,
+		com.google.android.material.R.attr.colorSurfaceContainer
+		);
+		
+		int pillBlend =
+		ColorUtils.blendARGB(
+		primaryContainer,
+		surfaceContainer,
+		0.55f
+		);
+		
+		int bodyBackground =
+		MaterialColors.getColor(
+		binding.appCountLayout,
+		com.google.android.material.R.attr.colorSurfaceContainerLow
+		);
+		
+		boolean isLight =
+		MaterialColors.getColor(
+		binding.appCountLayout,
+		com.google.android.material.R.attr.colorSurface
+		) > 0xFF7F7F7F;
+		
+		float amount =
+		isLight ? 0.25f : 0.06f;
+		
+		int pillColor =
+		ColorUtils.blendARGB(
+		bodyBackground,
+		pillBlend,
+		1.0f - amount
+		);
+		
+		RoundedShapeDrawable appCountPill =
+		new RoundedShapeDrawable(binding.appCountLayout)
+		.full()
+		.backgroundColor(pillColor)
+		.applyToView();
+		
+		materialDistributionBar.attachAppCountPill(
+		appCountPill,
+		binding.imageview1
+		);
+		
+		// 6. labelLayout chip + imageview2 + labelText (first-frame seed colors)
+		int labelFill =
+		MaterialColors.getColor(
+		binding.labelLayout,
+		com.google.android.material.R.attr.colorSecondaryContainer
+		);
+		
+		int labelOutline =
+		MaterialColors.getColor(
+		binding.labelLayout,
+		com.google.android.material.R.attr.colorOutline
+		);
+		
+		int labelStroke =
+		ColorUtils.blendARGB(
+		labelFill,
+		labelOutline,
+		0.35f
+		);
+		
+		RoundedShapeDrawable labelChip =
+		new RoundedShapeDrawable(binding.labelLayout)
+		.radius(12)
+		.backgroundColor(labelFill)
+		.strokeColor(1, labelStroke)
+		.applyToView();
+		
+		materialDistributionBar.attachLabelLayout(
+		labelChip,
+		binding.imageview2,
+		binding.labelText
+		);
+		
+		// 7. Emo Droid Lottie mascot
+		materialDistributionBar.attachEmoDroid(
+		binding.emoDroid
+		);
+		
+		// 7b. Cookie ripple rings behind appCountTextLayout.
+		//     Index 0 puts the rings behind the cookie; their color follows
+		//     the indicator color owned by MaterialDistributionBar.
+		CookieRippleView cookieRipple = new CookieRippleView(this);
+		binding.raderEffectLayout.addView(
+		cookieRipple,
+		0,
+		new android.widget.FrameLayout.LayoutParams(
+		android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+		android.view.ViewGroup.LayoutParams.MATCH_PARENT
+		)
+		);
+		materialDistributionBar.attachRippleView(cookieRipple);
+		
+		// 8. InstallerTabController (built LAST so every attach*() is registered)
+		installerTabController =
+		new InstallerTabController(
+		this,
+		binding.installerTabs,
+		appCountAnimator,
+		materialDistributionBar
+		);
+		_setFont();
+		_theHelper();
+		_materialTheme();
+		updateHandle = UpdateManager.scheduleAutoCheck(this);
+		circlesBg = FloatingCirclesDrawable.attachTo(binding.rootLayout);
+		glassBg = GlassBackdropDrawable.attachTo(
+		binding.bodyOutline, binding.rootLayout, 28f);
+		materialDistributionBar.setBodyFillAlpha(70);
+		
+		glassLabel = GlassBackdropDrawable.attachTo(
+		binding.labelLayout, binding.rootLayout, /* radius */ 14f);
+		materialDistributionBar.setLabelFillAlpha(/* alpha */ 70);
+		
+		glassAppCount = GlassBackdropDrawable.attachTo(
+		binding.appCountLayout, binding.rootLayout, /* radius */ 21f);
+		materialDistributionBar.setAppCountFillAlpha(/* alpha */ 50);
+		ReleaseNotesDialog.showForCurrentVersion(this);
+		
+		//ReleaseNotesDialog.show(this);
+	}
+	
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		activityResumed = true;
+		
+		if (installedAppTracker == null ||
+		appCountAnimator == null ||
+		installerTabController == null) {
+			return;
+		}
+		
+		installedAppTracker.checkForChanges(
+		new InstalledAppTracker.Callback() {
+			
+			@Override
+			public void onResult(
+			InstalledAppTracker.Result result) {
+				
+				if (!activityResumed) {
+					return;
+				}
+				
+				if (result == null ||
+				!result.isSuccess()) {
+					return;
+				}
+				
+				installerTabController.update(
+				result.getCount(),
+				result.getInstallerInfos(),
+				result.isFirstRun()
+				);
+				
+				if (result.isFirstRun()) {
+					
+					installedAppTracker
+					.markFirstAnimationShown();
+				}
+			}
+		}
+		);
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		activityResumed = false;
+		
+		if (appCountAnimator != null) {
+			appCountAnimator.finish();
+		}
+	}
+	
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		activityResumed = false;
+		
+		// 1. Animator
+		try {
+			if (appCountAnimator != null) {
+				appCountAnimator.destroy();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "appCountAnimator destroy failed", t);
+		} finally {
+			appCountAnimator = null;
+		}
+		
+		// 2. Tracker
+		try {
+			if (installedAppTracker != null) {
+				installedAppTracker.shutdown();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "installedAppTracker shutdown failed", t);
+		} finally {
+			installedAppTracker = null;
+		}
+		
+		// 3. Touch helpers
+		try {
+			DroidPressBounce.detach(binding.emoDroid);
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "DroidPressBounce detach failed", t);
+		}
+		
+		try {
+			MaterialSettingsRipple.detach(binding.settingsLayout);
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "MaterialSettingsRipple detach failed", t);
+		}
+		
+		// 4. Haptic manager
+		try {
+			if (hapticManager != null) {
+				hapticManager.destroy();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "hapticManager destroy failed", t);
+		} finally {
+			hapticManager = null;
+		}
+		
+		// 5. Toolbar helper
+		try {
+			if (toolbarScrollHelper != null) {
+				toolbarScrollHelper.detach();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "toolbarScrollHelper detach failed", t);
+		} finally {
+			toolbarScrollHelper = null;
+		}
+		
+		// 6. Panel controller (its destroy() forwards to the bar)
+		try {
+			if (installerTabController != null) {
+				installerTabController.destroy();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "installerTabController destroy failed", t);
+		} finally {
+			installerTabController = null;
+		}
+		
+		// 7. Distribution bar
+		try {
+			if (materialDistributionBar != null) {
+				materialDistributionBar.destroy();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "materialDistributionBar destroy failed", t);
+		} finally {
+			materialDistributionBar = null;
+		}
+		
+		// 8. Update check
+		try {
+			if (updateHandle != null) {
+				updateHandle.cancel();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "updateHandle cancel failed", t);
+		} finally {
+			updateHandle = null;
+		}
+		
+		// 9. Animated circles background
+		try {
+			if (circlesBg != null) {
+				circlesBg.release();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "circlesBg release failed", t);
+		} finally {
+			circlesBg = null;
+		}
+		
+		// 10. Glass backdrop layers — must be released AFTER the bar (step 7)
+		//     so no further apply*FillColor() call can touch a released layer.
+		try {
+			if (glassBg != null) {
+				glassBg.release();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "glassBg release failed", t);
+		} finally {
+			glassBg = null;
+		}
+		
+		try {
+			if (glassLabel != null) {
+				glassLabel.release();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "glassLabel release failed", t);
+		} finally {
+			glassLabel = null;
+		}
+		
+		try {
+			if (glassAppCount != null) {
+				glassAppCount.release();
+			}
+		} catch (Throwable t) {
+			Log.e(DESTROY_TAG, "glassAppCount release failed", t);
+		} finally {
+			glassAppCount = null;
+		}
+	}
+	
+	@Override
+	protected void attachBaseContext(Context newBase) {
+		try {
+			SettingsDialog.applySavedTheme(newBase);
+		} catch (Throwable t) {
+			android.util.Log.e("MainActivity", "attachBaseContext theme apply failed", t);
+		}
+		super.attachBaseContext(newBase);
+	}
+	public void _materialTheme() {
+		/* ToolBar Color Switch  */ 
+		
+		toolbarScrollHelper =
+		new MaterialToolbarScrollHelper(
+		this,
+		findViewById(R.id.toolBar),
+		findViewById(R.id.installerTabs)
+		);
+		
+		toolbarScrollHelper.attach();
+		/* titleText Color */ 
+		
+		binding.titleText.setTextColor(
+		MaterialColorsHelper.getColor(
+		this,
+		com.google.android.material.R.attr.colorOnSurface
+		)
+		);
+	}
+	
+	
+	public void _theHelper() {
+		/* ToolBar Position */ 
+		
+		androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(
+		binding.toolBar,
+		new androidx.core.view.OnApplyWindowInsetsListener() {
+			@Override
+			public androidx.core.view.WindowInsetsCompat onApplyWindowInsets(
+			View v,
+			androidx.core.view.WindowInsetsCompat insets) {
+				
+				androidx.core.graphics.Insets statusBars =
+				insets.getInsets(
+				androidx.core.view.WindowInsetsCompat.Type.statusBars()
+				);
+				
+				v.setPadding(
+				v.getPaddingLeft(),
+				statusBars.top,
+				v.getPaddingRight(),
+				v.getPaddingBottom()
+				);
+				
+				return insets;
+			}
+		}
+		);
+		
+		androidx.core.view.ViewCompat.requestApplyInsets(binding.toolBar);
+		/* Emo Droid Bounce */ 
+		
+		DroidPressBounce.attach(
+		findViewById(R.id.emo_droid)
+		);
+		
+		
+		/* Haptic Feedback  */ 
+		
+		/* Haptic Feedback  */ 
+		
+		hapticManager =
+		new HapticFeedbackManager(this);
+		
+		findViewById(R.id.emo_droid).setOnClickListener(
+		new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				hapticManager.cycleNextLevel();
+				hapticManager.performFeedback(v);
+				hapticManager.showStatusSnackbar(
+				findViewById(android.R.id.content)
+				);
+			}
+		}
+		);
+		/* Settings Ripple */ 
+		
+		MaterialSettingsRipple.attach(
+		findViewById(R.id.settingsLayout),
+		findViewById(R.id.installerTabs)
+		);
+		/* Settings OnClick */ 
+		
+		findViewById(R.id.settingsLayout).setOnClickListener(
+		new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SettingsDialog.show(MainActivity.this);
+			}
+		}
+		);
+		/* Update Dialog */ 
+		
+		
+	}
+	
+	
+	public void _setFont() {
+		/* Fonts */ 
+		
+		SystemFont.bold(binding.titleText);
+		SystemFont.black(binding.appCountText);
+		SystemFont.regular(binding.labelText);
+	}
+	
+}

@@ -1,1 +1,308 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuYW5pbWF0aW9uLlZhbHVlQW5pbWF0b3I7CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuQ29udGV4dDsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuQ2FudmFzOwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5Db2xvcjsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuUGFpbnQ7CmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLlJhZGlhbEdyYWRpZW50OwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5SZWN0OwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5TaGFkZXI7CmltcG9ydCBhbmRyb2lkLm9zLkxvb3BlcjsKaW1wb3J0IGFuZHJvaWQudXRpbC5BdHRyaWJ1dGVTZXQ7CmltcG9ydCBhbmRyb2lkLnZpZXcuVmlldzsKaW1wb3J0IGFuZHJvaWQudmlldy5hbmltYXRpb24uTGluZWFySW50ZXJwb2xhdG9yOwoKaW1wb3J0IGFuZHJvaWR4LmFubm90YXRpb24uQ29sb3JJbnQ7CmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk5vbk51bGw7CmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk51bGxhYmxlOwoKLyoqCiAqIFNvZnQgZ2xvdyArIGV4cGFuZGluZyAxMi1zaWRlZCBjb29raWUgcmluZ3MgZHJhd24gYmVoaW5kIHRoZSBjb29raWUuCiAqIFBsYWNlIGl0IGFzIHRoZSBmaXJzdCBjaGlsZCBvZiByYWRlckVmZmVjdExheW91dCAoMTYwZHApIHNvIHRoZQogKiAxMDBkcCBjb29raWUgc2l0cyBvbiB0b3Agb2YgaXQuCiAqCiAqIFJpbmcgY29sb3IgYW5kIGdsb3cgY29sb3IgYXJlIHNldCBpbmRlcGVuZGVudGx5OgogKiAgIHNldFJpbmdDb2xvcihpbnQpIC0+IHJpbmdzIChpbmRpY2F0b3IgY29sb3IpCiAqICAgc2V0R2xvd0NvbG9yKGludCkgLT4gYmFja2dyb3VuZCBnbG93ICh1c3VhbGx5IHRoZSBzYW1lIGluZGljYXRvciBjb2xvciwKICogICAgICAgICAgICAgICAgICAgICAgIGRyYXduIGFzIGEgbG93LWFscGhhIHN0YXRlIGxheWVyIHNvIGx1bWluYW5jZSBpcwogKiAgICAgICAgICAgICAgICAgICAgICAgc2V0IGJ5IGFscGhhIHJhdGhlciB0aGFuIGJ5IGEgcGVyLWh1ZSB0b25lKQogKgogKiBUaHJlYWQtc2FmZTogYm90aCBzZXR0ZXJzIG1heSBiZSBjYWxsZWQgZnJvbSBhbnkgdGhyZWFkLgogKi8KcHVibGljIGNsYXNzIENvb2tpZVJpcHBsZVZpZXcgZXh0ZW5kcyBWaWV3IHsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgUklOR19DT1VOVCA9IDM7CgogICAgLy8gQ29va2llIHNpemUgLyB0aGlzIHZpZXcncyBzaXplICgxMDBkcCAvIDE2MGRwKS4gUmluZ3Mgc3RhcnQgYXQgdGhlCiAgICAvLyBjb29raWUncyBzaXplIGFuZCBncm93IHVudGlsIHRoZXkgcmVhY2ggdGhpcyB2aWV3J3MgZWRnZS4KICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IEJBU0VfRlJBQ1RJT04gPSAxMDBmIC8gMTYwZjsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBsb25nIENZQ0xFX01TID0gMjgwMEw7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBTVFJPS0VfRFAgPSAyZjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IE1BWF9BTFBIQSA9IDAuNTVmOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgZmxvYXQgRkFERV9JTl9FTkQgPSAwLjA4ZjsKCiAgICAvLyAtLS0tIEdsb3cgLS0tLQogICAgLy8gTTMgc3RhdGUtbGF5ZXIgb3BhY2l0eTogcHJpbWFyeSBkcmF3biBvdmVyIHRoZSBzdXJmYWNlIGF0IDE2JSBhdCBpdHMKICAgIC8vIHN0cm9uZ2VzdCAodGhlIHNwZWMncyAiZHJhZ2dlZCIgbGF5ZXIpLCBicmVhdGhpbmcgZG93biB0byBhYm91dCAxMCUKICAgIC8vICh0aGUgImZvY3VzL3ByZXNzZWQiIGxheWVyKS4gQmVjYXVzZSBsaWdodG5lc3MgY29tZXMgZnJvbSB0aGUgYWxwaGEsCiAgICAvLyBldmVyeSBpbnN0YWxsZXIgY29sb3IgZ2V0cyBhIHRpbnQgb2YgdGhlIHNhbWUgc3RyZW5ndGguCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBHTE9XX0FMUEhBID0gMC4xNmY7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBHTE9XX0JSRUFUSEUgPSAwLjQwZjsKCiAgICBwcml2YXRlIGZpbmFsIENvb2tpZTEyU2lkZWREcmF3YWJsZSByaW5nID0gbmV3IENvb2tpZTEyU2lkZWREcmF3YWJsZShDb2xvci5HUkFZKTsKICAgIHByaXZhdGUgZmluYWwgUmVjdCByZXVzYWJsZUJvdW5kcyA9IG5ldyBSZWN0KCk7CgogICAgcHJpdmF0ZSBmaW5hbCBQYWludCBnbG93UGFpbnQgPSBuZXcgUGFpbnQoUGFpbnQuQU5USV9BTElBU19GTEFHKTsKCiAgICBATnVsbGFibGUgcHJpdmF0ZSBWYWx1ZUFuaW1hdG9yIGFuaW1hdG9yOwoKICAgIC8vIE9ubHkgZXZlciB0b3VjaGVkIG9uIHRoZSBtYWluIHRocmVhZCAodGhlIHBvc3RlZCBydW5uYWJsZSBhbmQgb25EcmF3CiAgICAvLyBib3RoIHJ1biBvbiBtYWluKSwgc28gbm8gc3luY2hyb25pemF0aW9uIGlzIHJlcXVpcmVkIGZvciB0aGVzZS4KICAgIHByaXZhdGUgZmxvYXQgcHJvZ3Jlc3MgPSAwZjsKICAgIHByaXZhdGUgYm9vbGVhbiByaW5nVmlzaWJsZSA9IHRydWU7CgogICAgLy8gT3BhcXVlIFJHQiBvZiB0aGUgY3VycmVudCBnbG93IGNvbG9yLgogICAgcHJpdmF0ZSBpbnQgZ2xvd1JnYiA9IENvbG9yLkdSQVk7CiAgICAvLyBUaGUgZ3JhZGllbnQgaXMgcmVidWlsdCBsYXppbHkgaW4gb25EcmF3IHdoZW4gdGhlIGNvbG9yIG9yIHNpemUgY2hhbmdlcy4KICAgIHByaXZhdGUgYm9vbGVhbiBnbG93RGlydHkgPSB0cnVlOwoKICAgIC8vIFRyYWNrcyB3aGV0aGVyIHRoaXMgdmlldyBpcyBib3RoIGF0dGFjaGVkIEFORCB2aXNpYmxlIHNvIHdlIGRvbid0CiAgICAvLyBzdGFydCB0d28gYW5pbWF0b3JzIGluIGEgcm93IHdoZW4gdGhlIGZyYW1ld29yayBjYWxscyBib3RoCiAgICAvLyBvbkF0dGFjaGVkVG9XaW5kb3coKSBhbmQgb25XaW5kb3dWaXNpYmlsaXR5Q2hhbmdlZCgpLgogICAgcHJpdmF0ZSBib29sZWFuIHNob3VsZEFuaW1hdGUgPSBmYWxzZTsKCiAgICBwdWJsaWMgQ29va2llUmlwcGxlVmlldyhDb250ZXh0IGNvbnRleHQpIHsgc3VwZXIoY29udGV4dCk7IGluaXQoKTsgfQogICAgcHVibGljIENvb2tpZVJpcHBsZVZpZXcoQ29udGV4dCBjb250ZXh0LCBATnVsbGFibGUgQXR0cmlidXRlU2V0IGF0dHJzKSB7IHN1cGVyKGNvbnRleHQsIGF0dHJzKTsgaW5pdCgpOyB9CiAgICBwdWJsaWMgQ29va2llUmlwcGxlVmlldyhDb250ZXh0IGNvbnRleHQsIEBOdWxsYWJsZSBBdHRyaWJ1dGVTZXQgYXR0cnMsIGludCBkZWZTdHlsZUF0dHIpIHsKICAgICAgICBzdXBlcihjb250ZXh0LCBhdHRycywgZGVmU3R5bGVBdHRyKTsgaW5pdCgpOwogICAgfQoKICAgIHByaXZhdGUgdm9pZCBpbml0KCkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGZsb2F0IGRlbnNpdHkgPSBnZXRSZXNvdXJjZXMoKS5nZXREaXNwbGF5TWV0cmljcygpLmRlbnNpdHk7CiAgICAgICAgICAgIHJpbmcuc2V0U3Ryb2tlV2lkdGgoU1RST0tFX0RQICogZGVuc2l0eSk7CiAgICAgICAgICAgIHJpbmcuc2V0QWxwaGEoMCk7CiAgICAgICAgICAgIGdsb3dQYWludC5zZXRTdHlsZShQYWludC5TdHlsZS5GSUxMKTsKICAgICAgICAgICAgc2V0V2lsbE5vdERyYXcoZmFsc2UpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7CiAgICAgICAgICAgIC8vIE5ldmVyIGxldCBjb25zdHJ1Y3Rpb24gdGhyb3cgLS0gYSBicm9rZW4gcmluZyBpcyB3b3JzZSB0aGFuIG5vIHJpbmcuCiAgICAgICAgfQogICAgfQoKICAgIC8qKgogICAgICogU2V0cyB0aGUgcmluZyBjb2xvci4gQ2FsbGVkIGJ5IE1hdGVyaWFsRGlzdHJpYnV0aW9uQmFyIG9uIGV2ZXJ5CiAgICAgKiBjb2xvci1jcm9zc2ZhZGUgZnJhbWUuIFNhZmUgdG8gY2FsbCBmcm9tIGFueSB0aHJlYWQuCiAgICAgKiBBIGZ1bGx5IHRyYW5zcGFyZW50IGNvbG9yIGhpZGVzIHJpbmdzIGFuZCBnbG93ICh1c2VkIHdoaWxlIHRoZQogICAgICogaW5zdGFsbGVyIGNvbG9yIGlzIHN0aWxsIGJlaW5nIHJlc29sdmVkKS4KICAgICAqLwogICAgcHVibGljIHZvaWQgc2V0UmluZ0NvbG9yKEBDb2xvckludCBmaW5hbCBpbnQgY29sb3IpIHsKICAgICAgICBmaW5hbCBSdW5uYWJsZSBhcHBseSA9ICgpIC0+IHsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGlmIChDb2xvci5hbHBoYShjb2xvcikgPT0gMCkgewogICAgICAgICAgICAgICAgICAgIHJpbmdWaXNpYmxlID0gZmFsc2U7CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIHJpbmdWaXNpYmxlID0gdHJ1ZTsKICAgICAgICAgICAgICAgICAgICAvLyBGb3JjZSBmdWxseS1vcGFxdWUgZmlsbDsgYWxwaGEgaXMgY29udHJvbGxlZCBwZXItcmluZyBpbiBvbkRyYXcuCiAgICAgICAgICAgICAgICAgICAgcmluZy5zZXRGaWxsQ29sb3IoY29sb3IgfCAweEZGMDAwMDAwKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHBvc3RJbnZhbGlkYXRlT25BbmltYXRpb24oKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIGlnbm9yZWQpIHsgfQogICAgICAgIH07CgogICAgICAgIGlmIChMb29wZXIubXlMb29wZXIoKSA9PSBMb29wZXIuZ2V0TWFpbkxvb3BlcigpKSB7CiAgICAgICAgICAgIGFwcGx5LnJ1bigpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIHBvc3QoYXBwbHkpOwogICAgICAgIH0KICAgIH0KCiAgICAvKioKICAgICAqIFNldHMgdGhlIGdsb3cgY29sb3IgaW5kZXBlbmRlbnRseSBvZiB0aGUgcmluZ3MuCiAgICAgKiBTYWZlIHRvIGNhbGwgZnJvbSBhbnkgdGhyZWFkLgogICAgICovCiAgICBwdWJsaWMgdm9pZCBzZXRHbG93Q29sb3IoQENvbG9ySW50IGZpbmFsIGludCBjb2xvcikgewogICAgICAgIGZpbmFsIFJ1bm5hYmxlIGFwcGx5ID0gKCkgLT4gewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgZ2xvd1JnYiA9IGNvbG9yICYgMHgwMEZGRkZGRjsKICAgICAgICAgICAgICAgIGdsb3dEaXJ0eSA9IHRydWU7CiAgICAgICAgICAgICAgICBwb3N0SW52YWxpZGF0ZU9uQW5pbWF0aW9uKCk7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7IH0KICAgICAgICB9OwoKICAgICAgICBpZiAoTG9vcGVyLm15TG9vcGVyKCkgPT0gTG9vcGVyLmdldE1haW5Mb29wZXIoKSkgewogICAgICAgICAgICBhcHBseS5ydW4oKTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBwb3N0KGFwcGx5KTsKICAgICAgICB9CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvblNpemVDaGFuZ2VkKGludCB3LCBpbnQgaCwgaW50IG9sZHcsIGludCBvbGRoKSB7CiAgICAgICAgc3VwZXIub25TaXplQ2hhbmdlZCh3LCBoLCBvbGR3LCBvbGRoKTsKICAgICAgICBnbG93RGlydHkgPSB0cnVlOwogICAgICAgIGlmICh3IDw9IDAgfHwgaCA8PSAwKSByZXR1cm47CgogICAgICAgIGludCBiYXNlID0gTWF0aC5yb3VuZChNYXRoLm1pbih3LCBoKSAqIEJBU0VfRlJBQ1RJT04pOwogICAgICAgIGlmIChiYXNlIDw9IDApIHJldHVybjsKCiAgICAgICAgaW50IGxlZnQgPSAodyAtIGJhc2UpIC8gMjsKICAgICAgICBpbnQgdG9wICA9IChoIC0gYmFzZSkgLyAyOwogICAgICAgIHJldXNhYmxlQm91bmRzLnNldChsZWZ0LCB0b3AsIGxlZnQgKyBiYXNlLCB0b3AgKyBiYXNlKTsKICAgICAgICByaW5nLnNldEJvdW5kcyhyZXVzYWJsZUJvdW5kcyk7CiAgICB9CgogICAgLyoqIFJlYnVpbGRzIHRoZSByYWRpYWwgZ3JhZGllbnQgZm9yIHRoZSBjdXJyZW50IHNpemUgYW5kIGNvbG9yLiAqLwogICAgcHJpdmF0ZSB2b2lkIHJlYnVpbGRHbG93KGludCB3LCBpbnQgaCkgewogICAgICAgIGZpbmFsIGZsb2F0IHJhZGl1cyA9IE1hdGgubWluKHcsIGgpIC8gMmY7CiAgICAgICAgaWYgKHJhZGl1cyA8PSAwZikgcmV0dXJuOwoKICAgICAgICBmaW5hbCBpbnQgYTAgPSBNYXRoLnJvdW5kKDI1NWYgKiBHTE9XX0FMUEhBKTsKICAgICAgICBmaW5hbCBpbnQgYTEgPSBNYXRoLnJvdW5kKDI1NWYgKiBHTE9XX0FMUEhBICogMC4zMGYpOwoKICAgICAgICBmaW5hbCBpbnQgc3Ryb25nID0gKGEwIDw8IDI0KSB8IGdsb3dSZ2I7CiAgICAgICAgZmluYWwgaW50IG1pZCAgICA9IChhMSA8PCAyNCkgfCBnbG93UmdiOwogICAgICAgIGZpbmFsIGludCBjbGVhciAgPSBnbG93UmdiOyAgICAgICAgICAgICAgIC8vIHNhbWUgUkdCLCBhbHBoYSAwCgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGdsb3dQYWludC5zZXRTaGFkZXIobmV3IFJhZGlhbEdyYWRpZW50KAogICAgICAgICAgICAgICAgICAgIHcgLyAyZiwgaCAvIDJmLCByYWRpdXMsCiAgICAgICAgICAgICAgICAgICAgbmV3IGludFtdIHsgc3Ryb25nLCBzdHJvbmcsIG1pZCwgY2xlYXIgfSwKICAgICAgICAgICAgICAgICAgICBuZXcgZmxvYXRbXSB7IDBmLCBCQVNFX0ZSQUNUSU9OICogMC45NWYsIDAuODJmLCAxZiB9LAogICAgICAgICAgICAgICAgICAgIFNoYWRlci5UaWxlTW9kZS5DTEFNUCkpOwogICAgICAgICAgICBnbG93RGlydHkgPSBmYWxzZTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgaWdub3JlZCkgewogICAgICAgICAgICBnbG93UGFpbnQuc2V0U2hhZGVyKG51bGwpOwogICAgICAgIH0KICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHByb3RlY3RlZCB2b2lkIG9uRHJhdyhATm9uTnVsbCBDYW52YXMgY2FudmFzKSB7CiAgICAgICAgc3VwZXIub25EcmF3KGNhbnZhcyk7CgogICAgICAgIGlmICghcmluZ1Zpc2libGUpIHJldHVybjsKCiAgICAgICAgZmluYWwgaW50IHcgPSBnZXRXaWR0aCgpOwogICAgICAgIGZpbmFsIGludCBoID0gZ2V0SGVpZ2h0KCk7CiAgICAgICAgaWYgKHcgPD0gMCB8fCBoIDw9IDApIHJldHVybjsKCiAgICAgICAgZmluYWwgZmxvYXQgcCA9IHByb2dyZXNzOwoKICAgICAgICAvLyAtLS0tIEdsb3cgKGJlaGluZCBldmVyeXRoaW5nKSAtLS0tCiAgICAgICAgaWYgKGdsb3dEaXJ0eSkgcmVidWlsZEdsb3codywgaCk7CiAgICAgICAgaWYgKGdsb3dQYWludC5nZXRTaGFkZXIoKSAhPSBudWxsKSB7CiAgICAgICAgICAgIGZsb2F0IGJyZWF0aGUgPSAwLjVmICsgMC41ZiAqIChmbG9hdCkgTWF0aC5jb3MoMi4wICogTWF0aC5QSSAqIHApOwogICAgICAgICAgICBmbG9hdCBnbG93U2NhbGUgPSAoMWYgLSBHTE9XX0JSRUFUSEUpICsgR0xPV19CUkVBVEhFICogYnJlYXRoZTsKICAgICAgICAgICAgZ2xvd1BhaW50LnNldEFscGhhKE1hdGgucm91bmQoMjU1ZiAqIGdsb3dTY2FsZSkpOwogICAgICAgICAgICBjYW52YXMuZHJhd0NpcmNsZSh3IC8gMmYsIGggLyAyZiwgTWF0aC5taW4odywgaCkgLyAyZiwgZ2xvd1BhaW50KTsKICAgICAgICB9CgogICAgICAgIC8vIC0tLS0gUmluZ3MgLS0tLQogICAgICAgIGlmIChyaW5nLmdldEJvdW5kcygpLmlzRW1wdHkoKSkgcmV0dXJuOwoKICAgICAgICBmaW5hbCBmbG9hdCBjeCA9IHcgLyAyZjsKICAgICAgICBmaW5hbCBmbG9hdCBjeSA9IGggLyAyZjsKICAgICAgICBmaW5hbCBmbG9hdCBtYXhTY2FsZSA9IDFmIC8gQkFTRV9GUkFDVElPTjsKCiAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBSSU5HX0NPVU5UOyBpKyspIHsKICAgICAgICAgICAgZmxvYXQgdCA9IChwICsgaSAvIChmbG9hdCkgUklOR19DT1VOVCkgJSAxZjsKICAgICAgICAgICAgaWYgKHQgPCAwZikgdCArPSAxZjsgLy8gZGVmZW5zaXZlIGFnYWluc3QgZmxvYXQgJSBzaWduIGlzc3VlcwoKICAgICAgICAgICAgZmxvYXQgZWFzZWQgPSAxZiAtICgxZiAtIHQpICogKDFmIC0gdCk7ICAgICAgLy8gZGVjZWxlcmF0ZQogICAgICAgICAgICBmbG9hdCBzY2FsZSA9IDFmICsgKG1heFNjYWxlIC0gMWYpICogZWFzZWQ7CgogICAgICAgICAgICBmbG9hdCBmYWRlID0gMWYgLSB0OwogICAgICAgICAgICBmbG9hdCBhID0gTUFYX0FMUEhBICogZmFkZSAqIGZhZGU7CiAgICAgICAgICAgIGlmICh0IDwgRkFERV9JTl9FTkQpIGEgKj0gdCAvIEZBREVfSU5fRU5EOwogICAgICAgICAgICBpZiAoYSA8PSAwZikgY29udGludWU7CgogICAgICAgICAgICBpbnQgYWxwaGEgPSBNYXRoLnJvdW5kKDI1NWYgKiBhKTsKICAgICAgICAgICAgLy8gQ2xhbXAgLS0gRHJhd2FibGUuc2V0QWxwaGEgdGhyb3dzIGlmIG91dHNpZGUgMC4uMjU1LgogICAgICAgICAgICBpZiAoYWxwaGEgPCAwKSBhbHBoYSA9IDA7CiAgICAgICAgICAgIGVsc2UgaWYgKGFscGhhID4gMjU1KSBhbHBoYSA9IDI1NTsKCiAgICAgICAgICAgIGludCBzYXZlID0gY2FudmFzLnNhdmUoKTsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHJpbmcuc2V0QWxwaGEoYWxwaGEpOwogICAgICAgICAgICAgICAgY2FudmFzLnNjYWxlKHNjYWxlLCBzY2FsZSwgY3gsIGN5KTsKICAgICAgICAgICAgICAgIHJpbmcuZHJhdyhjYW52YXMpOwogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgY2FudmFzLnJlc3RvcmVUb0NvdW50KHNhdmUpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIC8vIC0tLS0tLS0tLS0gbGlmZWN5Y2xlIC0tLS0tLS0tLS0KCiAgICBwcml2YXRlIHZvaWQgc3RhcnRBbmltKCkgewogICAgICAgIGlmIChhbmltYXRvciAhPSBudWxsKSByZXR1cm47CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgVmFsdWVBbmltYXRvciBhID0gVmFsdWVBbmltYXRvci5vZkZsb2F0KDBmLCAxZik7CiAgICAgICAgICAgIGEuc2V0RHVyYXRpb24oQ1lDTEVfTVMpOwogICAgICAgICAgICBhLnNldEludGVycG9sYXRvcihuZXcgTGluZWFySW50ZXJwb2xhdG9yKCkpOwogICAgICAgICAgICBhLnNldFJlcGVhdENvdW50KFZhbHVlQW5pbWF0b3IuSU5GSU5JVEUpOwogICAgICAgICAgICBhLmFkZFVwZGF0ZUxpc3RlbmVyKGFuaW0gLT4gewogICAgICAgICAgICAgICAgT2JqZWN0IHYgPSBhbmltLmdldEFuaW1hdGVkVmFsdWUoKTsKICAgICAgICAgICAgICAgIGlmICh2IGluc3RhbmNlb2YgRmxvYXQpIHsKICAgICAgICAgICAgICAgICAgICBwcm9ncmVzcyA9IChGbG9hdCkgdjsKICAgICAgICAgICAgICAgICAgICBwb3N0SW52YWxpZGF0ZU9uQW5pbWF0aW9uKCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwogICAgICAgICAgICBhbmltYXRvciA9IGE7CiAgICAgICAgICAgIGEuc3RhcnQoKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBhbmltYXRvciA9IG51bGw7IC8vIG5ldmVyIGxlYXZlIGEgaGFsZi1idWlsdCBhbmltYXRvciBiZWhpbmQKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIHN0b3BBbmltKCkgewogICAgICAgIFZhbHVlQW5pbWF0b3IgYSA9IGFuaW1hdG9yOwogICAgICAgIGFuaW1hdG9yID0gbnVsbDsKICAgICAgICBpZiAoYSAhPSBudWxsKSB7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAvLyBCcmVhayB0aGUgc3Ryb25nIHJlZiBhbmltYXRvciAtPiBsaXN0ZW5lciAtPiBWaWV3LgogICAgICAgICAgICAgICAgYS5yZW1vdmVBbGxVcGRhdGVMaXN0ZW5lcnMoKTsKICAgICAgICAgICAgICAgIGEuY2FuY2VsKCk7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7IH0KICAgICAgICB9CiAgICB9CgogICAgLyoqIFJlLWV2YWx1YXRlIHdoZXRoZXIgd2Ugc2hvdWxkIGJlIGFuaW1hdGluZyByaWdodCBub3cuICovCiAgICBwcml2YXRlIHZvaWQgdXBkYXRlQW5pbVN0YXRlKCkgewogICAgICAgIGJvb2xlYW4gc2hvdWxkUnVuID0gc2hvdWxkQW5pbWF0ZQogICAgICAgICAgICAgICAgJiYgaXNBdHRhY2hlZFRvV2luZG93KCkKICAgICAgICAgICAgICAgICYmIGdldFdpbmRvd1Zpc2liaWxpdHkoKSA9PSBWaWV3LlZJU0lCTEUKICAgICAgICAgICAgICAgICYmIGdldFZpc2liaWxpdHkoKSA9PSBWaWV3LlZJU0lCTEUKICAgICAgICAgICAgICAgICYmIGlzU2hvd24oKTsKCiAgICAgICAgaWYgKHNob3VsZFJ1bikgc3RhcnRBbmltKCk7CiAgICAgICAgZWxzZSBzdG9wQW5pbSgpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHJvdGVjdGVkIHZvaWQgb25BdHRhY2hlZFRvV2luZG93KCkgewogICAgICAgIHN1cGVyLm9uQXR0YWNoZWRUb1dpbmRvdygpOwogICAgICAgIHNob3VsZEFuaW1hdGUgPSB0cnVlOwogICAgICAgIHVwZGF0ZUFuaW1TdGF0ZSgpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHJvdGVjdGVkIHZvaWQgb25EZXRhY2hlZEZyb21XaW5kb3coKSB7CiAgICAgICAgc2hvdWxkQW5pbWF0ZSA9IGZhbHNlOwogICAgICAgIHN0b3BBbmltKCk7CiAgICAgICAgc3VwZXIub25EZXRhY2hlZEZyb21XaW5kb3coKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHByb3RlY3RlZCB2b2lkIG9uV2luZG93VmlzaWJpbGl0eUNoYW5nZWQoaW50IHZpc2liaWxpdHkpIHsKICAgICAgICBzdXBlci5vbldpbmRvd1Zpc2liaWxpdHlDaGFuZ2VkKHZpc2liaWxpdHkpOwogICAgICAgIHVwZGF0ZUFuaW1TdGF0ZSgpOwogICAgfQoKICAgIEBPdmVycmlkZQogICAgcHJvdGVjdGVkIHZvaWQgb25WaXNpYmlsaXR5Q2hhbmdlZChATm9uTnVsbCBWaWV3IGNoYW5nZWRWaWV3LCBpbnQgdmlzaWJpbGl0eSkgewogICAgICAgIHN1cGVyLm9uVmlzaWJpbGl0eUNoYW5nZWQoY2hhbmdlZFZpZXcsIHZpc2liaWxpdHkpOwogICAgICAgIHVwZGF0ZUFuaW1TdGF0ZSgpOwogICAgfQp9
+package com.musaddiqbaluch.census;
+
+import android.animation.ValueAnimator;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RadialGradient;
+import android.graphics.Rect;
+import android.graphics.Shader;
+import android.os.Looper;
+import android.util.AttributeSet;
+import android.view.View;
+import android.view.animation.LinearInterpolator;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+/**
+ * Soft glow + expanding 12-sided cookie rings drawn behind the cookie.
+ * Place it as the first child of raderEffectLayout (160dp) so the
+ * 100dp cookie sits on top of it.
+ *
+ * Ring color and glow color are set independently:
+ *   setRingColor(int) -> rings (indicator color)
+ *   setGlowColor(int) -> background glow (usually the same indicator color,
+ *                       drawn as a low-alpha state layer so luminance is
+ *                       set by alpha rather than by a per-hue tone)
+ *
+ * Thread-safe: both setters may be called from any thread.
+ */
+public class CookieRippleView extends View {
+
+    private static final int RING_COUNT = 3;
+
+    // Cookie size / this view's size (100dp / 160dp). Rings start at the
+    // cookie's size and grow until they reach this view's edge.
+    private static final float BASE_FRACTION = 100f / 160f;
+
+    private static final long CYCLE_MS = 2800L;
+    private static final float STROKE_DP = 2f;
+    private static final float MAX_ALPHA = 0.55f;
+    private static final float FADE_IN_END = 0.08f;
+
+    // ---- Glow ----
+    // M3 state-layer opacity: primary drawn over the surface at 16% at its
+    // strongest (the spec's "dragged" layer), breathing down to about 10%
+    // (the "focus/pressed" layer). Because lightness comes from the alpha,
+    // every installer color gets a tint of the same strength.
+    private static final float GLOW_ALPHA = 0.16f;
+    private static final float GLOW_BREATHE = 0.40f;
+
+    private final Cookie12SidedDrawable ring = new Cookie12SidedDrawable(Color.GRAY);
+    private final Rect reusableBounds = new Rect();
+
+    private final Paint glowPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+    @Nullable private ValueAnimator animator;
+
+    // Only ever touched on the main thread (the posted runnable and onDraw
+    // both run on main), so no synchronization is required for these.
+    private float progress = 0f;
+    private boolean ringVisible = true;
+
+    // Opaque RGB of the current glow color.
+    private int glowRgb = Color.GRAY;
+    // The gradient is rebuilt lazily in onDraw when the color or size changes.
+    private boolean glowDirty = true;
+
+    // Tracks whether this view is both attached AND visible so we don't
+    // start two animators in a row when the framework calls both
+    // onAttachedToWindow() and onWindowVisibilityChanged().
+    private boolean shouldAnimate = false;
+
+    public CookieRippleView(Context context) { super(context); init(); }
+    public CookieRippleView(Context context, @Nullable AttributeSet attrs) { super(context, attrs); init(); }
+    public CookieRippleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr); init();
+    }
+
+    private void init() {
+        try {
+            float density = getResources().getDisplayMetrics().density;
+            ring.setStrokeWidth(STROKE_DP * density);
+            ring.setAlpha(0);
+            glowPaint.setStyle(Paint.Style.FILL);
+            setWillNotDraw(false);
+        } catch (Throwable ignored) {
+            // Never let construction throw -- a broken ring is worse than no ring.
+        }
+    }
+
+    /**
+     * Sets the ring color. Called by MaterialDistributionBar on every
+     * color-crossfade frame. Safe to call from any thread.
+     * A fully transparent color hides rings and glow (used while the
+     * installer color is still being resolved).
+     */
+    public void setRingColor(@ColorInt final int color) {
+        final Runnable apply = () -> {
+            try {
+                if (Color.alpha(color) == 0) {
+                    ringVisible = false;
+                } else {
+                    ringVisible = true;
+                    // Force fully-opaque fill; alpha is controlled per-ring in onDraw.
+                    ring.setFillColor(color | 0xFF000000);
+                }
+                postInvalidateOnAnimation();
+            } catch (Throwable ignored) { }
+        };
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            apply.run();
+        } else {
+            post(apply);
+        }
+    }
+
+    /**
+     * Sets the glow color independently of the rings.
+     * Safe to call from any thread.
+     */
+    public void setGlowColor(@ColorInt final int color) {
+        final Runnable apply = () -> {
+            try {
+                glowRgb = color & 0x00FFFFFF;
+                glowDirty = true;
+                postInvalidateOnAnimation();
+            } catch (Throwable ignored) { }
+        };
+
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            apply.run();
+        } else {
+            post(apply);
+        }
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        glowDirty = true;
+        if (w <= 0 || h <= 0) return;
+
+        int base = Math.round(Math.min(w, h) * BASE_FRACTION);
+        if (base <= 0) return;
+
+        int left = (w - base) / 2;
+        int top  = (h - base) / 2;
+        reusableBounds.set(left, top, left + base, top + base);
+        ring.setBounds(reusableBounds);
+    }
+
+    /** Rebuilds the radial gradient for the current size and color. */
+    private void rebuildGlow(int w, int h) {
+        final float radius = Math.min(w, h) / 2f;
+        if (radius <= 0f) return;
+
+        final int a0 = Math.round(255f * GLOW_ALPHA);
+        final int a1 = Math.round(255f * GLOW_ALPHA * 0.30f);
+
+        final int strong = (a0 << 24) | glowRgb;
+        final int mid    = (a1 << 24) | glowRgb;
+        final int clear  = glowRgb;               // same RGB, alpha 0
+
+        try {
+            glowPaint.setShader(new RadialGradient(
+                    w / 2f, h / 2f, radius,
+                    new int[] { strong, strong, mid, clear },
+                    new float[] { 0f, BASE_FRACTION * 0.95f, 0.82f, 1f },
+                    Shader.TileMode.CLAMP));
+            glowDirty = false;
+        } catch (Throwable ignored) {
+            glowPaint.setShader(null);
+        }
+    }
+
+    @Override
+    protected void onDraw(@NonNull Canvas canvas) {
+        super.onDraw(canvas);
+
+        if (!ringVisible) return;
+
+        final int w = getWidth();
+        final int h = getHeight();
+        if (w <= 0 || h <= 0) return;
+
+        final float p = progress;
+
+        // ---- Glow (behind everything) ----
+        if (glowDirty) rebuildGlow(w, h);
+        if (glowPaint.getShader() != null) {
+            float breathe = 0.5f + 0.5f * (float) Math.cos(2.0 * Math.PI * p);
+            float glowScale = (1f - GLOW_BREATHE) + GLOW_BREATHE * breathe;
+            glowPaint.setAlpha(Math.round(255f * glowScale));
+            canvas.drawCircle(w / 2f, h / 2f, Math.min(w, h) / 2f, glowPaint);
+        }
+
+        // ---- Rings ----
+        if (ring.getBounds().isEmpty()) return;
+
+        final float cx = w / 2f;
+        final float cy = h / 2f;
+        final float maxScale = 1f / BASE_FRACTION;
+
+        for (int i = 0; i < RING_COUNT; i++) {
+            float t = (p + i / (float) RING_COUNT) % 1f;
+            if (t < 0f) t += 1f; // defensive against float % sign issues
+
+            float eased = 1f - (1f - t) * (1f - t);      // decelerate
+            float scale = 1f + (maxScale - 1f) * eased;
+
+            float fade = 1f - t;
+            float a = MAX_ALPHA * fade * fade;
+            if (t < FADE_IN_END) a *= t / FADE_IN_END;
+            if (a <= 0f) continue;
+
+            int alpha = Math.round(255f * a);
+            // Clamp -- Drawable.setAlpha throws if outside 0..255.
+            if (alpha < 0) alpha = 0;
+            else if (alpha > 255) alpha = 255;
+
+            int save = canvas.save();
+            try {
+                ring.setAlpha(alpha);
+                canvas.scale(scale, scale, cx, cy);
+                ring.draw(canvas);
+            } finally {
+                canvas.restoreToCount(save);
+            }
+        }
+    }
+
+    // ---------- lifecycle ----------
+
+    private void startAnim() {
+        if (animator != null) return;
+        try {
+            ValueAnimator a = ValueAnimator.ofFloat(0f, 1f);
+            a.setDuration(CYCLE_MS);
+            a.setInterpolator(new LinearInterpolator());
+            a.setRepeatCount(ValueAnimator.INFINITE);
+            a.addUpdateListener(anim -> {
+                Object v = anim.getAnimatedValue();
+                if (v instanceof Float) {
+                    progress = (Float) v;
+                    postInvalidateOnAnimation();
+                }
+            });
+            animator = a;
+            a.start();
+        } catch (Throwable t) {
+            animator = null; // never leave a half-built animator behind
+        }
+    }
+
+    private void stopAnim() {
+        ValueAnimator a = animator;
+        animator = null;
+        if (a != null) {
+            try {
+                // Break the strong ref animator -> listener -> View.
+                a.removeAllUpdateListeners();
+                a.cancel();
+            } catch (Throwable ignored) { }
+        }
+    }
+
+    /** Re-evaluate whether we should be animating right now. */
+    private void updateAnimState() {
+        boolean shouldRun = shouldAnimate
+                && isAttachedToWindow()
+                && getWindowVisibility() == View.VISIBLE
+                && getVisibility() == View.VISIBLE
+                && isShown();
+
+        if (shouldRun) startAnim();
+        else stopAnim();
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        shouldAnimate = true;
+        updateAnimState();
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        shouldAnimate = false;
+        stopAnim();
+        super.onDetachedFromWindow();
+    }
+
+    @Override
+    protected void onWindowVisibilityChanged(int visibility) {
+        super.onWindowVisibilityChanged(visibility);
+        updateAnimState();
+    }
+
+    @Override
+    protected void onVisibilityChanged(@NonNull View changedView, int visibility) {
+        super.onVisibilityChanged(changedView, visibility);
+        updateAnimState();
+    }
+}

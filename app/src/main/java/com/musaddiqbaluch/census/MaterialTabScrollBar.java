@@ -1,1 +1,307 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuY29udGVudC5yZXMuQ29sb3JTdGF0ZUxpc3Q7CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQucmVzLlJlc291cmNlczsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuZHJhd2FibGUuR3JhZGllbnREcmF3YWJsZTsKaW1wb3J0IGFuZHJvaWQub3MuTG9vcGVyOwppbXBvcnQgYW5kcm9pZC51dGlsLkRpc3BsYXlNZXRyaWNzOwppbXBvcnQgYW5kcm9pZC51dGlsLkxvZzsKCmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk5vbk51bGw7CmltcG9ydCBhbmRyb2lkeC5jb3JlLmdyYXBoaWNzLkNvbG9yVXRpbHM7CgppbXBvcnQgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlI7CmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuY29sb3IuTWF0ZXJpYWxDb2xvcnM7CmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwudGFicy5UYWJMYXlvdXQ7CgovKioKICogQXBwbGllcyBhIE1hdGVyaWFsIDMgcm91bmRlZC10b3AgdGFiIGluZGljYXRvciBhbmQgYSAxNiUtb3BhY2l0eQogKiBwcmltYXJ5IHJpcHBsZSB0byBhIFRhYkxheW91dC4KICoKICogSW5kaWNhdG9yIG9yZGVyaW5nCiAqIC0tLS0tLS0tLS0tLS0tLS0tLQogKiAgIE1hdGVyaWFsIENvbXBvbmVudHMnIFRhYkxheW91dCBoYXMgYSBzdWJ0bGUgdHJhcDoKICoKICogICAgICAgc2V0U2VsZWN0ZWRUYWJJbmRpY2F0b3JIZWlnaHQoaW50KSBpbnRlcm5hbGx5IHNldHMKICogICAgICAgYHRhYlNlbGVjdGVkSW5kaWNhdG9yID0gbnVsbGAsIGRpc2NhcmRpbmcgYW55IGN1c3RvbQogKiAgICAgICBpbmRpY2F0b3IgZHJhd2FibGUgdGhhdCB3YXMgcHJldmlvdXNseSBhcHBsaWVkLgogKgogKiAgIChTb3VyY2U6IFRhYkxheW91dC5qYXZhLCBkZXByZWNhdGVkIG1ldGhvZCB3aXRoIHRoZSBjb21tZW50CiAqICAgIkRvbid0IG92ZXJ3cml0ZSB0aGUgY3VzdG9tIHRhYiBpbmRpY2F0b3IgY29sb3IuIikKICoKICogICBTbyB0aGUgaGVpZ2h0IE1VU1QgYmUgc2V0IEJFRk9SRSB0aGUgY3VzdG9tIGRyYXdhYmxlLiBJZiB0aGUKICogICBvcmRlciBpcyByZXZlcnNlZCwgdGhlIGN1c3RvbSBHcmFkaWVudERyYXdhYmxlIGlzIHNpbGVudGx5CiAqICAgdGhyb3duIGF3YXkgYW5kIHRoZSBUYWJMYXlvdXQgZmFsbHMgYmFjayB0byBpdHMgdGhlbWUtZGVmYXVsdAogKiAgIGluZGljYXRvci4KICoKICogICBhcHBseUluZGljYXRvcigpIGJlbG93IGVuZm9yY2VzIHRoZSBjb3JyZWN0IG9yZGVyLgogKgogKiBSb2J1c3RuZXNzCiAqIC0tLS0tLS0tLS0KICogICAtIGF0dGFjaCgpIC8gZGV0YWNoKCkgYXJlIHNhZmUgdG8gY2FsbCBmcm9tIHRoZSBtYWluIHRocmVhZDsgYQogKiAgICAgZGVidWctb25seSB3YXJuaW5nIGlzIGxvZ2dlZCBpZiB0aGV5IGFyZSBjYWxsZWQgb2ZmLXRocmVhZC4KICogICAtIERlbnNpdHkgaXMgdmFsaWRhdGVkOyBhIGJyb2tlbiBEaXNwbGF5TWV0cmljcyBmYWxscyBiYWNrIHRvCiAqICAgICBERU5TSVRZX0RFRkFVTFQuCiAqICAgLSBUaGUgdGhlbWUncyBjb2xvclByaW1hcnkgaXMgdmFsaWRhdGVkOyBhIGZhaWx1cmUgb3IgYQogKiAgICAgdHJhbnNwYXJlbnQgdmFsdWUgZmFsbHMgYmFjayB0byBhIGhhcmRjb2RlZCBNMyBwcmltYXJ5LgogKiAgIC0gVGhlIHJpcHBsZSByZXNvdXJjZSBSLmNvbG9yLm0zX3RhYnNfcmlwcGxlX2NvbG9yIGlzIG9wdGlvbmFsOwogKiAgICAgaWYgbWlzc2luZywgYSBDb2xvclN0YXRlTGlzdCBpcyBidWlsdCBmcm9tIHByaW1hcnkgYXQgMTYlIGFscGhhLgogKiAgIC0gRXZlcnkgVGFiTGF5b3V0IG11dGF0aW9uIGlzIGluZGl2aWR1YWxseSB3cmFwcGVkIHNvIG9uZQogKiAgICAgZmFpbHVyZSBkb2VzIG5vdCBwcmV2ZW50IHRoZSBvdGhlcnMuCiAqLwpwdWJsaWMgZmluYWwgY2xhc3MgTWF0ZXJpYWxUYWJTY3JvbGxCYXIgewoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBUQUcgPSAiTWF0ZXJpYWxUYWJTY3JvbGxCYXIiOwoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IElORElDQVRPUl9IRUlHSFRfRFAgPSAzZjsKCiAgICAvKiogTWF0ZXJpYWwgMyBzdGFuZGFyZCBmb3IgdGFiIHJpcHBsZXMuICovCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBSSVBQTEVfQUxQSEEgPSAwLjE2ZjsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgRkFMTEJBQ0tfUFJJTUFSWV9MSUdIVCA9IDB4RkY2NzUwQTQ7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgRkFMTEJBQ0tfUFJJTUFSWV9EQVJLICA9IDB4RkZEMEJDRkY7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgaW50IEZBTExCQUNLX0RFTlNJVFlfRFBJID0gRGlzcGxheU1ldHJpY3MuREVOU0lUWV9ERUZBVUxUOwoKICAgIHByaXZhdGUgTWF0ZXJpYWxUYWJTY3JvbGxCYXIoKSB7CiAgICAgICAgLy8gVXRpbGl0eSBjbGFzcy4KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIFB1YmxpYyBBUEkKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBhdHRhY2goQE5vbk51bGwgVGFiTGF5b3V0IHRhYkxheW91dCkgewoKICAgICAgICB3YXJuSWZOb3RNYWluVGhyZWFkKCJhdHRhY2giKTsKCiAgICAgICAgaWYgKHRhYkxheW91dCA9PSBudWxsKSByZXR1cm47CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGZpbmFsIGZsb2F0IGRlbnNpdHkgPSByZXNvbHZlRGVuc2l0eSh0YWJMYXlvdXQpOwoKICAgICAgICAgICAgZmluYWwgaW50IGluZGljYXRvckhlaWdodCA9IE1hdGgubWF4KAogICAgICAgICAgICAgICAgICAgIDEsCiAgICAgICAgICAgICAgICAgICAgTWF0aC5yb3VuZChJTkRJQ0FUT1JfSEVJR0hUX0RQICogZGVuc2l0eSkpOwoKICAgICAgICAgICAgZmluYWwgaW50IHByaW1hcnlDb2xvciA9IHJlc29sdmVQcmltYXJ5Q29sb3IodGFiTGF5b3V0KTsKCiAgICAgICAgICAgIGFwcGx5UmlwcGxlKHRhYkxheW91dCwgcHJpbWFyeUNvbG9yKTsKCiAgICAgICAgICAgIGFwcGx5SW5kaWNhdG9yKHRhYkxheW91dCwgcHJpbWFyeUNvbG9yLCBpbmRpY2F0b3JIZWlnaHQpOwoKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHRhYkxheW91dC5zZXRUYWJJbmRpY2F0b3JGdWxsV2lkdGgoZmFsc2UpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAic2V0VGFiSW5kaWNhdG9yRnVsbFdpZHRoIGZhaWxlZCIsIHQpOwogICAgICAgICAgICB9CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImF0dGFjaCBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIGRldGFjaChATm9uTnVsbCBUYWJMYXlvdXQgdGFiTGF5b3V0KSB7CgogICAgICAgIHdhcm5JZk5vdE1haW5UaHJlYWQoImRldGFjaCIpOwoKICAgICAgICBpZiAodGFiTGF5b3V0ID09IG51bGwpIHJldHVybjsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdGFiTGF5b3V0LnNldFNlbGVjdGVkVGFiSW5kaWNhdG9yKG51bGwpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImRldGFjaDogc2V0U2VsZWN0ZWRUYWJJbmRpY2F0b3IobnVsbCkgZmFpbGVkIiwgdCk7CiAgICAgICAgfQoKICAgICAgICB0cnkgewogICAgICAgICAgICB0YWJMYXlvdXQuc2V0VGFiUmlwcGxlQ29sb3IobnVsbCk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiZGV0YWNoOiBzZXRUYWJSaXBwbGVDb2xvcihudWxsKSBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBJbmRpY2F0b3IgLS0gT1JERVIgTUFUVEVSUwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBhcHBseUluZGljYXRvcigKICAgICAgICAgICAgQE5vbk51bGwgVGFiTGF5b3V0IHRhYkxheW91dCwKICAgICAgICAgICAgaW50IHByaW1hcnlDb2xvciwKICAgICAgICAgICAgaW50IGluZGljYXRvckhlaWdodCkgewoKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICAgIC8vIFNURVAgMSAtLSBIRUlHSFQgRklSU1QuCiAgICAgICAgLy8KICAgICAgICAvLyBzZXRTZWxlY3RlZFRhYkluZGljYXRvckhlaWdodCgpIGludGVybmFsbHkgbnVsbHMgb3V0IGFueSBjdXN0b20KICAgICAgICAvLyBpbmRpY2F0b3IgZHJhd2FibGUgdGhlIFRhYkxheW91dCB3YXMgcHJldmlvdXNseSB1c2luZy4gSXQgTVVTVAogICAgICAgIC8vIHJ1biBiZWZvcmUgc2V0U2VsZWN0ZWRUYWJJbmRpY2F0b3IoKSwgb3RoZXJ3aXNlIGl0IHdpcGVzIHRoZQogICAgICAgIC8vIGN1c3RvbSBkcmF3YWJsZSB3ZSBhcmUgYWJvdXQgdG8gaW5zdGFsbC4KICAgICAgICAvLwogICAgICAgIC8vIChEZXByZWNhdGVkIGluIGZhdm9yIG9mICJ1c2UgYSBjdXN0b20gZHJhd2FibGUgd2l0aCBhbiBpbnRyaW5zaWMKICAgICAgICAvLyBoZWlnaHQiIC0tIGJ1dCB0aGUgZGVwcmVjYXRlZCBzZXR0ZXIgcmVtYWlucyB0aGUgb25seSByZWxpYWJsZQogICAgICAgIC8vIHdheSB0byBjb250cm9sIHRoZSBpbmRpY2F0b3IgaGVpZ2h0IGluIG9sZGVyIE1hdGVyaWFsIENvbXBvbmVudHMKICAgICAgICAvLyByZWxlYXNlcywgYW5kIHRoaXMgY2xhc3MgdGFyZ2V0cyB0aG9zZSByZWxlYXNlcy4pCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICB0cnkgewogICAgICAgICAgICB0YWJMYXlvdXQuc2V0U2VsZWN0ZWRUYWJJbmRpY2F0b3JIZWlnaHQoaW5kaWNhdG9ySGVpZ2h0KTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJzZXRTZWxlY3RlZFRhYkluZGljYXRvckhlaWdodCBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgLy8gU1RFUCAyIC0tIENVU1RPTSBEUkFXQUJMRSBTRUNPTkQuCiAgICAgICAgLy8KICAgICAgICAvLyBOb3cgdGhhdCB0aGUgaGVpZ2h0IGlzIHNldCwgaW5zdGFsbCB0aGUgY3VzdG9tIHJvdW5kZWQtdG9wCiAgICAgICAgLy8gaW5kaWNhdG9yLiBJdCB3aWxsIG5vdCBiZSBkaXNjYXJkZWQgYmVjYXVzZSB3ZSBkbyBub3QgY2FsbCB0aGUKICAgICAgICAvLyBkZXByZWNhdGVkIHNldHRlciBhZ2FpbiBhZnRlcndhcmQuCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICBHcmFkaWVudERyYXdhYmxlIGluZGljYXRvciA9IG51bGw7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIC8vIFRvcCBjb3JuZXJzIGZ1bGx5IHJvdW5kZWQsIGJvdHRvbSBjb3JuZXJzIGZsYXQuCiAgICAgICAgICAgIC8vCiAgICAgICAgICAgIC8vIFRoZSByYWRpdXMgbXVzdCBlcXVhbCB0aGUgRlVMTCBpbmRpY2F0b3IgaGVpZ2h0LiBXaXRoCiAgICAgICAgICAgIC8vIGhlaWdodCAvIDIgdGhlIGN1cnZlIG9ubHkgY292ZXJzIHRoZSB1cHBlciBoYWxmIG9mIHRoZSBiYXIKICAgICAgICAgICAgLy8gYW5kIHRoZSBzaGFwZSBzdGlsbCBsb29rcyBib3h5LiBXaXRoIHRoZSBmdWxsIGhlaWdodCBlYWNoIHRvcAogICAgICAgICAgICAvLyBjb3JuZXIgaXMgYSBjb21wbGV0ZSBxdWFydGVyIGNpcmNsZSB0aGF0IHJ1bnMgYWxsIHRoZSB3YXkKICAgICAgICAgICAgLy8gZG93biB0byB0aGUgZmxhdCBib3R0b20gZWRnZS4KICAgICAgICAgICAgZmluYWwgZmxvYXQgdG9wUmFkaXVzID0gaW5kaWNhdG9ySGVpZ2h0OwoKICAgICAgICAgICAgaW5kaWNhdG9yID0gbmV3IEdyYWRpZW50RHJhd2FibGUoKTsKICAgICAgICAgICAgaW5kaWNhdG9yLnNldFNoYXBlKEdyYWRpZW50RHJhd2FibGUuUkVDVEFOR0xFKTsKICAgICAgICAgICAgaW5kaWNhdG9yLnNldENvbG9yKHByaW1hcnlDb2xvcik7CiAgICAgICAgICAgIGluZGljYXRvci5zZXRDb3JuZXJSYWRpaShuZXcgZmxvYXRbXXsKICAgICAgICAgICAgICAgICAgICB0b3BSYWRpdXMsIHRvcFJhZGl1cywgICAvLyB0b3AtbGVmdAogICAgICAgICAgICAgICAgICAgIHRvcFJhZGl1cywgdG9wUmFkaXVzLCAgIC8vIHRvcC1yaWdodAogICAgICAgICAgICAgICAgICAgIDBmLCAwZiwgICAgICAgICAgICAgICAgIC8vIGJvdHRvbS1yaWdodAogICAgICAgICAgICAgICAgICAgIDBmLCAwZiAgICAgICAgICAgICAgICAgIC8vIGJvdHRvbS1sZWZ0CiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgLy8gSW50cmluc2ljIGhlaWdodCBzbyB0aGUgZHJhd2FibGUgaXMgc2VsZi1kZXNjcmliaW5nIGV2ZW4gaWYKICAgICAgICAgICAgLy8gdGhlIGZyYW1ld29yayBjb25zdWx0cyBpdCBiZWZvcmUgbGF5b3V0LgogICAgICAgICAgICBpbmRpY2F0b3Iuc2V0U2l6ZSgtMSwgaW5kaWNhdG9ySGVpZ2h0KTsKCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiRmFpbGVkIHRvIGJ1aWxkIGluZGljYXRvciBkcmF3YWJsZSIsIHQpOwogICAgICAgICAgICBpbmRpY2F0b3IgPSBudWxsOwogICAgICAgIH0KCiAgICAgICAgaWYgKGluZGljYXRvciAhPSBudWxsKSB7CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICB0YWJMYXlvdXQuc2V0U2VsZWN0ZWRUYWJJbmRpY2F0b3IoaW5kaWNhdG9yKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgInNldFNlbGVjdGVkVGFiSW5kaWNhdG9yIGZhaWxlZCIsIHQpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gUmlwcGxlCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIGFwcGx5UmlwcGxlKAogICAgICAgICAgICBATm9uTnVsbCBUYWJMYXlvdXQgdGFiTGF5b3V0LAogICAgICAgICAgICBpbnQgcHJpbWFyeUNvbG9yKSB7CgogICAgICAgIC8vIFByZWZlcnJlZDogdXNlIHRoZSB0aGVtZSByZXNvdXJjZS4KICAgICAgICB0cnkgewogICAgICAgICAgICB0YWJMYXlvdXQuc2V0VGFiUmlwcGxlQ29sb3JSZXNvdXJjZShSLmNvbG9yLm0zX3RhYnNfcmlwcGxlX2NvbG9yKTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0gY2F0Y2ggKFJlc291cmNlcy5Ob3RGb3VuZEV4Y2VwdGlvbiBlKSB7CiAgICAgICAgICAgIExvZy53KFRBRywgIlIuY29sb3IubTNfdGFic19yaXBwbGVfY29sb3Igbm90IGZvdW5kOyAiCiAgICAgICAgICAgICAgICAgICAgKyAiZmFsbGluZyBiYWNrIHRvIG1hbnVhbCByaXBwbGUiLCBlKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJzZXRUYWJSaXBwbGVDb2xvclJlc291cmNlIGZhaWxlZDsgIgogICAgICAgICAgICAgICAgICAgICsgImZhbGxpbmcgYmFjayB0byBtYW51YWwgcmlwcGxlIiwgdCk7CiAgICAgICAgfQoKICAgICAgICAvLyBGYWxsYmFjazogcHJpbWFyeSBhdCAxNiUgYWxwaGEuCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgaW50IHJpcHBsZUNvbG9yID0gQ29sb3JVdGlscy5zZXRBbHBoYUNvbXBvbmVudCgKICAgICAgICAgICAgICAgICAgICBwcmltYXJ5Q29sb3IsCiAgICAgICAgICAgICAgICAgICAgTWF0aC5yb3VuZChSSVBQTEVfQUxQSEEgKiAyNTVmKSk7CgogICAgICAgICAgICB0YWJMYXlvdXQuc2V0VGFiUmlwcGxlQ29sb3IoCiAgICAgICAgICAgICAgICAgICAgQ29sb3JTdGF0ZUxpc3QudmFsdWVPZihyaXBwbGVDb2xvcikpOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJGYWxsYmFjayByaXBwbGUgYXBwbGljYXRpb24gZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gQ29sb3IgaGVscGVycwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHJpdmF0ZSBzdGF0aWMgaW50IHJlc29sdmVQcmltYXJ5Q29sb3IoQE5vbk51bGwgVGFiTGF5b3V0IHRhYkxheW91dCkgewoKICAgICAgICBib29sZWFuIGRhcmsgPSBzYWZlSXNOaWdodE1vZGUodGFiTGF5b3V0KTsKICAgICAgICBpbnQgZmFsbGJhY2sgPSBkYXJrID8gRkFMTEJBQ0tfUFJJTUFSWV9EQVJLIDogRkFMTEJBQ0tfUFJJTUFSWV9MSUdIVDsKCiAgICAgICAgaW50IGNvbG9yOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGNvbG9yID0gTWF0ZXJpYWxDb2xvcnMuZ2V0Q29sb3IodGFiTGF5b3V0LCBSLmF0dHIuY29sb3JQcmltYXJ5KTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJnZXRDb2xvcihjb2xvclByaW1hcnkpIGZhaWxlZCwgdXNpbmcgZmFsbGJhY2siLCB0KTsKICAgICAgICAgICAgcmV0dXJuIGZhbGxiYWNrOwogICAgICAgIH0KCiAgICAgICAgaWYgKGNvbG9yID09IGFuZHJvaWQuZ3JhcGhpY3MuQ29sb3IuVFJBTlNQQVJFTlQpIHJldHVybiBmYWxsYmFjazsKICAgICAgICBpZiAoKChjb2xvciA+Pj4gMjQpICYgMHhGRikgPT0gMCkgcmV0dXJuIGZhbGxiYWNrOwoKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBEZW5zaXR5IGhlbHBlcnMKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHByaXZhdGUgc3RhdGljIGZsb2F0IHJlc29sdmVEZW5zaXR5KEBOb25OdWxsIFRhYkxheW91dCB0YWJMYXlvdXQpIHsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgUmVzb3VyY2VzIHJlcyA9IHRhYkxheW91dC5nZXRSZXNvdXJjZXMoKTsKICAgICAgICAgICAgaWYgKHJlcyA9PSBudWxsKSByZXR1cm4gMS4wZjsKCiAgICAgICAgICAgIERpc3BsYXlNZXRyaWNzIG1ldHJpY3MgPSByZXMuZ2V0RGlzcGxheU1ldHJpY3MoKTsKICAgICAgICAgICAgaWYgKG1ldHJpY3MgPT0gbnVsbCkgcmV0dXJuIDEuMGY7CgogICAgICAgICAgICBmbG9hdCBkZW5zaXR5ID0gbWV0cmljcy5kZW5zaXR5OwogICAgICAgICAgICBpZiAoZGVuc2l0eSA8PSAwZikgewogICAgICAgICAgICAgICAgaW50IGRwaSA9IG1ldHJpY3MuZGVuc2l0eURwaTsKICAgICAgICAgICAgICAgIGlmIChkcGkgPiAwKSByZXR1cm4gZHBpIC8gKGZsb2F0KSBGQUxMQkFDS19ERU5TSVRZX0RQSTsKICAgICAgICAgICAgICAgIHJldHVybiAxLjBmOwogICAgICAgICAgICB9CgogICAgICAgICAgICByZXR1cm4gZGVuc2l0eTsKCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAicmVzb2x2ZURlbnNpdHkgZmFpbGVkLCB1c2luZyAxLjBmIiwgdCk7CiAgICAgICAgICAgIHJldHVybiAxLjBmOwogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIE1pc2MgaGVscGVycwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHJpdmF0ZSBzdGF0aWMgYm9vbGVhbiBzYWZlSXNOaWdodE1vZGUoQE5vbk51bGwgVGFiTGF5b3V0IHRhYkxheW91dCkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGludCBmbGFncyA9IHRhYkxheW91dC5nZXRSZXNvdXJjZXMoKS5nZXRDb25maWd1cmF0aW9uKCkudWlNb2RlCiAgICAgICAgICAgICAgICAgICAgJiBhbmRyb2lkLmNvbnRlbnQucmVzLkNvbmZpZ3VyYXRpb24uVUlfTU9ERV9OSUdIVF9NQVNLOwogICAgICAgICAgICByZXR1cm4gZmxhZ3MgPT0gYW5kcm9pZC5jb250ZW50LnJlcy5Db25maWd1cmF0aW9uLlVJX01PREVfTklHSFRfWUVTOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCB3YXJuSWZOb3RNYWluVGhyZWFkKFN0cmluZyBtZXRob2ROYW1lKSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgaWYgKExvb3Blci5teUxvb3BlcigpICE9IExvb3Blci5nZXRNYWluTG9vcGVyKCkpIHsKICAgICAgICAgICAgICAgIExvZy53KFRBRywgbWV0aG9kTmFtZSArICIgY2FsbGVkIG9mZiB0aGUgbWFpbiB0aHJlYWQuICIKICAgICAgICAgICAgICAgICAgICAgICAgKyAiVGFiTGF5b3V0IGlzIG1haW4tdGhyZWFkLW9ubHkuIik7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgaWdub3JlZCkgewogICAgICAgICAgICAvLyBMb2dnaW5nIG11c3QgbmV2ZXIgYnJlYWsgdGhlIHBpcGVsaW5lLgogICAgICAgIH0KICAgIH0KfQo=
+package com.musaddiqbaluch.census;
+
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Looper;
+import android.util.DisplayMetrics;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.core.graphics.ColorUtils;
+
+import com.google.android.material.R;
+import com.google.android.material.color.MaterialColors;
+import com.google.android.material.tabs.TabLayout;
+
+/**
+ * Applies a Material 3 rounded-top tab indicator and a 16%-opacity
+ * primary ripple to a TabLayout.
+ *
+ * Indicator ordering
+ * ------------------
+ *   Material Components' TabLayout has a subtle trap:
+ *
+ *       setSelectedTabIndicatorHeight(int) internally sets
+ *       `tabSelectedIndicator = null`, discarding any custom
+ *       indicator drawable that was previously applied.
+ *
+ *   (Source: TabLayout.java, deprecated method with the comment
+ *   "Don't overwrite the custom tab indicator color.")
+ *
+ *   So the height MUST be set BEFORE the custom drawable. If the
+ *   order is reversed, the custom GradientDrawable is silently
+ *   thrown away and the TabLayout falls back to its theme-default
+ *   indicator.
+ *
+ *   applyIndicator() below enforces the correct order.
+ *
+ * Robustness
+ * ----------
+ *   - attach() / detach() are safe to call from the main thread; a
+ *     debug-only warning is logged if they are called off-thread.
+ *   - Density is validated; a broken DisplayMetrics falls back to
+ *     DENSITY_DEFAULT.
+ *   - The theme's colorPrimary is validated; a failure or a
+ *     transparent value falls back to a hardcoded M3 primary.
+ *   - The ripple resource R.color.m3_tabs_ripple_color is optional;
+ *     if missing, a ColorStateList is built from primary at 16% alpha.
+ *   - Every TabLayout mutation is individually wrapped so one
+ *     failure does not prevent the others.
+ */
+public final class MaterialTabScrollBar {
+
+    private static final String TAG = "MaterialTabScrollBar";
+
+    private static final float INDICATOR_HEIGHT_DP = 3f;
+
+    /** Material 3 standard for tab ripples. */
+    private static final float RIPPLE_ALPHA = 0.16f;
+
+    private static final int FALLBACK_PRIMARY_LIGHT = 0xFF6750A4;
+    private static final int FALLBACK_PRIMARY_DARK  = 0xFFD0BCFF;
+
+    private static final int FALLBACK_DENSITY_DPI = DisplayMetrics.DENSITY_DEFAULT;
+
+    private MaterialTabScrollBar() {
+        // Utility class.
+    }
+
+    // ============================================================
+    // Public API
+    // ============================================================
+
+    public static void attach(@NonNull TabLayout tabLayout) {
+
+        warnIfNotMainThread("attach");
+
+        if (tabLayout == null) return;
+
+        try {
+            final float density = resolveDensity(tabLayout);
+
+            final int indicatorHeight = Math.max(
+                    1,
+                    Math.round(INDICATOR_HEIGHT_DP * density));
+
+            final int primaryColor = resolvePrimaryColor(tabLayout);
+
+            applyRipple(tabLayout, primaryColor);
+
+            applyIndicator(tabLayout, primaryColor, indicatorHeight);
+
+            try {
+                tabLayout.setTabIndicatorFullWidth(false);
+            } catch (Throwable t) {
+                Log.e(TAG, "setTabIndicatorFullWidth failed", t);
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "attach failed", t);
+        }
+    }
+
+    public static void detach(@NonNull TabLayout tabLayout) {
+
+        warnIfNotMainThread("detach");
+
+        if (tabLayout == null) return;
+
+        try {
+            tabLayout.setSelectedTabIndicator(null);
+        } catch (Throwable t) {
+            Log.e(TAG, "detach: setSelectedTabIndicator(null) failed", t);
+        }
+
+        try {
+            tabLayout.setTabRippleColor(null);
+        } catch (Throwable t) {
+            Log.e(TAG, "detach: setTabRippleColor(null) failed", t);
+        }
+    }
+
+    // ============================================================
+    // Indicator -- ORDER MATTERS
+    // ============================================================
+
+    private static void applyIndicator(
+            @NonNull TabLayout tabLayout,
+            int primaryColor,
+            int indicatorHeight) {
+
+        // -----------------------------------------------------------------
+        // STEP 1 -- HEIGHT FIRST.
+        //
+        // setSelectedTabIndicatorHeight() internally nulls out any custom
+        // indicator drawable the TabLayout was previously using. It MUST
+        // run before setSelectedTabIndicator(), otherwise it wipes the
+        // custom drawable we are about to install.
+        //
+        // (Deprecated in favor of "use a custom drawable with an intrinsic
+        // height" -- but the deprecated setter remains the only reliable
+        // way to control the indicator height in older Material Components
+        // releases, and this class targets those releases.)
+        // -----------------------------------------------------------------
+        try {
+            tabLayout.setSelectedTabIndicatorHeight(indicatorHeight);
+        } catch (Throwable t) {
+            Log.e(TAG, "setSelectedTabIndicatorHeight failed", t);
+        }
+
+        // -----------------------------------------------------------------
+        // STEP 2 -- CUSTOM DRAWABLE SECOND.
+        //
+        // Now that the height is set, install the custom rounded-top
+        // indicator. It will not be discarded because we do not call the
+        // deprecated setter again afterward.
+        // -----------------------------------------------------------------
+        GradientDrawable indicator = null;
+
+        try {
+            // Top corners fully rounded, bottom corners flat.
+            //
+            // The radius must equal the FULL indicator height. With
+            // height / 2 the curve only covers the upper half of the bar
+            // and the shape still looks boxy. With the full height each top
+            // corner is a complete quarter circle that runs all the way
+            // down to the flat bottom edge.
+            final float topRadius = indicatorHeight;
+
+            indicator = new GradientDrawable();
+            indicator.setShape(GradientDrawable.RECTANGLE);
+            indicator.setColor(primaryColor);
+            indicator.setCornerRadii(new float[]{
+                    topRadius, topRadius,   // top-left
+                    topRadius, topRadius,   // top-right
+                    0f, 0f,                 // bottom-right
+                    0f, 0f                  // bottom-left
+            });
+
+            // Intrinsic height so the drawable is self-describing even if
+            // the framework consults it before layout.
+            indicator.setSize(-1, indicatorHeight);
+
+        } catch (Throwable t) {
+            Log.e(TAG, "Failed to build indicator drawable", t);
+            indicator = null;
+        }
+
+        if (indicator != null) {
+            try {
+                tabLayout.setSelectedTabIndicator(indicator);
+            } catch (Throwable t) {
+                Log.e(TAG, "setSelectedTabIndicator failed", t);
+            }
+        }
+    }
+
+    // ============================================================
+    // Ripple
+    // ============================================================
+
+    private static void applyRipple(
+            @NonNull TabLayout tabLayout,
+            int primaryColor) {
+
+        // Preferred: use the theme resource.
+        try {
+            tabLayout.setTabRippleColorResource(R.color.m3_tabs_ripple_color);
+            return;
+        } catch (Resources.NotFoundException e) {
+            Log.w(TAG, "R.color.m3_tabs_ripple_color not found; "
+                    + "falling back to manual ripple", e);
+        } catch (Throwable t) {
+            Log.e(TAG, "setTabRippleColorResource failed; "
+                    + "falling back to manual ripple", t);
+        }
+
+        // Fallback: primary at 16% alpha.
+        try {
+            int rippleColor = ColorUtils.setAlphaComponent(
+                    primaryColor,
+                    Math.round(RIPPLE_ALPHA * 255f));
+
+            tabLayout.setTabRippleColor(
+                    ColorStateList.valueOf(rippleColor));
+
+        } catch (Throwable t) {
+            Log.e(TAG, "Fallback ripple application failed", t);
+        }
+    }
+
+    // ============================================================
+    // Color helpers
+    // ============================================================
+
+    private static int resolvePrimaryColor(@NonNull TabLayout tabLayout) {
+
+        boolean dark = safeIsNightMode(tabLayout);
+        int fallback = dark ? FALLBACK_PRIMARY_DARK : FALLBACK_PRIMARY_LIGHT;
+
+        int color;
+        try {
+            color = MaterialColors.getColor(tabLayout, R.attr.colorPrimary);
+        } catch (Throwable t) {
+            Log.e(TAG, "getColor(colorPrimary) failed, using fallback", t);
+            return fallback;
+        }
+
+        if (color == android.graphics.Color.TRANSPARENT) return fallback;
+        if (((color >>> 24) & 0xFF) == 0) return fallback;
+
+        return color;
+    }
+
+    // ============================================================
+    // Density helpers
+    // ============================================================
+
+    private static float resolveDensity(@NonNull TabLayout tabLayout) {
+
+        try {
+            Resources res = tabLayout.getResources();
+            if (res == null) return 1.0f;
+
+            DisplayMetrics metrics = res.getDisplayMetrics();
+            if (metrics == null) return 1.0f;
+
+            float density = metrics.density;
+            if (density <= 0f) {
+                int dpi = metrics.densityDpi;
+                if (dpi > 0) return dpi / (float) FALLBACK_DENSITY_DPI;
+                return 1.0f;
+            }
+
+            return density;
+
+        } catch (Throwable t) {
+            Log.e(TAG, "resolveDensity failed, using 1.0f", t);
+            return 1.0f;
+        }
+    }
+
+    // ============================================================
+    // Misc helpers
+    // ============================================================
+
+    private static boolean safeIsNightMode(@NonNull TabLayout tabLayout) {
+        try {
+            int flags = tabLayout.getResources().getConfiguration().uiMode
+                    & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+            return flags == android.content.res.Configuration.UI_MODE_NIGHT_YES;
+        } catch (Throwable t) {
+            return false;
+        }
+    }
+
+    private static void warnIfNotMainThread(String methodName) {
+        try {
+            if (Looper.myLooper() != Looper.getMainLooper()) {
+                Log.w(TAG, methodName + " called off the main thread. "
+                        + "TabLayout is main-thread-only.");
+            }
+        } catch (Throwable ignored) {
+            // Logging must never break the pipeline.
+        }
+    }
+}

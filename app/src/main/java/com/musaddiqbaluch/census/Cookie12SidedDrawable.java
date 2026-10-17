@@ -1,1 +1,287 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuQ2FudmFzOwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5Db2xvckZpbHRlcjsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuUGFpbnQ7CmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLlBhdGg7CmltcG9ydCBhbmRyb2lkLmdyYXBoaWNzLlBpeGVsRm9ybWF0OwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5SZWN0OwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5kcmF3YWJsZS5EcmF3YWJsZTsKaW1wb3J0IGFuZHJvaWQudXRpbC5Mb2c7CgppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5Ob25OdWxsOwppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5OdWxsYWJsZTsKaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy5Db3JuZXJSb3VuZGluZzsKaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy5DdWJpYzsKaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy5Sb3VuZGVkUG9seWdvbjsKaW1wb3J0IGFuZHJvaWR4LmdyYXBoaWNzLnNoYXBlcy5TaGFwZXNLdDsKCmltcG9ydCBqYXZhLnV0aWwuTGlzdDsKCi8qKgogKiBEcmF3YWJsZSB0aGF0IHJlbmRlcnMgdGhlIEdvb2dsZSBNYXRlcmlhbCAzIEV4cHJlc3NpdmUgImNvb2tpZQogKiAxMi1zaWRlZCIgc2hhcGU6IGEgMTItcG9pbnRlZCBzdGFyIHdpdGggaGVhdmlseSByb3VuZGVkIGNvcm5lcnMsCiAqIHJvdGF0ZWQgLTkwIGRlZ3JlZXMuCiAqCiAqIFRoZSBzaGFwZSBpcyBidWlsdCBvbmNlIGluIHRoZSBjb25zdHJ1Y3RvciwgY2FjaGVkIGFzIGEgZmxhdCBmbG9hdFtdCiAqIG9mIHJvdGF0ZWQgY3ViaWNzLCBhbmQgdGhlIHNjYWxlZCBQYXRoIGlzIHJlYnVpbHQgb25seSB3aGVuIHRoZQogKiBib3VuZHMgY2hhbmdlLiBJZiB0aGUgc2hhcGVzIGxpYnJhcnkgZmFpbHMsIHRoZSBkcmF3YWJsZSBkZWdyYWRlcyB0bwogKiBhbiBlbXB0eSAoaW52aXNpYmxlKSBkcmF3YWJsZSBpbnN0ZWFkIG9mIGNyYXNoaW5nLgogKgogKiBGaWxsIG1vZGUgaXMgdGhlIGRlZmF1bHQuIENhbGwgc2V0U3Ryb2tlV2lkdGgoKSB0byBzd2l0Y2ggdG8gYW4KICogb3V0bGluZWQgcmluZyAodXNlZCBieSBDb29raWVSaXBwbGVWaWV3KS4KICovCnB1YmxpYyBjbGFzcyBDb29raWUxMlNpZGVkRHJhd2FibGUgZXh0ZW5kcyBEcmF3YWJsZSB7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFRBRyA9ICJDb29raWUxMlNpZGVkRHJhd2FibGUiOwoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IFJPVEFUSU9OX0RFR1JFRVMgPSAtOTBmOwoKICAgIHByaXZhdGUgZmluYWwgUGFpbnQgcGFpbnQ7CiAgICBwcml2YXRlIGZpbmFsIFBhdGggcGF0aCA9IG5ldyBQYXRoKCk7CgogICAgLyoqCiAgICAgKiBGbGF0IGN1YmljIGRhdGEgcGVyIGN1YmljOgogICAgICogICBbeDAsIHkwLCBjeDAsIGN5MCwgY3gxLCBjeTEsIHgxLCB5MV0KICAgICAqIEFscmVhZHkgcm90YXRlZCBieSBST1RBVElPTl9ERUdSRUVTLgogICAgICogTnVsbCBpZiB0aGUgc2hhcGUgY291bGQgbm90IGJlIGJ1aWx0LgogICAgICovCiAgICBATnVsbGFibGUKICAgIHByaXZhdGUgZmluYWwgZmxvYXRbXSBjdWJpY3NGbGF0OwoKICAgIC8qKiBDYWNoZWQgYm91bmRzIG9mIHRoZSByb3RhdGVkIHBvbHlnb24gKGJlZm9yZSBzY2FsaW5nKS4gKi8KICAgIHByaXZhdGUgZmluYWwgZmxvYXQgc291cmNlTWluWDsKICAgIHByaXZhdGUgZmluYWwgZmxvYXQgc291cmNlTWluWTsKICAgIHByaXZhdGUgZmluYWwgZmxvYXQgc291cmNlV2lkdGg7CiAgICBwcml2YXRlIGZpbmFsIGZsb2F0IHNvdXJjZUhlaWdodDsKCiAgICAvKiogVHJ1ZSBvbmx5IGlmIHRoZSBzaGFwZSB3YXMgYnVpbHQgYW5kIHRoZSBjdWJpY3MgYXJlIHVzYWJsZS4gKi8KICAgIHByaXZhdGUgZmluYWwgYm9vbGVhbiB1c2FibGU7CgogICAgcHVibGljIENvb2tpZTEyU2lkZWREcmF3YWJsZShpbnQgY29sb3IpIHsKCiAgICAgICAgcGFpbnQgPSBuZXcgUGFpbnQoUGFpbnQuQU5USV9BTElBU19GTEFHKTsKICAgICAgICBwYWludC5zZXRTdHlsZShQYWludC5TdHlsZS5GSUxMKTsKICAgICAgICBwYWludC5zZXRDb2xvcihjb2xvcik7CgogICAgICAgIC8vIFByZWNvbXB1dGUgcm90YXRpb24gY29uc3RhbnRzIG9uY2UuCiAgICAgICAgZmluYWwgZG91YmxlIGFuZ2xlID0gTWF0aC50b1JhZGlhbnMoUk9UQVRJT05fREVHUkVFUyk7CiAgICAgICAgZmluYWwgZmxvYXQgY29zID0gKGZsb2F0KSBNYXRoLmNvcyhhbmdsZSk7CiAgICAgICAgZmluYWwgZmxvYXQgc2luID0gKGZsb2F0KSBNYXRoLnNpbihhbmdsZSk7CgogICAgICAgIGZsb2F0W10gZmxhdCA9IG51bGw7CiAgICAgICAgZmxvYXQgbWluWCA9IDBmOwogICAgICAgIGZsb2F0IG1pblkgPSAwZjsKICAgICAgICBmbG9hdCB3aWR0aCA9IDBmOwogICAgICAgIGZsb2F0IGhlaWdodCA9IDBmOwogICAgICAgIGJvb2xlYW4gYnVpbHRPayA9IGZhbHNlOwoKICAgICAgICB0cnkgewogICAgICAgICAgICBDb3JuZXJSb3VuZGluZyByb3VuZGluZyA9IG5ldyBDb3JuZXJSb3VuZGluZygwLjVmLCAwLjBmKTsKCiAgICAgICAgICAgIFJvdW5kZWRQb2x5Z29uIGNvb2tpZSA9IFNoYXBlc0t0LnN0YXIoCiAgICAgICAgICAgICAgICAgICAgUm91bmRlZFBvbHlnb24uQ29tcGFuaW9uLAogICAgICAgICAgICAgICAgICAgIDEyLAogICAgICAgICAgICAgICAgICAgIDEuMGYsCiAgICAgICAgICAgICAgICAgICAgMC44ZiwKICAgICAgICAgICAgICAgICAgICByb3VuZGluZywKICAgICAgICAgICAgICAgICAgICBudWxsLAogICAgICAgICAgICAgICAgICAgIG51bGwsCiAgICAgICAgICAgICAgICAgICAgMC4wZiwKICAgICAgICAgICAgICAgICAgICAwLjBmCiAgICAgICAgICAgICk7CgogICAgICAgICAgICBpZiAoY29va2llICE9IG51bGwpIHsKICAgICAgICAgICAgICAgIExpc3Q8Q3ViaWM+IGN1YmljcyA9IGNvb2tpZS5nZXRDdWJpY3MoKTsKCiAgICAgICAgICAgICAgICBpZiAoY3ViaWNzICE9IG51bGwgJiYgIWN1Ymljcy5pc0VtcHR5KCkpIHsKCiAgICAgICAgICAgICAgICAgICAgaW50IG4gPSBjdWJpY3Muc2l6ZSgpOwogICAgICAgICAgICAgICAgICAgIGZsYXQgPSBuZXcgZmxvYXRbbiAqIDhdOwoKICAgICAgICAgICAgICAgICAgICBmbG9hdCBsb2NhbE1pblggPSBGbG9hdC5NQVhfVkFMVUU7CiAgICAgICAgICAgICAgICAgICAgZmxvYXQgbG9jYWxNaW5ZID0gRmxvYXQuTUFYX1ZBTFVFOwogICAgICAgICAgICAgICAgICAgIGZsb2F0IGxvY2FsTWF4WCA9IC1GbG9hdC5NQVhfVkFMVUU7CiAgICAgICAgICAgICAgICAgICAgZmxvYXQgbG9jYWxNYXhZID0gLUZsb2F0Lk1BWF9WQUxVRTsKCiAgICAgICAgICAgICAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBuOyBpKyspIHsKICAgICAgICAgICAgICAgICAgICAgICAgQ3ViaWMgYyA9IGN1Ymljcy5nZXQoaSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChjID09IG51bGwpIGNvbnRpbnVlOwoKICAgICAgICAgICAgICAgICAgICAgICAgaW50IG8gPSBpICogODsKCiAgICAgICAgICAgICAgICAgICAgICAgIGZsb2F0IHgwID0gYy5nZXRBbmNob3IwWCgpOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCB5MCA9IGMuZ2V0QW5jaG9yMFkoKTsKICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgY3gwID0gYy5nZXRDb250cm9sMFgoKTsKICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgY3kwID0gYy5nZXRDb250cm9sMFkoKTsKICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgY3gxID0gYy5nZXRDb250cm9sMVgoKTsKICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgY3kxID0gYy5nZXRDb250cm9sMVkoKTsKICAgICAgICAgICAgICAgICAgICAgICAgZmxvYXQgeDEgPSBjLmdldEFuY2hvcjFYKCk7CiAgICAgICAgICAgICAgICAgICAgICAgIGZsb2F0IHkxID0gYy5nZXRBbmNob3IxWSgpOwoKICAgICAgICAgICAgICAgICAgICAgICAgLy8gUm90YXRlIG9uY2UsIGNhY2hlIHRoZSByb3RhdGVkIGNvb3JkaW5hdGVzLgogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByeDAgPSB4MCAqIGNvcyAtIHkwICogc2luOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByeTAgPSB4MCAqIHNpbiArIHkwICogY29zOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByY3gwID0gY3gwICogY29zIC0gY3kwICogc2luOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByY3kwID0gY3gwICogc2luICsgY3kwICogY29zOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByY3gxID0gY3gxICogY29zIC0gY3kxICogc2luOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByY3kxID0gY3gxICogc2luICsgY3kxICogY29zOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByeDEgPSB4MSAqIGNvcyAtIHkxICogc2luOwogICAgICAgICAgICAgICAgICAgICAgICBmbG9hdCByeTEgPSB4MSAqIHNpbiArIHkxICogY29zOwoKICAgICAgICAgICAgICAgICAgICAgICAgZmxhdFtvXSAgICAgPSByeDA7CiAgICAgICAgICAgICAgICAgICAgICAgIGZsYXRbbyArIDFdID0gcnkwOwogICAgICAgICAgICAgICAgICAgICAgICBmbGF0W28gKyAyXSA9IHJjeDA7CiAgICAgICAgICAgICAgICAgICAgICAgIGZsYXRbbyArIDNdID0gcmN5MDsKICAgICAgICAgICAgICAgICAgICAgICAgZmxhdFtvICsgNF0gPSByY3gxOwogICAgICAgICAgICAgICAgICAgICAgICBmbGF0W28gKyA1XSA9IHJjeTE7CiAgICAgICAgICAgICAgICAgICAgICAgIGZsYXRbbyArIDZdID0gcngxOwogICAgICAgICAgICAgICAgICAgICAgICBmbGF0W28gKyA3XSA9IHJ5MTsKCiAgICAgICAgICAgICAgICAgICAgICAgIC8vIFRyYWNrIHJvdGF0ZWQgYm91bmRzIHVzaW5nIGFsbCBmb3VyIGNvbnRyb2wKICAgICAgICAgICAgICAgICAgICAgICAgLy8gcG9pbnRzIChvdmVyLWVzdGltYXRlLCBpbnRlbnRpb25hbCkuCiAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsTWluWCA9IE1hdGgubWluKGxvY2FsTWluWCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXRoLm1pbihyeDAsIE1hdGgubWluKHJjeDAsIE1hdGgubWluKHJjeDEsIHJ4MSkpKSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsTWluWSA9IE1hdGgubWluKGxvY2FsTWluWSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXRoLm1pbihyeTAsIE1hdGgubWluKHJjeTAsIE1hdGgubWluKHJjeTEsIHJ5MSkpKSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsTWF4WCA9IE1hdGgubWF4KGxvY2FsTWF4WCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXRoLm1heChyeDAsIE1hdGgubWF4KHJjeDAsIE1hdGgubWF4KHJjeDEsIHJ4MSkpKSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGxvY2FsTWF4WSA9IE1hdGgubWF4KGxvY2FsTWF4WSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBNYXRoLm1heChyeTAsIE1hdGgubWF4KHJjeTAsIE1hdGgubWF4KHJjeTEsIHJ5MSkpKSk7CiAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICB3aWR0aCA9IGxvY2FsTWF4WCAtIGxvY2FsTWluWDsKICAgICAgICAgICAgICAgICAgICBoZWlnaHQgPSBsb2NhbE1heFkgLSBsb2NhbE1pblk7CgogICAgICAgICAgICAgICAgICAgIGlmICh3aWR0aCA+IDBmICYmIGhlaWdodCA+IDBmKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG1pblggPSBsb2NhbE1pblg7CiAgICAgICAgICAgICAgICAgICAgICAgIG1pblkgPSBsb2NhbE1pblk7CiAgICAgICAgICAgICAgICAgICAgICAgIGJ1aWx0T2sgPSB0cnVlOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGZsYXQgPSBudWxsOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJGYWlsZWQgdG8gYnVpbGQgY29va2llIHNoYXBlOyAiCiAgICAgICAgICAgICAgICAgICAgKyAidXNpbmcgZW1wdHkgZHJhd2FibGUiLCB0KTsKICAgICAgICAgICAgZmxhdCA9IG51bGw7CiAgICAgICAgICAgIGJ1aWx0T2sgPSBmYWxzZTsKICAgICAgICB9CgogICAgICAgIHRoaXMuY3ViaWNzRmxhdCA9IGZsYXQ7CiAgICAgICAgdGhpcy5zb3VyY2VNaW5YID0gbWluWDsKICAgICAgICB0aGlzLnNvdXJjZU1pblkgPSBtaW5ZOwogICAgICAgIHRoaXMuc291cmNlV2lkdGggPSB3aWR0aDsKICAgICAgICB0aGlzLnNvdXJjZUhlaWdodCA9IGhlaWdodDsKICAgICAgICB0aGlzLnVzYWJsZSA9IGJ1aWx0T2s7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwcm90ZWN0ZWQgdm9pZCBvbkJvdW5kc0NoYW5nZShATm9uTnVsbCBSZWN0IGJvdW5kcykgewoKICAgICAgICBzdXBlci5vbkJvdW5kc0NoYW5nZShib3VuZHMpOwoKICAgICAgICBwYXRoLnJlc2V0KCk7CgogICAgICAgIGlmICghdXNhYmxlIHx8IGN1Ymljc0ZsYXQgPT0gbnVsbCkgcmV0dXJuOwoKICAgICAgICBmaW5hbCBpbnQgYncgPSBib3VuZHMud2lkdGgoKTsKICAgICAgICBmaW5hbCBpbnQgYmggPSBib3VuZHMuaGVpZ2h0KCk7CiAgICAgICAgaWYgKGJ3IDw9IDAgfHwgYmggPD0gMCkgewogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICBmaW5hbCBmbG9hdCB0YXJnZXRTaXplID0gTWF0aC5taW4oYncsIGJoKTsKICAgICAgICBmaW5hbCBmbG9hdCBzY2FsZSA9IHRhcmdldFNpemUgLyBNYXRoLm1heChzb3VyY2VXaWR0aCwgc291cmNlSGVpZ2h0KTsKCiAgICAgICAgaWYgKHNjYWxlIDw9IDBmIHx8IEZsb2F0LmlzTmFOKHNjYWxlKSB8fCBGbG9hdC5pc0luZmluaXRlKHNjYWxlKSkgewogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICBmaW5hbCBmbG9hdCBmaW5hbFdpZHRoID0gc291cmNlV2lkdGggKiBzY2FsZTsKICAgICAgICBmaW5hbCBmbG9hdCBmaW5hbEhlaWdodCA9IHNvdXJjZUhlaWdodCAqIHNjYWxlOwoKICAgICAgICBmaW5hbCBmbG9hdCBvZmZzZXRYID0gYm91bmRzLmxlZnQgKyAoYncgLSBmaW5hbFdpZHRoKSAvIDJmOwogICAgICAgIGZpbmFsIGZsb2F0IG9mZnNldFkgPSBib3VuZHMudG9wICsgKGJoIC0gZmluYWxIZWlnaHQpIC8gMmY7CgogICAgICAgIGZpbmFsIGludCBjdWJpY3MgPSBjdWJpY3NGbGF0Lmxlbmd0aCAvIDg7CgogICAgICAgIGZvciAoaW50IGkgPSAwOyBpIDwgY3ViaWNzOyBpKyspIHsKICAgICAgICAgICAgZmluYWwgaW50IG8gPSBpICogODsKCiAgICAgICAgICAgIGZpbmFsIGZsb2F0IHgwICA9IG9mZnNldFggKyAoY3ViaWNzRmxhdFtvXSAgICAgLSBzb3VyY2VNaW5YKSAqIHNjYWxlOwogICAgICAgICAgICBmaW5hbCBmbG9hdCB5MCAgPSBvZmZzZXRZICsgKGN1Ymljc0ZsYXRbbyArIDFdIC0gc291cmNlTWluWSkgKiBzY2FsZTsKICAgICAgICAgICAgZmluYWwgZmxvYXQgY3gwID0gb2Zmc2V0WCArIChjdWJpY3NGbGF0W28gKyAyXSAtIHNvdXJjZU1pblgpICogc2NhbGU7CiAgICAgICAgICAgIGZpbmFsIGZsb2F0IGN5MCA9IG9mZnNldFkgKyAoY3ViaWNzRmxhdFtvICsgM10gLSBzb3VyY2VNaW5ZKSAqIHNjYWxlOwogICAgICAgICAgICBmaW5hbCBmbG9hdCBjeDEgPSBvZmZzZXRYICsgKGN1Ymljc0ZsYXRbbyArIDRdIC0gc291cmNlTWluWCkgKiBzY2FsZTsKICAgICAgICAgICAgZmluYWwgZmxvYXQgY3kxID0gb2Zmc2V0WSArIChjdWJpY3NGbGF0W28gKyA1XSAtIHNvdXJjZU1pblkpICogc2NhbGU7CiAgICAgICAgICAgIGZpbmFsIGZsb2F0IHgxICA9IG9mZnNldFggKyAoY3ViaWNzRmxhdFtvICsgNl0gLSBzb3VyY2VNaW5YKSAqIHNjYWxlOwogICAgICAgICAgICBmaW5hbCBmbG9hdCB5MSAgPSBvZmZzZXRZICsgKGN1Ymljc0ZsYXRbbyArIDddIC0gc291cmNlTWluWSkgKiBzY2FsZTsKCiAgICAgICAgICAgIGlmIChpID09IDApIHsKICAgICAgICAgICAgICAgIHBhdGgubW92ZVRvKHgwLCB5MCk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHBhdGguY3ViaWNUbyhjeDAsIGN5MCwgY3gxLCBjeTEsIHgxLCB5MSk7CiAgICAgICAgfQoKICAgICAgICBwYXRoLmNsb3NlKCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBkcmF3KEBOb25OdWxsIENhbnZhcyBjYW52YXMpIHsKCiAgICAgICAgaWYgKHBhdGguaXNFbXB0eSgpKSByZXR1cm47CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGNhbnZhcy5kcmF3UGF0aChwYXRoLCBwYWludCk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiZHJhdyBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBQdWJsaWMgQVBJCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgdm9pZCBzZXRGaWxsQ29sb3IoaW50IGNvbG9yKSB7CiAgICAgICAgcGFpbnQuc2V0Q29sb3IoY29sb3IpOwogICAgICAgIGludmFsaWRhdGVTZWxmKCk7CiAgICB9CgogICAgLyoqIFN3aXRjaGVzIHRoZSBkcmF3YWJsZSBmcm9tIGZpbGxlZCB0byBvdXRsaW5lZC4gKi8KICAgIHB1YmxpYyB2b2lkIHNldFN0cm9rZVdpZHRoKGZsb2F0IHdpZHRoUHgpIHsKICAgICAgICBwYWludC5zZXRTdHlsZShQYWludC5TdHlsZS5TVFJPS0UpOwogICAgICAgIHBhaW50LnNldFN0cm9rZVdpZHRoKHdpZHRoUHgpOwogICAgICAgIHBhaW50LnNldFN0cm9rZUpvaW4oUGFpbnQuSm9pbi5ST1VORCk7CiAgICAgICAgaW52YWxpZGF0ZVNlbGYoKTsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIERyYXdhYmxlIG92ZXJyaWRlcwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBzZXRBbHBoYShpbnQgYWxwaGEpIHsKICAgICAgICBwYWludC5zZXRBbHBoYShhbHBoYSk7CiAgICAgICAgaW52YWxpZGF0ZVNlbGYoKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyBpbnQgZ2V0QWxwaGEoKSB7CiAgICAgICAgcmV0dXJuIHBhaW50LmdldEFscGhhKCk7CiAgICB9CgogICAgQE92ZXJyaWRlCiAgICBwdWJsaWMgdm9pZCBzZXRDb2xvckZpbHRlcihATnVsbGFibGUgQ29sb3JGaWx0ZXIgY29sb3JGaWx0ZXIpIHsKICAgICAgICBwYWludC5zZXRDb2xvckZpbHRlcihjb2xvckZpbHRlcik7CiAgICAgICAgaW52YWxpZGF0ZVNlbGYoKTsKICAgIH0KCiAgICBAT3ZlcnJpZGUKICAgIHB1YmxpYyBpbnQgZ2V0T3BhY2l0eSgpIHsKICAgICAgICByZXR1cm4gUGl4ZWxGb3JtYXQuVFJBTlNMVUNFTlQ7CiAgICB9Cn0=
+package com.musaddiqbaluch.census;
+
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.PixelFormat;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.graphics.shapes.CornerRounding;
+import androidx.graphics.shapes.Cubic;
+import androidx.graphics.shapes.RoundedPolygon;
+import androidx.graphics.shapes.ShapesKt;
+
+import java.util.List;
+
+/**
+ * Drawable that renders the Google Material 3 Expressive "cookie
+ * 12-sided" shape: a 12-pointed star with heavily rounded corners,
+ * rotated -90 degrees.
+ *
+ * The shape is built once in the constructor, cached as a flat float[]
+ * of rotated cubics, and the scaled Path is rebuilt only when the
+ * bounds change. If the shapes library fails, the drawable degrades to
+ * an empty (invisible) drawable instead of crashing.
+ *
+ * Fill mode is the default. Call setStrokeWidth() to switch to an
+ * outlined ring (used by CookieRippleView).
+ */
+public class Cookie12SidedDrawable extends Drawable {
+
+    private static final String TAG = "Cookie12SidedDrawable";
+
+    private static final float ROTATION_DEGREES = -90f;
+
+    private final Paint paint;
+    private final Path path = new Path();
+
+    /**
+     * Flat cubic data per cubic:
+     *   [x0, y0, cx0, cy0, cx1, cy1, x1, y1]
+     * Already rotated by ROTATION_DEGREES.
+     * Null if the shape could not be built.
+     */
+    @Nullable
+    private final float[] cubicsFlat;
+
+    /** Cached bounds of the rotated polygon (before scaling). */
+    private final float sourceMinX;
+    private final float sourceMinY;
+    private final float sourceWidth;
+    private final float sourceHeight;
+
+    /** True only if the shape was built and the cubics are usable. */
+    private final boolean usable;
+
+    public Cookie12SidedDrawable(int color) {
+
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(color);
+
+        // Precompute rotation constants once.
+        final double angle = Math.toRadians(ROTATION_DEGREES);
+        final float cos = (float) Math.cos(angle);
+        final float sin = (float) Math.sin(angle);
+
+        float[] flat = null;
+        float minX = 0f;
+        float minY = 0f;
+        float width = 0f;
+        float height = 0f;
+        boolean builtOk = false;
+
+        try {
+            CornerRounding rounding = new CornerRounding(0.5f, 0.0f);
+
+            RoundedPolygon cookie = ShapesKt.star(
+                    RoundedPolygon.Companion,
+                    12,
+                    1.0f,
+                    0.8f,
+                    rounding,
+                    null,
+                    null,
+                    0.0f,
+                    0.0f
+            );
+
+            if (cookie != null) {
+                List<Cubic> cubics = cookie.getCubics();
+
+                if (cubics != null && !cubics.isEmpty()) {
+
+                    int n = cubics.size();
+                    flat = new float[n * 8];
+
+                    float localMinX = Float.MAX_VALUE;
+                    float localMinY = Float.MAX_VALUE;
+                    float localMaxX = -Float.MAX_VALUE;
+                    float localMaxY = -Float.MAX_VALUE;
+
+                    for (int i = 0; i < n; i++) {
+                        Cubic c = cubics.get(i);
+                        if (c == null) continue;
+
+                        int o = i * 8;
+
+                        float x0 = c.getAnchor0X();
+                        float y0 = c.getAnchor0Y();
+                        float cx0 = c.getControl0X();
+                        float cy0 = c.getControl0Y();
+                        float cx1 = c.getControl1X();
+                        float cy1 = c.getControl1Y();
+                        float x1 = c.getAnchor1X();
+                        float y1 = c.getAnchor1Y();
+
+                        // Rotate once, cache the rotated coordinates.
+                        float rx0 = x0 * cos - y0 * sin;
+                        float ry0 = x0 * sin + y0 * cos;
+                        float rcx0 = cx0 * cos - cy0 * sin;
+                        float rcy0 = cx0 * sin + cy0 * cos;
+                        float rcx1 = cx1 * cos - cy1 * sin;
+                        float rcy1 = cx1 * sin + cy1 * cos;
+                        float rx1 = x1 * cos - y1 * sin;
+                        float ry1 = x1 * sin + y1 * cos;
+
+                        flat[o]     = rx0;
+                        flat[o + 1] = ry0;
+                        flat[o + 2] = rcx0;
+                        flat[o + 3] = rcy0;
+                        flat[o + 4] = rcx1;
+                        flat[o + 5] = rcy1;
+                        flat[o + 6] = rx1;
+                        flat[o + 7] = ry1;
+
+                        // Track rotated bounds using all four control
+                        // points (over-estimate, intentional).
+                        localMinX = Math.min(localMinX,
+                                Math.min(rx0, Math.min(rcx0, Math.min(rcx1, rx1))));
+                        localMinY = Math.min(localMinY,
+                                Math.min(ry0, Math.min(rcy0, Math.min(rcy1, ry1))));
+                        localMaxX = Math.max(localMaxX,
+                                Math.max(rx0, Math.max(rcx0, Math.max(rcx1, rx1))));
+                        localMaxY = Math.max(localMaxY,
+                                Math.max(ry0, Math.max(rcy0, Math.max(rcy1, ry1))));
+                    }
+
+                    width = localMaxX - localMinX;
+                    height = localMaxY - localMinY;
+
+                    if (width > 0f && height > 0f) {
+                        minX = localMinX;
+                        minY = localMinY;
+                        builtOk = true;
+                    } else {
+                        flat = null;
+                    }
+                }
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "Failed to build cookie shape; "
+                    + "using empty drawable", t);
+            flat = null;
+            builtOk = false;
+        }
+
+        this.cubicsFlat = flat;
+        this.sourceMinX = minX;
+        this.sourceMinY = minY;
+        this.sourceWidth = width;
+        this.sourceHeight = height;
+        this.usable = builtOk;
+    }
+
+    @Override
+    protected void onBoundsChange(@NonNull Rect bounds) {
+
+        super.onBoundsChange(bounds);
+
+        path.reset();
+
+        if (!usable || cubicsFlat == null) return;
+
+        final int bw = bounds.width();
+        final int bh = bounds.height();
+        if (bw <= 0 || bh <= 0) {
+            return;
+        }
+
+        final float targetSize = Math.min(bw, bh);
+        final float scale = targetSize / Math.max(sourceWidth, sourceHeight);
+
+        if (scale <= 0f || Float.isNaN(scale) || Float.isInfinite(scale)) {
+            return;
+        }
+
+        final float finalWidth = sourceWidth * scale;
+        final float finalHeight = sourceHeight * scale;
+
+        final float offsetX = bounds.left + (bw - finalWidth) / 2f;
+        final float offsetY = bounds.top + (bh - finalHeight) / 2f;
+
+        final int cubics = cubicsFlat.length / 8;
+
+        for (int i = 0; i < cubics; i++) {
+            final int o = i * 8;
+
+            final float x0  = offsetX + (cubicsFlat[o]     - sourceMinX) * scale;
+            final float y0  = offsetY + (cubicsFlat[o + 1] - sourceMinY) * scale;
+            final float cx0 = offsetX + (cubicsFlat[o + 2] - sourceMinX) * scale;
+            final float cy0 = offsetY + (cubicsFlat[o + 3] - sourceMinY) * scale;
+            final float cx1 = offsetX + (cubicsFlat[o + 4] - sourceMinX) * scale;
+            final float cy1 = offsetY + (cubicsFlat[o + 5] - sourceMinY) * scale;
+            final float x1  = offsetX + (cubicsFlat[o + 6] - sourceMinX) * scale;
+            final float y1  = offsetY + (cubicsFlat[o + 7] - sourceMinY) * scale;
+
+            if (i == 0) {
+                path.moveTo(x0, y0);
+            }
+
+            path.cubicTo(cx0, cy0, cx1, cy1, x1, y1);
+        }
+
+        path.close();
+    }
+
+    @Override
+    public void draw(@NonNull Canvas canvas) {
+
+        if (path.isEmpty()) return;
+
+        try {
+            canvas.drawPath(path, paint);
+        } catch (Throwable t) {
+            Log.e(TAG, "draw failed", t);
+        }
+    }
+
+    // ============================================================
+    // Public API
+    // ============================================================
+
+    public void setFillColor(int color) {
+        paint.setColor(color);
+        invalidateSelf();
+    }
+
+    /** Switches the drawable from filled to outlined. */
+    public void setStrokeWidth(float widthPx) {
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(widthPx);
+        paint.setStrokeJoin(Paint.Join.ROUND);
+        invalidateSelf();
+    }
+
+    // ============================================================
+    // Drawable overrides
+    // ============================================================
+
+    @Override
+    public void setAlpha(int alpha) {
+        paint.setAlpha(alpha);
+        invalidateSelf();
+    }
+
+    @Override
+    public int getAlpha() {
+        return paint.getAlpha();
+    }
+
+    @Override
+    public void setColorFilter(@Nullable ColorFilter colorFilter) {
+        paint.setColorFilter(colorFilter);
+        invalidateSelf();
+    }
+
+    @Override
+    public int getOpacity() {
+        return PixelFormat.TRANSLUCENT;
+    }
+}

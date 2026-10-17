@@ -1,1 +1,689 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuYXBwLkFjdGl2aXR5OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQ7CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuSW50ZW50OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LnJlcy5Db2xvclN0YXRlTGlzdDsKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuZHJhd2FibGUuRHJhd2FibGU7CmltcG9ydCBhbmRyb2lkLm5ldC5Vcmk7CmltcG9ydCBhbmRyb2lkLm9zLkJ1aWxkOwppbXBvcnQgYW5kcm9pZC51dGlsLkxvZzsKaW1wb3J0IGFuZHJvaWQudXRpbC5UeXBlZFZhbHVlOwppbXBvcnQgYW5kcm9pZC52aWV3LkdyYXZpdHk7CmltcG9ydCBhbmRyb2lkLnZpZXcuVmlldzsKaW1wb3J0IGFuZHJvaWQudmlldy5WaWV3R3JvdXA7CmltcG9ydCBhbmRyb2lkLndpZGdldC5JbWFnZVZpZXc7CmltcG9ydCBhbmRyb2lkLndpZGdldC5MaW5lYXJMYXlvdXQ7CmltcG9ydCBhbmRyb2lkLndpZGdldC5TY3JvbGxWaWV3OwppbXBvcnQgYW5kcm9pZC53aWRnZXQuVGV4dFZpZXc7CmltcG9ydCBhbmRyb2lkLndpZGdldC5Ub2FzdDsKCmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk5vbk51bGw7CmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk51bGxhYmxlOwppbXBvcnQgYW5kcm9pZHguYXBwY29tcGF0LmFwcC5BbGVydERpYWxvZzsKaW1wb3J0IGFuZHJvaWR4LmFwcGNvbXBhdC5jb250ZW50LnJlcy5BcHBDb21wYXRSZXNvdXJjZXM7CmltcG9ydCBhbmRyb2lkeC5jb3JlLndpZGdldC5UZXh0Vmlld0NvbXBhdDsKCmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuY29sb3IuTWF0ZXJpYWxDb2xvcnM7CmltcG9ydCBjb20uZ29vZ2xlLmFuZHJvaWQubWF0ZXJpYWwuZGlhbG9nLk1hdGVyaWFsQWxlcnREaWFsb2dCdWlsZGVyOwppbXBvcnQgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLmRpdmlkZXIuTWF0ZXJpYWxEaXZpZGVyOwoKLyoqCiAqIFRoaXJkLXBhcnR5IHJlc291cmNlcyBkaWFsb2cgKE1hdGVyaWFsIDMpLCBidWlsdCBlbnRpcmVseSBpbiBKYXZhLgogKiBMYXlvdXQ6IGNvb2tpZSBpY29uLCBoZWFkbGluZSwgc3VwcG9ydGluZyB0ZXh0LCB0aGVuIGxpbmsgc2VjdGlvbnMKICogc2VwYXJhdGVkIGJ5IE1hdGVyaWFsRGl2aWRlcnMuCiAqLwpwdWJsaWMgZmluYWwgY2xhc3MgUmVzb3VyY2VzRGlhbG9nIHsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgVEFHID0gIlJlc291cmNlc0RpYWxvZyI7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFVSTF9MT1RUSUUgPQogICAgICAgICAgICAiaHR0cHM6Ly9naXRodWIuY29tL2FpcmJuYi9sb3R0aWUtYW5kcm9pZCI7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgVVJMX01BVEVSSUFMX0NPTVBPTkVOVFMgPQogICAgICAgICAgICAiaHR0cHM6Ly9naXRodWIuY29tL21hdGVyaWFsLWNvbXBvbmVudHMvbWF0ZXJpYWwtY29tcG9uZW50cy1hbmRyb2lkIjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBVUkxfTUFURVJJQUxfQ09MT1JfVVRJTFMgPQogICAgICAgICAgICAiaHR0cHM6Ly9naXRodWIuY29tL21hdGVyaWFsLWZvdW5kYXRpb24vbWF0ZXJpYWwtY29sb3ItdXRpbGl0aWVzIjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBVUkxfUEFMRVRURSA9CiAgICAgICAgICAgICJodHRwczovL2RldmVsb3Blci5hbmRyb2lkLmNvbS9qZXRwYWNrL2FuZHJvaWR4L3JlbGVhc2VzL3BhbGV0dGUiOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFVSTF9HUkFQSElDU19TSEFQRVMgPQogICAgICAgICAgICAiaHR0cHM6Ly9kZXZlbG9wZXIuYW5kcm9pZC5jb20vamV0cGFjay9hbmRyb2lkeC9yZWxlYXNlcy9ncmFwaGljcyI7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgVVJMX0FJX0FOSU1BVElPTiA9CiAgICAgICAgICAgICJodHRwczovL2ljb25zY291dC5jb20vZnJlZS1sb3R0aWUtYW5pbWF0aW9uLyIKICAgICAgICAgICAgICAgICAgICArICJmcmVlLWFpLXNlcnZpY2UtYW5pbWF0aW9uXzExMTI3MDM1IjsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgRkFMTEJBQ0tfQ09OVEFJTkVSX0NPTE9SID0gMHhGRkU4REVGODsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGludCBGQUxMQkFDS19PTl9DT05UQUlORVJfQ09MT1IgPSAweEZGMjEwMDVEOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgaW50IEZBTExCQUNLX09OX1NVUkZBQ0UgPSAweEZGMUQxQjIwOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgaW50IEZBTExCQUNLX09OX1NVUkZBQ0VfVkFSSUFOVCA9IDB4RkY0OTQ1NEY7CgogICAgcHJpdmF0ZSBSZXNvdXJjZXNEaWFsb2coKSB7CiAgICAgICAgLy8gVXRpbGl0eSBjbGFzcy4KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIFB1YmxpYyBBUEkKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBzaG93KAogICAgICAgICAgICBATnVsbGFibGUgZmluYWwgQWN0aXZpdHkgYWN0aXZpdHksCiAgICAgICAgICAgIEBOdWxsYWJsZSBmaW5hbCBBbGVydERpYWxvZyBwYXJlbnREaWFsb2dUb0Nsb3NlKSB7CgogICAgICAgIGlmIChhY3Rpdml0eSA9PSBudWxsKSByZXR1cm47CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmIChhY3Rpdml0eS5pc0ZpbmlzaGluZygpKSByZXR1cm47CiAgICAgICAgICAgIGlmIChCdWlsZC5WRVJTSU9OLlNES19JTlQgPj0gQnVpbGQuVkVSU0lPTl9DT0RFUy5KRUxMWV9CRUFOX01SMQogICAgICAgICAgICAgICAgICAgICYmIGFjdGl2aXR5LmlzRGVzdHJveWVkKCkpIHsKICAgICAgICAgICAgICAgIHJldHVybjsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgInNob3c6IGxpZmVjeWNsZSBjaGVjayBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KCiAgICAgICAgaWYgKHBhcmVudERpYWxvZ1RvQ2xvc2UgIT0gbnVsbCkgewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgaWYgKHBhcmVudERpYWxvZ1RvQ2xvc2UuaXNTaG93aW5nKCkpIHsKICAgICAgICAgICAgICAgICAgICBwYXJlbnREaWFsb2dUb0Nsb3NlLmRpc21pc3MoKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgInBhcmVudCBkaWFsb2cgZGlzbWlzcyBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgZmluYWwgTWF0ZXJpYWxBbGVydERpYWxvZ0J1aWxkZXIgYnVpbGRlciA9CiAgICAgICAgICAgICAgICAgICAgbmV3IE1hdGVyaWFsQWxlcnREaWFsb2dCdWlsZGVyKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgYWN0aXZpdHksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBSLnN0eWxlLlRoZW1lT3ZlcmxheV9BcHBfU2V0dGluZ3NEaWFsb2cpOwoKICAgICAgICAgICAgZmluYWwgQ29udGV4dCBjdHggPSBidWlsZGVyLmdldENvbnRleHQoKTsKICAgICAgICAgICAgZmluYWwgVmlldyBjb250ZW50ID0gYnVpbGRDb250ZW50KGN0eCwgYWN0aXZpdHkpOwoKICAgICAgICAgICAgZmluYWwgQWxlcnREaWFsb2cgZGlhbG9nID0gYnVpbGRlcgogICAgICAgICAgICAgICAgICAgIC5zZXRWaWV3KGNvbnRlbnQpCiAgICAgICAgICAgICAgICAgICAgLnNldFBvc2l0aXZlQnV0dG9uKCJDbG9zZSIsIG51bGwpCiAgICAgICAgICAgICAgICAgICAgLmNyZWF0ZSgpOwoKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGRpYWxvZy5zaG93KCk7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJkaWFsb2cuc2hvdyBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgfQoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJzaG93IGZhaWxlZCIsIHQpOwogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIENvbnRlbnQKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHByaXZhdGUgc3RhdGljIFZpZXcgYnVpbGRDb250ZW50KAogICAgICAgICAgICBATm9uTnVsbCBDb250ZXh0IGN0eCwKICAgICAgICAgICAgQE5vbk51bGwgQWN0aXZpdHkgYWN0aXZpdHkpIHsKCiAgICAgICAgU2Nyb2xsVmlldyBzY3JvbGwgPSBuZXcgU2Nyb2xsVmlldyhjdHgpOwogICAgICAgIHNjcm9sbC5zZXRPdmVyU2Nyb2xsTW9kZShWaWV3Lk9WRVJfU0NST0xMX05FVkVSKTsKICAgICAgICBzY3JvbGwuc2V0RmlsbFZpZXdwb3J0KGZhbHNlKTsKCiAgICAgICAgTGluZWFyTGF5b3V0IHJvb3QgPSBuZXcgTGluZWFyTGF5b3V0KGN0eCk7CiAgICAgICAgcm9vdC5zZXRPcmllbnRhdGlvbihMaW5lYXJMYXlvdXQuVkVSVElDQUwpOwogICAgICAgIHJvb3Quc2V0UGFkZGluZyhkcChjdHgsIDEyKSwgZHAoY3R4LCAyNCksIGRwKGN0eCwgMTIpLCBkcChjdHgsIDApKTsKICAgICAgICBzY3JvbGwuYWRkVmlldyhyb290LCBuZXcgU2Nyb2xsVmlldy5MYXlvdXRQYXJhbXMoCiAgICAgICAgICAgICAgICBWaWV3R3JvdXAuTGF5b3V0UGFyYW1zLk1BVENIX1BBUkVOVCwKICAgICAgICAgICAgICAgIFZpZXdHcm91cC5MYXlvdXRQYXJhbXMuV1JBUF9DT05URU5UKSk7CgogICAgICAgIC8vIC0tLS0gQ29va2llIGljb24gLS0tLQogICAgICAgIExpbmVhckxheW91dCBjb29raWUgPSBuZXcgTGluZWFyTGF5b3V0KGN0eCk7CiAgICAgICAgY29va2llLnNldEdyYXZpdHkoR3Jhdml0eS5DRU5URVIpOwogICAgICAgIExpbmVhckxheW91dC5MYXlvdXRQYXJhbXMgY29va2llTHAgPQogICAgICAgICAgICAgICAgbmV3IExpbmVhckxheW91dC5MYXlvdXRQYXJhbXMoZHAoY3R4LCA2NCksIGRwKGN0eCwgNjQpKTsKICAgICAgICBjb29raWVMcC5ncmF2aXR5ID0gR3Jhdml0eS5DRU5URVJfSE9SSVpPTlRBTDsKCiAgICAgICAgSW1hZ2VWaWV3IGljb24gPSBuZXcgSW1hZ2VWaWV3KGN0eCk7CiAgICAgICAgaWNvbi5zZXRDb250ZW50RGVzY3JpcHRpb24oIlRoaXJkLXBhcnR5IHJlc291cmNlcyIpOwogICAgICAgIGNvb2tpZS5hZGRWaWV3KGljb24sIG5ldyBMaW5lYXJMYXlvdXQuTGF5b3V0UGFyYW1zKAogICAgICAgICAgICAgICAgZHAoY3R4LCAzMiksIGRwKGN0eCwgMzIpKSk7CiAgICAgICAgcm9vdC5hZGRWaWV3KGNvb2tpZSwgY29va2llTHApOwoKICAgICAgICBzZXR1cENvb2tpZUljb24oCiAgICAgICAgICAgICAgICBjdHgsIGNvb2tpZSwgaWNvbiwKICAgICAgICAgICAgICAgICJpY29uX3Jlc291cmNlc19yb3VuZGVkIiwKICAgICAgICAgICAgICAgICJpY29uX2xpbmtfcm91bmRlZCIpOwoKICAgICAgICAvLyAtLS0tIEhlYWRsaW5lIC0tLS0KICAgICAgICBUZXh0VmlldyB0aXRsZSA9IG5ldyBUZXh0VmlldyhjdHgpOwogICAgICAgIHRpdGxlLnNldFRleHQoIlRoaXJkLXBhcnR5IHJlc291cmNlcyIpOwogICAgICAgIHRpdGxlLnNldEdyYXZpdHkoR3Jhdml0eS5DRU5URVIpOwogICAgICAgIGFwcGx5VGV4dEFwcGVhcmFuY2UoY3R4LCB0aXRsZSwKICAgICAgICAgICAgICAgIGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIudGV4dEFwcGVhcmFuY2VIZWFkbGluZVNtYWxsKTsKICAgICAgICB0aXRsZS5zZXRUZXh0Q29sb3IoY29sb3IoY3R4LAogICAgICAgICAgICAgICAgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci5jb2xvck9uU3VyZmFjZSwKICAgICAgICAgICAgICAgIEZBTExCQUNLX09OX1NVUkZBQ0UpKTsKICAgICAgICBMaW5lYXJMYXlvdXQuTGF5b3V0UGFyYW1zIHRpdGxlTHAgPSBtYXRjaFdyYXAoKTsKICAgICAgICB0aXRsZUxwLnRvcE1hcmdpbiA9IGRwKGN0eCwgMTYpOwogICAgICAgIHRpdGxlTHAubGVmdE1hcmdpbiA9IGRwKGN0eCwgMTIpOwogICAgICAgIHRpdGxlTHAucmlnaHRNYXJnaW4gPSBkcChjdHgsIDEyKTsKICAgICAgICByb290LmFkZFZpZXcodGl0bGUsIHRpdGxlTHApOwoKICAgICAgICAvLyAtLS0tIFN1cHBvcnRpbmcgdGV4dCAtLS0tCiAgICAgICAgVGV4dFZpZXcgbWVzc2FnZSA9IG5ldyBUZXh0VmlldyhjdHgpOwogICAgICAgIG1lc3NhZ2Uuc2V0VGV4dCgiT3Blbi1zb3VyY2UgbGlicmFyaWVzIGFuZCBhc3NldHMgdXNlZCBpbiBDZW5zdXMuICIKICAgICAgICAgICAgICAgICsgIlRhcCBhbiBpdGVtIHRvIHZpZXcgaXRzIHNvdXJjZSBhbmQgbGljZW5zZS4iKTsKICAgICAgICBtZXNzYWdlLnNldEdyYXZpdHkoR3Jhdml0eS5DRU5URVIpOwogICAgICAgIGFwcGx5VGV4dEFwcGVhcmFuY2UoY3R4LCBtZXNzYWdlLAogICAgICAgICAgICAgICAgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci50ZXh0QXBwZWFyYW5jZUJvZHlNZWRpdW0pOwogICAgICAgIG1lc3NhZ2Uuc2V0VGV4dENvbG9yKGNvbG9yKGN0eCwKICAgICAgICAgICAgICAgIGNvbS5nb29nbGUuYW5kcm9pZC5tYXRlcmlhbC5SLmF0dHIuY29sb3JPblN1cmZhY2VWYXJpYW50LAogICAgICAgICAgICAgICAgRkFMTEJBQ0tfT05fU1VSRkFDRV9WQVJJQU5UKSk7CiAgICAgICAgTGluZWFyTGF5b3V0LkxheW91dFBhcmFtcyBtc2dMcCA9IG1hdGNoV3JhcCgpOwogICAgICAgIG1zZ0xwLnRvcE1hcmdpbiA9IGRwKGN0eCwgMTIpOwogICAgICAgIG1zZ0xwLmxlZnRNYXJnaW4gPSBkcChjdHgsIDEyKTsKICAgICAgICBtc2dMcC5yaWdodE1hcmdpbiA9IGRwKGN0eCwgMTIpOwogICAgICAgIHJvb3QuYWRkVmlldyhtZXNzYWdlLCBtc2dMcCk7CgogICAgICAgIC8vIC0tLS0gU2VjdGlvbjogTGlicmFyaWVzICYgZnJhbWV3b3JrcyAtLS0tCiAgICAgICAgYWRkU2VjdGlvbihjdHgsIHJvb3QsICJMSUJSQVJJRVMgJiBGUkFNRVdPUktTIik7CgogICAgICAgIGFkZFJvdyhjdHgsIGFjdGl2aXR5LCByb290LAogICAgICAgICAgICAgICAgIkxvdHRpZSBBbmltYXRpb24gRnJhbWV3b3JrIiwKICAgICAgICAgICAgICAgICJWZWN0b3IgYW5pbWF0aW9uIHJlbmRlcmluZyBlbmdpbmUgYnkgQWlyYm5iIChBcGFjaGUgTGljZW5zZSAyLjApLiIsCiAgICAgICAgICAgICAgICBVUkxfTE9UVElFLCB0cnVlKTsKCiAgICAgICAgYWRkUm93KGN0eCwgYWN0aXZpdHksIHJvb3QsCiAgICAgICAgICAgICAgICAiTWF0ZXJpYWwgQ29tcG9uZW50cyB2MS4xNC4wIiwKICAgICAgICAgICAgICAgICJPZmZpY2lhbCBNYXRlcmlhbCBEZXNpZ24gY29tcG9uZW50cyBhbmQgRXhwcmVzc2l2ZSBsYXlvdXQgc3lzdGVtIGJ5IEdvb2dsZS4iLAogICAgICAgICAgICAgICAgVVJMX01BVEVSSUFMX0NPTVBPTkVOVFMsIHRydWUpOwoKICAgICAgICBhZGRSb3coY3R4LCBhY3Rpdml0eSwgcm9vdCwKICAgICAgICAgICAgICAgICJNYXRlcmlhbCBDb2xvciBVdGlsaXRpZXMgdjMuMC4xIiwKICAgICAgICAgICAgICAgICJEeW5hbWljIGNvbG9yIHNlZWQgYWxnb3JpdGhtcyBhbmQgcGFsZXR0ZSBtYXRjaGluZyB0b29scyB1c2VkIGZvciBjYWxjdWxhdGluZyB0aGVtZSBjb2xvcnMgZnJvbSBpY29ucy4iLAogICAgICAgICAgICAgICAgVVJMX01BVEVSSUFMX0NPTE9SX1VUSUxTLCB0cnVlKTsKCiAgICAgICAgYWRkUm93KGN0eCwgYWN0aXZpdHksIHJvb3QsCiAgICAgICAgICAgICAgICAiQW5kcm9pZFggUGFsZXR0ZSB2MS4wLjAiLAogICAgICAgICAgICAgICAgIkV4dHJhY3RzIGRvbWluYW50IHZpYnJhbnQgYW5kIG11dGVkIGNvbG9yIHN3YXRjaGVzIGRpcmVjdGx5IGZyb20gYXBwIGFuZCByZXNvdXJjZSBpY29ucy4iLAogICAgICAgICAgICAgICAgVVJMX1BBTEVUVEUsIHRydWUpOwoKICAgICAgICBhZGRSb3coY3R4LCBhY3Rpdml0eSwgcm9vdCwKICAgICAgICAgICAgICAgICJBbmRyb2lkWCBHcmFwaGljcyBTaGFwZXMgdjEuMS4wIiwKICAgICAgICAgICAgICAgICJSZW5kZXJzIGN1c3RvbSByb3VuZGVkIHNoYXBlcywgbXVsdGktc2lkZWQgcG9seWdvbiBjb250b3VycywgYW5kIHNtb290aCBnZW9tZXRyaWMgcGF0aHMuIiwKICAgICAgICAgICAgICAgIFVSTF9HUkFQSElDU19TSEFQRVMsIGZhbHNlKTsKCiAgICAgICAgLy8gLS0tLSBTZWN0aW9uOiBWZWN0b3IgYW5pbWF0aW9ucyAtLS0tCiAgICAgICAgYWRkU2VjdGlvbihjdHgsIHJvb3QsICJWRUNUT1IgQU5JTUFUSU9OUyIpOwoKICAgICAgICBhZGRSb3coY3R4LCBhY3Rpdml0eSwgcm9vdCwKICAgICAgICAgICAgICAgICJGcmVlIEFJIFNlcnZpY2UgQW5pbWF0aW9uIiwKICAgICAgICAgICAgICAgICJMb3R0aWUgSlNPTiB2ZWN0b3IgYW5pbWF0aW9uIGJ5IEljb25TY291dCBEZXNpZ24gRWNvc3lzdGVtIHVuZGVyIEljb25TY291dCBMaWNlbnNlIHRlcm1zLiIsCiAgICAgICAgICAgICAgICBVUkxfQUlfQU5JTUFUSU9OLCBmYWxzZSk7CgogICAgICAgIHJldHVybiBzY3JvbGw7CiAgICB9CgogICAgLyoqIEZ1bGwtd2lkdGggZGl2aWRlciBmb2xsb3dlZCBieSBhIHNlY3Rpb24gaGVhZGVyLiAqLwogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBhZGRTZWN0aW9uKAogICAgICAgICAgICBATm9uTnVsbCBDb250ZXh0IGN0eCwKICAgICAgICAgICAgQE5vbk51bGwgTGluZWFyTGF5b3V0IHBhcmVudCwKICAgICAgICAgICAgQE5vbk51bGwgU3RyaW5nIHRleHQpIHsKCiAgICAgICAgYWRkRGl2aWRlcihjdHgsIHBhcmVudCwgMTIsIDEyLCAxNiwgMCk7CgogICAgICAgIFRleHRWaWV3IGhlYWRlciA9IG5ldyBUZXh0VmlldyhjdHgpOwogICAgICAgIGhlYWRlci5zZXRUZXh0KHRleHQpOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIFRleHRWaWV3Q29tcGF0LnNldFRleHRBcHBlYXJhbmNlKAogICAgICAgICAgICAgICAgICAgIGhlYWRlciwgUi5zdHlsZS5UZXh0QXBwZWFyYW5jZV9BcHBfU2V0dGluZ3NfU2VjdGlvbkhlYWRlcik7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAic2VjdGlvbiBoZWFkZXIgc3R5bGUgZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgICAgIExpbmVhckxheW91dC5MYXlvdXRQYXJhbXMgbHAgPSBtYXRjaFdyYXAoKTsKICAgICAgICBscC5sZWZ0TWFyZ2luID0gZHAoY3R4LCAxMik7CiAgICAgICAgbHAudG9wTWFyZ2luID0gZHAoY3R4LCAxNik7CiAgICAgICAgbHAuYm90dG9tTWFyZ2luID0gZHAoY3R4LCA0KTsKICAgICAgICBwYXJlbnQuYWRkVmlldyhoZWFkZXIsIGxwKTsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIGFkZFJvdygKICAgICAgICAgICAgQE5vbk51bGwgQ29udGV4dCBjdHgsCiAgICAgICAgICAgIEBOb25OdWxsIGZpbmFsIEFjdGl2aXR5IGFjdGl2aXR5LAogICAgICAgICAgICBATm9uTnVsbCBMaW5lYXJMYXlvdXQgcGFyZW50LAogICAgICAgICAgICBATm9uTnVsbCBTdHJpbmcgdGl0bGVUZXh0LAogICAgICAgICAgICBATm9uTnVsbCBTdHJpbmcgc2Vjb25kYXJ5VGV4dCwKICAgICAgICAgICAgQE5vbk51bGwgZmluYWwgU3RyaW5nIHVybCwKICAgICAgICAgICAgYm9vbGVhbiBhZGREaXZpZGVyQmVsb3cpIHsKCiAgICAgICAgTGluZWFyTGF5b3V0IHJvdyA9IG5ldyBMaW5lYXJMYXlvdXQoY3R4KTsKICAgICAgICByb3cuc2V0T3JpZW50YXRpb24oTGluZWFyTGF5b3V0LlZFUlRJQ0FMKTsKICAgICAgICByb3cuc2V0UGFkZGluZyhkcChjdHgsIDEyKSwgZHAoY3R4LCAxMiksIGRwKGN0eCwgMTIpLCBkcChjdHgsIDEyKSk7CiAgICAgICAgcm93LnNldENsaWNrYWJsZSh0cnVlKTsKICAgICAgICByb3cuc2V0Rm9jdXNhYmxlKHRydWUpOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHJvdy5zZXRCYWNrZ3JvdW5kUmVzb3VyY2UoUi5kcmF3YWJsZS5yaXBwbGVfcHJpbWFyeV9yb3VuZGVkKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJyb3cgYmFja2dyb3VuZCBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIFRleHRWaWV3IHRpdGxlID0gbmV3IFRleHRWaWV3KGN0eCk7CiAgICAgICAgdGl0bGUuc2V0VGV4dCh0aXRsZVRleHQpOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIFRleHRWaWV3Q29tcGF0LnNldFRleHRBcHBlYXJhbmNlKAogICAgICAgICAgICAgICAgICAgIHRpdGxlLCBSLnN0eWxlLlRleHRBcHBlYXJhbmNlX0FwcF9TZXR0aW5nc19Sb3dUaXRsZSk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAicm93IHRpdGxlIHN0eWxlIGZhaWxlZCIsIHQpOwogICAgICAgIH0KICAgICAgICByb3cuYWRkVmlldyh0aXRsZSwgbWF0Y2hXcmFwKCkpOwoKICAgICAgICBUZXh0VmlldyBzZWNvbmRhcnkgPSBuZXcgVGV4dFZpZXcoY3R4KTsKICAgICAgICBzZWNvbmRhcnkuc2V0VGV4dChzZWNvbmRhcnlUZXh0KTsKICAgICAgICB0cnkgewogICAgICAgICAgICBUZXh0Vmlld0NvbXBhdC5zZXRUZXh0QXBwZWFyYW5jZSgKICAgICAgICAgICAgICAgICAgICBzZWNvbmRhcnksIFIuc3R5bGUuVGV4dEFwcGVhcmFuY2VfQXBwX1NldHRpbmdzX1Jvd1NlY29uZGFyeSk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAicm93IHNlY29uZGFyeSBzdHlsZSBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICAgICAgTGluZWFyTGF5b3V0LkxheW91dFBhcmFtcyBzZWNMcCA9IG1hdGNoV3JhcCgpOwogICAgICAgIHNlY0xwLnRvcE1hcmdpbiA9IGRwKGN0eCwgNCk7CiAgICAgICAgcm93LmFkZFZpZXcoc2Vjb25kYXJ5LCBzZWNMcCk7CgogICAgICAgIHJvdy5zZXRPbkNsaWNrTGlzdGVuZXIobmV3IFZpZXcuT25DbGlja0xpc3RlbmVyKCkgewogICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgcHVibGljIHZvaWQgb25DbGljayhWaWV3IHYpIHsKICAgICAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAgICAgb3BlblVybChhY3Rpdml0eSwgdXJsKTsKICAgICAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAicm93IGNsaWNrIGZhaWxlZCIsIHQpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgfSk7CgogICAgICAgIHBhcmVudC5hZGRWaWV3KHJvdywgbWF0Y2hXcmFwKCkpOwoKICAgICAgICBpZiAoYWRkRGl2aWRlckJlbG93KSB7CiAgICAgICAgICAgIGFkZERpdmlkZXIoY3R4LCBwYXJlbnQsIDEyLCAxMiwgMCwgMCk7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgc3RhdGljIHZvaWQgYWRkRGl2aWRlcigKICAgICAgICAgICAgQE5vbk51bGwgQ29udGV4dCBjdHgsCiAgICAgICAgICAgIEBOb25OdWxsIExpbmVhckxheW91dCBwYXJlbnQsCiAgICAgICAgICAgIGludCBpbnNldFN0YXJ0RHAsCiAgICAgICAgICAgIGludCBpbnNldEVuZERwLAogICAgICAgICAgICBpbnQgdG9wTWFyZ2luRHAsCiAgICAgICAgICAgIGludCBib3R0b21NYXJnaW5EcCkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBNYXRlcmlhbERpdmlkZXIgZGl2aWRlciA9IG5ldyBNYXRlcmlhbERpdmlkZXIoY3R4KTsKICAgICAgICAgICAgZGl2aWRlci5zZXREaXZpZGVySW5zZXRTdGFydChkcChjdHgsIGluc2V0U3RhcnREcCkpOwogICAgICAgICAgICBkaXZpZGVyLnNldERpdmlkZXJJbnNldEVuZChkcChjdHgsIGluc2V0RW5kRHApKTsKCiAgICAgICAgICAgIExpbmVhckxheW91dC5MYXlvdXRQYXJhbXMgbHAgPSBuZXcgTGluZWFyTGF5b3V0LkxheW91dFBhcmFtcygKICAgICAgICAgICAgICAgICAgICBWaWV3R3JvdXAuTGF5b3V0UGFyYW1zLk1BVENIX1BBUkVOVCwKICAgICAgICAgICAgICAgICAgICBWaWV3R3JvdXAuTGF5b3V0UGFyYW1zLldSQVBfQ09OVEVOVCk7CiAgICAgICAgICAgIGxwLnRvcE1hcmdpbiA9IGRwKGN0eCwgdG9wTWFyZ2luRHApOwogICAgICAgICAgICBscC5ib3R0b21NYXJnaW4gPSBkcChjdHgsIGJvdHRvbU1hcmdpbkRwKTsKICAgICAgICAgICAgcGFyZW50LmFkZFZpZXcoZGl2aWRlciwgbHApOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImFkZERpdmlkZXIgZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gSWNvbiBzZXR1cAogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBzZXR1cENvb2tpZUljb24oCiAgICAgICAgICAgIEBOdWxsYWJsZSBDb250ZXh0IGNvbnRleHQsCiAgICAgICAgICAgIEBOdWxsYWJsZSBMaW5lYXJMYXlvdXQgY29udGFpbmVyLAogICAgICAgICAgICBATnVsbGFibGUgSW1hZ2VWaWV3IGltYWdlVmlldywKICAgICAgICAgICAgQE51bGxhYmxlIFN0cmluZyBwcmltYXJ5RHJhd2FibGUsCiAgICAgICAgICAgIEBOdWxsYWJsZSBTdHJpbmcgZmFsbGJhY2tEcmF3YWJsZSkgewoKICAgICAgICBpZiAoY29udGV4dCA9PSBudWxsIHx8IGNvbnRhaW5lciA9PSBudWxsIHx8IGltYWdlVmlldyA9PSBudWxsKSB7CiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB9CgogICAgICAgIGludCBiYWNrZ3JvdW5kQ29sb3IgPSBjb2xvcihjb250ZXh0LAogICAgICAgICAgICAgICAgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci5jb2xvclByaW1hcnlDb250YWluZXIsCiAgICAgICAgICAgICAgICBGQUxMQkFDS19DT05UQUlORVJfQ09MT1IpOwogICAgICAgIGludCBpY29uQ29sb3IgPSBjb2xvcihjb250ZXh0LAogICAgICAgICAgICAgICAgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLlIuYXR0ci5jb2xvck9uUHJpbWFyeUNvbnRhaW5lciwKICAgICAgICAgICAgICAgIEZBTExCQUNLX09OX0NPTlRBSU5FUl9DT0xPUik7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGNvbnRhaW5lci5zZXRCYWNrZ3JvdW5kKG5ldyBDb29raWU0U2lkZWREcmF3YWJsZShiYWNrZ3JvdW5kQ29sb3IpKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJjb250YWluZXIgYmFja2dyb3VuZCBmYWlsZWQiLCB0KTsKICAgICAgICB9CgogICAgICAgIERyYXdhYmxlIGRyYXdhYmxlID0gbnVsbDsKICAgICAgICBpZiAocHJpbWFyeURyYXdhYmxlICE9IG51bGwpIHsKICAgICAgICAgICAgZHJhd2FibGUgPSBsb2FkRHJhd2FibGUoY29udGV4dCwgcHJpbWFyeURyYXdhYmxlKTsKICAgICAgICB9CiAgICAgICAgaWYgKGRyYXdhYmxlID09IG51bGwgJiYgZmFsbGJhY2tEcmF3YWJsZSAhPSBudWxsKSB7CiAgICAgICAgICAgIGRyYXdhYmxlID0gbG9hZERyYXdhYmxlKGNvbnRleHQsIGZhbGxiYWNrRHJhd2FibGUpOwogICAgICAgIH0KCiAgICAgICAgaWYgKGRyYXdhYmxlID09IG51bGwpIHsKICAgICAgICAgICAgc2FmZVNldEltYWdlKGltYWdlVmlldywgbnVsbCk7CiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB9CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHNhZmVTZXRJbWFnZShpbWFnZVZpZXcsIGRyYXdhYmxlLm11dGF0ZSgpKTsKICAgICAgICAgICAgaW1hZ2VWaWV3LnNldEltYWdlVGludExpc3QoQ29sb3JTdGF0ZUxpc3QudmFsdWVPZihpY29uQ29sb3IpKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJpY29uIHNldHVwIGZhaWxlZCIsIHQpOwogICAgICAgICAgICBzYWZlU2V0SW1hZ2UoaW1hZ2VWaWV3LCBudWxsKTsKICAgICAgICB9CiAgICB9CgogICAgQE51bGxhYmxlCiAgICBwcml2YXRlIHN0YXRpYyBEcmF3YWJsZSBsb2FkRHJhd2FibGUoCiAgICAgICAgICAgIEBOb25OdWxsIENvbnRleHQgY3R4LAogICAgICAgICAgICBATm9uTnVsbCBTdHJpbmcgbmFtZSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmIChuYW1lLnRyaW0oKS5pc0VtcHR5KCkpIHJldHVybiBudWxsOwogICAgICAgICAgICBpbnQgaWQgPSBjdHguZ2V0UmVzb3VyY2VzKCkuZ2V0SWRlbnRpZmllcigKICAgICAgICAgICAgICAgICAgICBuYW1lLCAiZHJhd2FibGUiLCBjdHguZ2V0UGFja2FnZU5hbWUoKSk7CiAgICAgICAgICAgIGlmIChpZCA9PSAwKSByZXR1cm4gbnVsbDsKICAgICAgICAgICAgcmV0dXJuIEFwcENvbXBhdFJlc291cmNlcy5nZXREcmF3YWJsZShjdHgsIGlkKTsKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJsb2FkRHJhd2FibGUgZmFpbGVkOiAiICsgbmFtZSwgdCk7CiAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIHNhZmVTZXRJbWFnZSgKICAgICAgICAgICAgQE51bGxhYmxlIEltYWdlVmlldyBpbWFnZVZpZXcsCiAgICAgICAgICAgIEBOdWxsYWJsZSBEcmF3YWJsZSBkcmF3YWJsZSkgewoKICAgICAgICBpZiAoaW1hZ2VWaWV3ID09IG51bGwpIHJldHVybjsKICAgICAgICB0cnkgewogICAgICAgICAgICBpbWFnZVZpZXcuc2V0SW1hZ2VEcmF3YWJsZShkcmF3YWJsZSk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAic2V0SW1hZ2VEcmF3YWJsZSBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBIZWxwZXJzCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwcml2YXRlIHN0YXRpYyBMaW5lYXJMYXlvdXQuTGF5b3V0UGFyYW1zIG1hdGNoV3JhcCgpIHsKICAgICAgICByZXR1cm4gbmV3IExpbmVhckxheW91dC5MYXlvdXRQYXJhbXMoCiAgICAgICAgICAgICAgICBWaWV3R3JvdXAuTGF5b3V0UGFyYW1zLk1BVENIX1BBUkVOVCwKICAgICAgICAgICAgICAgIFZpZXdHcm91cC5MYXlvdXRQYXJhbXMuV1JBUF9DT05URU5UKTsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyBpbnQgZHAoQE5vbk51bGwgQ29udGV4dCBjdHgsIGludCB2YWx1ZSkgewogICAgICAgIHJldHVybiAoaW50KSBUeXBlZFZhbHVlLmFwcGx5RGltZW5zaW9uKAogICAgICAgICAgICAgICAgVHlwZWRWYWx1ZS5DT01QTEVYX1VOSVRfRElQLAogICAgICAgICAgICAgICAgdmFsdWUsCiAgICAgICAgICAgICAgICBjdHguZ2V0UmVzb3VyY2VzKCkuZ2V0RGlzcGxheU1ldHJpY3MoKSk7CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgaW50IGNvbG9yKEBOb25OdWxsIENvbnRleHQgY3R4LCBpbnQgYXR0ciwgaW50IGZhbGxiYWNrKSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgcmV0dXJuIE1hdGVyaWFsQ29sb3JzLmdldENvbG9yKGN0eCwgYXR0ciwgZmFsbGJhY2spOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIHJldHVybiBmYWxsYmFjazsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBhcHBseVRleHRBcHBlYXJhbmNlKAogICAgICAgICAgICBATm9uTnVsbCBDb250ZXh0IGN0eCwKICAgICAgICAgICAgQE5vbk51bGwgVGV4dFZpZXcgdHYsCiAgICAgICAgICAgIGludCBzdHlsZUF0dHIpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBUeXBlZFZhbHVlIG91dCA9IG5ldyBUeXBlZFZhbHVlKCk7CiAgICAgICAgICAgIGlmIChjdHguZ2V0VGhlbWUoKS5yZXNvbHZlQXR0cmlidXRlKHN0eWxlQXR0ciwgb3V0LCB0cnVlKQogICAgICAgICAgICAgICAgICAgICYmIG91dC5yZXNvdXJjZUlkICE9IDApIHsKICAgICAgICAgICAgICAgIFRleHRWaWV3Q29tcGF0LnNldFRleHRBcHBlYXJhbmNlKHR2LCBvdXQucmVzb3VyY2VJZCk7CiAgICAgICAgICAgIH0KICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICBMb2cuZShUQUcsICJ0ZXh0IGFwcGVhcmFuY2UgZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gRXh0ZXJuYWwgbGluawogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHJpdmF0ZSBzdGF0aWMgdm9pZCBvcGVuVXJsKAogICAgICAgICAgICBATnVsbGFibGUgQWN0aXZpdHkgYWN0aXZpdHksCiAgICAgICAgICAgIEBOdWxsYWJsZSBTdHJpbmcgdXJsKSB7CgogICAgICAgIGlmIChhY3Rpdml0eSA9PSBudWxsKSByZXR1cm47CgogICAgICAgIGlmICh1cmwgPT0gbnVsbCB8fCB1cmwudHJpbSgpLmlzRW1wdHkoKSkgewogICAgICAgICAgICBzYWZlVG9hc3QoYWN0aXZpdHksICJMaW5rIHVuYXZhaWxhYmxlLiIpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQoKICAgICAgICB0cnkgewogICAgICAgICAgICBhY3Rpdml0eS5zdGFydEFjdGl2aXR5KG5ldyBJbnRlbnQoSW50ZW50LkFDVElPTl9WSUVXLCBVcmkucGFyc2UodXJsKSkpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgIm9wZW5VcmwgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIHNhZmVUb2FzdChhY3Rpdml0eSwgIlVuYWJsZSB0byBvcGVuIGxpbmsuIik7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgc3RhdGljIHZvaWQgc2FmZVRvYXN0KAogICAgICAgICAgICBATnVsbGFibGUgQWN0aXZpdHkgYWN0aXZpdHksCiAgICAgICAgICAgIEBOdWxsYWJsZSBTdHJpbmcgbWVzc2FnZSkgewoKICAgICAgICBpZiAoYWN0aXZpdHkgPT0gbnVsbCkgcmV0dXJuOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIFRvYXN0Lm1ha2VUZXh0KGFjdGl2aXR5LCBtZXNzYWdlICE9IG51bGwgPyBtZXNzYWdlIDogIiIsCiAgICAgICAgICAgICAgICAgICAgVG9hc3QuTEVOR1RIX1NIT1JUKS5zaG93KCk7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAidG9hc3QgZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgfQp9
+
+package com.musaddiqbaluch.census;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.core.widget.TextViewCompat;
+
+import com.google.android.material.color.MaterialColors;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.divider.MaterialDivider;
+
+/**
+ * Third-party resources dialog for Census.
+ *
+ * Includes:
+ * - Open-source libraries and frameworks.
+ * - Vector animation assets.
+ * - Native Android graphics APIs used by the glass backdrop.
+ *
+ * Built entirely in Java with a Material 3 dialog layout.
+ */
+public final class ResourcesDialog {
+
+    private static final String TAG = "ResourcesDialog";
+
+    // ============================================================
+    // Open-source libraries and assets
+    // ============================================================
+
+    private static final String URL_LOTTIE =
+            "https://github.com/airbnb/lottie-android";
+
+    private static final String URL_MATERIAL_COMPONENTS =
+            "https://github.com/material-components/material-components-android";
+
+    private static final String URL_MATERIAL_COLOR_UTILS =
+            "https://github.com/material-foundation/material-color-utilities";
+
+    private static final String URL_PALETTE =
+            "https://developer.android.com/jetpack/androidx/releases/palette";
+
+    private static final String URL_GRAPHICS_SHAPES =
+            "https://developer.android.com/jetpack/androidx/releases/graphics";
+
+    private static final String URL_AI_ANIMATION =
+            "https://iconscout.com/free-lottie-animation/"
+                    + "free-ai-service-animation_11127035";
+
+    // ============================================================
+    // Native Android graphics APIs
+    // ============================================================
+
+    private static final String URL_RENDER_NODE =
+            "https://developer.android.com/reference/android/graphics/RenderNode";
+
+    private static final String URL_RENDER_EFFECT =
+            "https://developer.android.com/reference/android/graphics/RenderEffect";
+
+    private static final int FALLBACK_CONTAINER_COLOR = 0xFFE8DEF8;
+    private static final int FALLBACK_ON_CONTAINER_COLOR = 0xFF21005D;
+    private static final int FALLBACK_ON_SURFACE = 0xFF1D1B20;
+    private static final int FALLBACK_ON_SURFACE_VARIANT = 0xFF49454F;
+
+    private ResourcesDialog() {
+        // Utility class.
+    }
+
+    // ============================================================
+    // Public API
+    // ============================================================
+
+    public static void show(
+            @Nullable final Activity activity,
+            @Nullable final AlertDialog parentDialogToClose) {
+
+        if (activity == null) return;
+
+        try {
+            if (activity.isFinishing()) return;
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
+                    && activity.isDestroyed()) {
+                return;
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "show: lifecycle check failed", t);
+            return;
+        }
+
+        if (parentDialogToClose != null) {
+            try {
+                if (parentDialogToClose.isShowing()) {
+                    parentDialogToClose.dismiss();
+                }
+            } catch (Throwable t) {
+                Log.e(TAG, "parent dialog dismiss failed", t);
+            }
+        }
+
+        try {
+            final MaterialAlertDialogBuilder builder =
+                    new MaterialAlertDialogBuilder(
+                            activity,
+                            R.style.ThemeOverlay_App_SettingsDialog);
+
+            final Context ctx = builder.getContext();
+            final View content = buildContent(ctx, activity);
+
+            final AlertDialog dialog = builder
+                    .setView(content)
+                    .setPositiveButton("Close", null)
+                    .create();
+
+            try {
+                dialog.show();
+            } catch (Throwable t) {
+                Log.e(TAG, "dialog.show failed", t);
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "show failed", t);
+        }
+    }
+
+    // ============================================================
+    // Content
+    // ============================================================
+
+    private static View buildContent(
+            @NonNull Context ctx,
+            @NonNull Activity activity) {
+
+        ScrollView scroll = new ScrollView(ctx);
+        scroll.setOverScrollMode(View.OVER_SCROLL_NEVER);
+        scroll.setFillViewport(false);
+
+        LinearLayout root = new LinearLayout(ctx);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setPadding(
+                dp(ctx, 12),
+                dp(ctx, 24),
+                dp(ctx, 12),
+                dp(ctx, 0));
+
+        scroll.addView(root, new ScrollView.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        // --------------------------------------------------------
+        // Cookie icon
+        // --------------------------------------------------------
+
+        LinearLayout cookie = new LinearLayout(ctx);
+        cookie.setGravity(Gravity.CENTER);
+
+        LinearLayout.LayoutParams cookieLp =
+                new LinearLayout.LayoutParams(
+                        dp(ctx, 64),
+                        dp(ctx, 64));
+
+        cookieLp.gravity = Gravity.CENTER_HORIZONTAL;
+
+        ImageView icon = new ImageView(ctx);
+        icon.setContentDescription("Third-party resources");
+
+        cookie.addView(icon, new LinearLayout.LayoutParams(
+                dp(ctx, 32),
+                dp(ctx, 32)));
+
+        root.addView(cookie, cookieLp);
+
+        setupCookieIcon(
+                ctx,
+                cookie,
+                icon,
+                "icon_resources_rounded",
+                "icon_link_rounded");
+
+        // --------------------------------------------------------
+        // Headline
+        // --------------------------------------------------------
+
+        TextView title = new TextView(ctx);
+        title.setText("Third-party resources");
+        title.setGravity(Gravity.CENTER);
+
+        applyTextAppearance(
+                ctx,
+                title,
+                com.google.android.material.R.attr.textAppearanceHeadlineSmall);
+
+        title.setTextColor(color(
+                ctx,
+                com.google.android.material.R.attr.colorOnSurface,
+                FALLBACK_ON_SURFACE));
+
+        LinearLayout.LayoutParams titleLp = matchWrap();
+        titleLp.topMargin = dp(ctx, 16);
+        titleLp.leftMargin = dp(ctx, 12);
+        titleLp.rightMargin = dp(ctx, 12);
+
+        root.addView(title, titleLp);
+
+        // --------------------------------------------------------
+        // Supporting text
+        // --------------------------------------------------------
+
+        TextView message = new TextView(ctx);
+        message.setText(
+                "Open-source libraries, visual assets, and native "
+                        + "Android APIs used in Census. Tap an item to "
+                        + "view its source, documentation, or license.");
+
+        message.setGravity(Gravity.CENTER);
+
+        applyTextAppearance(
+                ctx,
+                message,
+                com.google.android.material.R.attr.textAppearanceBodyMedium);
+
+        message.setTextColor(color(
+                ctx,
+                com.google.android.material.R.attr.colorOnSurfaceVariant,
+                FALLBACK_ON_SURFACE_VARIANT));
+
+        LinearLayout.LayoutParams msgLp = matchWrap();
+        msgLp.topMargin = dp(ctx, 12);
+        msgLp.leftMargin = dp(ctx, 12);
+        msgLp.rightMargin = dp(ctx, 12);
+
+        root.addView(message, msgLp);
+
+        // ========================================================
+        // Section: Libraries and frameworks
+        // ========================================================
+
+        addSection(ctx, root, "LIBRARIES & FRAMEWORKS");
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Lottie Animation Framework",
+                "Vector animation rendering engine by Airbnb "
+                        + "(Apache License 2.0).",
+                URL_LOTTIE,
+                true);
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Material Components v1.14.0",
+                "Official Material Design components and "
+                        + "Expressive layout system by Google.",
+                URL_MATERIAL_COMPONENTS,
+                true);
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Material Color Utilities v3.0.1",
+                "Dynamic color seed algorithms and palette matching "
+                        + "tools used for calculating theme colors from icons.",
+                URL_MATERIAL_COLOR_UTILS,
+                true);
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "AndroidX Palette v1.0.0",
+                "Extracts dominant vibrant and muted color swatches "
+                        + "directly from app and resource icons.",
+                URL_PALETTE,
+                true);
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "AndroidX Graphics Shapes v1.1.0",
+                "Renders custom rounded shapes, multi-sided polygon "
+                        + "contours, and smooth geometric paths.",
+                URL_GRAPHICS_SHAPES,
+                false);
+
+        // ========================================================
+        // Section: Vector animations
+        // ========================================================
+
+        addSection(ctx, root, "VECTOR ANIMATIONS");
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Free AI Service Animation",
+                "Lottie JSON vector animation by IconScout Design "
+                        + "Ecosystem under IconScout License terms.",
+                URL_AI_ANIMATION,
+                false);
+
+        // ========================================================
+        // Section: Native Android graphics
+        // ========================================================
+
+        addSection(ctx, root, "NATIVE ANDROID GRAPHICS");
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Android RenderNode (API 29+)",
+                "Native Android rendering API used by Census to "
+                        + "record the backdrop content for its custom "
+                        + "glass effect. Part of the Android platform; "
+                        + "no additional library required.",
+                URL_RENDER_NODE,
+                true);
+
+        addRow(
+                ctx,
+                activity,
+                root,
+                "Android RenderEffect (API 31+)",
+                "Native graphics effect used with RenderNode to apply "
+                        + "the hardware-accelerated background blur "
+                        + "behind Census cards on Android 12 and newer. "
+                        + "Older Android versions fall back to a "
+                        + "translucent card appearance.",
+                URL_RENDER_EFFECT,
+                false);
+
+        return scroll;
+    }
+
+    // ============================================================
+    // Section header
+    // ============================================================
+
+    /** Full-width divider followed by a section header. */
+    private static void addSection(
+            @NonNull Context ctx,
+            @NonNull LinearLayout parent,
+            @NonNull String text) {
+
+        addDivider(ctx, parent, 12, 12, 16, 0);
+
+        TextView header = new TextView(ctx);
+        header.setText(text);
+
+        try {
+            TextViewCompat.setTextAppearance(
+                    header,
+                    R.style.TextAppearance_App_Settings_SectionHeader);
+        } catch (Throwable t) {
+            Log.e(TAG, "section header style failed", t);
+        }
+
+        LinearLayout.LayoutParams lp = matchWrap();
+        lp.leftMargin = dp(ctx, 12);
+        lp.topMargin = dp(ctx, 16);
+        lp.bottomMargin = dp(ctx, 4);
+
+        parent.addView(header, lp);
+    }
+
+    // ============================================================
+    // Resource row
+    // ============================================================
+
+    private static void addRow(
+            @NonNull Context ctx,
+            @NonNull final Activity activity,
+            @NonNull LinearLayout parent,
+            @NonNull String titleText,
+            @NonNull String secondaryText,
+            @NonNull final String url,
+            boolean addDividerBelow) {
+
+        LinearLayout row = new LinearLayout(ctx);
+        row.setOrientation(LinearLayout.VERTICAL);
+        row.setPadding(
+                dp(ctx, 12),
+                dp(ctx, 12),
+                dp(ctx, 12),
+                dp(ctx, 12));
+
+        row.setClickable(true);
+        row.setFocusable(true);
+
+        try {
+            row.setBackgroundResource(R.drawable.ripple_primary_rounded);
+        } catch (Throwable t) {
+            Log.e(TAG, "row background failed", t);
+        }
+
+        TextView title = new TextView(ctx);
+        title.setText(titleText);
+
+        try {
+            TextViewCompat.setTextAppearance(
+                    title,
+                    R.style.TextAppearance_App_Settings_RowTitle);
+        } catch (Throwable t) {
+            Log.e(TAG, "row title style failed", t);
+        }
+
+        row.addView(title, matchWrap());
+
+        TextView secondary = new TextView(ctx);
+        secondary.setText(secondaryText);
+
+        try {
+            TextViewCompat.setTextAppearance(
+                    secondary,
+                    R.style.TextAppearance_App_Settings_RowSecondary);
+        } catch (Throwable t) {
+            Log.e(TAG, "row secondary style failed", t);
+        }
+
+        LinearLayout.LayoutParams secLp = matchWrap();
+        secLp.topMargin = dp(ctx, 4);
+
+        row.addView(secondary, secLp);
+
+        row.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    openUrl(activity, url);
+                } catch (Throwable t) {
+                    Log.e(TAG, "row click failed", t);
+                }
+            }
+        });
+
+        parent.addView(row, matchWrap());
+
+        if (addDividerBelow) {
+            addDivider(ctx, parent, 12, 12, 0, 0);
+        }
+    }
+
+    // ============================================================
+    // Material divider
+    // ============================================================
+
+    private static void addDivider(
+            @NonNull Context ctx,
+            @NonNull LinearLayout parent,
+            int insetStartDp,
+            int insetEndDp,
+            int topMarginDp,
+            int bottomMarginDp) {
+
+        try {
+            MaterialDivider divider = new MaterialDivider(ctx);
+
+            divider.setDividerInsetStart(dp(ctx, insetStartDp));
+            divider.setDividerInsetEnd(dp(ctx, insetEndDp));
+
+            LinearLayout.LayoutParams lp =
+                    new LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT);
+
+            lp.topMargin = dp(ctx, topMarginDp);
+            lp.bottomMargin = dp(ctx, bottomMarginDp);
+
+            parent.addView(divider, lp);
+
+        } catch (Throwable t) {
+            Log.e(TAG, "addDivider failed", t);
+        }
+    }
+
+    // ============================================================
+    // Cookie icon setup
+    // ============================================================
+
+    private static void setupCookieIcon(
+            @Nullable Context context,
+            @Nullable LinearLayout container,
+            @Nullable ImageView imageView,
+            @Nullable String primaryDrawable,
+            @Nullable String fallbackDrawable) {
+
+        if (context == null || container == null || imageView == null) {
+            return;
+        }
+
+        int backgroundColor = color(
+                context,
+                com.google.android.material.R.attr.colorPrimaryContainer,
+                FALLBACK_CONTAINER_COLOR);
+
+        int iconColor = color(
+                context,
+                com.google.android.material.R.attr.colorOnPrimaryContainer,
+                FALLBACK_ON_CONTAINER_COLOR);
+
+        try {
+            container.setBackground(
+                    new Cookie4SidedDrawable(backgroundColor));
+        } catch (Throwable t) {
+            Log.e(TAG, "container background failed", t);
+        }
+
+        Drawable drawable = null;
+
+        if (primaryDrawable != null) {
+            drawable = loadDrawable(context, primaryDrawable);
+        }
+
+        if (drawable == null && fallbackDrawable != null) {
+            drawable = loadDrawable(context, fallbackDrawable);
+        }
+
+        if (drawable == null) {
+            safeSetImage(imageView, null);
+            return;
+        }
+
+        try {
+            safeSetImage(imageView, drawable.mutate());
+
+            imageView.setImageTintList(
+                    ColorStateList.valueOf(iconColor));
+
+        } catch (Throwable t) {
+            Log.e(TAG, "icon setup failed", t);
+            safeSetImage(imageView, null);
+        }
+    }
+
+    @Nullable
+    private static Drawable loadDrawable(
+            @NonNull Context ctx,
+            @NonNull String name) {
+
+        try {
+            if (name.trim().isEmpty()) return null;
+
+            int id = ctx.getResources().getIdentifier(
+                    name,
+                    "drawable",
+                    ctx.getPackageName());
+
+            if (id == 0) return null;
+
+            return AppCompatResources.getDrawable(ctx, id);
+
+        } catch (Throwable t) {
+            Log.e(TAG, "loadDrawable failed: " + name, t);
+            return null;
+        }
+    }
+
+    private static void safeSetImage(
+            @Nullable ImageView imageView,
+            @Nullable Drawable drawable) {
+
+        if (imageView == null) return;
+
+        try {
+            imageView.setImageDrawable(drawable);
+        } catch (Throwable t) {
+            Log.e(TAG, "setImageDrawable failed", t);
+        }
+    }
+
+    // ============================================================
+    // Helpers
+    // ============================================================
+
+    private static LinearLayout.LayoutParams matchWrap() {
+        return new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+    }
+
+    private static int dp(
+            @NonNull Context ctx,
+            int value) {
+
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                value,
+                ctx.getResources().getDisplayMetrics());
+    }
+
+    private static int color(
+            @NonNull Context ctx,
+            int attr,
+            int fallback) {
+
+        try {
+            return MaterialColors.getColor(ctx, attr, fallback);
+        } catch (Throwable t) {
+            return fallback;
+        }
+    }
+
+    private static void applyTextAppearance(
+            @NonNull Context ctx,
+            @NonNull TextView tv,
+            int styleAttr) {
+
+        try {
+            TypedValue out = new TypedValue();
+
+            if (ctx.getTheme().resolveAttribute(styleAttr, out, true)
+                    && out.resourceId != 0) {
+                TextViewCompat.setTextAppearance(tv, out.resourceId);
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "text appearance failed", t);
+        }
+    }
+
+    // ============================================================
+    // External links
+    // ============================================================
+
+    private static void openUrl(
+            @Nullable Activity activity,
+            @Nullable String url) {
+
+        if (activity == null) return;
+
+        if (url == null || url.trim().isEmpty()) {
+            safeToast(activity, "Link unavailable.");
+            return;
+        }
+
+        try {
+            activity.startActivity(
+                    new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(url)));
+
+        } catch (Throwable t) {
+            Log.e(TAG, "openUrl failed", t);
+            safeToast(activity, "Unable to open link.");
+        }
+    }
+
+    private static void safeToast(
+            @Nullable Activity activity,
+            @Nullable String message) {
+
+        if (activity == null) return;
+
+        try {
+            Toast.makeText(
+                    activity,
+                    message != null ? message : "",
+                    Toast.LENGTH_SHORT).show();
+
+        } catch (Throwable t) {
+            Log.e(TAG, "toast failed", t);
+        }
+    }
+}

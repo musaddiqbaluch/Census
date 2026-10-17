@@ -1,1 +1,14 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHNoYXBlIHhtbG5zOmFuZHJvaWQ9Imh0dHA6Ly9zY2hlbWFzLmFuZHJvaWQuY29tL2Fway9yZXMvYW5kcm9pZCIKICAgIGFuZHJvaWQ6c2hhcGU9InJlY3RhbmdsZSI+CgogICAgPCEtLSBUcmFuc3BhcmVudCBiYWNrZ3JvdW5kIC0tPgogICAgPHNvbGlkIGFuZHJvaWQ6Y29sb3I9IkBhbmRyb2lkOmNvbG9yL3RyYW5zcGFyZW50IiAvPgoKICAgIDwhLS0gU3Ryb2tlOiB3aWR0aCBpbiBkcCwgY29sb3IgcGxhY2Vob2xkZXIgLS0+CiAgICA8c3Ryb2tlCiAgICAgICAgYW5kcm9pZDp3aWR0aD0iMmRwIgogICAgICAgIGFuZHJvaWQ6Y29sb3I9IiMwMDAwMDAwMCIgLz4KCiAgICA8Y29ybmVycyBhbmRyb2lkOnJhZGl1cz0iMjBkcCIgLz4KPC9zaGFwZT4=
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Transparent background -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Stroke: width in dp, color placeholder -->
+    <stroke
+        android:width="2dp"
+        android:color="#00000000" />
+
+    <corners android:radius="20dp" />
+</shape>

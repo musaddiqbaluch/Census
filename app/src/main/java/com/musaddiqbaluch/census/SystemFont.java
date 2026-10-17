@@ -1,1 +1,215 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuZ3JhcGhpY3MuVHlwZWZhY2U7CmltcG9ydCBhbmRyb2lkLm9zLkxvb3BlcjsKaW1wb3J0IGFuZHJvaWQudXRpbC5Mb2c7CmltcG9ydCBhbmRyb2lkLndpZGdldC5UZXh0VmlldzsKCmltcG9ydCBhbmRyb2lkeC5hbm5vdGF0aW9uLk51bGxhYmxlOwoKLyoqCiAqIFN5c3RlbSBmb250IGhlbHBlcjogYXBwbGllcyBhIE1hdGVyaWFsIDMgd2VpZ2h0ICgxMDAuLjkwMCkgdG8gYQogKiBUZXh0VmlldyB1c2luZyB0aGUgc3lzdGVtJ3MgdmFyaWFibGUtd2VpZ2h0IHNhbnMtc2VyaWYgZmFtaWx5LgogKgogKiBXZWlnaHQgY29uc3RhbnRzIG1hcCBkaXJlY3RseSB0byBNYXRlcmlhbCAzJ3Mgc3VwcG9ydGVkIHdlaWdodHMuIEFueQogKiB3ZWlnaHQgdmFsdWUgaXMgYWNjZXB0ZWQ7IHZhbHVlcyBvdXRzaWRlIDEwMC4uOTAwIGFyZSBjbGFtcGVkLCBhbmQKICogdmFsdWVzIG5vdCBvbiBhIDEwMC1zdGVwIGJvdW5kYXJ5IGFyZSByb3VuZGVkIHRvIHRoZSBuZWFyZXN0IGh1bmRyZWQKICogKG1hdGNoaW5nIHdoYXQgVHlwZWZhY2UuY3JlYXRlIGl0c2VsZiBkb2VzIGludGVybmFsbHkpLgogKgogKiBSb2J1c3RuZXNzCiAqIC0tLS0tLS0tLS0KICogICAtIFR5cGVmYWNlIGluc3RhbmNlcyBhcmUgQ0FDSEVELiBUeXBlZmFjZS5jcmVhdGUgaXMgZXhwZW5zaXZlIGFuZAogKiAgICAgd2FzIHByZXZpb3VzbHkgY2FsbGVkIG9uY2UgcGVyIHRhYiBwZXIgcmVmcmVzaCAtLSB1cCB0byB+NjAKICogICAgIGFsbG9jYXRpb25zIHBlciB0YXAgb24gYSBwaG9uZSB3aXRoIDMwIGluc3RhbGxlcnMuCiAqICAgLSBFdmVyeSBtZXRob2QgaXMgd3JhcHBlZDsgYSBUeXBlZmFjZS5jcmVhdGUgZmFpbHVyZSBmYWxscyBiYWNrIHRvCiAqICAgICB0aGUgc3lzdGVtIGRlZmF1bHQuIEEgc2V0VHlwZWZhY2UgZmFpbHVyZSBpcyBsb2dnZWQsIG5vdCB0aHJvd24uCiAqICAgLSBOdWxsIFRleHRWaWV3IGlzIGEgc2FmZSBuby1vcC4KICogICAtIEEgZGVidWctb25seSB3YXJuaW5nIGlzIGxvZ2dlZCBpZiBhIHNldHRlciBpcyBjYWxsZWQgb2ZmIHRoZQogKiAgICAgbWFpbiB0aHJlYWQ7IGl0IGRvZXMgbm90IHRocm93LgogKi8KcHVibGljIGZpbmFsIGNsYXNzIFN5c3RlbUZvbnQgewoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBUQUcgPSAiU3lzdGVtRm9udCI7CgogICAgLy8gTWF0ZXJpYWwgMyBzdXBwb3J0ZWQgd2VpZ2h0cy4KICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgaW50IFRISU4gICAgICAgID0gMTAwOwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBpbnQgRVhUUkFfTElHSFQgPSAyMDA7CiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGludCBMSUdIVCAgICAgICA9IDMwMDsKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgaW50IFJFR1VMQVIgICAgID0gNDAwOwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBpbnQgTUVESVVNICAgICAgPSA1MDA7CiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGludCBTRU1JX0JPTEQgICA9IDYwMDsKICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgaW50IEJPTEQgICAgICAgID0gNzAwOwogICAgcHVibGljIHN0YXRpYyBmaW5hbCBpbnQgRVhUUkFfQk9MRCAgPSA4MDA7CiAgICBwdWJsaWMgc3RhdGljIGZpbmFsIGludCBCTEFDSyAgICAgICA9IDkwMDsKCiAgICAvLyBTbWFsbCwgYm91bmRlZCBjYWNoZTogOSB3ZWlnaHQgc3RlcHMgeCAyIGl0YWxpYyBzdGF0ZXMgPSAxOCBzbG90cy4KICAgIC8vIEluZGV4ZWQgYnkgKHN0ZXAgLSAxKSAqIDIgKyAoaXRhbGljID8gMSA6IDApLCB3aGVyZSBzdGVwIGlzIDEuLjkuCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBpbnQgQ0FDSEVfU0laRSA9IDE4OwogICAgQFN1cHByZXNzV2FybmluZ3MoInVuY2hlY2tlZCIpCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBUeXBlZmFjZVtdIENBQ0hFID0gbmV3IFR5cGVmYWNlW0NBQ0hFX1NJWkVdOwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgT2JqZWN0IENBQ0hFX0xPQ0sgPSBuZXcgT2JqZWN0KCk7CgogICAgcHJpdmF0ZSBTeXN0ZW1Gb250KCkgewogICAgICAgIC8vIFV0aWxpdHkgY2xhc3MuCiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBUeXBlZmFjZSBmYWN0b3J5CiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBATnVsbGFibGUKICAgIHB1YmxpYyBzdGF0aWMgVHlwZWZhY2UgZ2V0KGludCB3ZWlnaHQpIHsKICAgICAgICByZXR1cm4gZ2V0KHdlaWdodCwgZmFsc2UpOwogICAgfQoKICAgIEBOdWxsYWJsZQogICAgcHVibGljIHN0YXRpYyBUeXBlZmFjZSBnZXQoaW50IHdlaWdodCwgYm9vbGVhbiBpdGFsaWMpIHsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgZmluYWwgaW50IHN0ZXAgPSBub3JtYWxpemVXZWlnaHRUb1N0ZXAod2VpZ2h0KTsKICAgICAgICAgICAgZmluYWwgaW50IGluZGV4ID0gY2FjaGVJbmRleChzdGVwLCBpdGFsaWMpOwoKICAgICAgICAgICAgLy8gRmFzdCBwYXRoOiBjYWNoZWQgaW5zdGFuY2UuCiAgICAgICAgICAgIFR5cGVmYWNlIGNhY2hlZCA9IENBQ0hFW2luZGV4XTsKICAgICAgICAgICAgaWYgKGNhY2hlZCAhPSBudWxsKSByZXR1cm4gY2FjaGVkOwoKICAgICAgICAgICAgc3luY2hyb25pemVkIChDQUNIRV9MT0NLKSB7CiAgICAgICAgICAgICAgICAvLyBSZS1jaGVjayB1bmRlciBsb2NrIHRvIGF2b2lkIGR1cGxpY2F0ZSBjcmVhdGlvbi4KICAgICAgICAgICAgICAgIGNhY2hlZCA9IENBQ0hFW2luZGV4XTsKICAgICAgICAgICAgICAgIGlmIChjYWNoZWQgIT0gbnVsbCkgcmV0dXJuIGNhY2hlZDsKCiAgICAgICAgICAgICAgICBUeXBlZmFjZSBjcmVhdGVkOwogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBjcmVhdGVkID0gVHlwZWZhY2UuY3JlYXRlKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgVHlwZWZhY2UuU0FOU19TRVJJRiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ZXAgKiAxMDAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpdGFsaWMKICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJUeXBlZmFjZS5jcmVhdGUgZmFpbGVkIGZvciB3ZWlnaHQgIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgKyAoc3RlcCAqIDEwMCkgKyAiIGl0YWxpYz0iICsgaXRhbGljLCB0KTsKICAgICAgICAgICAgICAgICAgICBjcmVhdGVkID0gbnVsbDsKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBpZiAoY3JlYXRlZCA9PSBudWxsKSB7CiAgICAgICAgICAgICAgICAgICAgLy8gU29tZSBPRU1zIHJldHVybiBudWxsIGZyb20gVHlwZWZhY2UuY3JlYXRlIGZvcgogICAgICAgICAgICAgICAgICAgIC8vIHVudXN1YWwgZmFtaWxpZXMvd2VpZ2h0cy4gRmFsbCBiYWNrIHRvIGRlZmF1bHQuCiAgICAgICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICAgICAgY3JlYXRlZCA9IFR5cGVmYWNlLkRFRkFVTFQ7CiAgICAgICAgICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiVHlwZWZhY2UuREVGQVVMVCBsb29rdXAgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBDQUNIRVtpbmRleF0gPSBjcmVhdGVkOwogICAgICAgICAgICAgICAgcmV0dXJuIGNyZWF0ZWQ7CiAgICAgICAgICAgIH0KCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiZ2V0KHdlaWdodD0iICsgd2VpZ2h0ICsgIiwgaXRhbGljPSIgKyBpdGFsaWMKICAgICAgICAgICAgICAgICAgICArICIpIGZhaWxlZCIsIHQpOwogICAgICAgICAgICAvLyBCZXN0LWVmZm9ydCBmYWxsYmFjazsgbWF5IHJldHVybiBudWxsIGlmIGV2ZW4gdGhpcyBmYWlscy4KICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHJldHVybiBUeXBlZmFjZS5ERUZBVUxUOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdDIpIHsKICAgICAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gQXBwbGllcnMKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBhcHBseShATnVsbGFibGUgVGV4dFZpZXcgdGV4dFZpZXcsIGludCB3ZWlnaHQpIHsKICAgICAgICBhcHBseSh0ZXh0Vmlldywgd2VpZ2h0LCBmYWxzZSk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIGFwcGx5KAogICAgICAgICAgICBATnVsbGFibGUgVGV4dFZpZXcgdGV4dFZpZXcsCiAgICAgICAgICAgIGludCB3ZWlnaHQsCiAgICAgICAgICAgIGJvb2xlYW4gaXRhbGljKSB7CgogICAgICAgIGlmICh0ZXh0VmlldyA9PSBudWxsKSByZXR1cm47CgogICAgICAgIHdhcm5JZk5vdE1haW5UaHJlYWQoImFwcGx5Iik7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIFR5cGVmYWNlIHR5cGVmYWNlID0gZ2V0KHdlaWdodCwgaXRhbGljKTsKICAgICAgICAgICAgaWYgKHR5cGVmYWNlICE9IG51bGwpIHsKICAgICAgICAgICAgICAgIHRleHRWaWV3LnNldFR5cGVmYWNlKHR5cGVmYWNlKTsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImFwcGx5IGZhaWxlZCIsIHQpOwogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIENvbnZlbmllbmNlIHNob3J0Y3V0cwogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHVibGljIHN0YXRpYyB2b2lkIHJlZ3VsYXIoQE51bGxhYmxlIFRleHRWaWV3IHRleHRWaWV3KSB7CiAgICAgICAgYXBwbHkodGV4dFZpZXcsIFJFR1VMQVIpOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBtZWRpdW0oQE51bGxhYmxlIFRleHRWaWV3IHRleHRWaWV3KSB7CiAgICAgICAgYXBwbHkodGV4dFZpZXcsIE1FRElVTSk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIHNlbWlCb2xkKEBOdWxsYWJsZSBUZXh0VmlldyB0ZXh0VmlldykgewogICAgICAgIGFwcGx5KHRleHRWaWV3LCBTRU1JX0JPTEQpOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBib2xkKEBOdWxsYWJsZSBUZXh0VmlldyB0ZXh0VmlldykgewogICAgICAgIGFwcGx5KHRleHRWaWV3LCBCT0xEKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgZXh0cmFCb2xkKEBOdWxsYWJsZSBUZXh0VmlldyB0ZXh0VmlldykgewogICAgICAgIGFwcGx5KHRleHRWaWV3LCBFWFRSQV9CT0xEKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgYmxhY2soQE51bGxhYmxlIFRleHRWaWV3IHRleHRWaWV3KSB7CiAgICAgICAgYXBwbHkodGV4dFZpZXcsIEJMQUNLKTsKICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIEludGVybmFsIGhlbHBlcnMKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIC8qKgogICAgICogQ29udmVydHMgYW4gYXJiaXRyYXJ5IHdlaWdodCAoMTAwLi45MDAgdHlwaWNhbGx5KSBpbnRvIGEgc3RlcAogICAgICogdmFsdWUgaW4gMS4uOS4gVmFsdWVzIGJlbG93IDEwMCBjbGFtcCB0byAxOyBhYm92ZSA5MDAgY2xhbXAgdG8gOS4KICAgICAqIFZhbHVlcyBub3Qgb24gYSBodW5kcmVkIGJvdW5kYXJ5IHJvdW5kIHRvIHRoZSBuZWFyZXN0IGh1bmRyZWQsCiAgICAgKiBtYXRjaGluZyBBbmRyb2lkJ3MgaW50ZXJuYWwgbm9ybWFsaXNhdGlvbi4KICAgICAqLwogICAgcHJpdmF0ZSBzdGF0aWMgaW50IG5vcm1hbGl6ZVdlaWdodFRvU3RlcChpbnQgd2VpZ2h0KSB7CgogICAgICAgIGlmICh3ZWlnaHQgPD0gMTAwKSByZXR1cm4gMTsKICAgICAgICBpZiAod2VpZ2h0ID49IDkwMCkgcmV0dXJuIDk7CgogICAgICAgIC8vIFJvdW5kIHRvIG5lYXJlc3QgaHVuZHJlZC4KICAgICAgICBpbnQgc3RlcCA9ICh3ZWlnaHQgKyA1MCkgLyAxMDA7CgogICAgICAgIC8vIEd1YXJkIGFnYWluc3QgYW55IG9mZi1ieS1vbmUgZnJvbSBpbnRlZ2VyIGRpdmlzaW9uLgogICAgICAgIGlmIChzdGVwIDwgMSkgc3RlcCA9IDE7CiAgICAgICAgaWYgKHN0ZXAgPiA5KSBzdGVwID0gOTsKCiAgICAgICAgcmV0dXJuIHN0ZXA7CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgaW50IGNhY2hlSW5kZXgoaW50IHN0ZXAsIGJvb2xlYW4gaXRhbGljKSB7CiAgICAgICAgcmV0dXJuIChzdGVwIC0gMSkgKiAyICsgKGl0YWxpYyA/IDEgOiAwKTsKICAgIH0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIHdhcm5JZk5vdE1haW5UaHJlYWQoU3RyaW5nIG1ldGhvZE5hbWUpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBpZiAoTG9vcGVyLm15TG9vcGVyKCkgIT0gTG9vcGVyLmdldE1haW5Mb29wZXIoKSkgewogICAgICAgICAgICAgICAgTG9nLncoVEFHLCBtZXRob2ROYW1lICsgIiBjYWxsZWQgb2ZmIHRoZSBtYWluIHRocmVhZC4gIgogICAgICAgICAgICAgICAgICAgICAgICArICJUZXh0Vmlldy5zZXRUeXBlZmFjZSBpcyBhIFVJIG9wZXJhdGlvbi4iKTsKICAgICAgICAgICAgfQogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7CiAgICAgICAgICAgIC8vIExvZ2dpbmcgbXVzdCBuZXZlciBicmVhayB0aGUgcGlwZWxpbmUuCiAgICAgICAgfQogICAgfQp9
+package com.musaddiqbaluch.census;
+
+import android.graphics.Typeface;
+import android.os.Looper;
+import android.util.Log;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+
+/**
+ * System font helper: applies a Material 3 weight (100..900) to a
+ * TextView using the system's variable-weight sans-serif family.
+ *
+ * Weight constants map directly to Material 3's supported weights. Any
+ * weight value is accepted; values outside 100..900 are clamped, and
+ * values not on a 100-step boundary are rounded to the nearest hundred
+ * (matching what Typeface.create itself does internally).
+ *
+ * Robustness
+ * ----------
+ *   - Typeface instances are CACHED. Typeface.create is expensive and
+ *     was previously called once per tab per refresh -- up to ~60
+ *     allocations per tap on a phone with 30 installers.
+ *   - Every method is wrapped; a Typeface.create failure falls back to
+ *     the system default. A setTypeface failure is logged, not thrown.
+ *   - Null TextView is a safe no-op.
+ *   - A debug-only warning is logged if a setter is called off the
+ *     main thread; it does not throw.
+ */
+public final class SystemFont {
+
+    private static final String TAG = "SystemFont";
+
+    // Material 3 supported weights.
+    public static final int THIN        = 100;
+    public static final int EXTRA_LIGHT = 200;
+    public static final int LIGHT       = 300;
+    public static final int REGULAR     = 400;
+    public static final int MEDIUM      = 500;
+    public static final int SEMI_BOLD   = 600;
+    public static final int BOLD        = 700;
+    public static final int EXTRA_BOLD  = 800;
+    public static final int BLACK       = 900;
+
+    // Small, bounded cache: 9 weight steps x 2 italic states = 18 slots.
+    // Indexed by (step - 1) * 2 + (italic ? 1 : 0), where step is 1..9.
+    private static final int CACHE_SIZE = 18;
+    @SuppressWarnings("unchecked")
+    private static final Typeface[] CACHE = new Typeface[CACHE_SIZE];
+    private static final Object CACHE_LOCK = new Object();
+
+    private SystemFont() {
+        // Utility class.
+    }
+
+    // ============================================================
+    // Typeface factory
+    // ============================================================
+
+    @Nullable
+    public static Typeface get(int weight) {
+        return get(weight, false);
+    }
+
+    @Nullable
+    public static Typeface get(int weight, boolean italic) {
+
+        try {
+            final int step = normalizeWeightToStep(weight);
+            final int index = cacheIndex(step, italic);
+
+            // Fast path: cached instance.
+            Typeface cached = CACHE[index];
+            if (cached != null) return cached;
+
+            synchronized (CACHE_LOCK) {
+                // Re-check under lock to avoid duplicate creation.
+                cached = CACHE[index];
+                if (cached != null) return cached;
+
+                Typeface created;
+                try {
+                    created = Typeface.create(
+                            Typeface.SANS_SERIF,
+                            step * 100,
+                            italic
+                    );
+                } catch (Throwable t) {
+                    Log.e(TAG, "Typeface.create failed for weight "
+                            + (step * 100) + " italic=" + italic, t);
+                    created = null;
+                }
+
+                if (created == null) {
+                    // Some OEMs return null from Typeface.create for
+                    // unusual families/weights. Fall back to default.
+                    try {
+                        created = Typeface.DEFAULT;
+                    } catch (Throwable t) {
+                        Log.e(TAG, "Typeface.DEFAULT lookup failed", t);
+                        return null;
+                    }
+                }
+
+                CACHE[index] = created;
+                return created;
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "get(weight=" + weight + ", italic=" + italic
+                    + ") failed", t);
+            // Best-effort fallback; may return null if even this fails.
+            try {
+                return Typeface.DEFAULT;
+            } catch (Throwable t2) {
+                return null;
+            }
+        }
+    }
+
+    // ============================================================
+    // Appliers
+    // ============================================================
+
+    public static void apply(@Nullable TextView textView, int weight) {
+        apply(textView, weight, false);
+    }
+
+    public static void apply(
+            @Nullable TextView textView,
+            int weight,
+            boolean italic) {
+
+        if (textView == null) return;
+
+        warnIfNotMainThread("apply");
+
+        try {
+            Typeface typeface = get(weight, italic);
+            if (typeface != null) {
+                textView.setTypeface(typeface);
+            }
+        } catch (Throwable t) {
+            Log.e(TAG, "apply failed", t);
+        }
+    }
+
+    // ============================================================
+    // Convenience shortcuts
+    // ============================================================
+
+    public static void regular(@Nullable TextView textView) {
+        apply(textView, REGULAR);
+    }
+
+    public static void medium(@Nullable TextView textView) {
+        apply(textView, MEDIUM);
+    }
+
+    public static void semiBold(@Nullable TextView textView) {
+        apply(textView, SEMI_BOLD);
+    }
+
+    public static void bold(@Nullable TextView textView) {
+        apply(textView, BOLD);
+    }
+
+    public static void extraBold(@Nullable TextView textView) {
+        apply(textView, EXTRA_BOLD);
+    }
+
+    public static void black(@Nullable TextView textView) {
+        apply(textView, BLACK);
+    }
+
+    // ============================================================
+    // Internal helpers
+    // ============================================================
+
+    /**
+     * Converts an arbitrary weight (100..900 typically) into a step
+     * value in 1..9. Values below 100 clamp to 1; above 900 clamp to 9.
+     * Values not on a hundred boundary round to the nearest hundred,
+     * matching Android's internal normalisation.
+     */
+    private static int normalizeWeightToStep(int weight) {
+
+        if (weight <= 100) return 1;
+        if (weight >= 900) return 9;
+
+        // Round to nearest hundred.
+        int step = (weight + 50) / 100;
+
+        // Guard against any off-by-one from integer division.
+        if (step < 1) step = 1;
+        if (step > 9) step = 9;
+
+        return step;
+    }
+
+    private static int cacheIndex(int step, boolean italic) {
+        return (step - 1) * 2 + (italic ? 1 : 0);
+    }
+
+    private static void warnIfNotMainThread(String methodName) {
+        try {
+            if (Looper.myLooper() != Looper.getMainLooper()) {
+                Log.w(TAG, methodName + " called off the main thread. "
+                        + "TextView.setTypeface is a UI operation.");
+            }
+        } catch (Throwable ignored) {
+            // Logging must never break the pipeline.
+        }
+    }
+}

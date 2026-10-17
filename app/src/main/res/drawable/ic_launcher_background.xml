@@ -1,1 +1,12 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHZlY3RvciB4bWxuczphbmRyb2lkPSJodHRwOi8vc2NoZW1hcy5hbmRyb2lkLmNvbS9hcGsvcmVzL2FuZHJvaWQiCiAgICBhbmRyb2lkOndpZHRoPSIxMDhkcCIKICAgIGFuZHJvaWQ6aGVpZ2h0PSIxMDhkcCIKICAgIGFuZHJvaWQ6dmlld3BvcnRXaWR0aD0iMTUzNiIKICAgIGFuZHJvaWQ6dmlld3BvcnRIZWlnaHQ9IjE1MzYiPgoKICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IkBjb2xvci9sYXVuY2hlcl9pY29uX2JhY2tncm91bmQiCiAgICAgICAgYW5kcm9pZDpwYXRoRGF0YT0iTSAyNTYsMCBIIDEyODAgQyAxNDIxLDAgMTUzNiwxMTUgMTUzNiwyNTYgViAxMjgwIEMgMTUzNiwxNDIxIDE0MjEsMTUzNiAxMjgwLDE1MzYgSCAyNTYgQyAxMTUsMTUzNiAwLDE0MjEgMCwxMjgwIFYgMjU2IEMgMCwxMTUgMTE1LDAgMjU2LDAgWiIgLz4KCjwvdmVjdG9yPgo=
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1536"
+    android:viewportHeight="1536">
+
+    <path
+        android:fillColor="@color/launcher_icon_background"
+        android:pathData="M 256,0 H 1280 C 1421,0 1536,115 1536,256 V 1280 C 1536,1421 1421,1536 1280,1536 H 256 C 115,1536 0,1421 0,1280 V 256 C 0,115 115,0 256,0 Z" />
+
+</vector>

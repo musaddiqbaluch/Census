@@ -1,1 +1,631 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQudXRpbC5BcnJheU1hcDsKaW1wb3J0IGFuZHJvaWQudXRpbC5Mb2c7CmltcG9ydCBhbmRyb2lkLnZpZXcuTW90aW9uRXZlbnQ7CmltcG9ydCBhbmRyb2lkLnZpZXcuVmlldzsKaW1wb3J0IGFuZHJvaWQudmlldy5WZWxvY2l0eVRyYWNrZXI7CgppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5Ob25OdWxsOwppbXBvcnQgYW5kcm9pZHguYW5ub3RhdGlvbi5OdWxsYWJsZTsKaW1wb3J0IGFuZHJvaWR4LmR5bmFtaWNhbmltYXRpb24uYW5pbWF0aW9uLkR5bmFtaWNBbmltYXRpb247CmltcG9ydCBhbmRyb2lkeC5keW5hbWljYW5pbWF0aW9uLmFuaW1hdGlvbi5TcHJpbmdBbmltYXRpb247CmltcG9ydCBhbmRyb2lkeC5keW5hbWljYW5pbWF0aW9uLmFuaW1hdGlvbi5TcHJpbmdGb3JjZTsKCi8qKgogKiBQaHlzaWNzLWJhc2VkIHByZXNzICsgZHJhZyBpbnRlcmFjdGlvbiBmb3IgdGhlIGRyb2lkIGNoYXJhY3Rlci4KICoKICogQmVoYXZpb3VyCiAqIC0tLS0tLS0tLQogKiAgIDEuIFByZXNzOiAgICAgICBzY2FsZSAtPiAwLjkyCiAqICAgMi4gRmluZ2VyIGRyYWc6IGhvcml6b250YWwgZmluZ2VyIG1vdmVtZW50IHRpbHRzIHRoZSBkcm9pZC4KICogICAzLiBUaWx0IGxpbWl0OiAgbWF4ICsvLSAxOCBkZWdyZWVzIGZyb20gdGhlIHRvdWNoLXN0YXJ0IHJvdGF0aW9uLgogKiAgIDQuIFJlbGVhc2U6ICAgICByZXR1cm5zIHRvIHRoZSByb3RhdGlvbiBoZWxkIGF0IEFDVElPTl9ET1dOLAogKiAgICAgICAgICAgICAgICAgICBjYXJyeWluZyB0aGUgZmluZ2VyJ3MgYW5ndWxhciB2ZWxvY2l0eSBpbnRvIHRoZQogKiAgICAgICAgICAgICAgICAgICByZXR1cm4gc3ByaW5nIHNvIHRoZSByZWNvaWwgZmVlbHMgcGh5c2ljYWwuCiAqICAgNS4gQ2FuY2VsOiAgICAgIHJldHVybnMgdG8gdGhlIHRvdWNoLXN0YXJ0IHJvdGF0aW9uIGF0IHplcm8KICogICAgICAgICAgICAgICAgICAgdmVsb2NpdHkgKG5vIHJlbGlhYmxlIHZlbG9jaXR5IGFmdGVyIGNhbmNlbCkuCiAqCiAqIEltcG9ydGFudDogdGhlIGhvc3QgVmlldyBtdXN0IGJlIGNsaWNrYWJsZQogKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICogICBUaGUgdG91Y2ggbGlzdGVuZXIgcmV0dXJucyBmYWxzZSBmcm9tIGV2ZXJ5IGFjdGlvbiwgd2hpY2ggaXMgdGhlCiAqICAgY29ycmVjdCB3YXkgdG8gbGV0IG5vcm1hbCBjbGljayBoYW5kbGluZyBjb250aW51ZS4gRm9yIHRoYXQgdG8gYWxzbwogKiAgIGtlZXAgdGhlIFZpZXcgYXMgdGhlIGZyYW1ld29yaydzIHRvdWNoIHRhcmdldCBmb3IgQUNUSU9OX01PVkUgYW5kCiAqICAgQUNUSU9OX1VQLCB0aGUgVmlldyBpdHNlbGYgbXVzdCBiZSBjbGlja2FibGUgKHNvIFZpZXcub25Ub3VjaEV2ZW50CiAqICAgcmV0dXJucyB0cnVlKS4gSWYgaXQgaXMgbm90LCBzZXQgYHZpZXcuc2V0Q2xpY2thYmxlKHRydWUpYCBiZWZvcmUKICogICBjYWxsaW5nIGF0dGFjaCgpLiBUaGlzIGNsYXNzIGludGVudGlvbmFsbHkgZG9lcyBub3QgY2hhbmdlIHRoZQogKiAgIFZpZXcncyBjbGlja2FibGUgc3RhdGUsIHRvIGF2b2lkIHN1cnByaXNpbmcgY2FsbGVycy4KICoKICogUm9idXN0bmVzcwogKiAtLS0tLS0tLS0tCiAqICAgLSBUaGUgaW5zdGFuY2UgcmVnaXN0cnkgaXMgdGhyZWFkLXNhZmUuCiAqICAgLSBFdmVyeSB0b3VjaCBicmFuY2gsIGFuaW1hdGlvbiBjYWxsLCBhbmQgc3RhdGljIG1ldGhvZCBpcwogKiAgICAgd3JhcHBlZDsgYSB0aHJvdyBpbnNpZGUgYSB0b3VjaCBkaXNwYXRjaGVyIHdvdWxkIG90aGVyd2lzZQogKiAgICAgY3Jhc2ggdGhlIHByb2Nlc3MuCiAqICAgLSBWZWxvY2l0eVRyYWNrZXIub2J0YWluKCkgbWF5IHJldHVybiBudWxsOyBhbGwgdHJhY2tlcgogKiAgICAgaW50ZXJhY3Rpb25zIGFyZSBudWxsLXNhZmUuCiAqICAgLSBjb21wdXRlQ3VycmVudFZlbG9jaXR5KCkgd2l0aCBpbnN1ZmZpY2llbnQgc2FtcGxlcyBjYW4gbGVhdmUKICogICAgIGdldFhWZWxvY2l0eSgpIHJldHVybmluZyBOYU47IE5hTiBpcyBub3JtYWxpc2VkIHRvIDBmLgogKiAgIC0gZGV0YWNoKCkgaXMgaWRlbXBvdGVudCBhbmQgc2FmZSB0byBjYWxsIGZyb20gYW55IGxpZmVjeWNsZQogKiAgICAgcG9pbnQsIGluY2x1ZGluZyBpbW1lZGlhdGVseSBhZnRlciBhIGZhaWxlZCBhdHRhY2guCiAqLwpwdWJsaWMgZmluYWwgY2xhc3MgRHJvaWRQcmVzc0JvdW5jZSB7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIFRBRyA9ICJEcm9pZFByZXNzQm91bmNlIjsKCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIC8vIFBSRVNTIFNDQUxFCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBQUkVTU0VEX1NDQUxFID0gMC45MmY7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBOT1JNQUxfU0NBTEUgPSAxLjBmOwoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IFNDQUxFX1NUSUZGTkVTUyA9IDcwMGY7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBTQ0FMRV9EQU1QSU5HID0gMC42NWY7CgogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAvLyBEUk9JRCBUSUxUCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBNQVhfVElMVCA9IDE4ZjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IFRJTFRfRElTVEFOQ0VfRkFDVE9SID0gMC4yMmY7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgZmxvYXQgUk9UQVRJT05fU1RJRkZORVNTID0gNzAwZjsKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIGZsb2F0IFJPVEFUSU9OX0RBTVBJTkcgPSAwLjc4ZjsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBmbG9hdCBNQVhfUkVMRUFTRV9WRUxPQ0lUWSA9IDQ4MGY7CgogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAvLyBSRUdJU1RSWQogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgQXJyYXlNYXA8VmlldywgQ29udHJvbGxlcj4gQ09OVFJPTExFUlMgPQogICAgICAgICAgICBuZXcgQXJyYXlNYXA8PigpOwoKICAgIC8qKiBHdWFyZHMgZXZlcnkgYWNjZXNzIHRvIENPTlRST0xMRVJTLiAqLwogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgT2JqZWN0IExPQ0sgPSBuZXcgT2JqZWN0KCk7CgogICAgcHJpdmF0ZSBEcm9pZFByZXNzQm91bmNlKCkgewogICAgICAgIC8vIFV0aWxpdHkgY2xhc3MuCiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBTVEFUSUMgQVBJCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgYXR0YWNoKEBOb25OdWxsIFZpZXcgdmlldykgewoKICAgICAgICB0cnkgewogICAgICAgICAgICAvLyBSZW1vdmUgYW55IGV4aXN0aW5nIGNvbnRyb2xsZXIgdG8gYXZvaWQgZHVwbGljYXRlCiAgICAgICAgICAgIC8vIGxpc3RlbmVycyAvIGFuaW1hdGlvbnMuCiAgICAgICAgICAgIGRldGFjaCh2aWV3KTsKCiAgICAgICAgICAgIENvbnRyb2xsZXIgY29udHJvbGxlciA9IG5ldyBDb250cm9sbGVyKHZpZXcpOwoKICAgICAgICAgICAgc3luY2hyb25pemVkIChMT0NLKSB7CiAgICAgICAgICAgICAgICBDT05UUk9MTEVSUy5wdXQodmlldywgY29udHJvbGxlcik7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGNvbnRyb2xsZXIuYXR0YWNoKCk7CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImF0dGFjaCBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIGRldGFjaChATm9uTnVsbCBWaWV3IHZpZXcpIHsKCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgQ29udHJvbGxlciBjb250cm9sbGVyOwogICAgICAgICAgICBzeW5jaHJvbml6ZWQgKExPQ0spIHsKICAgICAgICAgICAgICAgIGNvbnRyb2xsZXIgPSBDT05UUk9MTEVSUy5yZW1vdmUodmlldyk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGlmIChjb250cm9sbGVyICE9IG51bGwpIHsKICAgICAgICAgICAgICAgIGNvbnRyb2xsZXIuZGV0YWNoKCk7CiAgICAgICAgICAgIH0KCiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgTG9nLmUoVEFHLCAiZGV0YWNoIGZhaWxlZCIsIHQpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgZGV0YWNoQWxsKCkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBDb250cm9sbGVyW10gY29udHJvbGxlcnM7CiAgICAgICAgICAgIHN5bmNocm9uaXplZCAoTE9DSykgewogICAgICAgICAgICAgICAgY29udHJvbGxlcnMgPSBDT05UUk9MTEVSUy52YWx1ZXMoKS50b0FycmF5KAogICAgICAgICAgICAgICAgICAgICAgICBuZXcgQ29udHJvbGxlcltDT05UUk9MTEVSUy5zaXplKCldKTsKICAgICAgICAgICAgICAgIENPTlRST0xMRVJTLmNsZWFyKCk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGZvciAoQ29udHJvbGxlciBjb250cm9sbGVyIDogY29udHJvbGxlcnMpIHsKICAgICAgICAgICAgICAgIGlmIChjb250cm9sbGVyID09IG51bGwpIGNvbnRpbnVlOwogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBjb250cm9sbGVyLmRldGFjaCgpOwogICAgICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJkZXRhY2hBbGw6IGNvbnRyb2xsZXIuZGV0YWNoIGZhaWxlZCIsIHQpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgImRldGFjaEFsbCBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgICAvLyBDT05UUk9MTEVSCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBjbGFzcyBDb250cm9sbGVyIHsKCiAgICAgICAgcHJpdmF0ZSBmaW5hbCBWaWV3IHZpZXc7CiAgICAgICAgcHJpdmF0ZSBmaW5hbCBmbG9hdCBpbml0aWFsUm90YXRpb247CgogICAgICAgIC8vIFRoZXNlIG1heSBiZSBudWxsIGlmIFNwcmluZ0FuaW1hdGlvbiBjb25zdHJ1Y3Rpb24gZmFpbHMgb24KICAgICAgICAvLyBzb21lIGRldmljZTsgZXZlcnkgdXNlIGlzIG51bGwtY2hlY2tlZC4KICAgICAgICBATnVsbGFibGUgcHJpdmF0ZSBmaW5hbCBTcHJpbmdBbmltYXRpb24gc2NhbGVYOwogICAgICAgIEBOdWxsYWJsZSBwcml2YXRlIGZpbmFsIFNwcmluZ0FuaW1hdGlvbiBzY2FsZVk7CiAgICAgICAgQE51bGxhYmxlIHByaXZhdGUgZmluYWwgU3ByaW5nQW5pbWF0aW9uIHJvdGF0aW9uOwoKICAgICAgICBATnVsbGFibGUgcHJpdmF0ZSBWZWxvY2l0eVRyYWNrZXIgdmVsb2NpdHlUcmFja2VyOwoKICAgICAgICBwcml2YXRlIGZsb2F0IHRvdWNoU3RhcnRYOwogICAgICAgIHByaXZhdGUgZmxvYXQgdG91Y2hTdGFydFJvdGF0aW9uOwoKICAgICAgICBwcml2YXRlIGJvb2xlYW4gYXR0YWNoZWQ7CgogICAgICAgIENvbnRyb2xsZXIoQE5vbk51bGwgVmlldyB2aWV3KSB7CgogICAgICAgICAgICB0aGlzLnZpZXcgPSB2aWV3OwoKICAgICAgICAgICAgZmxvYXQgc3RhcnRSb3RhdGlvbiA9IDBmOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgc3RhcnRSb3RhdGlvbiA9IHZpZXcuZ2V0Um90YXRpb24oKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgInZpZXcuZ2V0Um90YXRpb24gZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgdGhpcy5pbml0aWFsUm90YXRpb24gPSBzdGFydFJvdGF0aW9uOwoKICAgICAgICAgICAgdGhpcy5zY2FsZVggPSBzYWZlQ3JlYXRlU2NhbGVTcHJpbmcoCiAgICAgICAgICAgICAgICAgICAgdmlldywgRHluYW1pY0FuaW1hdGlvbi5TQ0FMRV9YKTsKICAgICAgICAgICAgdGhpcy5zY2FsZVkgPSBzYWZlQ3JlYXRlU2NhbGVTcHJpbmcoCiAgICAgICAgICAgICAgICAgICAgdmlldywgRHluYW1pY0FuaW1hdGlvbi5TQ0FMRV9ZKTsKCiAgICAgICAgICAgIHRoaXMucm90YXRpb24gPSBzYWZlQ3JlYXRlUm90YXRpb25TcHJpbmcodmlldywgaW5pdGlhbFJvdGF0aW9uKTsKICAgICAgICB9CgogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAvLyBBdHRhY2ggLyBkZXRhY2gKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgogICAgICAgIHZvaWQgYXR0YWNoKCkgewoKICAgICAgICAgICAgaWYgKGF0dGFjaGVkKSByZXR1cm47CgogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgdmlldy5zZXRPblRvdWNoTGlzdGVuZXIoCiAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBWaWV3Lk9uVG91Y2hMaXN0ZW5lcigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgcHVibGljIGJvb2xlYW4gb25Ub3VjaChWaWV3IHYsIE1vdGlvbkV2ZW50IGV2ZW50KSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGhhbmRsZVRvdWNoKHYsIGV2ZW50KTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJvblRvdWNoIGZhaWxlZCIsIHQpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIGF0dGFjaGVkID0gdHJ1ZTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgIkNvbnRyb2xsZXIuYXR0YWNoIGZhaWxlZCIsIHQpOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICB2b2lkIGRldGFjaCgpIHsKCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAvLyBJZGVtcG90ZW50OiBhbHdheXMgY2xlYW4gdXAgYW5pbWF0aW9ucyBhbmQgdHJhY2tlciwKICAgICAgICAgICAgICAgIC8vIGV2ZW4gb24gdGhlIHBhcnRpYWwtY29uc3RydWN0aW9uIHBhdGguCiAgICAgICAgICAgICAgICBzYWZlQ2FuY2VsKHNjYWxlWCk7CiAgICAgICAgICAgICAgICBzYWZlQ2FuY2VsKHNjYWxlWSk7CiAgICAgICAgICAgICAgICBzYWZlQ2FuY2VsKHJvdGF0aW9uKTsKCiAgICAgICAgICAgICAgICByZWN5Y2xlVmVsb2NpdHlUcmFja2VyKCk7CgogICAgICAgICAgICAgICAgaWYgKCFhdHRhY2hlZCkgcmV0dXJuOwogICAgICAgICAgICAgICAgYXR0YWNoZWQgPSBmYWxzZTsKCiAgICAgICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgICAgIHZpZXcuc2V0T25Ub3VjaExpc3RlbmVyKG51bGwpOwogICAgICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJzZXRPblRvdWNoTGlzdGVuZXIobnVsbCkgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiQ29udHJvbGxlci5kZXRhY2ggZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAgICAvLyBUb3VjaCBoYW5kbGluZwogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICAgICAgcHJpdmF0ZSBib29sZWFuIGhhbmRsZVRvdWNoKAogICAgICAgICAgICAgICAgQE5vbk51bGwgVmlldyB2LAogICAgICAgICAgICAgICAgQE51bGxhYmxlIE1vdGlvbkV2ZW50IGV2ZW50KSB7CgogICAgICAgICAgICBpZiAoIWF0dGFjaGVkIHx8IGV2ZW50ID09IG51bGwpIHJldHVybiBmYWxzZTsKCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBzd2l0Y2ggKGV2ZW50LmdldEFjdGlvbk1hc2tlZCgpKSB7CgogICAgICAgICAgICAgICAgICAgIGNhc2UgTW90aW9uRXZlbnQuQUNUSU9OX0RPV046CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBvbkRvd24odiwgZXZlbnQpOwoKICAgICAgICAgICAgICAgICAgICBjYXNlIE1vdGlvbkV2ZW50LkFDVElPTl9NT1ZFOgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb25Nb3ZlKHYsIGV2ZW50KTsKCiAgICAgICAgICAgICAgICAgICAgY2FzZSBNb3Rpb25FdmVudC5BQ1RJT05fVVA6CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBvblVwKHYsIGV2ZW50KTsKCiAgICAgICAgICAgICAgICAgICAgY2FzZSBNb3Rpb25FdmVudC5BQ1RJT05fQ0FOQ0VMOgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gb25DYW5jZWwodik7CgogICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgICAgICAgICAgICAgIC8vIEFDVElPTl9QT0lOVEVSX0RPV04gLyBBQ1RJT05fUE9JTlRFUl9VUCBhbmQKICAgICAgICAgICAgICAgICAgICAgICAgLy8gYW55dGhpbmcgZWxzZTogaWdub3JlLiBTaW5nbGUtcG9pbnRlciBkcmFnCiAgICAgICAgICAgICAgICAgICAgICAgIC8vIG9ubHksIHdoaWNoIG1hdGNoZXMgdGhlIG9yaWdpbmFsIGJlaGF2aW91ci4KICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiaGFuZGxlVG91Y2ggZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHByaXZhdGUgYm9vbGVhbiBvbkRvd24oCiAgICAgICAgICAgICAgICBATm9uTnVsbCBWaWV3IHYsCiAgICAgICAgICAgICAgICBATm9uTnVsbCBNb3Rpb25FdmVudCBldmVudCkgewoKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHRvdWNoU3RhcnRYID0gZXZlbnQuZ2V0WCgpOwogICAgICAgICAgICAgICAgdG91Y2hTdGFydFJvdGF0aW9uID0gdi5nZXRSb3RhdGlvbigpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAib25Eb3duIHJlYWQgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIC8vIFN0b3AgYW55IGluLWZsaWdodCByZXR1cm4gLyBwcmVzcyBhbmltYXRpb24uCiAgICAgICAgICAgIHNhZmVDYW5jZWwocm90YXRpb24pOwogICAgICAgICAgICBzYWZlQ2FuY2VsKHNjYWxlWCk7CiAgICAgICAgICAgIHNhZmVDYW5jZWwoc2NhbGVZKTsKCiAgICAgICAgICAgIC8vIEZyZXNoIHRyYWNrZXIgZm9yIHRoaXMgZ2VzdHVyZS4KICAgICAgICAgICAgcmVjeWNsZVZlbG9jaXR5VHJhY2tlcigpOwogICAgICAgICAgICB2ZWxvY2l0eVRyYWNrZXIgPSBzYWZlT2J0YWluVHJhY2tlcihldmVudCk7CgogICAgICAgICAgICAvLyBDb21wcmVzcyB0aGUgZHJvaWQuCiAgICAgICAgICAgIHNhZmVBbmltYXRlVG8oc2NhbGVYLCBQUkVTU0VEX1NDQUxFKTsKICAgICAgICAgICAgc2FmZUFuaW1hdGVUbyhzY2FsZVksIFBSRVNTRURfU0NBTEUpOwoKICAgICAgICAgICAgLy8gUmV0dXJuIGZhbHNlIHNvIG5vcm1hbCBjbGljayBoYW5kbGluZyBjb250aW51ZXMuCiAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICB9CgogICAgICAgIHByaXZhdGUgYm9vbGVhbiBvbk1vdmUoCiAgICAgICAgICAgICAgICBATm9uTnVsbCBWaWV3IHYsCiAgICAgICAgICAgICAgICBATm9uTnVsbCBNb3Rpb25FdmVudCBldmVudCkgewoKICAgICAgICAgICAgYWRkTW92ZW1lbnRTYWZlKGV2ZW50KTsKCiAgICAgICAgICAgIGZsb2F0IGRpc3RhbmNlOwogICAgICAgICAgICBmbG9hdCB3aWR0aDsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGRpc3RhbmNlID0gZXZlbnQuZ2V0WCgpIC0gdG91Y2hTdGFydFg7CiAgICAgICAgICAgICAgICB3aWR0aCA9IE1hdGgubWF4KHYuZ2V0V2lkdGgoKSwgMSk7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJvbk1vdmUgcmVhZCBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZmxvYXQgcmVzaXN0YW5jZURpc3RhbmNlID0gd2lkdGggKiBUSUxUX0RJU1RBTkNFX0ZBQ1RPUjsKICAgICAgICAgICAgZmxvYXQgbm9ybWFsaXplZCA9IGRpc3RhbmNlIC8gcmVzaXN0YW5jZURpc3RhbmNlOwoKICAgICAgICAgICAgZmxvYXQgdGlsdDsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIHRpbHQgPSAoZmxvYXQpIE1hdGgudGFuaChub3JtYWxpemVkKSAqIE1BWF9USUxUOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgdGlsdCA9IDBmOwogICAgICAgICAgICB9CgogICAgICAgICAgICBmbG9hdCB0YXJnZXRSb3RhdGlvbiA9IHRvdWNoU3RhcnRSb3RhdGlvbiArIHRpbHQ7CgogICAgICAgICAgICAvLyBTcHJpbmcgZm9sbG93cyB0aGUgZmluZ2VyLgogICAgICAgICAgICBzYWZlQW5pbWF0ZVRvKHJvdGF0aW9uLCB0YXJnZXRSb3RhdGlvbik7CgogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQoKICAgICAgICBwcml2YXRlIGJvb2xlYW4gb25VcCgKICAgICAgICAgICAgICAgIEBOb25OdWxsIFZpZXcgdiwKICAgICAgICAgICAgICAgIEBOb25OdWxsIE1vdGlvbkV2ZW50IGV2ZW50KSB7CgogICAgICAgICAgICBmbG9hdCByZWxlYXNlVmVsb2NpdHkgPSAwZjsKCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBhZGRNb3ZlbWVudFNhZmUoZXZlbnQpOwogICAgICAgICAgICAgICAgcmVsZWFzZVZlbG9jaXR5ID0gY29tcHV0ZVJlbGVhc2VWZWxvY2l0eSh2LCBldmVudCk7CiAgICAgICAgICAgICAgICByZWxlYXNlVmVsb2NpdHkgPSBjbGFtcCgKICAgICAgICAgICAgICAgICAgICAgICAgcmVsZWFzZVZlbG9jaXR5LAogICAgICAgICAgICAgICAgICAgICAgICAtTUFYX1JFTEVBU0VfVkVMT0NJVFksCiAgICAgICAgICAgICAgICAgICAgICAgIE1BWF9SRUxFQVNFX1ZFTE9DSVRZKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgIm9uVXAgdmVsb2NpdHkgcmVhZCBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgICAgIHJlbGVhc2VWZWxvY2l0eSA9IDBmOwogICAgICAgICAgICB9CgogICAgICAgICAgICAvLyBSZXR1cm4gdG8gdGhlIHJvdGF0aW9uIHRoYXQgZXhpc3RlZCBhdCBBQ1RJT05fRE9XTi4KICAgICAgICAgICAgZmxvYXQgY3VycmVudFJvdGF0aW9uOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgY3VycmVudFJvdGF0aW9uID0gdi5nZXRSb3RhdGlvbigpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgY3VycmVudFJvdGF0aW9uID0gdG91Y2hTdGFydFJvdGF0aW9uOwogICAgICAgICAgICB9CgogICAgICAgICAgICBzYWZlQ2FuY2VsKHJvdGF0aW9uKTsKICAgICAgICAgICAgc2FmZVNldFN0YXJ0VmFsdWUocm90YXRpb24sIGN1cnJlbnRSb3RhdGlvbik7CiAgICAgICAgICAgIHNhZmVTZXRTdGFydFZlbG9jaXR5KHJvdGF0aW9uLCByZWxlYXNlVmVsb2NpdHkpOwogICAgICAgICAgICBzYWZlQW5pbWF0ZVRvKHJvdGF0aW9uLCB0b3VjaFN0YXJ0Um90YXRpb24pOwoKICAgICAgICAgICAgcmVjeWNsZVZlbG9jaXR5VHJhY2tlcigpOwoKICAgICAgICAgICAgLy8gUmVsZWFzZSBzY2FsZS4KICAgICAgICAgICAgc2FmZUFuaW1hdGVUbyhzY2FsZVgsIE5PUk1BTF9TQ0FMRSk7CiAgICAgICAgICAgIHNhZmVBbmltYXRlVG8oc2NhbGVZLCBOT1JNQUxfU0NBTEUpOwoKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgIH0KCiAgICAgICAgcHJpdmF0ZSBib29sZWFuIG9uQ2FuY2VsKEBOb25OdWxsIFZpZXcgdikgewoKICAgICAgICAgICAgcmVjeWNsZVZlbG9jaXR5VHJhY2tlcigpOwoKICAgICAgICAgICAgZmxvYXQgY3VycmVudFJvdGF0aW9uOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgY3VycmVudFJvdGF0aW9uID0gdi5nZXRSb3RhdGlvbigpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgY3VycmVudFJvdGF0aW9uID0gdG91Y2hTdGFydFJvdGF0aW9uOwogICAgICAgICAgICB9CgogICAgICAgICAgICBzYWZlQ2FuY2VsKHJvdGF0aW9uKTsKICAgICAgICAgICAgc2FmZVNldFN0YXJ0VmFsdWUocm90YXRpb24sIGN1cnJlbnRSb3RhdGlvbik7CiAgICAgICAgICAgIHNhZmVTZXRTdGFydFZlbG9jaXR5KHJvdGF0aW9uLCAwZik7CiAgICAgICAgICAgIHNhZmVBbmltYXRlVG8ocm90YXRpb24sIHRvdWNoU3RhcnRSb3RhdGlvbik7CgogICAgICAgICAgICBzYWZlQW5pbWF0ZVRvKHNjYWxlWCwgTk9STUFMX1NDQUxFKTsKICAgICAgICAgICAgc2FmZUFuaW1hdGVUbyhzY2FsZVksIE5PUk1BTF9TQ0FMRSk7CgogICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgfQoKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgLy8gVmVsb2NpdHkgaGVscGVycwogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICAgICAgLyoqCiAgICAgICAgICogQWRkcyB0aGUgY3VycmVudCBldmVudCB0byB0aGUgdHJhY2tlci4gUmV0dXJucyBzaWxlbnRseSBpZgogICAgICAgICAqIHRoZSB0cmFja2VyIGlzIG51bGwgKG9idGFpbigpIGZhaWxlZCB1bmRlciBtZW1vcnkgcHJlc3N1cmUpLgogICAgICAgICAqLwogICAgICAgIHByaXZhdGUgdm9pZCBhZGRNb3ZlbWVudFNhZmUoQE5vbk51bGwgTW90aW9uRXZlbnQgZXZlbnQpIHsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIFZlbG9jaXR5VHJhY2tlciB0cmFja2VyID0gdmVsb2NpdHlUcmFja2VyOwogICAgICAgICAgICAgICAgaWYgKHRyYWNrZXIgIT0gbnVsbCkgewogICAgICAgICAgICAgICAgICAgIHRyYWNrZXIuYWRkTW92ZW1lbnQoZXZlbnQpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiYWRkTW92ZW1lbnQgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIC8qKgogICAgICAgICAqIE9idGFpbnMgYSBmcmVzaCBWZWxvY2l0eVRyYWNrZXIuIFJldHVybnMgbnVsbCBvbiBmYWlsdXJlCiAgICAgICAgICogKG9idGFpbigpIGNhbiByZXR1cm4gbnVsbCwgdGhvdWdoIHJhcmVseSkuCiAgICAgICAgICovCiAgICAgICAgQE51bGxhYmxlCiAgICAgICAgcHJpdmF0ZSBWZWxvY2l0eVRyYWNrZXIgc2FmZU9idGFpblRyYWNrZXIoQE5vbk51bGwgTW90aW9uRXZlbnQgZXZlbnQpIHsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIFZlbG9jaXR5VHJhY2tlciB0cmFja2VyID0gVmVsb2NpdHlUcmFja2VyLm9idGFpbigpOwogICAgICAgICAgICAgICAgaWYgKHRyYWNrZXIgIT0gbnVsbCkgewogICAgICAgICAgICAgICAgICAgIHRyYWNrZXIuYWRkTW92ZW1lbnQoZXZlbnQpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgcmV0dXJuIHRyYWNrZXI7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJvYnRhaW4gVmVsb2NpdHlUcmFja2VyIGZhaWxlZCIsIHQpOwogICAgICAgICAgICAgICAgcmV0dXJuIG51bGw7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIC8qKgogICAgICAgICAqIENvbXB1dGVzIHRoZSBhbmd1bGFyIHJlbGVhc2UgdmVsb2NpdHksIGd1YXJkaW5nIGFnYWluc3QKICAgICAgICAgKiBtaXNzaW5nIHRyYWNrZXIgZGF0YSBhbmQgTmFOIHJlc3VsdHMuCiAgICAgICAgICovCiAgICAgICAgcHJpdmF0ZSBmbG9hdCBjb21wdXRlUmVsZWFzZVZlbG9jaXR5KAogICAgICAgICAgICAgICAgQE5vbk51bGwgVmlldyB2LAogICAgICAgICAgICAgICAgQE5vbk51bGwgTW90aW9uRXZlbnQgZXZlbnQpIHsKCiAgICAgICAgICAgIFZlbG9jaXR5VHJhY2tlciB0cmFja2VyID0gdmVsb2NpdHlUcmFja2VyOwogICAgICAgICAgICBpZiAodHJhY2tlciA9PSBudWxsKSByZXR1cm4gMGY7CgogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgdHJhY2tlci5jb21wdXRlQ3VycmVudFZlbG9jaXR5KDEwMDApOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiY29tcHV0ZUN1cnJlbnRWZWxvY2l0eSBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgICAgIHJldHVybiAwZjsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZmxvYXQgeFZlbG9jaXR5OwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgeFZlbG9jaXR5ID0gdHJhY2tlci5nZXRYVmVsb2NpdHkoKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgImdldFhWZWxvY2l0eSBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgICAgIHJldHVybiAwZjsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgaWYgKEZsb2F0LmlzTmFOKHhWZWxvY2l0eSkgfHwgRmxvYXQuaXNJbmZpbml0ZSh4VmVsb2NpdHkpKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gMGY7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHJldHVybiBjYWxjdWxhdGVBbmd1bGFyVmVsb2NpdHkoCiAgICAgICAgICAgICAgICAgICAgdiwKICAgICAgICAgICAgICAgICAgICB0b3VjaFN0YXJ0WCwKICAgICAgICAgICAgICAgICAgICBldmVudC5nZXRYKCksCiAgICAgICAgICAgICAgICAgICAgeFZlbG9jaXR5KTsKICAgICAgICB9CgogICAgICAgIHByaXZhdGUgZmxvYXQgY2FsY3VsYXRlQW5ndWxhclZlbG9jaXR5KAogICAgICAgICAgICAgICAgQE5vbk51bGwgVmlldyB2aWV3LAogICAgICAgICAgICAgICAgZmxvYXQgc3RhcnRYLAogICAgICAgICAgICAgICAgZmxvYXQgY3VycmVudFgsCiAgICAgICAgICAgICAgICBmbG9hdCB4VmVsb2NpdHkpIHsKCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBmbG9hdCB3aWR0aCA9IE1hdGgubWF4KHZpZXcuZ2V0V2lkdGgoKSwgMSk7CiAgICAgICAgICAgICAgICBmbG9hdCByZXNpc3RhbmNlRGlzdGFuY2UgPSB3aWR0aCAqIFRJTFRfRElTVEFOQ0VfRkFDVE9SOwoKICAgICAgICAgICAgICAgIGZsb2F0IGRpc3RhbmNlID0gY3VycmVudFggLSBzdGFydFg7CiAgICAgICAgICAgICAgICBmbG9hdCBub3JtYWxpemVkID0gZGlzdGFuY2UgLyByZXNpc3RhbmNlRGlzdGFuY2U7CiAgICAgICAgICAgICAgICBmbG9hdCB0YW5oID0gKGZsb2F0KSBNYXRoLnRhbmgobm9ybWFsaXplZCk7CgogICAgICAgICAgICAgICAgLy8gRGVyaXZhdGl2ZSBvZiB0YW5oKHgpIGlzIDEgLSB0YW5oKHgpXjIuCiAgICAgICAgICAgICAgICBmbG9hdCByZXNwb25zZSA9IDFmIC0gKHRhbmggKiB0YW5oKTsKICAgICAgICAgICAgICAgIGZsb2F0IGRlZ3JlZXNQZXJQaXhlbCA9IE1BWF9USUxUIC8gcmVzaXN0YW5jZURpc3RhbmNlOwoKICAgICAgICAgICAgICAgIGZsb2F0IHJlc3VsdCA9IHhWZWxvY2l0eSAqIGRlZ3JlZXNQZXJQaXhlbCAqIHJlc3BvbnNlOwoKICAgICAgICAgICAgICAgIGlmIChGbG9hdC5pc05hTihyZXN1bHQpIHx8IEZsb2F0LmlzSW5maW5pdGUocmVzdWx0KSkgewogICAgICAgICAgICAgICAgICAgIHJldHVybiAwZjsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHJldHVybiByZXN1bHQ7CgogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiY2FsY3VsYXRlQW5ndWxhclZlbG9jaXR5IGZhaWxlZCIsIHQpOwogICAgICAgICAgICAgICAgcmV0dXJuIDBmOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgLy8gU2FmZSBzcHJpbmcgaGVscGVycwogICAgICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICAgICAgQE51bGxhYmxlCiAgICAgICAgcHJpdmF0ZSBTcHJpbmdBbmltYXRpb24gc2FmZUNyZWF0ZVNjYWxlU3ByaW5nKAogICAgICAgICAgICAgICAgQE5vbk51bGwgVmlldyB2aWV3LAogICAgICAgICAgICAgICAgQE5vbk51bGwgRHluYW1pY0FuaW1hdGlvbi5WaWV3UHJvcGVydHkgcHJvcGVydHkpIHsKCiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBTcHJpbmdBbmltYXRpb24gYW5pbWF0aW9uID0gbmV3IFNwcmluZ0FuaW1hdGlvbih2aWV3LCBwcm9wZXJ0eSk7CiAgICAgICAgICAgICAgICBTcHJpbmdGb3JjZSBzcHJpbmcgPSBuZXcgU3ByaW5nRm9yY2UoTk9STUFMX1NDQUxFKTsKICAgICAgICAgICAgICAgIHNwcmluZy5zZXRTdGlmZm5lc3MoU0NBTEVfU1RJRkZORVNTKTsKICAgICAgICAgICAgICAgIHNwcmluZy5zZXREYW1waW5nUmF0aW8oU0NBTEVfREFNUElORyk7CiAgICAgICAgICAgICAgICBhbmltYXRpb24uc2V0U3ByaW5nKHNwcmluZyk7CiAgICAgICAgICAgICAgICByZXR1cm4gYW5pbWF0aW9uOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAiY3JlYXRlU2NhbGVTcHJpbmcgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICByZXR1cm4gbnVsbDsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgQE51bGxhYmxlCiAgICAgICAgcHJpdmF0ZSBTcHJpbmdBbmltYXRpb24gc2FmZUNyZWF0ZVJvdGF0aW9uU3ByaW5nKAogICAgICAgICAgICAgICAgQE5vbk51bGwgVmlldyB2aWV3LAogICAgICAgICAgICAgICAgZmxvYXQgaW5pdGlhbFJvdGF0aW9uKSB7CgogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgU3ByaW5nQW5pbWF0aW9uIGFuaW1hdGlvbiA9CiAgICAgICAgICAgICAgICAgICAgICAgIG5ldyBTcHJpbmdBbmltYXRpb24odmlldywgRHluYW1pY0FuaW1hdGlvbi5ST1RBVElPTik7CgogICAgICAgICAgICAgICAgU3ByaW5nRm9yY2Ugc3ByaW5nID0gbmV3IFNwcmluZ0ZvcmNlKGluaXRpYWxSb3RhdGlvbik7CiAgICAgICAgICAgICAgICBzcHJpbmcuc2V0U3RpZmZuZXNzKFJPVEFUSU9OX1NUSUZGTkVTUyk7CiAgICAgICAgICAgICAgICBzcHJpbmcuc2V0RGFtcGluZ1JhdGlvKFJPVEFUSU9OX0RBTVBJTkcpOwogICAgICAgICAgICAgICAgYW5pbWF0aW9uLnNldFNwcmluZyhzcHJpbmcpOwoKICAgICAgICAgICAgICAgIGFuaW1hdGlvbi5zZXRNaW5WYWx1ZShpbml0aWFsUm90YXRpb24gLSBNQVhfVElMVCk7CiAgICAgICAgICAgICAgICBhbmltYXRpb24uc2V0TWF4VmFsdWUoaW5pdGlhbFJvdGF0aW9uICsgTUFYX1RJTFQpOwoKICAgICAgICAgICAgICAgIHJldHVybiBhbmltYXRpb247CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJjcmVhdGVSb3RhdGlvblNwcmluZyBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBwcml2YXRlIHZvaWQgc2FmZUNhbmNlbChATnVsbGFibGUgU3ByaW5nQW5pbWF0aW9uIGFuaW1hdGlvbikgewogICAgICAgICAgICBpZiAoYW5pbWF0aW9uID09IG51bGwpIHJldHVybjsKICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgIGFuaW1hdGlvbi5jYW5jZWwoKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgImFuaW1hdGlvbi5jYW5jZWwgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHByaXZhdGUgdm9pZCBzYWZlQW5pbWF0ZVRvKAogICAgICAgICAgICAgICAgQE51bGxhYmxlIFNwcmluZ0FuaW1hdGlvbiBhbmltYXRpb24sCiAgICAgICAgICAgICAgICBmbG9hdCB0YXJnZXQpIHsKCiAgICAgICAgICAgIGlmIChhbmltYXRpb24gPT0gbnVsbCkgcmV0dXJuOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgYW5pbWF0aW9uLmFuaW1hdGVUb0ZpbmFsUG9zaXRpb24odGFyZ2V0KTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgImFuaW1hdGVUb0ZpbmFsUG9zaXRpb24gZmFpbGVkIiwgdCk7CiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHByaXZhdGUgdm9pZCBzYWZlU2V0U3RhcnRWYWx1ZSgKICAgICAgICAgICAgICAgIEBOdWxsYWJsZSBTcHJpbmdBbmltYXRpb24gYW5pbWF0aW9uLAogICAgICAgICAgICAgICAgZmxvYXQgdmFsdWUpIHsKCiAgICAgICAgICAgIGlmIChhbmltYXRpb24gPT0gbnVsbCkgcmV0dXJuOwogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgYW5pbWF0aW9uLnNldFN0YXJ0VmFsdWUodmFsdWUpOwogICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgTG9nLmUoVEFHLCAic2V0U3RhcnRWYWx1ZSBmYWlsZWQiLCB0KTsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgcHJpdmF0ZSB2b2lkIHNhZmVTZXRTdGFydFZlbG9jaXR5KAogICAgICAgICAgICAgICAgQE51bGxhYmxlIFNwcmluZ0FuaW1hdGlvbiBhbmltYXRpb24sCiAgICAgICAgICAgICAgICBmbG9hdCB2ZWxvY2l0eSkgewoKICAgICAgICAgICAgaWYgKGFuaW1hdGlvbiA9PSBudWxsKSByZXR1cm47CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICBhbmltYXRpb24uc2V0U3RhcnRWZWxvY2l0eSh2ZWxvY2l0eSk7CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cuZShUQUcsICJzZXRTdGFydFZlbG9jaXR5IGZhaWxlZCIsIHQpOwogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgICAgLy8gTWlzYyBoZWxwZXJzCiAgICAgICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKICAgICAgICBwcml2YXRlIGZsb2F0IGNsYW1wKGZsb2F0IHZhbHVlLCBmbG9hdCBtaW4sIGZsb2F0IG1heCkgewogICAgICAgICAgICBpZiAodmFsdWUgPCBtaW4pIHJldHVybiBtaW47CiAgICAgICAgICAgIGlmICh2YWx1ZSA+IG1heCkgcmV0dXJuIG1heDsKICAgICAgICAgICAgcmV0dXJuIHZhbHVlOwogICAgICAgIH0KCiAgICAgICAgcHJpdmF0ZSB2b2lkIHJlY3ljbGVWZWxvY2l0eVRyYWNrZXIoKSB7CiAgICAgICAgICAgIFZlbG9jaXR5VHJhY2tlciB0cmFja2VyID0gdmVsb2NpdHlUcmFja2VyOwogICAgICAgICAgICBpZiAodHJhY2tlciA9PSBudWxsKSByZXR1cm47CiAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICB0cmFja2VyLnJlY3ljbGUoKTsKICAgICAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgICAgIExvZy5lKFRBRywgIlZlbG9jaXR5VHJhY2tlci5yZWN5Y2xlIGZhaWxlZCIsIHQpOwogICAgICAgICAgICB9IGZpbmFsbHkgewogICAgICAgICAgICAgICAgdmVsb2NpdHlUcmFja2VyID0gbnVsbDsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQ==
+package com.musaddiqbaluch.census;
+
+import android.util.ArrayMap;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.VelocityTracker;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.dynamicanimation.animation.DynamicAnimation;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
+
+/**
+ * Physics-based press + drag interaction for the droid character.
+ *
+ * Behaviour
+ * ---------
+ *   1. Press:       scale -> 0.92
+ *   2. Finger drag: horizontal finger movement tilts the droid.
+ *   3. Tilt limit:  max +/- 18 degrees from the touch-start rotation.
+ *   4. Release:     returns to the rotation held at ACTION_DOWN,
+ *                   carrying the finger's angular velocity into the
+ *                   return spring so the recoil feels physical.
+ *   5. Cancel:      returns to the touch-start rotation at zero
+ *                   velocity (no reliable velocity after cancel).
+ *
+ * Important: the host View must be clickable
+ * ------------------------------------------
+ *   The touch listener returns false from every action, which is the
+ *   correct way to let normal click handling continue. For that to also
+ *   keep the View as the framework's touch target for ACTION_MOVE and
+ *   ACTION_UP, the View itself must be clickable (so View.onTouchEvent
+ *   returns true). If it is not, set `view.setClickable(true)` before
+ *   calling attach(). This class intentionally does not change the
+ *   View's clickable state, to avoid surprising callers.
+ *
+ * Robustness
+ * ----------
+ *   - The instance registry is thread-safe.
+ *   - Every touch branch, animation call, and static method is
+ *     wrapped; a throw inside a touch dispatcher would otherwise
+ *     crash the process.
+ *   - VelocityTracker.obtain() may return null; all tracker
+ *     interactions are null-safe.
+ *   - computeCurrentVelocity() with insufficient samples can leave
+ *     getXVelocity() returning NaN; NaN is normalised to 0f.
+ *   - detach() is idempotent and safe to call from any lifecycle
+ *     point, including immediately after a failed attach.
+ */
+public final class DroidPressBounce {
+
+    private static final String TAG = "DroidPressBounce";
+
+    // ---------------------------------------------------------
+    // PRESS SCALE
+    // ---------------------------------------------------------
+
+    private static final float PRESSED_SCALE = 0.92f;
+    private static final float NORMAL_SCALE = 1.0f;
+
+    private static final float SCALE_STIFFNESS = 700f;
+    private static final float SCALE_DAMPING = 0.65f;
+
+    // ---------------------------------------------------------
+    // DROID TILT
+    // ---------------------------------------------------------
+
+    private static final float MAX_TILT = 18f;
+    private static final float TILT_DISTANCE_FACTOR = 0.22f;
+
+    private static final float ROTATION_STIFFNESS = 700f;
+    private static final float ROTATION_DAMPING = 0.78f;
+
+    private static final float MAX_RELEASE_VELOCITY = 480f;
+
+    // ---------------------------------------------------------
+    // REGISTRY
+    // ---------------------------------------------------------
+
+    private static final ArrayMap<View, Controller> CONTROLLERS =
+            new ArrayMap<>();
+
+    /** Guards every access to CONTROLLERS. */
+    private static final Object LOCK = new Object();
+
+    private DroidPressBounce() {
+        // Utility class.
+    }
+
+    // =========================================================
+    // STATIC API
+    // =========================================================
+
+    public static void attach(@NonNull View view) {
+
+        try {
+            // Remove any existing controller to avoid duplicate
+            // listeners / animations.
+            detach(view);
+
+            Controller controller = new Controller(view);
+
+            synchronized (LOCK) {
+                CONTROLLERS.put(view, controller);
+            }
+
+            controller.attach();
+
+        } catch (Throwable t) {
+            Log.e(TAG, "attach failed", t);
+        }
+    }
+
+    public static void detach(@NonNull View view) {
+
+        try {
+            Controller controller;
+            synchronized (LOCK) {
+                controller = CONTROLLERS.remove(view);
+            }
+
+            if (controller != null) {
+                controller.detach();
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "detach failed", t);
+        }
+    }
+
+    public static void detachAll() {
+
+        try {
+            Controller[] controllers;
+            synchronized (LOCK) {
+                controllers = CONTROLLERS.values().toArray(
+                        new Controller[CONTROLLERS.size()]);
+                CONTROLLERS.clear();
+            }
+
+            for (Controller controller : controllers) {
+                if (controller == null) continue;
+                try {
+                    controller.detach();
+                } catch (Throwable t) {
+                    Log.e(TAG, "detachAll: controller.detach failed", t);
+                }
+            }
+
+        } catch (Throwable t) {
+            Log.e(TAG, "detachAll failed", t);
+        }
+    }
+
+    // =========================================================
+    // CONTROLLER
+    // =========================================================
+
+    private static final class Controller {
+
+        private final View view;
+        private final float initialRotation;
+
+        // These may be null if SpringAnimation construction fails on
+        // some device; every use is null-checked.
+        @Nullable private final SpringAnimation scaleX;
+        @Nullable private final SpringAnimation scaleY;
+        @Nullable private final SpringAnimation rotation;
+
+        @Nullable private VelocityTracker velocityTracker;
+
+        private float touchStartX;
+        private float touchStartRotation;
+
+        private boolean attached;
+
+        Controller(@NonNull View view) {
+
+            this.view = view;
+
+            float startRotation = 0f;
+            try {
+                startRotation = view.getRotation();
+            } catch (Throwable t) {
+                Log.e(TAG, "view.getRotation failed", t);
+            }
+            this.initialRotation = startRotation;
+
+            this.scaleX = safeCreateScaleSpring(
+                    view, DynamicAnimation.SCALE_X);
+            this.scaleY = safeCreateScaleSpring(
+                    view, DynamicAnimation.SCALE_Y);
+
+            this.rotation = safeCreateRotationSpring(view, initialRotation);
+        }
+
+        // -------------------------------------------------
+        // Attach / detach
+        // -------------------------------------------------
+
+        void attach() {
+
+            if (attached) return;
+
+            try {
+                view.setOnTouchListener(
+                        new View.OnTouchListener() {
+                            @Override
+                            public boolean onTouch(View v, MotionEvent event) {
+                                try {
+                                    return handleTouch(v, event);
+                                } catch (Throwable t) {
+                                    Log.e(TAG, "onTouch failed", t);
+                                    return false;
+                                }
+                            }
+                        });
+                attached = true;
+            } catch (Throwable t) {
+                Log.e(TAG, "Controller.attach failed", t);
+            }
+        }
+
+        void detach() {
+
+            try {
+                // Idempotent: always clean up animations and tracker,
+                // even on the partial-construction path.
+                safeCancel(scaleX);
+                safeCancel(scaleY);
+                safeCancel(rotation);
+
+                recycleVelocityTracker();
+
+                if (!attached) return;
+                attached = false;
+
+                try {
+                    view.setOnTouchListener(null);
+                } catch (Throwable t) {
+                    Log.e(TAG, "setOnTouchListener(null) failed", t);
+                }
+
+            } catch (Throwable t) {
+                Log.e(TAG, "Controller.detach failed", t);
+            }
+        }
+
+        // -------------------------------------------------
+        // Touch handling
+        // -------------------------------------------------
+
+        private boolean handleTouch(
+                @NonNull View v,
+                @Nullable MotionEvent event) {
+
+            if (!attached || event == null) return false;
+
+            try {
+                switch (event.getActionMasked()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        return onDown(v, event);
+
+                    case MotionEvent.ACTION_MOVE:
+                        return onMove(v, event);
+
+                    case MotionEvent.ACTION_UP:
+                        return onUp(v, event);
+
+                    case MotionEvent.ACTION_CANCEL:
+                        return onCancel(v);
+
+                    default:
+                        // ACTION_POINTER_DOWN / ACTION_POINTER_UP and
+                        // anything else: ignore. Single-pointer drag
+                        // only, which matches the original behaviour.
+                        return false;
+                }
+            } catch (Throwable t) {
+                Log.e(TAG, "handleTouch failed", t);
+                return false;
+            }
+        }
+
+        private boolean onDown(
+                @NonNull View v,
+                @NonNull MotionEvent event) {
+
+            try {
+                touchStartX = event.getX();
+                touchStartRotation = v.getRotation();
+            } catch (Throwable t) {
+                Log.e(TAG, "onDown read failed", t);
+                return false;
+            }
+
+            // Stop any in-flight return / press animation.
+            safeCancel(rotation);
+            safeCancel(scaleX);
+            safeCancel(scaleY);
+
+            // Fresh tracker for this gesture.
+            recycleVelocityTracker();
+            velocityTracker = safeObtainTracker(event);
+
+            // Compress the droid.
+            safeAnimateTo(scaleX, PRESSED_SCALE);
+            safeAnimateTo(scaleY, PRESSED_SCALE);
+
+            // Return false so normal click handling continues.
+            return false;
+        }
+
+        private boolean onMove(
+                @NonNull View v,
+                @NonNull MotionEvent event) {
+
+            addMovementSafe(event);
+
+            float distance;
+            float width;
+            try {
+                distance = event.getX() - touchStartX;
+                width = Math.max(v.getWidth(), 1);
+            } catch (Throwable t) {
+                Log.e(TAG, "onMove read failed", t);
+                return false;
+            }
+
+            float resistanceDistance = width * TILT_DISTANCE_FACTOR;
+            float normalized = distance / resistanceDistance;
+
+            float tilt;
+            try {
+                tilt = (float) Math.tanh(normalized) * MAX_TILT;
+            } catch (Throwable t) {
+                tilt = 0f;
+            }
+
+            float targetRotation = touchStartRotation + tilt;
+
+            // Spring follows the finger.
+            safeAnimateTo(rotation, targetRotation);
+
+            return false;
+        }
+
+        private boolean onUp(
+                @NonNull View v,
+                @NonNull MotionEvent event) {
+
+            float releaseVelocity = 0f;
+
+            try {
+                addMovementSafe(event);
+                releaseVelocity = computeReleaseVelocity(v, event);
+                releaseVelocity = clamp(
+                        releaseVelocity,
+                        -MAX_RELEASE_VELOCITY,
+                        MAX_RELEASE_VELOCITY);
+            } catch (Throwable t) {
+                Log.e(TAG, "onUp velocity read failed", t);
+                releaseVelocity = 0f;
+            }
+
+            // Return to the rotation that existed at ACTION_DOWN.
+            float currentRotation;
+            try {
+                currentRotation = v.getRotation();
+            } catch (Throwable t) {
+                currentRotation = touchStartRotation;
+            }
+
+            safeCancel(rotation);
+            safeSetStartValue(rotation, currentRotation);
+            safeSetStartVelocity(rotation, releaseVelocity);
+            safeAnimateTo(rotation, touchStartRotation);
+
+            recycleVelocityTracker();
+
+            // Release scale.
+            safeAnimateTo(scaleX, NORMAL_SCALE);
+            safeAnimateTo(scaleY, NORMAL_SCALE);
+
+            return false;
+        }
+
+        private boolean onCancel(@NonNull View v) {
+
+            recycleVelocityTracker();
+
+            float currentRotation;
+            try {
+                currentRotation = v.getRotation();
+            } catch (Throwable t) {
+                currentRotation = touchStartRotation;
+            }
+
+            safeCancel(rotation);
+            safeSetStartValue(rotation, currentRotation);
+            safeSetStartVelocity(rotation, 0f);
+            safeAnimateTo(rotation, touchStartRotation);
+
+            safeAnimateTo(scaleX, NORMAL_SCALE);
+            safeAnimateTo(scaleY, NORMAL_SCALE);
+
+            return false;
+        }
+
+        // -------------------------------------------------
+        // Velocity helpers
+        // -------------------------------------------------
+
+        /**
+         * Adds the current event to the tracker. Returns silently if
+         * the tracker is null (obtain() failed under memory pressure).
+         */
+        private void addMovementSafe(@NonNull MotionEvent event) {
+            try {
+                VelocityTracker tracker = velocityTracker;
+                if (tracker != null) {
+                    tracker.addMovement(event);
+                }
+            } catch (Throwable t) {
+                Log.e(TAG, "addMovement failed", t);
+            }
+        }
+
+        /**
+         * Obtains a fresh VelocityTracker. Returns null on failure
+         * (obtain() can return null, though rarely).
+         */
+        @Nullable
+        private VelocityTracker safeObtainTracker(@NonNull MotionEvent event) {
+            try {
+                VelocityTracker tracker = VelocityTracker.obtain();
+                if (tracker != null) {
+                    tracker.addMovement(event);
+                }
+                return tracker;
+            } catch (Throwable t) {
+                Log.e(TAG, "obtain VelocityTracker failed", t);
+                return null;
+            }
+        }
+
+        /**
+         * Computes the angular release velocity, guarding against
+         * missing tracker data and NaN results.
+         */
+        private float computeReleaseVelocity(
+                @NonNull View v,
+                @NonNull MotionEvent event) {
+
+            VelocityTracker tracker = velocityTracker;
+            if (tracker == null) return 0f;
+
+            try {
+                tracker.computeCurrentVelocity(1000);
+            } catch (Throwable t) {
+                Log.e(TAG, "computeCurrentVelocity failed", t);
+                return 0f;
+            }
+
+            float xVelocity;
+            try {
+                xVelocity = tracker.getXVelocity();
+            } catch (Throwable t) {
+                Log.e(TAG, "getXVelocity failed", t);
+                return 0f;
+            }
+
+            if (Float.isNaN(xVelocity) || Float.isInfinite(xVelocity)) {
+                return 0f;
+            }
+
+            return calculateAngularVelocity(
+                    v,
+                    touchStartX,
+                    event.getX(),
+                    xVelocity);
+        }
+
+        private float calculateAngularVelocity(
+                @NonNull View view,
+                float startX,
+                float currentX,
+                float xVelocity) {
+
+            try {
+                float width = Math.max(view.getWidth(), 1);
+                float resistanceDistance = width * TILT_DISTANCE_FACTOR;
+
+                float distance = currentX - startX;
+                float normalized = distance / resistanceDistance;
+                float tanh = (float) Math.tanh(normalized);
+
+                // Derivative of tanh(x) is 1 - tanh(x)^2.
+                float response = 1f - (tanh * tanh);
+                float degreesPerPixel = MAX_TILT / resistanceDistance;
+
+                float result = xVelocity * degreesPerPixel * response;
+
+                if (Float.isNaN(result) || Float.isInfinite(result)) {
+                    return 0f;
+                }
+                return result;
+
+            } catch (Throwable t) {
+                Log.e(TAG, "calculateAngularVelocity failed", t);
+                return 0f;
+            }
+        }
+
+        // -------------------------------------------------
+        // Safe spring helpers
+        // -------------------------------------------------
+
+        @Nullable
+        private SpringAnimation safeCreateScaleSpring(
+                @NonNull View view,
+                @NonNull DynamicAnimation.ViewProperty property) {
+
+            try {
+                SpringAnimation animation = new SpringAnimation(view, property);
+                SpringForce spring = new SpringForce(NORMAL_SCALE);
+                spring.setStiffness(SCALE_STIFFNESS);
+                spring.setDampingRatio(SCALE_DAMPING);
+                animation.setSpring(spring);
+                return animation;
+            } catch (Throwable t) {
+                Log.e(TAG, "createScaleSpring failed", t);
+                return null;
+            }
+        }
+
+        @Nullable
+        private SpringAnimation safeCreateRotationSpring(
+                @NonNull View view,
+                float initialRotation) {
+
+            try {
+                SpringAnimation animation =
+                        new SpringAnimation(view, DynamicAnimation.ROTATION);
+
+                SpringForce spring = new SpringForce(initialRotation);
+                spring.setStiffness(ROTATION_STIFFNESS);
+                spring.setDampingRatio(ROTATION_DAMPING);
+                animation.setSpring(spring);
+
+                animation.setMinValue(initialRotation - MAX_TILT);
+                animation.setMaxValue(initialRotation + MAX_TILT);
+
+                return animation;
+            } catch (Throwable t) {
+                Log.e(TAG, "createRotationSpring failed", t);
+                return null;
+            }
+        }
+
+        private void safeCancel(@Nullable SpringAnimation animation) {
+            if (animation == null) return;
+            try {
+                animation.cancel();
+            } catch (Throwable t) {
+                Log.e(TAG, "animation.cancel failed", t);
+            }
+        }
+
+        private void safeAnimateTo(
+                @Nullable SpringAnimation animation,
+                float target) {
+
+            if (animation == null) return;
+            try {
+                animation.animateToFinalPosition(target);
+            } catch (Throwable t) {
+                Log.e(TAG, "animateToFinalPosition failed", t);
+            }
+        }
+
+        private void safeSetStartValue(
+                @Nullable SpringAnimation animation,
+                float value) {
+
+            if (animation == null) return;
+            try {
+                animation.setStartValue(value);
+            } catch (Throwable t) {
+                Log.e(TAG, "setStartValue failed", t);
+            }
+        }
+
+        private void safeSetStartVelocity(
+                @Nullable SpringAnimation animation,
+                float velocity) {
+
+            if (animation == null) return;
+            try {
+                animation.setStartVelocity(velocity);
+            } catch (Throwable t) {
+                Log.e(TAG, "setStartVelocity failed", t);
+            }
+        }
+
+        // -------------------------------------------------
+        // Misc helpers
+        // -------------------------------------------------
+
+        private float clamp(float value, float min, float max) {
+            if (value < min) return min;
+            if (value > max) return max;
+            return value;
+        }
+
+        private void recycleVelocityTracker() {
+            VelocityTracker tracker = velocityTracker;
+            if (tracker == null) return;
+            try {
+                tracker.recycle();
+            } catch (Throwable t) {
+                Log.e(TAG, "VelocityTracker.recycle failed", t);
+            } finally {
+                velocityTracker = null;
+            }
+        }
+    }
+}

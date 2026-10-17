@@ -1,1 +1,21 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHZlY3RvciB4bWxuczphbmRyb2lkPSJodHRwOi8vc2NoZW1hcy5hbmRyb2lkLmNvbS9hcGsvcmVzL2FuZHJvaWQiCiAgICBhbmRyb2lkOndpZHRoPSIxMDhkcCIKICAgIGFuZHJvaWQ6aGVpZ2h0PSIxMDhkcCIKICAgIGFuZHJvaWQ6dmlld3BvcnRXaWR0aD0iMTUzNiIKICAgIGFuZHJvaWQ6dmlld3BvcnRIZWlnaHQ9IjE1MzYiPgoKICAgIDxwYXRoCiAgICAgICAgYW5kcm9pZDpmaWxsQ29sb3I9IkBjb2xvci9sYXVuY2hlcl9pY29uX2ZvcmVncm91bmQiCiAgICAgICAgYW5kcm9pZDpmaWxsVHlwZT0iZXZlbk9kZCIKICAgICAgICBhbmRyb2lkOnBhdGhEYXRhPSJNIDUyMC41LDU1NC43CiAgICAgICAgICAgIEMgNTIwLjUsNDc4IDU1NCw0MzUgNjE5LDQ2MQogICAgICAgICAgICBMIDEwMzcsNjc0CiAgICAgICAgICAgIEMgMTA3NSw2OTUuNSAxMDg0LDczNCAxMDc1LDc1OS41CiAgICAgICAgICAgIEMgMTA4NCw3ODUgMTA2Nyw4MTEgMTAzNyw4MzYKICAgICAgICAgICAgTCA2NDAsMTA2MgogICAgICAgICAgICBDIDU3NiwxMDk2IDUyMC41LDEwNTggNTIwLjUsMTAxNS41CiAgICAgICAgICAgIFoKICAgICAgICAgICAgTSA2NjgsNjAwIEwgNjgwLDU5NCBMIDc3Niw3NzIgTCAxMDcyLDc1NSBMIDEwNzIsNzY3IEwgNzc5LDc4OSBMIDY1Myw5NTEgTCA2NDMsOTQzIEwgNzU4LDc4MSBaIiAvPgoKPC92ZWN0b3I+
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1536"
+    android:viewportHeight="1536">
+
+    <path
+        android:fillColor="@color/launcher_icon_foreground"
+        android:fillType="evenOdd"
+        android:pathData="M 520.5,554.7
+            C 520.5,478 554,435 619,461
+            L 1037,674
+            C 1075,695.5 1084,734 1075,759.5
+            C 1084,785 1067,811 1037,836
+            L 640,1062
+            C 576,1096 520.5,1058 520.5,1015.5
+            Z
+            M 668,600 L 680,594 L 776,772 L 1072,755 L 1072,767 L 779,789 L 653,951 L 643,943 L 758,781 Z" />
+
+</vector>

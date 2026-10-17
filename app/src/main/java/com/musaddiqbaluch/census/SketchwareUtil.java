@@ -1,1 +1,213 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwppbXBvcnQgYW5kcm9pZC5hcHAuKjsKaW1wb3J0IGFuZHJvaWQuY29udGVudC4qOwppbXBvcnQgYW5kcm9pZC5ncmFwaGljcy5kcmF3YWJsZS4qOwppbXBvcnQgYW5kcm9pZC5uZXQuKjsKaW1wb3J0IGFuZHJvaWQudXRpbC4qOwppbXBvcnQgYW5kcm9pZC52aWV3Lio7CmltcG9ydCBhbmRyb2lkLnZpZXcuaW5wdXRtZXRob2QuKjsKaW1wb3J0IGFuZHJvaWQud2lkZ2V0Lio7CgppbXBvcnQgamF2YS5pby4qOwppbXBvcnQgamF2YS51dGlsLio7CgppbXBvcnQgY29tLmdvb2dsZS5hbmRyb2lkLm1hdGVyaWFsLmNvbG9yLk1hdGVyaWFsQ29sb3JzOwoKcHVibGljIGNsYXNzIFNrZXRjaHdhcmVVdGlsIHsKCiAgICBwdWJsaWMgc3RhdGljIGludCBUT1AgPSAxOwogICAgcHVibGljIHN0YXRpYyBpbnQgQ0VOVEVSID0gMjsKICAgIHB1YmxpYyBzdGF0aWMgaW50IEJPVFRPTSA9IDM7CgogICAgcHVibGljIHN0YXRpYyB2b2lkIEN1c3RvbVRvYXN0KENvbnRleHQgX2NvbnRleHQsIFN0cmluZyBfbWVzc2FnZSwgaW50IF90ZXh0Q29sb3IsIGludCBfdGV4dFNpemUsIGludCBfYmdDb2xvciwgaW50IF9yYWRpdXMsIGludCBfZ3Jhdml0eSkgewogICAgICAgIFRvYXN0IF90b2FzdCA9IFRvYXN0Lm1ha2VUZXh0KF9jb250ZXh0LCBfbWVzc2FnZSwgVG9hc3QuTEVOR1RIX1NIT1JUKTsKICAgICAgICBWaWV3IF92aWV3ID0gX3RvYXN0LmdldFZpZXcoKTsKICAgICAgICBUZXh0VmlldyBfdGV4dFZpZXcgPSBfdmlldy5maW5kVmlld0J5SWQoYW5kcm9pZC5SLmlkLm1lc3NhZ2UpOwogICAgICAgIF90ZXh0Vmlldy5zZXRUZXh0U2l6ZShfdGV4dFNpemUpOwogICAgICAgIF90ZXh0Vmlldy5zZXRUZXh0Q29sb3IoX3RleHRDb2xvcik7CiAgICAgICAgX3RleHRWaWV3LnNldEdyYXZpdHkoR3Jhdml0eS5DRU5URVIpOwoKICAgICAgICBHcmFkaWVudERyYXdhYmxlIF9ncmFkaWVudERyYXdhYmxlID0gbmV3IEdyYWRpZW50RHJhd2FibGUoKTsKICAgICAgICBfZ3JhZGllbnREcmF3YWJsZS5zZXRDb2xvcihfYmdDb2xvcik7CiAgICAgICAgX2dyYWRpZW50RHJhd2FibGUuc2V0Q29ybmVyUmFkaXVzKF9yYWRpdXMpOwogICAgICAgIF92aWV3LnNldEJhY2tncm91bmQoX2dyYWRpZW50RHJhd2FibGUpOwogICAgICAgIF92aWV3LnNldFBhZGRpbmcoMTUsIDEwLCAxNSwgMTApOwogICAgICAgIF92aWV3LnNldEVsZXZhdGlvbigxMCk7CgogICAgICAgIHN3aXRjaCAoX2dyYXZpdHkpIHsKICAgICAgICAgICAgY2FzZSAxOgogICAgICAgICAgICAgICAgX3RvYXN0LnNldEdyYXZpdHkoR3Jhdml0eS5UT1AsIDAsIDE1MCk7CiAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgIGNhc2UgMjoKICAgICAgICAgICAgICAgIF90b2FzdC5zZXRHcmF2aXR5KEdyYXZpdHkuQ0VOVEVSLCAwLCAwKTsKICAgICAgICAgICAgICAgIGJyZWFrOwoKICAgICAgICAgICAgY2FzZSAzOgogICAgICAgICAgICAgICAgX3RvYXN0LnNldEdyYXZpdHkoR3Jhdml0eS5CT1RUT00sIDAsIDE1MCk7CiAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICAgICAgX3RvYXN0LnNob3coKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgQ3VzdG9tVG9hc3RXaXRoSWNvbihDb250ZXh0IF9jb250ZXh0LCBTdHJpbmcgX21lc3NhZ2UsIGludCBfdGV4dENvbG9yLCBpbnQgX3RleHRTaXplLCBpbnQgX2JnQ29sb3IsIGludCBfcmFkaXVzLCBpbnQgX2dyYXZpdHksIGludCBfaWNvbikgewogICAgICAgIFRvYXN0IF90b2FzdCA9IFRvYXN0Lm1ha2VUZXh0KF9jb250ZXh0LCBfbWVzc2FnZSwgVG9hc3QuTEVOR1RIX1NIT1JUKTsKICAgICAgICBWaWV3IF92aWV3ID0gX3RvYXN0LmdldFZpZXcoKTsKICAgICAgICBUZXh0VmlldyBfdGV4dFZpZXcgPSAoVGV4dFZpZXcpIF92aWV3LmZpbmRWaWV3QnlJZChhbmRyb2lkLlIuaWQubWVzc2FnZSk7CiAgICAgICAgX3RleHRWaWV3LnNldFRleHRTaXplKF90ZXh0U2l6ZSk7CiAgICAgICAgX3RleHRWaWV3LnNldFRleHRDb2xvcihfdGV4dENvbG9yKTsKICAgICAgICBfdGV4dFZpZXcuc2V0Q29tcG91bmREcmF3YWJsZXNXaXRoSW50cmluc2ljQm91bmRzKF9pY29uLCAwLCAwLCAwKTsKICAgICAgICBfdGV4dFZpZXcuc2V0R3Jhdml0eShHcmF2aXR5LkNFTlRFUik7CiAgICAgICAgX3RleHRWaWV3LnNldENvbXBvdW5kRHJhd2FibGVQYWRkaW5nKDEwKTsKCiAgICAgICAgR3JhZGllbnREcmF3YWJsZSBfZ3JhZGllbnREcmF3YWJsZSA9IG5ldyBHcmFkaWVudERyYXdhYmxlKCk7CiAgICAgICAgX2dyYWRpZW50RHJhd2FibGUuc2V0Q29sb3IoX2JnQ29sb3IpOwogICAgICAgIF9ncmFkaWVudERyYXdhYmxlLnNldENvcm5lclJhZGl1cyhfcmFkaXVzKTsKICAgICAgICBfdmlldy5zZXRCYWNrZ3JvdW5kKF9ncmFkaWVudERyYXdhYmxlKTsKICAgICAgICBfdmlldy5zZXRQYWRkaW5nKDEwLCAxMCwgMTAsIDEwKTsKICAgICAgICBfdmlldy5zZXRFbGV2YXRpb24oMTApOwoKICAgICAgICBzd2l0Y2ggKF9ncmF2aXR5KSB7CiAgICAgICAgICAgIGNhc2UgMToKICAgICAgICAgICAgICAgIF90b2FzdC5zZXRHcmF2aXR5KEdyYXZpdHkuVE9QLCAwLCAxNTApOwogICAgICAgICAgICAgICAgYnJlYWs7CgogICAgICAgICAgICBjYXNlIDI6CiAgICAgICAgICAgICAgICBfdG9hc3Quc2V0R3Jhdml0eShHcmF2aXR5LkNFTlRFUiwgMCwgMCk7CiAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgIGNhc2UgMzoKICAgICAgICAgICAgICAgIF90b2FzdC5zZXRHcmF2aXR5KEdyYXZpdHkuQk9UVE9NLCAwLCAxNTApOwogICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgfQogICAgICAgIF90b2FzdC5zaG93KCk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIHNvcnRMaXN0TWFwKGZpbmFsIEFycmF5TGlzdDxIYXNoTWFwPFN0cmluZywgT2JqZWN0Pj4gbGlzdE1hcCwgZmluYWwgU3RyaW5nIGtleSwgZmluYWwgYm9vbGVhbiBpc051bWJlciwgZmluYWwgYm9vbGVhbiBhc2NlbmRpbmcpIHsKICAgICAgICBDb2xsZWN0aW9ucy5zb3J0KGxpc3RNYXAsIG5ldyBDb21wYXJhdG9yPEhhc2hNYXA8U3RyaW5nLCBPYmplY3Q+PigpIHsKICAgICAgICAgICAgcHVibGljIGludCBjb21wYXJlKEhhc2hNYXA8U3RyaW5nLCBPYmplY3Q+IF9jb21wYXJlTWFwMSwgSGFzaE1hcDxTdHJpbmcsIE9iamVjdD4gX2NvbXBhcmVNYXAyKSB7CiAgICAgICAgICAgICAgICBpZiAoaXNOdW1iZXIpIHsKICAgICAgICAgICAgICAgICAgICBpbnQgX2NvdW50MSA9IEludGVnZXIudmFsdWVPZihfY29tcGFyZU1hcDEuZ2V0KGtleSkudG9TdHJpbmcoKSk7CiAgICAgICAgICAgICAgICAgICAgaW50IF9jb3VudDIgPSBJbnRlZ2VyLnZhbHVlT2YoX2NvbXBhcmVNYXAyLmdldChrZXkpLnRvU3RyaW5nKCkpOwogICAgICAgICAgICAgICAgICAgIGlmIChhc2NlbmRpbmcpIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIF9jb3VudDEgPCBfY291bnQyID8gLTEgOiBfY291bnQxIDwgX2NvdW50MiA/IDEgOiAwOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBfY291bnQxID4gX2NvdW50MiA/IC0xIDogX2NvdW50MSA+IF9jb3VudDIgPyAxIDogMDsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIGlmIChhc2NlbmRpbmcpIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIChfY29tcGFyZU1hcDEuZ2V0KGtleSkudG9TdHJpbmcoKSkuY29tcGFyZVRvKF9jb21wYXJlTWFwMi5nZXQoa2V5KS50b1N0cmluZygpKTsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gKF9jb21wYXJlTWFwMi5nZXQoa2V5KS50b1N0cmluZygpKS5jb21wYXJlVG8oX2NvbXBhcmVNYXAxLmdldChrZXkpLnRvU3RyaW5nKCkpOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgdm9pZCBDcm9wSW1hZ2UoQWN0aXZpdHkgX2FjdGl2aXR5LCBTdHJpbmcgX3BhdGgsIGludCBfcmVxdWVzdENvZGUpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBJbnRlbnQgX2ludGVudCA9IG5ldyBJbnRlbnQoImNvbS5hbmRyb2lkLmNhbWVyYS5hY3Rpb24uQ1JPUCIpOwogICAgICAgICAgICBGaWxlIF9maWxlID0gbmV3IEZpbGUoX3BhdGgpOwogICAgICAgICAgICBVcmkgX2NvbnRlbnRVcmkgPSBVcmkuZnJvbUZpbGUoX2ZpbGUpOwogICAgICAgICAgICBfaW50ZW50LnNldERhdGFBbmRUeXBlKF9jb250ZW50VXJpLCAiaW1hZ2UvKiIpOwogICAgICAgICAgICBfaW50ZW50LnB1dEV4dHJhKCJjcm9wIiwgInRydWUiKTsKICAgICAgICAgICAgX2ludGVudC5wdXRFeHRyYSgiYXNwZWN0WCIsIDEpOwogICAgICAgICAgICBfaW50ZW50LnB1dEV4dHJhKCJhc3BlY3RZIiwgMSk7CiAgICAgICAgICAgIF9pbnRlbnQucHV0RXh0cmEoIm91dHB1dFgiLCAyODApOwogICAgICAgICAgICBfaW50ZW50LnB1dEV4dHJhKCJvdXRwdXRZIiwgMjgwKTsKICAgICAgICAgICAgX2ludGVudC5wdXRFeHRyYSgicmV0dXJuLWRhdGEiLCBmYWxzZSk7CiAgICAgICAgICAgIF9hY3Rpdml0eS5zdGFydEFjdGl2aXR5Rm9yUmVzdWx0KF9pbnRlbnQsIF9yZXF1ZXN0Q29kZSk7CiAgICAgICAgfSBjYXRjaCAoQWN0aXZpdHlOb3RGb3VuZEV4Y2VwdGlvbiBfZSkgewogICAgICAgICAgICBUb2FzdC5tYWtlVGV4dChfYWN0aXZpdHksICJZb3VyIGRldmljZSBkb2Vzbid0IHN1cHBvcnQgdGhlIGNyb3AgYWN0aW9uISIsIFRvYXN0LkxFTkdUSF9TSE9SVCkuc2hvdygpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGJvb2xlYW4gaXNDb25uZWN0ZWQoQ29udGV4dCBfY29udGV4dCkgewogICAgICAgIENvbm5lY3Rpdml0eU1hbmFnZXIgX2Nvbm5lY3Rpdml0eU1hbmFnZXIgPSAoQ29ubmVjdGl2aXR5TWFuYWdlcikgX2NvbnRleHQuZ2V0U3lzdGVtU2VydmljZShDb250ZXh0LkNPTk5FQ1RJVklUWV9TRVJWSUNFKTsKICAgICAgICBOZXR3b3JrSW5mbyBfYWN0aXZlTmV0d29ya0luZm8gPSBfY29ubmVjdGl2aXR5TWFuYWdlci5nZXRBY3RpdmVOZXR3b3JrSW5mbygpOwogICAgICAgIHJldHVybiBfYWN0aXZlTmV0d29ya0luZm8gIT0gbnVsbCAmJiBfYWN0aXZlTmV0d29ya0luZm8uaXNDb25uZWN0ZWQoKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIFN0cmluZyBjb3B5RnJvbUlucHV0U3RyZWFtKElucHV0U3RyZWFtIF9pbnB1dFN0cmVhbSkgewogICAgICAgIEJ5dGVBcnJheU91dHB1dFN0cmVhbSBfb3V0cHV0U3RyZWFtID0gbmV3IEJ5dGVBcnJheU91dHB1dFN0cmVhbSgpOwogICAgICAgIGJ5dGVbXSBfYnVmID0gbmV3IGJ5dGVbMTAyNF07CiAgICAgICAgaW50IF9pOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIHdoaWxlICgoX2kgPSBfaW5wdXRTdHJlYW0ucmVhZChfYnVmKSkgIT0gLTEpewogICAgICAgICAgICAgICAgX291dHB1dFN0cmVhbS53cml0ZShfYnVmLCAwLCBfaSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgX291dHB1dFN0cmVhbS5jbG9zZSgpOwogICAgICAgICAgICBfaW5wdXRTdHJlYW0uY2xvc2UoKTsKICAgICAgICB9IGNhdGNoIChJT0V4Y2VwdGlvbiBfZSkgewogICAgICAgIH0KCiAgICAgICAgcmV0dXJuIF9vdXRwdXRTdHJlYW0udG9TdHJpbmcoKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgaGlkZUtleWJvYXJkKENvbnRleHQgX2NvbnRleHQpIHsKICAgICAgICBJbnB1dE1ldGhvZE1hbmFnZXIgX2lucHV0TWV0aG9kTWFuYWdlciA9IChJbnB1dE1ldGhvZE1hbmFnZXIpIF9jb250ZXh0LmdldFN5c3RlbVNlcnZpY2UoQ29udGV4dC5JTlBVVF9NRVRIT0RfU0VSVklDRSk7CiAgICAgICAgX2lucHV0TWV0aG9kTWFuYWdlci50b2dnbGVTb2Z0SW5wdXQoSW5wdXRNZXRob2RNYW5hZ2VyLkhJREVfSU1QTElDSVRfT05MWSwgMCk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIHNob3dLZXlib2FyZChDb250ZXh0IF9jb250ZXh0KSB7CiAgICAgICAgSW5wdXRNZXRob2RNYW5hZ2VyIF9pbnB1dE1ldGhvZE1hbmFnZXIgPSAoSW5wdXRNZXRob2RNYW5hZ2VyKSBfY29udGV4dC5nZXRTeXN0ZW1TZXJ2aWNlKENvbnRleHQuSU5QVVRfTUVUSE9EX1NFUlZJQ0UpOwogICAgICAgIF9pbnB1dE1ldGhvZE1hbmFnZXIudG9nZ2xlU29mdElucHV0KElucHV0TWV0aG9kTWFuYWdlci5TSE9XX0ZPUkNFRCwgMCk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyB2b2lkIHNob3dNZXNzYWdlKENvbnRleHQgX2NvbnRleHQsIFN0cmluZyBfcykgewogICAgICAgIFRvYXN0Lm1ha2VUZXh0KF9jb250ZXh0LCBfcywgVG9hc3QuTEVOR1RIX1NIT1JUKS5zaG93KCk7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBpbnQgZ2V0TWF0ZXJpYWxDb2xvcihDb250ZXh0IGNvbnRleHQsIGludCByZXNvdXJjZUlkKSB7CiAgICAgICAgcmV0dXJuIE1hdGVyaWFsQ29sb3JzLmdldENvbG9yKGNvbnRleHQsIHJlc291cmNlSWQsICJnZXRNYXRlcmlhbENvbG9yIik7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBpbnQgZ2V0TG9jYXRpb25YKFZpZXcgX3ZpZXcpIHsKICAgICAgICBpbnQgX2xvY2F0aW9uW10gPSBuZXcgaW50WzJdOwogICAgICAgIF92aWV3LmdldExvY2F0aW9uSW5XaW5kb3coX2xvY2F0aW9uKTsKICAgICAgICByZXR1cm4gX2xvY2F0aW9uWzBdOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgaW50IGdldExvY2F0aW9uWShWaWV3IF92aWV3KSB7CiAgICAgICAgaW50IF9sb2NhdGlvbltdID0gbmV3IGludFsyXTsKICAgICAgICBfdmlldy5nZXRMb2NhdGlvbkluV2luZG93KF9sb2NhdGlvbik7CiAgICAgICAgcmV0dXJuIF9sb2NhdGlvblsxXTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGludCBnZXRSYW5kb20oaW50IF9taW4sIGludCBfbWF4KSB7CiAgICAgICAgUmFuZG9tIHJhbmRvbSA9IG5ldyBSYW5kb20oKTsKICAgICAgICByZXR1cm4gcmFuZG9tLm5leHRJbnQoX21heCAtIF9taW4gKyAxKSArIF9taW47CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBBcnJheUxpc3Q8RG91YmxlPiBnZXRDaGVja2VkSXRlbVBvc2l0aW9uc1RvQXJyYXkoTGlzdFZpZXcgX2xpc3QpIHsKICAgICAgICBBcnJheUxpc3Q8RG91YmxlPiBfcmVzdWx0ID0gbmV3IEFycmF5TGlzdDxEb3VibGU+KCk7CiAgICAgICAgU3BhcnNlQm9vbGVhbkFycmF5IF9hcnIgPSBfbGlzdC5nZXRDaGVja2VkSXRlbVBvc2l0aW9ucygpOwogICAgICAgIGZvciAoaW50IF9pSWR4ID0gMDsgX2lJZHggPCBfYXJyLnNpemUoKTsgX2lJZHgrKykgewogICAgICAgICAgICBpZiAoX2Fyci52YWx1ZUF0KF9pSWR4KSkKICAgICAgICAgICAgICAgIF9yZXN1bHQuYWRkKChkb3VibGUpIF9hcnIua2V5QXQoX2lJZHgpKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIF9yZXN1bHQ7CiAgICB9CgogICAgcHVibGljIHN0YXRpYyBmbG9hdCBnZXREaXAoQ29udGV4dCBfY29udGV4dCwgaW50IF9pbnB1dCkgewogICAgICAgIHJldHVybiBUeXBlZFZhbHVlLmFwcGx5RGltZW5zaW9uKFR5cGVkVmFsdWUuQ09NUExFWF9VTklUX0RJUCwgX2lucHV0LCBfY29udGV4dC5nZXRSZXNvdXJjZXMoKS5nZXREaXNwbGF5TWV0cmljcygpKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIGludCBnZXREaXNwbGF5V2lkdGhQaXhlbHMoQ29udGV4dCBfY29udGV4dCkgewogICAgICAgIHJldHVybiBfY29udGV4dC5nZXRSZXNvdXJjZXMoKS5nZXREaXNwbGF5TWV0cmljcygpLndpZHRoUGl4ZWxzOwogICAgfQoKICAgIHB1YmxpYyBzdGF0aWMgaW50IGdldERpc3BsYXlIZWlnaHRQaXhlbHMoQ29udGV4dCBfY29udGV4dCkgewogICAgICAgIHJldHVybiBfY29udGV4dC5nZXRSZXNvdXJjZXMoKS5nZXREaXNwbGF5TWV0cmljcygpLmhlaWdodFBpeGVsczsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgZ2V0QWxsS2V5c0Zyb21NYXAoTWFwPFN0cmluZywgT2JqZWN0PiBfbWFwLCBBcnJheUxpc3Q8U3RyaW5nPiBfb3V0cHV0KSB7CiAgICAgICAgaWYgKF9vdXRwdXQgPT0gbnVsbCkgcmV0dXJuOwogICAgICAgIF9vdXRwdXQuY2xlYXIoKTsKICAgICAgICBpZiAoX21hcCA9PSBudWxsIHx8IF9tYXAuc2l6ZSgpIDwgMSkgcmV0dXJuOwogICAgICAgIGZvciAoTWFwLkVudHJ5PFN0cmluZywgT2JqZWN0PiBfZW50cnkgOiBfbWFwLmVudHJ5U2V0KCkpIHsKICAgICAgICAgICAgX291dHB1dC5hZGQoX2VudHJ5LmdldEtleSgpKTsKICAgICAgICB9CiAgICB9Cn0K
+package com.musaddiqbaluch.census;
+import android.app.*;
+import android.content.*;
+import android.graphics.drawable.*;
+import android.net.*;
+import android.util.*;
+import android.view.*;
+import android.view.inputmethod.*;
+import android.widget.*;
+
+import java.io.*;
+import java.util.*;
+
+import com.google.android.material.color.MaterialColors;
+
+public class SketchwareUtil {
+
+    public static int TOP = 1;
+    public static int CENTER = 2;
+    public static int BOTTOM = 3;
+
+    public static void CustomToast(Context _context, String _message, int _textColor, int _textSize, int _bgColor, int _radius, int _gravity) {
+        Toast _toast = Toast.makeText(_context, _message, Toast.LENGTH_SHORT);
+        View _view = _toast.getView();
+        TextView _textView = _view.findViewById(android.R.id.message);
+        _textView.setTextSize(_textSize);
+        _textView.setTextColor(_textColor);
+        _textView.setGravity(Gravity.CENTER);
+
+        GradientDrawable _gradientDrawable = new GradientDrawable();
+        _gradientDrawable.setColor(_bgColor);
+        _gradientDrawable.setCornerRadius(_radius);
+        _view.setBackground(_gradientDrawable);
+        _view.setPadding(15, 10, 15, 10);
+        _view.setElevation(10);
+
+        switch (_gravity) {
+            case 1:
+                _toast.setGravity(Gravity.TOP, 0, 150);
+                break;
+
+            case 2:
+                _toast.setGravity(Gravity.CENTER, 0, 0);
+                break;
+
+            case 3:
+                _toast.setGravity(Gravity.BOTTOM, 0, 150);
+                break;
+        }
+        _toast.show();
+    }
+
+    public static void CustomToastWithIcon(Context _context, String _message, int _textColor, int _textSize, int _bgColor, int _radius, int _gravity, int _icon) {
+        Toast _toast = Toast.makeText(_context, _message, Toast.LENGTH_SHORT);
+        View _view = _toast.getView();
+        TextView _textView = (TextView) _view.findViewById(android.R.id.message);
+        _textView.setTextSize(_textSize);
+        _textView.setTextColor(_textColor);
+        _textView.setCompoundDrawablesWithIntrinsicBounds(_icon, 0, 0, 0);
+        _textView.setGravity(Gravity.CENTER);
+        _textView.setCompoundDrawablePadding(10);
+
+        GradientDrawable _gradientDrawable = new GradientDrawable();
+        _gradientDrawable.setColor(_bgColor);
+        _gradientDrawable.setCornerRadius(_radius);
+        _view.setBackground(_gradientDrawable);
+        _view.setPadding(10, 10, 10, 10);
+        _view.setElevation(10);
+
+        switch (_gravity) {
+            case 1:
+                _toast.setGravity(Gravity.TOP, 0, 150);
+                break;
+
+            case 2:
+                _toast.setGravity(Gravity.CENTER, 0, 0);
+                break;
+
+            case 3:
+                _toast.setGravity(Gravity.BOTTOM, 0, 150);
+                break;
+        }
+        _toast.show();
+    }
+
+    public static void sortListMap(final ArrayList<HashMap<String, Object>> listMap, final String key, final boolean isNumber, final boolean ascending) {
+        Collections.sort(listMap, new Comparator<HashMap<String, Object>>() {
+            public int compare(HashMap<String, Object> _compareMap1, HashMap<String, Object> _compareMap2) {
+                if (isNumber) {
+                    int _count1 = Integer.valueOf(_compareMap1.get(key).toString());
+                    int _count2 = Integer.valueOf(_compareMap2.get(key).toString());
+                    if (ascending) {
+                        return _count1 < _count2 ? -1 : _count1 < _count2 ? 1 : 0;
+                    } else {
+                        return _count1 > _count2 ? -1 : _count1 > _count2 ? 1 : 0;
+                    }
+                } else {
+                    if (ascending) {
+                        return (_compareMap1.get(key).toString()).compareTo(_compareMap2.get(key).toString());
+                    } else {
+                        return (_compareMap2.get(key).toString()).compareTo(_compareMap1.get(key).toString());
+                    }
+                }
+            }
+        });
+    }
+
+    public static void CropImage(Activity _activity, String _path, int _requestCode) {
+        try {
+            Intent _intent = new Intent("com.android.camera.action.CROP");
+            File _file = new File(_path);
+            Uri _contentUri = Uri.fromFile(_file);
+            _intent.setDataAndType(_contentUri, "image/*");
+            _intent.putExtra("crop", "true");
+            _intent.putExtra("aspectX", 1);
+            _intent.putExtra("aspectY", 1);
+            _intent.putExtra("outputX", 280);
+            _intent.putExtra("outputY", 280);
+            _intent.putExtra("return-data", false);
+            _activity.startActivityForResult(_intent, _requestCode);
+        } catch (ActivityNotFoundException _e) {
+            Toast.makeText(_activity, "Your device doesn't support the crop action!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public static boolean isConnected(Context _context) {
+        ConnectivityManager _connectivityManager = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo _activeNetworkInfo = _connectivityManager.getActiveNetworkInfo();
+        return _activeNetworkInfo != null && _activeNetworkInfo.isConnected();
+    }
+
+    public static String copyFromInputStream(InputStream _inputStream) {
+        ByteArrayOutputStream _outputStream = new ByteArrayOutputStream();
+        byte[] _buf = new byte[1024];
+        int _i;
+        try {
+            while ((_i = _inputStream.read(_buf)) != -1){
+                _outputStream.write(_buf, 0, _i);
+            }
+            _outputStream.close();
+            _inputStream.close();
+        } catch (IOException _e) {
+        }
+
+        return _outputStream.toString();
+    }
+
+    public static void hideKeyboard(Context _context) {
+        InputMethodManager _inputMethodManager = (InputMethodManager) _context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        _inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+    }
+
+    public static void showKeyboard(Context _context) {
+        InputMethodManager _inputMethodManager = (InputMethodManager) _context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        _inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+    }
+
+    public static void showMessage(Context _context, String _s) {
+        Toast.makeText(_context, _s, Toast.LENGTH_SHORT).show();
+    }
+
+    public static int getMaterialColor(Context context, int resourceId) {
+        return MaterialColors.getColor(context, resourceId, "getMaterialColor");
+    }
+
+    public static int getLocationX(View _view) {
+        int _location[] = new int[2];
+        _view.getLocationInWindow(_location);
+        return _location[0];
+    }
+
+    public static int getLocationY(View _view) {
+        int _location[] = new int[2];
+        _view.getLocationInWindow(_location);
+        return _location[1];
+    }
+
+    public static int getRandom(int _min, int _max) {
+        Random random = new Random();
+        return random.nextInt(_max - _min + 1) + _min;
+    }
+
+    public static ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
+        ArrayList<Double> _result = new ArrayList<Double>();
+        SparseBooleanArray _arr = _list.getCheckedItemPositions();
+        for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
+            if (_arr.valueAt(_iIdx))
+                _result.add((double) _arr.keyAt(_iIdx));
+        }
+        return _result;
+    }
+
+    public static float getDip(Context _context, int _input) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, _context.getResources().getDisplayMetrics());
+    }
+
+    public static int getDisplayWidthPixels(Context _context) {
+        return _context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    public static int getDisplayHeightPixels(Context _context) {
+        return _context.getResources().getDisplayMetrics().heightPixels;
+    }
+
+    public static void getAllKeysFromMap(Map<String, Object> _map, ArrayList<String> _output) {
+        if (_output == null) return;
+        _output.clear();
+        if (_map == null || _map.size() < 1) return;
+        for (Map.Entry<String, Object> _entry : _map.entrySet()) {
+            _output.add(_entry.getKey());
+        }
+    }
+}

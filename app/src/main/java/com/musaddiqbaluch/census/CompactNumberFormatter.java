@@ -1,1 +1,121 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGphdmEudXRpbC5Mb2NhbGU7CgovKioKICogQ29tcGFjdCBudW1iZXIgZm9ybWF0dGluZzogMTIzNCAtPiAiMS4ySyIsIDk5OTk5OSAtPiAiMU0iLAogKiAxXzUwMF8wMDBfMDAwIC0+ICIxLjVCIi4KICoKICogQ29udHJhY3QKICogLS0tLS0tLS0KICogICAtIE5ldmVyIHRocm93cy4gQW55IGludGVybmFsIGZhaWx1cmUgZmFsbHMgYmFjayB0byBTdHJpbmcudmFsdWVPZi4KICogICAtIE5lZ2F0aXZlIHZhbHVlcyBhcmUgY2xhbXBlZCB0byAwLgogKiAgIC0gQXQgbW9zdCB0aHJlZSBzaWduaWZpY2FudCBkaWdpdHMgYmVmb3JlIHRoZSBzdWZmaXg6CiAqICAgICAgIDFfMDAwICAgICAtPiAxSwogKiAgICAgICAxXzEwMCAgICAgLT4gMS4xSwogKiAgICAgICA5OTlfNTAwICAgLT4gOTk5LjVLCiAqICAgICAgIDk5OV85NTAgICAtPiAxTSAgICAgICAocm91bmRpbmcgcHJvbW90ZXMgdG8gdGhlIG5leHQgdW5pdCwKICogICAgICAgOTk5Xzk5OSAgIC0+IDFNICAgICAgICBtYXRjaGluZyBHb29nbGUncyBDb21wYWN0RGVjaW1hbEZvcm1hdCkKICogICAgICAgMV8wMDBfMDAwIC0+IDFNCiAqCiAqIExvY2FsZQogKiAtLS0tLS0KICogICBTdWZmaXhlcyBLIC8gTSAvIEIgYXJlIEVuZ2xpc2ggc2hvcnRoYW5kLiBVc2luZyBMb2NhbGUuVVMgZm9yIHRoZQogKiAgIGRlY2ltYWwgc2VwYXJhdG9yIGtlZXBzIHRoZSBvdXRwdXQgc2VsZi1jb25zaXN0ZW50IChhIGRvdCBhbHdheXMKICogICBzZXBhcmF0ZXMgdGhlIGRlY2ltYWwpIHJlZ2FyZGxlc3Mgb2YgdGhlIGRldmljZSdzIGxvY2FsZS4gVGhpcwogKiAgIG1hdGNoZXMgaG93IEFuZHJvaWQncyBvd24gQ29tcGFjdERlY2ltYWxGb3JtYXQgYmVoYXZlcyBmb3IgdGhlCiAqICAgRW5nbGlzaCBhYmJyZXZpYXRpb25zLgogKi8KcHVibGljIGZpbmFsIGNsYXNzIENvbXBhY3ROdW1iZXJGb3JtYXR0ZXIgewoKICAgIHByaXZhdGUgQ29tcGFjdE51bWJlckZvcm1hdHRlcigpIHsKICAgICAgICAvLyBVdGlsaXR5IGNsYXNzLgogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gUHVibGljIEFQSQogICAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgogICAgcHVibGljIHN0YXRpYyBTdHJpbmcgZm9ybWF0KGludCB2YWx1ZSkgewogICAgICAgIHJldHVybiBmb3JtYXQoKGxvbmcpIHZhbHVlKTsKICAgIH0KCiAgICBwdWJsaWMgc3RhdGljIFN0cmluZyBmb3JtYXQobG9uZyB2YWx1ZSkgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBpZiAodmFsdWUgPCAwTCkgewogICAgICAgICAgICAgICAgdmFsdWUgPSAwTDsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgLy8gVW5kZXIgMUsgLT4gcGxhaW4gaW50ZWdlciwgbm8gc3VmZml4LgogICAgICAgICAgICBpZiAodmFsdWUgPCAxXzAwMEwpIHsKICAgICAgICAgICAgICAgIHJldHVybiBTdHJpbmcudmFsdWVPZih2YWx1ZSk7CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIC8vIFVuZGVyIDFNIC0+IEssIHVubGVzcyByb3VuZGluZyBwdXNoZXMgdXMgaW50byBNIHRlcnJpdG9yeS4KICAgICAgICAgICAgaWYgKHZhbHVlIDwgMV8wMDBfMDAwTCkgewogICAgICAgICAgICAgICAgZG91YmxlIGsgPSB2YWx1ZSAvIDFfMDAwLjA7CiAgICAgICAgICAgICAgICBpZiAocm91bmRUb09uZURlY2ltYWwoaykgPCAxXzAwMC4wKSB7CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGZvcm1hdFJvdW5kZWQoaywgIksiKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIC8vIDk5OV85NTAgYW5kIGFib3ZlOiBmYWxsIHRocm91Z2ggdG8gTS4KICAgICAgICAgICAgfQoKICAgICAgICAgICAgLy8gVW5kZXIgMUIgLT4gTSwgdW5sZXNzIHJvdW5kaW5nIHB1c2hlcyB1cyBpbnRvIEIgdGVycml0b3J5LgogICAgICAgICAgICBpZiAodmFsdWUgPCAxXzAwMF8wMDBfMDAwTCkgewogICAgICAgICAgICAgICAgZG91YmxlIG0gPSB2YWx1ZSAvIDFfMDAwXzAwMC4wOwogICAgICAgICAgICAgICAgaWYgKHJvdW5kVG9PbmVEZWNpbWFsKG0pIDwgMV8wMDAuMCkgewogICAgICAgICAgICAgICAgICAgIHJldHVybiBmb3JtYXRSb3VuZGVkKG0sICJNIik7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAvLyA5OTlfOTUwXzAwMCBhbmQgYWJvdmU6IGZhbGwgdGhyb3VnaCB0byBCLgogICAgICAgICAgICB9CgogICAgICAgICAgICAvLyAxQiBhbmQgYWJvdmUgLT4gQi4gVmFsdWVzIGFib3ZlIH4xIHRyaWxsaW9uIHdpbGwgc2hvdyBhCiAgICAgICAgICAgIC8vIGxhcmdlIG1hbnRpc3NhIChlLmcuICIxNTAwQiIpLCBidXQgdGhhdCBpcyBvdXQgb2YgcmFuZ2UKICAgICAgICAgICAgLy8gZm9yIHRoZSBhcHAtY291bnQgdXNlIGNhc2UgdGhpcyBmb3JtYXR0ZXIgc2VydmVzLgogICAgICAgICAgICBkb3VibGUgYiA9IHZhbHVlIC8gMV8wMDBfMDAwXzAwMC4wOwogICAgICAgICAgICByZXR1cm4gZm9ybWF0Um91bmRlZChiLCAiQiIpOwoKICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAvLyBEZXRlcm1pbmlzdGljIGZvcm1hdHRlcjsgdGhpcyBzaG91bGQgbmV2ZXIgZmlyZS4gS2VwdCBzbwogICAgICAgICAgICAvLyBhIGZ1dHVyZSBjaGFuZ2UgY2Fubm90IGFjY2lkZW50YWxseSB0dXJuIHRoaXMgaW50byBhCiAgICAgICAgICAgIC8vIGNyYXNoIHBhdGggZm9yIGNhbGxlcnMuCiAgICAgICAgICAgIHJldHVybiBTdHJpbmcudmFsdWVPZih2YWx1ZSk7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gSW50ZXJuYWwKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIC8qKgogICAgICogUm91bmRzIGEgZG91YmxlIHRvIG9uZSBkZWNpbWFsIHBsYWNlIHVzaW5nIHRoZSBzYW1lIHJ1bGUgdGhlCiAgICAgKiBmb3JtYXR0ZXIgZGlzcGxheXMgd2l0aDogTWF0aC5yb3VuZCh2ICogMTApIC8gMTAuCiAgICAgKi8KICAgIHByaXZhdGUgc3RhdGljIGRvdWJsZSByb3VuZFRvT25lRGVjaW1hbChkb3VibGUgdikgewogICAgICAgIHJldHVybiBNYXRoLnJvdW5kKHYgKiAxMC4wKSAvIDEwLjA7CiAgICB9CgogICAgLyoqCiAgICAgKiBGb3JtYXRzIGEgdmFsdWUgdGhhdCBoYXMgYWxyZWFkeSBiZWVuIGNvbmZpcm1lZCB0byBiZSBiZWxvdyB0aGUKICAgICAqIG5leHQgdW5pdCdzIHJvdW5kaW5nIHRocmVzaG9sZC4gU3RyaXBzIGEgdHJhaWxpbmcgIi4wIiBzbwogICAgICogd2hvbGUtbnVtYmVyIHJlc3VsdHMgcmVuZGVyIGFzICIxSyIgcmF0aGVyIHRoYW4gIjEuMEsiLgogICAgICovCiAgICBwcml2YXRlIHN0YXRpYyBTdHJpbmcgZm9ybWF0Um91bmRlZChkb3VibGUgcmF3LCBTdHJpbmcgc3VmZml4KSB7CgogICAgICAgIGRvdWJsZSByb3VuZGVkID0gcm91bmRUb09uZURlY2ltYWwocmF3KTsKCiAgICAgICAgU3RyaW5nIHJlc3VsdCA9IFN0cmluZy5mb3JtYXQoCiAgICAgICAgICAgICAgICBMb2NhbGUuVVMsCiAgICAgICAgICAgICAgICAiJS4xZiIsCiAgICAgICAgICAgICAgICByb3VuZGVkCiAgICAgICAgKTsKCiAgICAgICAgLy8gIjEuMCIgLT4gIjEiCiAgICAgICAgaWYgKHJlc3VsdC5lbmRzV2l0aCgiLjAiKSkgewogICAgICAgICAgICByZXN1bHQgPSByZXN1bHQuc3Vic3RyaW5nKDAsIHJlc3VsdC5sZW5ndGgoKSAtIDIpOwogICAgICAgIH0KCiAgICAgICAgcmV0dXJuIHJlc3VsdCArIHN1ZmZpeDsKICAgIH0KfQ==
+package com.musaddiqbaluch.census;
+
+import java.util.Locale;
+
+/**
+ * Compact number formatting: 1234 -> "1.2K", 999999 -> "1M",
+ * 1_500_000_000 -> "1.5B".
+ *
+ * Contract
+ * --------
+ *   - Never throws. Any internal failure falls back to String.valueOf.
+ *   - Negative values are clamped to 0.
+ *   - At most three significant digits before the suffix:
+ *       1_000     -> 1K
+ *       1_100     -> 1.1K
+ *       999_500   -> 999.5K
+ *       999_950   -> 1M       (rounding promotes to the next unit,
+ *       999_999   -> 1M        matching Google's CompactDecimalFormat)
+ *       1_000_000 -> 1M
+ *
+ * Locale
+ * ------
+ *   Suffixes K / M / B are English shorthand. Using Locale.US for the
+ *   decimal separator keeps the output self-consistent (a dot always
+ *   separates the decimal) regardless of the device's locale. This
+ *   matches how Android's own CompactDecimalFormat behaves for the
+ *   English abbreviations.
+ */
+public final class CompactNumberFormatter {
+
+    private CompactNumberFormatter() {
+        // Utility class.
+    }
+
+    // ============================================================
+    // Public API
+    // ============================================================
+
+    public static String format(int value) {
+        return format((long) value);
+    }
+
+    public static String format(long value) {
+
+        try {
+            if (value < 0L) {
+                value = 0L;
+            }
+
+            // Under 1K -> plain integer, no suffix.
+            if (value < 1_000L) {
+                return String.valueOf(value);
+            }
+
+            // Under 1M -> K, unless rounding pushes us into M territory.
+            if (value < 1_000_000L) {
+                double k = value / 1_000.0;
+                if (roundToOneDecimal(k) < 1_000.0) {
+                    return formatRounded(k, "K");
+                }
+                // 999_950 and above: fall through to M.
+            }
+
+            // Under 1B -> M, unless rounding pushes us into B territory.
+            if (value < 1_000_000_000L) {
+                double m = value / 1_000_000.0;
+                if (roundToOneDecimal(m) < 1_000.0) {
+                    return formatRounded(m, "M");
+                }
+                // 999_950_000 and above: fall through to B.
+            }
+
+            // 1B and above -> B. Values above ~1 trillion will show a
+            // large mantissa (e.g. "1500B"), but that is out of range
+            // for the app-count use case this formatter serves.
+            double b = value / 1_000_000_000.0;
+            return formatRounded(b, "B");
+
+        } catch (Throwable t) {
+            // Deterministic formatter; this should never fire. Kept so
+            // a future change cannot accidentally turn this into a
+            // crash path for callers.
+            return String.valueOf(value);
+        }
+    }
+
+    // ============================================================
+    // Internal
+    // ============================================================
+
+    /**
+     * Rounds a double to one decimal place using the same rule the
+     * formatter displays with: Math.round(v * 10) / 10.
+     */
+    private static double roundToOneDecimal(double v) {
+        return Math.round(v * 10.0) / 10.0;
+    }
+
+    /**
+     * Formats a value that has already been confirmed to be below the
+     * next unit's rounding threshold. Strips a trailing ".0" so
+     * whole-number results render as "1K" rather than "1.0K".
+     */
+    private static String formatRounded(double raw, String suffix) {
+
+        double rounded = roundToOneDecimal(raw);
+
+        String result = String.format(
+                Locale.US,
+                "%.1f",
+                rounded
+        );
+
+        // "1.0" -> "1"
+        if (result.endsWith(".0")) {
+            result = result.substring(0, result.length() - 2);
+        }
+
+        return result + suffix;
+    }
+}

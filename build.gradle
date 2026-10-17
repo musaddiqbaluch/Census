@@ -1,1 +1,24 @@
-Ly8gVG9wLWxldmVsIGJ1aWxkIGZpbGUgd2hlcmUgeW91IGNhbiBhZGQgY29uZmlndXJhdGlvbiBvcHRpb25zIGNvbW1vbiB0byBhbGwgc3ViLXByb2plY3RzL21vZHVsZXMuDQpidWlsZHNjcmlwdCB7DQogICAgcmVwb3NpdG9yaWVzIHsNCiAgICAgICAgZ29vZ2xlKCkNCiAgICAgICAgbWF2ZW5DZW50cmFsKCkNCiAgICB9DQogICAgZGVwZW5kZW5jaWVzIHsNCiAgICAgICAgY2xhc3NwYXRoICdjb20uYW5kcm9pZC50b29scy5idWlsZDpncmFkbGU6OC4xMi4wJw0KICAgICAgICBjbGFzc3BhdGggJ2NvbS5nb29nbGUuZ21zOmdvb2dsZS1zZXJ2aWNlczo0LjQuMycNCiAgICAgICAgLy8gTk9URTogRG8gbm90IHBsYWNlIHlvdXIgYXBwbGljYXRpb24gZGVwZW5kZW5jaWVzIGhlcmU7IHRoZXkgYmVsb25nDQogICAgICAgIC8vIGluIHRoZSBpbmRpdmlkdWFsIG1vZHVsZSBidWlsZC5ncmFkbGUgZmlsZXMNCiAgICB9DQp9DQoNCmFsbHByb2plY3RzIHsNCiAgICByZXBvc2l0b3JpZXMgew0KICAgICAgICBnb29nbGUoKQ0KICAgICAgICBtYXZlbkNlbnRyYWwoKQ0KICAgIH0NCn0NCg0KdGFza3MucmVnaXN0ZXIoImNsZWFuIiwgRGVsZXRlKSB7DQogICAgZGVsZXRlIHJvb3RQcm9qZWN0LmJ1aWxkRGlyDQp9DQo=
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.12.0'
+        classpath 'com.google.gms:google-services:4.4.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

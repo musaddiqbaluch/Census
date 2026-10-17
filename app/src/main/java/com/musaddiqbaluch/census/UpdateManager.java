@@ -1,1 +1,229 @@
-cGFja2FnZSBjb20ubXVzYWRkaXFiYWx1Y2guY2Vuc3VzOwoKaW1wb3J0IGFuZHJvaWQuYXBwLkFjdGl2aXR5OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LkNvbnRleHQ7CmltcG9ydCBhbmRyb2lkLmNvbnRlbnQuSW50ZW50OwppbXBvcnQgYW5kcm9pZC5jb250ZW50LlNoYXJlZFByZWZlcmVuY2VzOwppbXBvcnQgYW5kcm9pZC5uZXQuVXJpOwppbXBvcnQgYW5kcm9pZC5vcy5CdWlsZDsKaW1wb3J0IGFuZHJvaWQub3MuSGFuZGxlcjsKaW1wb3J0IGFuZHJvaWQub3MuTG9vcGVyOwppbXBvcnQgYW5kcm9pZC51dGlsLkxvZzsKaW1wb3J0IGFuZHJvaWQud2lkZ2V0LlRvYXN0OwoKaW1wb3J0IGFuZHJvaWR4LmFubm90YXRpb24uTm9uTnVsbDsKaW1wb3J0IGFuZHJvaWR4LmFubm90YXRpb24uTnVsbGFibGU7CgovKioKICogR2x1ZSBiZXR3ZWVuIFVwZGF0ZUNoZWNrZXIgYW5kIE5ld1VwZGF0ZURpYWxvZy4KICoKICogIC0gV2FpdHMgU1RBUlRVUF9ERUxBWV9NUyBhZnRlciBsYXVuY2ggYmVmb3JlIGRvaW5nIGFueXRoaW5nLgogKiAgLSBSdW5zIGF0IG1vc3Qgb25jZSBwZXIgYXBwIGxhdW5jaC4KICogIC0gIkxhdGVyIiAoYnV0dG9uLCBiYWNrLCBvciB0YXAgb3V0c2lkZSkgc25vb3plcyBmb3IgU05PT1pFX01TIGFuZAogKiAgICBubyBuZXR3b3JrIHJlcXVlc3QgaXMgbWFkZSB3aGlsZSBzbm9vemVkLgogKiAgLSBPbmx5IHJ1bnMgaWYgdGhlICJVcGRhdGUgQ2hlY2siIHN3aXRjaCBpbiBTZXR0aW5ncyBpcyBvbi4KICogIC0gTmV2ZXIgZG93bmxvYWRzIGFueXRoaW5nOiBpdCBvbmx5IG9wZW5zIGEgbGluay4KICoKICogVXNhZ2UgKEFjdGl2aXR5Lm9uQ3JlYXRlKTogIGhhbmRsZSA9IFVwZGF0ZU1hbmFnZXIuc2NoZWR1bGVBdXRvQ2hlY2sodGhpcyk7CiAqIFVzYWdlIChBY3Rpdml0eS5vbkRlc3Ryb3kpOiBpZiAoaGFuZGxlICE9IG51bGwpIGhhbmRsZS5jYW5jZWwoKTsKICovCnB1YmxpYyBmaW5hbCBjbGFzcyBVcGRhdGVNYW5hZ2VyIHsKCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgVEFHID0gIlVwZGF0ZU1hbmFnZXIiOwoKICAgIHByaXZhdGUgc3RhdGljIGZpbmFsIFN0cmluZyBQUkVGU19OQU1FID0gInVwZGF0ZV9wcmVmcyI7CiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBTdHJpbmcgS0VZX1NOT09aRV9VTlRJTCA9ICJzbm9vemVfdW50aWwiOwoKICAgIC8qKiBXYWl0IGJlZm9yZSBjaGVja2luZywgc28gbm90aGluZyBwb3BzIHVwIGFzIHRoZSBhcHAgb3BlbnMuICovCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBsb25nIFNUQVJUVVBfREVMQVlfTVMgPSA1XzAwMEw7CgogICAgLyoqIEhvdyBsb25nICJMYXRlciIgc2lsZW5jZXMgdGhlIGRpYWxvZyAoNiBob3VycykuICovCiAgICBwcml2YXRlIHN0YXRpYyBmaW5hbCBsb25nIFNOT09aRV9NUyA9IDZMICogNjBMICogNjBMICogMTAwMEw7CgogICAgcHJpdmF0ZSBzdGF0aWMgZmluYWwgSGFuZGxlciBNQUlOID0gbmV3IEhhbmRsZXIoTG9vcGVyLmdldE1haW5Mb29wZXIoKSk7CgogICAgLy8gTWFpbiB0aHJlYWQgb25seS4gR3VhcmRzIGFnYWluc3QgcmUtY2hlY2tpbmcgb24gZXZlcnkgcmVjcmVhdGUuCiAgICBwcml2YXRlIHN0YXRpYyBib29sZWFuIGNoZWNrZWRUaGlzTGF1bmNoID0gZmFsc2U7CgogICAgcHJpdmF0ZSBVcGRhdGVNYW5hZ2VyKCkgewogICAgICAgIC8vIFV0aWxpdHkgY2xhc3MuCiAgICB9CgogICAgLyoqIENhbmNlbHMgdGhlIHBlbmRpbmcgLyBydW5uaW5nIGNoZWNrLiBTYWZlIHRvIGNhbGwgcmVwZWF0ZWRseS4gKi8KICAgIHB1YmxpYyBzdGF0aWMgZmluYWwgY2xhc3MgSGFuZGxlIHsKICAgICAgICBwcml2YXRlIFJ1bm5hYmxlIHBlbmRpbmc7CiAgICAgICAgcHJpdmF0ZSBVcGRhdGVDaGVja2VyLlJlcXVlc3QgcmVxdWVzdDsKICAgICAgICBwcml2YXRlIGJvb2xlYW4gY2FuY2VsbGVkOwoKICAgICAgICBwdWJsaWMgdm9pZCBjYW5jZWwoKSB7CiAgICAgICAgICAgIGNhbmNlbGxlZCA9IHRydWU7CiAgICAgICAgICAgIGlmIChwZW5kaW5nICE9IG51bGwpIE1BSU4ucmVtb3ZlQ2FsbGJhY2tzKHBlbmRpbmcpOwogICAgICAgICAgICBpZiAocmVxdWVzdCAhPSBudWxsKSByZXF1ZXN0LmNhbmNlbCgpOwogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIFB1YmxpYyBBUEkKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIEBOb25OdWxsCiAgICBwdWJsaWMgc3RhdGljIEhhbmRsZSBzY2hlZHVsZUF1dG9DaGVjayhATnVsbGFibGUgZmluYWwgQWN0aXZpdHkgYWN0aXZpdHkpIHsKCiAgICAgICAgZmluYWwgSGFuZGxlIGhhbmRsZSA9IG5ldyBIYW5kbGUoKTsKCiAgICAgICAgaWYgKGFjdGl2aXR5ID09IG51bGwpIHJldHVybiBoYW5kbGU7CiAgICAgICAgaWYgKGNoZWNrZWRUaGlzTGF1bmNoKSByZXR1cm4gaGFuZGxlOwogICAgICAgIGlmICghU2V0dGluZ3NEaWFsb2cuaXNBdXRvVXBkYXRlQ2hlY2tzRW5hYmxlZChhY3Rpdml0eSkpIHJldHVybiBoYW5kbGU7CiAgICAgICAgaWYgKGlzU25vb3plZChhY3Rpdml0eSkpIHJldHVybiBoYW5kbGU7CgogICAgICAgIGhhbmRsZS5wZW5kaW5nID0gbmV3IFJ1bm5hYmxlKCkgewogICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgcHVibGljIHZvaWQgcnVuKCkgewogICAgICAgICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgICAgICAgICBpZiAoaGFuZGxlLmNhbmNlbGxlZCB8fCAhaXNBbGl2ZShhY3Rpdml0eSkpIHJldHVybjsKICAgICAgICAgICAgICAgICAgICBpZiAoY2hlY2tlZFRoaXNMYXVuY2gpIHJldHVybjsKICAgICAgICAgICAgICAgICAgICBpZiAoaXNTbm9vemVkKGFjdGl2aXR5KSkgcmV0dXJuOwoKICAgICAgICAgICAgICAgICAgICBjaGVja2VkVGhpc0xhdW5jaCA9IHRydWU7CgogICAgICAgICAgICAgICAgICAgIGhhbmRsZS5yZXF1ZXN0ID0gVXBkYXRlQ2hlY2tlci5jaGVja0ZvclVwZGF0ZXMoYWN0aXZpdHksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXcgVXBkYXRlQ2hlY2tlci5PbkNoZWNrQ29tcGxldGVMaXN0ZW5lcigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwdWJsaWMgdm9pZCBvblVwZGF0ZUZvdW5kKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVXBkYXRlQ2hlY2tlci5VcGRhdGVJbmZvIGluZm8pIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2hvd0RpYWxvZyhhY3Rpdml0eSwgaW5mbyk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwdWJsaWMgdm9pZCBvbk5vVXBkYXRlRm91bmQoKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vIFNpbGVudC4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHB1YmxpYyB2b2lkIG9uRXJyb3IoRXhjZXB0aW9uIGUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLy8gU2lsZW50OiBhbiBhdXRvbWF0aWMgY2hlY2sgbXVzdCBuZXZlcgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvLyBib3RoZXIgdGhlIHVzZXIuCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIExvZy53KFRBRywgImF1dG8gY2hlY2sgZmFpbGVkOiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKyBlLmdldE1lc3NhZ2UoKSk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICB9IGNhdGNoIChUaHJvd2FibGUgdCkgewogICAgICAgICAgICAgICAgICAgIExvZy5lKFRBRywgImF1dG8gY2hlY2sgZmFpbGVkIiwgdCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9OwoKICAgICAgICBNQUlOLnBvc3REZWxheWVkKGhhbmRsZS5wZW5kaW5nLCBTVEFSVFVQX0RFTEFZX01TKTsKICAgICAgICByZXR1cm4gaGFuZGxlOwogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gRGlhbG9nCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwcml2YXRlIHN0YXRpYyB2b2lkIHNob3dEaWFsb2coCiAgICAgICAgICAgIEBOb25OdWxsIGZpbmFsIEFjdGl2aXR5IGFjdGl2aXR5LAogICAgICAgICAgICBATm9uTnVsbCBmaW5hbCBVcGRhdGVDaGVja2VyLlVwZGF0ZUluZm8gaW5mbykgewoKICAgICAgICB0cnkgewogICAgICAgICAgICBpZiAoIWlzQWxpdmUoYWN0aXZpdHkpKSByZXR1cm47CgogICAgICAgICAgICBuZXcgTmV3VXBkYXRlRGlhbG9nKGFjdGl2aXR5KQogICAgICAgICAgICAgICAgICAgIC5zZXRMYXRlc3RWZXJzaW9uKGluZm8udmVyc2lvbikKICAgICAgICAgICAgICAgICAgICAuc2V0T25VcGRhdGVMaXN0ZW5lcihuZXcgTmV3VXBkYXRlRGlhbG9nLk9uVXBkYXRlTGlzdGVuZXIoKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIEBPdmVycmlkZQogICAgICAgICAgICAgICAgICAgICAgICBwdWJsaWMgdm9pZCBvblVwZGF0ZUNsaWNrZWQoKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBvcGVuRG93bmxvYWQoYWN0aXZpdHksIGluZm8pOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfSkKICAgICAgICAgICAgICAgICAgICAuc2V0T25MYXRlckxpc3RlbmVyKG5ldyBOZXdVcGRhdGVEaWFsb2cuT25MYXRlckxpc3RlbmVyKCkgewogICAgICAgICAgICAgICAgICAgICAgICBAT3ZlcnJpZGUKICAgICAgICAgICAgICAgICAgICAgICAgcHVibGljIHZvaWQgb25MYXRlcigpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNub296ZShhY3Rpdml0eSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICAgICAgICAgIC5zaG93KCk7CgogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgInNob3dEaWFsb2cgZmFpbGVkIiwgdCk7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gT3BlbmluZyB0aGUgbGluayAoZGlyZWN0IEFQSyAtPiByZWxlYXNlIHBhZ2UgLT4gL3JlbGVhc2VzL2xhdGVzdCkKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHByaXZhdGUgc3RhdGljIHZvaWQgb3BlbkRvd25sb2FkKAogICAgICAgICAgICBATm9uTnVsbCBBY3Rpdml0eSBhY3Rpdml0eSwKICAgICAgICAgICAgQE5vbk51bGwgVXBkYXRlQ2hlY2tlci5VcGRhdGVJbmZvIGluZm8pIHsKCiAgICAgICAgU3RyaW5nW10gY2FuZGlkYXRlcyA9IG5ldyBTdHJpbmdbXSB7CiAgICAgICAgICAgICAgICBpbmZvLmRvd25sb2FkVXJsLAogICAgICAgICAgICAgICAgaW5mby5yZWxlYXNlVXJsLAogICAgICAgICAgICAgICAgVXBkYXRlQ2hlY2tlci5SRUxFQVNFU19MQVRFU1RfVVJMCiAgICAgICAgfTsKCiAgICAgICAgU3RyaW5nIGxhc3QgPSBudWxsOwogICAgICAgIGZvciAoaW50IGkgPSAwOyBpIDwgY2FuZGlkYXRlcy5sZW5ndGg7IGkrKykgewogICAgICAgICAgICBTdHJpbmcgdXJsID0gY2FuZGlkYXRlc1tpXTsKICAgICAgICAgICAgaWYgKHVybCA9PSBudWxsIHx8IHVybC5pc0VtcHR5KCkgfHwgdXJsLmVxdWFscyhsYXN0KSkgY29udGludWU7CiAgICAgICAgICAgIGxhc3QgPSB1cmw7CgogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgYWN0aXZpdHkuc3RhcnRBY3Rpdml0eSgKICAgICAgICAgICAgICAgICAgICAgICAgbmV3IEludGVudChJbnRlbnQuQUNUSU9OX1ZJRVcsIFVyaS5wYXJzZSh1cmwpKSk7CiAgICAgICAgICAgICAgICByZXR1cm47CiAgICAgICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgICAgICBMb2cudyhUQUcsICJjb3VsZCBub3Qgb3BlbiAiICsgdXJsLCB0KTsKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgVG9hc3QubWFrZVRleHQoYWN0aXZpdHksICJVbmFibGUgdG8gb3BlbiB0aGUgZG93bmxvYWQgbGluay4iLAogICAgICAgICAgICAgICAgICAgIFRvYXN0LkxFTkdUSF9TSE9SVCkuc2hvdygpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSBpZ25vcmVkKSB7CiAgICAgICAgfQogICAgfQoKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgLy8gU25vb3plCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KCiAgICBwdWJsaWMgc3RhdGljIHZvaWQgc25vb3plKEBOdWxsYWJsZSBDb250ZXh0IGNvbnRleHQpIHsKICAgICAgICBpZiAoY29udGV4dCA9PSBudWxsKSByZXR1cm47CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgY29udGV4dC5nZXRTaGFyZWRQcmVmZXJlbmNlcyhQUkVGU19OQU1FLCBDb250ZXh0Lk1PREVfUFJJVkFURSkKICAgICAgICAgICAgICAgICAgICAuZWRpdCgpCiAgICAgICAgICAgICAgICAgICAgLnB1dExvbmcoS0VZX1NOT09aRV9VTlRJTCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIFN5c3RlbS5jdXJyZW50VGltZU1pbGxpcygpICsgU05PT1pFX01TKQogICAgICAgICAgICAgICAgICAgIC5hcHBseSgpOwogICAgICAgIH0gY2F0Y2ggKFRocm93YWJsZSB0KSB7CiAgICAgICAgICAgIExvZy5lKFRBRywgInNub296ZSBmYWlsZWQiLCB0KTsKICAgICAgICB9CiAgICB9CgogICAgcHJpdmF0ZSBzdGF0aWMgYm9vbGVhbiBpc1Nub296ZWQoQE5vbk51bGwgQ29udGV4dCBjb250ZXh0KSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgU2hhcmVkUHJlZmVyZW5jZXMgcHJlZnMgPSBjb250ZXh0LmdldFNoYXJlZFByZWZlcmVuY2VzKAogICAgICAgICAgICAgICAgICAgIFBSRUZTX05BTUUsIENvbnRleHQuTU9ERV9QUklWQVRFKTsKICAgICAgICAgICAgbG9uZyB1bnRpbCA9IHByZWZzLmdldExvbmcoS0VZX1NOT09aRV9VTlRJTCwgMEwpOwogICAgICAgICAgICBsb25nIG5vdyA9IFN5c3RlbS5jdXJyZW50VGltZU1pbGxpcygpOwoKICAgICAgICAgICAgLy8gdW50aWwgPiBub3cgKyBTTk9PWkVfTVMgbWVhbnMgdGhlIGNsb2NrIHdhcyBtb3ZlZCBiYWNrOgogICAgICAgICAgICAvLyBpZ25vcmUgdGhlIHN0YWxlIHZhbHVlIGluc3RlYWQgb2Ygc25vb3ppbmcgZm9yIGRheXMuCiAgICAgICAgICAgIHJldHVybiB1bnRpbCA+IG5vdyAmJiB1bnRpbCA8PSBub3cgKyBTTk9PWkVfTVM7CiAgICAgICAgfSBjYXRjaCAoVGhyb3dhYmxlIHQpIHsKICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgIH0KICAgIH0KCiAgICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIC8vIEhlbHBlcnMKICAgIC8vID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKICAgIHByaXZhdGUgc3RhdGljIGJvb2xlYW4gaXNBbGl2ZShATnVsbGFibGUgQWN0aXZpdHkgYWN0aXZpdHkpIHsKICAgICAgICBpZiAoYWN0aXZpdHkgPT0gbnVsbCB8fCBhY3Rpdml0eS5pc0ZpbmlzaGluZygpKSByZXR1cm4gZmFsc2U7CiAgICAgICAgcmV0dXJuICEoQnVpbGQuVkVSU0lPTi5TREtfSU5UID49IEJ1aWxkLlZFUlNJT05fQ09ERVMuSkVMTFlfQkVBTl9NUjEKICAgICAgICAgICAgICAgICYmIGFjdGl2aXR5LmlzRGVzdHJveWVkKCkpOwogICAgfQp9
+package com.musaddiqbaluch.census;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+/**
+ * Glue between UpdateChecker and NewUpdateDialog.
+ *
+ *  - Waits STARTUP_DELAY_MS after launch before doing anything.
+ *  - Runs at most once per app launch.
+ *  - "Later" (button, back, or tap outside) snoozes for SNOOZE_MS and
+ *    no network request is made while snoozed.
+ *  - Only runs if the "Update Check" switch in Settings is on.
+ *  - Never downloads anything: it only opens a link.
+ *
+ * Usage (Activity.onCreate):  handle = UpdateManager.scheduleAutoCheck(this);
+ * Usage (Activity.onDestroy): if (handle != null) handle.cancel();
+ */
+public final class UpdateManager {
+
+    private static final String TAG = "UpdateManager";
+
+    private static final String PREFS_NAME = "update_prefs";
+    private static final String KEY_SNOOZE_UNTIL = "snooze_until";
+
+    /** Wait before checking, so nothing pops up as the app opens. */
+    private static final long STARTUP_DELAY_MS = 5_000L;
+
+    /** How long "Later" silences the dialog (6 hours). */
+    private static final long SNOOZE_MS = 6L * 60L * 60L * 1000L;
+
+    private static final Handler MAIN = new Handler(Looper.getMainLooper());
+
+    // Main thread only. Guards against re-checking on every recreate.
+    private static boolean checkedThisLaunch = false;
+
+    private UpdateManager() {
+        // Utility class.
+    }
+
+    /** Cancels the pending / running check. Safe to call repeatedly. */
+    public static final class Handle {
+        private Runnable pending;
+        private UpdateChecker.Request request;
+        private boolean cancelled;
+
+        public void cancel() {
+            cancelled = true;
+            if (pending != null) MAIN.removeCallbacks(pending);
+            if (request != null) request.cancel();
+        }
+    }
+
+    // ============================================================
+    // Public API
+    // ============================================================
+
+    @NonNull
+    public static Handle scheduleAutoCheck(@Nullable final Activity activity) {
+
+        final Handle handle = new Handle();
+
+        if (activity == null) return handle;
+        if (checkedThisLaunch) return handle;
+        if (!SettingsDialog.isAutoUpdateChecksEnabled(activity)) return handle;
+        if (isSnoozed(activity)) return handle;
+
+        handle.pending = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (handle.cancelled || !isAlive(activity)) return;
+                    if (checkedThisLaunch) return;
+                    if (isSnoozed(activity)) return;
+
+                    checkedThisLaunch = true;
+
+                    handle.request = UpdateChecker.checkForUpdates(activity,
+                            new UpdateChecker.OnCheckCompleteListener() {
+                                @Override
+                                public void onUpdateFound(
+                                        UpdateChecker.UpdateInfo info) {
+                                    showDialog(activity, info);
+                                }
+
+                                @Override
+                                public void onNoUpdateFound() {
+                                    // Silent.
+                                }
+
+                                @Override
+                                public void onError(Exception e) {
+                                    // Silent: an automatic check must never
+                                    // bother the user.
+                                    Log.w(TAG, "auto check failed: "
+                                            + e.getMessage());
+                                }
+                            });
+                } catch (Throwable t) {
+                    Log.e(TAG, "auto check failed", t);
+                }
+            }
+        };
+
+        MAIN.postDelayed(handle.pending, STARTUP_DELAY_MS);
+        return handle;
+    }
+
+    // ============================================================
+    // Dialog
+    // ============================================================
+
+    private static void showDialog(
+            @NonNull final Activity activity,
+            @NonNull final UpdateChecker.UpdateInfo info) {
+
+        try {
+            if (!isAlive(activity)) return;
+
+            new NewUpdateDialog(activity)
+                    .setLatestVersion(info.version)
+                    .setOnUpdateListener(new NewUpdateDialog.OnUpdateListener() {
+                        @Override
+                        public void onUpdateClicked() {
+                            openDownload(activity, info);
+                        }
+                    })
+                    .setOnLaterListener(new NewUpdateDialog.OnLaterListener() {
+                        @Override
+                        public void onLater() {
+                            snooze(activity);
+                        }
+                    })
+                    .show();
+
+        } catch (Throwable t) {
+            Log.e(TAG, "showDialog failed", t);
+        }
+    }
+
+    // ============================================================
+    // Opening the link (direct APK -> release page -> /releases/latest)
+    // ============================================================
+
+    private static void openDownload(
+            @NonNull Activity activity,
+            @NonNull UpdateChecker.UpdateInfo info) {
+
+        String[] candidates = new String[] {
+                info.downloadUrl,
+                info.releaseUrl,
+                UpdateChecker.RELEASES_LATEST_URL
+        };
+
+        String last = null;
+        for (int i = 0; i < candidates.length; i++) {
+            String url = candidates[i];
+            if (url == null || url.isEmpty() || url.equals(last)) continue;
+            last = url;
+
+            try {
+                activity.startActivity(
+                        new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                return;
+            } catch (Throwable t) {
+                Log.w(TAG, "could not open " + url, t);
+            }
+        }
+
+        try {
+            Toast.makeText(activity, "Unable to open the download link.",
+                    Toast.LENGTH_SHORT).show();
+        } catch (Throwable ignored) {
+        }
+    }
+
+    // ============================================================
+    // Snooze
+    // ============================================================
+
+    public static void snooze(@Nullable Context context) {
+        if (context == null) return;
+        try {
+            context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                    .edit()
+                    .putLong(KEY_SNOOZE_UNTIL,
+                            System.currentTimeMillis() + SNOOZE_MS)
+                    .apply();
+        } catch (Throwable t) {
+            Log.e(TAG, "snooze failed", t);
+        }
+    }
+
+    private static boolean isSnoozed(@NonNull Context context) {
+        try {
+            SharedPreferences prefs = context.getSharedPreferences(
+                    PREFS_NAME, Context.MODE_PRIVATE);
+            long until = prefs.getLong(KEY_SNOOZE_UNTIL, 0L);
+            long now = System.currentTimeMillis();
+
+            // until > now + SNOOZE_MS means the clock was moved back:
+            // ignore the stale value instead of snoozing for days.
+            return until > now && until <= now + SNOOZE_MS;
+        } catch (Throwable t) {
+            return false;
+        }
+    }
+
+    // ============================================================
+    // Helpers
+    // ============================================================
+
+    private static boolean isAlive(@Nullable Activity activity) {
+        if (activity == null || activity.isFinishing()) return false;
+        return !(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1
+                && activity.isDestroyed());
+    }
+}
